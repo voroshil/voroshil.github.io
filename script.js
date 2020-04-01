@@ -16,48 +16,52 @@ function buildCountries(stat, threshold) {
 function totalStat(data){
     let s = {
         name: "Total",
-        code: "Total",
+        code: "Всего",
         confirmed: 0,
         deaths: 0,
         recovered: 0,
         active: 0,
         inactive: 0,
+        confirmedDiff: 0,
+        recoveredDiff: 0,
+        deathsDiff: 0,
+        activeDiff: 0,
+        inactiveDiff: 0,
+        deathsEstimated: 0,
+        deathsEstimatedDiff: 0,
     };
     Object.keys(data).forEach(country => {
         let d = data[country];
-//        console.log(d);
         s.confirmed += d.confirmed;
         s.deaths += d.deaths;
         s.recovered += d.recovered;
         s.active += d.active;
         s.inactive += d.inactive;
-        s.deathRate += d.deathRate;
-        s.fatalityRate += d.fatalityRate;
         s.deathsEstimated += d.deathsEstimated;
+        s.confirmedDiff += d.confirmedDiff;
+        s.recoveredDiff += d.recoveredDiff;
+        s.deathsDiff += d.deathsDiff;
+        s.activeDiff += d.activeDiff;
+        s.inactiveDiff += d.inactiveDiff;
+        s.deathsEstimatedDiff += d.deathsEstimatedDiff;
     });
-    s.deathRate = s.confirmed > 0 ? s.deaths / s.confirmed : 0;
-    s.fatalityRate = s.inactive > 0 ? s.deaths / (s.recovered + s.deaths) : 0;
+    s.deathRate = s.confirmed !== 0 ? s.deaths / s.confirmed : 0;
+    s.fatalityRate = s.inactive !== 0 ? s.deaths / s.inactive : 0;
+
+    s.confirmedPrev = s.confirmed - s.confirmedDiff;
+    s.recoveredPrev = s.recovered - s.recoveredDiff;
+    s.deathsPrev = s.deaths - s.deathsDiff;
+    s.inactivePrev = s.inactive - s.inactiveDiff;
+
+    s.deathRatePrev = s.confirmedPrev !== 0 ? s.deathsPrev / s.confirmedPrev : 0;
+    s.fatalityRatePrev = s.inactivePrev !== 0 ? s.deathsPrev / s.inactivePrev : 0;
+
     s.deathsEstimated = s.active * s.fatalityRate;
-    return s;
-}
-function diffStat(dCur, dPrev){
-    let s = {};
-    Object.keys(dCur).forEach(country => {
-      d0 = dCur[country];
-      d1 = dPrev[country];
-      s[country] = {
-        name: d0.name,
-        code: d0.code,
-        confirmed: d0.confirmed - d1.confirmed,
-        deaths: d0.deaths - d1.deaths,
-        recovered: d0.recovered - d1.recovered,
-        active: d0.active - d1.active,
-        inactive: d0.inactive - d1.inactive,
-        deathRate: d0.deathRate - d1.deathRate,
-        fatalityRate: d0.fatalityRate - d1.fatalityRate,
-        deathsEstimated: d0.deathsEstimated - d1.deathsEstimated,
-      };
-    });
+    s.deathsEstimatedPrev = (s.active - s.activeDiff) * s.fatalityRatePrev;
+
+    s.deathRateDiff = s.deathRate - s.deathRatePrev;
+    s.fatalityRateDiff = s.fatalityRate - s.fatalityRatePrev;
+    s.deathsEstimatedDiff = s.deathsEstimated - s.deathsEstimatedPrev;
     return s;
 }
 function countryStat(data, codes){
@@ -77,6 +81,14 @@ function countryStat(data, codes){
                 s.deathRate = dd.deathRate;
                 s.fatalityRate = dd.fatalityRate;
                 s.deathsEstimated = dd.deathsEstimated;
+                s.confirmedDiff = dd.confirmedDiff;
+                s.deathsDiff = dd.deathsDiff;
+                s.recoveredDiff = dd.recoveredDiff;
+                s.activeDiff = dd.activeDiff;
+                s.inactiveDiff = dd.inactiveDiff;
+                s.deathRateDiff = dd.deathRateDiff;
+                s.fatalityRateDiff = dd.fatalityRateDiff;
+                s.deathsEstimatedDiff = dd.deathsEstimatedDiff;
               }
           });
           stat[country] = s;
@@ -103,7 +115,7 @@ function convertData(data){
                 dd.recoveredDiff = dd.recovered - prevD.recovered;
                 dd.deathsDiff = dd.deaths - prevD.deaths;
                 dd.activeDiff = dd.active - prevD.active;
-                dd.inactiveDiff = dd.active - prevD.active;
+                dd.inactiveDiff = dd.inactive - prevD.inactive;
                 dd.deathRateDiff = dd.deathRate - prevD.deathRate;
                 dd.fatalityRateDiff = dd.fatalityRate - prevD.fatalityRate;
                 dd.deathsEstimatedDiff = dd.deathsEstimated - prevD.deathsEstimated;
@@ -144,22 +156,25 @@ function outputStatHtmlTable(elementId, stat, countries){
 
 function getColoredDiff(v, cp, cm){
     if (v > 0)
-      return`<span class="${cp}">+${v}</span>`;
+      return`<span class="${cp}">(+${v})</span>`;
     else if (v < 0)
-      return`<span class="${cm}">${v}</span>`;
+      return`<span class="${cm}">(${v})</span>`;
     else
       return "";
 }
-function outputBetterStatHtmlTable(elementId, stat, diff, countries){
+function outputBetterStatHtmlTable(elementId, stat, countries){
     let html = "";
     countries.forEach(c => {
-      let confirmedDiff = getColoredDiff(diff[c].confirmed, "diff-red", "diff-green");
-      let recoveredDiff = getColoredDiff(diff[c].recovered, "diff-green", "diff-red");
-      let deathsDiff = getColoredDiff(diff[c].deaths, "diff-red", "diff-green");
-      let activeDiff = getColoredDiff(diff[c].active, "diff-red", "diff-green");
-      let fatalityRateDiff = getColoredDiff((100 * diff[c].fatalityRate).toFixed(1), "diff-red", "diff-green");
-      let deathRateDiff = getColoredDiff((100 * diff[c].deathRate).toFixed(1), "diff-red", "diff-green");
-      let deathsEstimatedDiff = getColoredDiff(diff[c].deathsEstimated.toFixed(0), "diff-red", "diff-green");
+      let confirmedDiff = getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green");
+      let recoveredDiff = getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red");
+      let deathsDiff = getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green");
+      let activeDiff = getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green");
+      let fatalityRateDiff = getColoredDiff((100 * stat[c].fatalityRateDiff).toFixed(1), "diff-red", "diff-green");
+      let deathRateDiff = getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green");
+      let deathsEstimatedDiff = "";
+      if (stat[c].deathsEstimatedDiff !== undefined){
+          deathsEstimatedDiff = getColoredDiff(stat[c].deathsEstimatedDiff.toFixed(0), "diff-red", "diff-green");
+      }
       html += "<tr>";
       html += `<td>${stat[c].code}</td>`;
       html += `<td align="right" >${stat[c].confirmed}${confirmedDiff}</td>`;
@@ -174,7 +189,7 @@ function outputBetterStatHtmlTable(elementId, stat, diff, countries){
     let table = document.getElementById(elementId);
     table.innerHTML = html;
 }
-function outputFatalityHtmlTable(elementId, dates, stat, countries){
+function outputHistoryHtmlTable(elementId, dates, stat, countries, getValue, getDiff){
     let html = "";
     html += "<tr>";
     html += "<th>Date</th>";
@@ -198,8 +213,8 @@ function outputFatalityHtmlTable(elementId, dates, stat, countries){
       countries.forEach(c => {
         let dd = dates[d][c];
         if (dd !== undefined){
-          diff = getColoredDiff(dd.activeDiff, "diff-red", "diff-green");
-          html += `<td>${dd.active}${diff}</td>`
+          diff = getColoredDiff(getDiff(dd), "diff-red", "diff-green");
+          html += `<td>${getValue(dd)}${diff}</td>`
         }else{
           html += "<td></td>"
         }

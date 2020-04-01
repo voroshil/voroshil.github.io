@@ -15,7 +15,16 @@
     <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Последние</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Динамика болеющих</a>
+    <a class="nav-link" id="confirmed-history-tab" data-toggle="tab" href="#confirmed-history" role="tab" aria-controls="confirmed-history" aria-selected="false">Динамика зараженных</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="recovered-history-tab" data-toggle="tab" href="#recovered-history" role="tab" aria-controls="recovered-history" aria-selected="false">Динамика вылечившихся</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="death-history-tab" data-toggle="tab" href="#death-history" role="tab" aria-controls="death-history" aria-selected="false">Динамика смертей</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="active-history-tab" data-toggle="tab" href="#active-history" role="tab" aria-controls="active-history" aria-selected="false">Динамика болеющих</a>
   </li>
 </ul>
 <div class="tab-content">
@@ -37,9 +46,17 @@
       </table>
     </div>
   </div>
-  <div class="tab-pane" id="fatality-history" role="tabpanel" aria-labelledby="fatality-history-tab">
-  <table id = "fatalityHistory" class="table table-condensed table-striped table-hover">
-  </table>
+  <div class="tab-pane" id="confirmed-history" role="tabpanel" aria-labelledby="confirmed-history-tab">
+    <table id = "confirmedHistory" class="table table-condensed table-striped table-hover"></table>
+  </div> 
+  <div class="tab-pane" id="recovered-history" role="tabpanel" aria-labelledby="recovered-history-tab">
+    <table id = "recoveredHistory" class="table table-condensed table-striped table-hover"></table>
+  </div> 
+  <div class="tab-pane" id="death-history" role="tabpanel" aria-labelledby="death-history-tab">
+    <table id = "deathHistory" class="table table-condensed table-striped table-hover"></table>
+  </div> 
+  <div class="tab-pane" id="active-history" role="tabpanel" aria-labelledby="active-history-tab">
+    <table id = "activeHistory" class="table table-condensed table-striped table-hover"></table>
   </div>
 </div>
 
@@ -70,11 +87,14 @@
     dates[d0]["Total"] = d0t
     dates[d1]["Total"] = d1t
     stat["Total"] = d0t;
-    var diff = diffStat(dates[d0], dates[d1]);
-//    console.log(diff)
     var countries = buildCountries(stat, threshold);
-    outputBetterStatHtmlTable("latestStat", stat, diff, countries);
-    outputFatalityHtmlTable("fatalityHistory", dates, stat, countries);
+
+    outputBetterStatHtmlTable("latestStat", stat, countries);
+
+    outputHistoryHtmlTable("confirmedHistory", dates, stat, countries, d => d.confirmed, d => d.confirmedDiff);
+    outputHistoryHtmlTable("recoveredHistory", dates, stat, countries, d => d.recovered, d => d.recoveredDiff);
+    outputHistoryHtmlTable("deathHistory", dates, stat, countries, d => d.deaths, d => d.deathsDiff);
+    outputHistoryHtmlTable("activeHistory", dates, stat, countries, d => d.active, d => d.activeDiff);
 </script>
 <script id="latestStatTemplate" language="xTemplate">
 </script>
