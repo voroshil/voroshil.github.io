@@ -15,16 +15,22 @@
     <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Последние</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="confirmed-history-tab" data-toggle="tab" href="#confirmed-history" role="tab" aria-controls="confirmed-history" aria-selected="false">Динамика зараженных</a>
+    <a class="nav-link" id="confirmed-history-tab" data-toggle="tab" href="#confirmed-history" role="tab" aria-controls="confirmed-history" aria-selected="false">Зараженные</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="recovered-history-tab" data-toggle="tab" href="#recovered-history" role="tab" aria-controls="recovered-history" aria-selected="false">Динамика вылечившихся</a>
+    <a class="nav-link" id="recovered-history-tab" data-toggle="tab" href="#recovered-history" role="tab" aria-controls="recovered-history" aria-selected="false">Вылечившиеся</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="death-history-tab" data-toggle="tab" href="#death-history" role="tab" aria-controls="death-history" aria-selected="false">Динамика смертей</a>
+    <a class="nav-link" id="death-history-tab" data-toggle="tab" href="#death-history" role="tab" aria-controls="death-history" aria-selected="false">Смерти</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="active-history-tab" data-toggle="tab" href="#active-history" role="tab" aria-controls="active-history" aria-selected="false">Динамика болеющих</a>
+    <a class="nav-link" id="active-history-tab" data-toggle="tab" href="#active-history" role="tab" aria-controls="active-history" aria-selected="false">Болеющие</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Летальность</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="death-rate-history-tab" data-toggle="tab" href="#death-rate-history" role="tab" aria-controls="death-rate-history" aria-selected="false">Смертность</a>
   </li>
 </ul>
 <div class="tab-content">
@@ -58,6 +64,12 @@
   <div class="tab-pane" id="active-history" role="tabpanel" aria-labelledby="active-history-tab">
     <table id = "activeHistory" class="table table-condensed table-striped table-hover"></table>
   </div>
+  <div class="tab-pane" id="fatality-history" role="tabpanel" aria-labelledby="fatality-history-tab">
+    <table id = "fatalityHistory" class="table table-condensed table-striped table-hover"></table>
+  </div>
+  <div class="tab-pane" id="death-rate-history" role="tabpanel" aria-labelledby="death-rate--history-tab">
+    <table id = "deathRateHistory" class="table table-condensed table-striped table-hover"></table>
+  </div>
 </div>
 
 <script language="javascript" src="vendor/jquery-3.4.1.min.js"></script>
@@ -79,14 +91,12 @@
         return 1;
       return 0;
     });
+    dds.forEach(d => {
+      dates[d]["Total"] = totalStat(dates[d]);
+    });
     let d0 = dds[0];
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
-    let d1 = dds[1];
-    let d0t = totalStat(dates[d0]);
-    let d1t = totalStat(dates[d1]);
-    dates[d0]["Total"] = d0t
-    dates[d1]["Total"] = d1t
-    stat["Total"] = d0t;
+    stat["Total"] = dates[d0]["Total"];
     var countries = buildCountries(stat, threshold);
 
     outputBetterStatHtmlTable("latestStat", stat, countries);
@@ -95,6 +105,8 @@
     outputHistoryHtmlTable("recoveredHistory", dates, stat, countries, d => d.recovered, d => d.recoveredDiff);
     outputHistoryHtmlTable("deathHistory", dates, stat, countries, d => d.deaths, d => d.deathsDiff);
     outputHistoryHtmlTable("activeHistory", dates, stat, countries, d => d.active, d => d.activeDiff);
+    outputHistoryHtmlTable("fatalityHistory", dates, stat, countries, d => (100 * d.fatalityRate).toFixed(1), d => (100*d.fatalityRateDiff).toFixed(1));
+    outputHistoryHtmlTable("deathRateHistory", dates, stat, countries, d => (100 * d.deathRate).toFixed(1), d => (100*d.deathRateDiff).toFixed(1));
 </script>
 <script id="latestStatTemplate" language="xTemplate">
 </script>
