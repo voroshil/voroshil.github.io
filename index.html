@@ -8,17 +8,18 @@
 <body>
 <a href="https://pomber.github.io/covid19/timeseries.json">timeseries.json</a>
 
+    <h4>Данные JHU [<span id="latestDate"></span>]</h4>
+
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Latest</a>
+    <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Последние</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Fatality history</a>
+    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Динамика болеющих</a>
   </li>
 </ul>
 <div class="tab-content">
   <div class="tab-pane active" id="latest" role="tabpanel" aria-labelledby="latest-tab">
-    <h4>Latest stat</h4>
     <div class="col-sm-4">
       <table class="table table-condensed table-striped" border="1">
         <tr>
@@ -37,7 +38,6 @@
     </div>
   </div>
   <div class="tab-pane" id="fatality-history" role="tabpanel" aria-labelledby="fatality-history-tab">
-  <h4>Fatality history</h4>
   <table id = "fatalityHistory" class="table table-condensed table-striped table-hover">
   </table>
   </div>
@@ -63,6 +63,7 @@
       return 0;
     });
     let d0 = dds[0];
+    document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     let d1 = dds[1];
     let d0t = totalStat(dates[d0]);
     let d1t = totalStat(dates[d1]);

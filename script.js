@@ -141,7 +141,7 @@ function outputBetterStatHtmlTable(elementId, stat, diff, countries){
       let deathRateDiff = getColoredDiff((100 * diff[c].deathRate).toFixed(1), "diff-red", "diff-green");
       let deathsEstimatedDiff = getColoredDiff(diff[c].deathsEstimated.toFixed(0), "diff-red", "diff-green");
       html += "<tr>";
-      html += `<td>${stat[c].name}</td>`;
+      html += `<td>${stat[c].code}</td>`;
       html += `<td align="right" >${stat[c].confirmed}${confirmedDiff}</td>`;
       html += `<td align="right">${stat[c].recovered}${recoveredDiff}</td>`
       html += `<td align="right">${stat[c].deaths}${deathsDiff}</td>`
@@ -168,7 +168,7 @@ function outputFatalityHtmlTable(elementId, dates, stat, countries){
     });
 
     countries.forEach(c => {
-        html += `<th>${stat[c].name}</th>`;
+        html += `<th>${stat[c].code}</th>`;
     });
     html += "</tr>";
     dds.forEach(d => {
@@ -183,7 +183,7 @@ function outputFatalityHtmlTable(elementId, dates, stat, countries){
         let deathRate = dd.confirmed > 0 ? Math.round(100 * dd.deaths / dd.confirmed) : 0;
         let fatalityRate = inactive > 0 ? Math.round(100 * dd.deaths / (dd.recovered + dd.deaths)) : 0;
         ddd[c] = fatalityRate;
-        html += `<td>${fatalityRate}</td>`
+        html += `<td>${active}</td>`
         }else{
         html += "<td></td>"
         }
