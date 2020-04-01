@@ -86,20 +86,40 @@ function countryStat(data, codes){
 function convertData(data){
       var dates = {}
       Object.keys(data).forEach(country => {
-          data[country].forEach(date_data => {
-              let d = moment(date_data.date, "YYYY-MM-DD").unix();
-              let x = dates[d]
-              if (typeof(x) === "undefined"){
+          let prevD = undefined;
+          data[country].forEach(dd => {
+              let d = moment(dd.date, "YYYY-MM-DD").unix();
+              if (typeof(dates[d]) === "undefined"){
                 dates[d] = {}
               }
-              let s = date_data
-              s.date = d;
-              s.active = s.confirmed - s.recovered - s.deaths;
-              s.inactive = s.recovered + s.deaths;
-              s.deathRate = s.confirmed > 0 ? s.deaths / s.confirmed : 0;
-              s.fatalityRate = s.inactive > 0 ? s.deaths / (s.recovered + s.deaths) : 0;
-              s.deathsEstimated = s.active * s.fatalityRate;
-              dates[d][country] = s
+              dd.date = d;
+              dd.active = dd.confirmed - dd.recovered - dd.deaths;
+              dd.inactive = dd.recovered + dd.deaths;
+              dd.deathRate = dd.confirmed > 0 ? dd.deaths / dd.confirmed : 0;
+              dd.fatalityRate = dd.inactive > 0 ? dd.deaths / dd.inactive : 0;
+              dd.deathsEstimated = dd.active * dd.fatalityRate;
+              if (prevD !== undefined){
+                dd.confirmedDiff = dd.confirmed - prevD.confirmed;
+                dd.recoveredDiff = dd.recovered - prevD.recovered;
+                dd.deathsDiff = dd.deaths - prevD.deaths;
+                dd.activeDiff = dd.active - prevD.active;
+                dd.inactiveDiff = dd.active - prevD.active;
+                dd.deathRateDiff = dd.deathRate - prevD.deathRate;
+                dd.fatalityRateDiff = dd.fatalityRate - prevD.fatalityRate;
+                dd.deathsEstimatedDiff = dd.deathsEstimated - prevD.deathsEstimated;
+              }else{
+                dd.confirmedDiff = 0;
+                dd.recoveredDiff = 0;
+                dd.deathsDiff = 0;
+                dd.activeDiff = 0;
+                dd.inactiveDiff = 0;
+                dd.deathRateDiff = 0;
+                dd.fatalityRateDiff = 0;
+                dd.deathsEstimatedDiff = 0;
+              }
+              dates[d][country] = dd;
+
+              prevD = dd;
           })
       });
       return dates;
@@ -171,25 +191,22 @@ function outputFatalityHtmlTable(elementId, dates, stat, countries){
         html += `<th>${stat[c].code}</th>`;
     });
     html += "</tr>";
+    let prevD = undefined;
     dds.forEach(d => {
       html += "<tr>";
-      let ddd = {date: d};
       html += `<td>${moment.unix(d).format("DD.MM.YYYY")}</td>`;
       countries.forEach(c => {
         let dd = dates[d][c];
         if (dd !== undefined){
-        let active = dd.confirmed - dd.recovered - dd.deaths;
-        let inactive = dd.recovered + dd.deaths;
-        let deathRate = dd.confirmed > 0 ? Math.round(100 * dd.deaths / dd.confirmed) : 0;
-        let fatalityRate = inactive > 0 ? Math.round(100 * dd.deaths / (dd.recovered + dd.deaths)) : 0;
-        ddd[c] = fatalityRate;
-        html += `<td>${active}</td>`
+          diff = getColoredDiff(dd.activeDiff, "diff-red", "diff-green");
+          html += `<td>${dd.active}${diff}</td>`
         }else{
-        html += "<td></td>"
+          html += "<td></td>"
         }
       });
 //      console.log(ddd);
       html += "</tr>";
+      prevDD = d;
     });
     let table = document.getElementById(elementId);
     table.innerHTML = html;
