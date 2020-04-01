@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf8">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<a href="https://pomber.github.io/covid19/timeseries.json">timeseries.json</a>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Latest</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Fatality history</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="latest" role="tabpanel" aria-labelledby="latest-tab">
+    <h4>Latest stat</h4>
+    <div class="col-sm-4">
+      <table class="table table-condensed table-striped" border="1">
+        <tr>
+          <th>Страна</th>
+          <th align="right">Зараженных</th>
+          <th>Выздоровлений</th>
+          <th>Смертей</th>
+          <th>Болеющих</th>
+          <th>Летальность</th>
+          <th>Смертность</th>
+          <th>Прогноз</th>
+        </tr>
+        <thead>
+        <tbody id="latestStat"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="tab-pane" id="fatality-history" role="tabpanel" aria-labelledby="fatality-history-tab">
+  <h4>Fatality history</h4>
+  <table id = "fatalityHistory" class="table table-condensed table-striped table-hover">
+  </table>
+  </div>
+</div>
+
+<script language="javascript" src="vendor/jquery-3.4.1.min.js"></script>
+<script language="javascript" src="vendor/popper.min.js"></script>
+<script language="javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script language="javascript" src="vendor/moment.js"></script>
+
+<script language="javascript" src="config.js"></script>
+<script language="javascript" src="timeseries.js"></script>
+<script language="javascript" src="script.js"></script>
+<script>
+    var dates = convertData(data);
+    var stat = countryStat(data, names);
+    let dds = Object.keys(dates);
+    dds.sort((a,b) => {
+      if (a > b)
+        return -1;
+      if (a < b)
+        return 1;
+      return 0;
+    });
+    let d0 = dds[0];
+    let d1 = dds[1];
+    let d0t = totalStat(dates[d0]);
+    let d1t = totalStat(dates[d1]);
+    dates[d0]["Total"] = d0t
+    dates[d1]["Total"] = d1t
+    stat["Total"] = d0t;
+    var diff = diffStat(dates[d0], dates[d1]);
+//    console.log(diff)
+    var countries = buildCountries(stat, threshold);
+    outputBetterStatHtmlTable("latestStat", stat, diff, countries);
+    outputFatalityHtmlTable("fatalityHistory", dates, stat, countries);
+</script>
+<script id="latestStatTemplate" language="xTemplate">
+</script>
+</body>
+</html>
