@@ -27,10 +27,13 @@
     <a class="nav-link" id="active-history-tab" data-toggle="tab" href="#active-history" role="tab" aria-controls="active-history" aria-selected="false">Болеющие</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Летальность</a>
+    <a class="nav-link" id="fatality-history-tab" data-toggle="tab" href="#fatality-history" role="tab" aria-controls="fatality-history" aria-selected="false">Летальность, %</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="death-rate-history-tab" data-toggle="tab" href="#death-rate-history" role="tab" aria-controls="death-rate-history" aria-selected="false">Смертность</a>
+    <a class="nav-link" id="death-rate-history-tab" data-toggle="tab" href="#death-rate-history" role="tab" aria-controls="death-rate-history" aria-selected="false">Смертность, %</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="deaths-estimated-history-tab" data-toggle="tab" href="#deaths-estimated-history" role="tab" aria-controls="deaths-estimated-history" aria-selected="false">Прогноз</a>
   </li>
 </ul>
 <div class="tab-content">
@@ -70,6 +73,9 @@
   <div class="tab-pane" id="death-rate-history" role="tabpanel" aria-labelledby="death-rate--history-tab">
     <table id = "deathRateHistory" class="table table-condensed table-striped table-hover"></table>
   </div>
+  <div class="tab-pane" id="deaths-estimated-history" role="tabpanel" aria-labelledby="deaths-estimated--history-tab">
+    <table id = "deathsEstimatedHistory" class="table table-condensed table-striped table-hover"></table>
+  </div>
 </div>
 
 <script language="javascript" src="vendor/jquery-3.4.1.min.js"></script>
@@ -77,37 +83,9 @@
 <script language="javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script language="javascript" src="vendor/moment.js"></script>
 
-<script language="javascript" src="config.js"></script>
 <script language="javascript" src="timeseries.js"></script>
 <script language="javascript" src="script.js"></script>
-<script>
-    var dates = convertData(data);
-    var stat = countryStat(data, names);
-    let dds = Object.keys(dates);
-    dds.sort((a,b) => {
-      if (a > b)
-        return -1;
-      if (a < b)
-        return 1;
-      return 0;
-    });
-    dds.forEach(d => {
-      dates[d]["Total"] = totalStat(dates[d]);
-    });
-    let d0 = dds[0];
-    document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
-    stat["Total"] = dates[d0]["Total"];
-    var countries = buildCountries(stat, threshold);
-
-    outputBetterStatHtmlTable("latestStat", stat, countries);
-
-    outputHistoryHtmlTable("confirmedHistory", dates, stat, countries, d => d.confirmed, d => d.confirmedDiff);
-    outputHistoryHtmlTable("recoveredHistory", dates, stat, countries, d => d.recovered, d => d.recoveredDiff);
-    outputHistoryHtmlTable("deathHistory", dates, stat, countries, d => d.deaths, d => d.deathsDiff);
-    outputHistoryHtmlTable("activeHistory", dates, stat, countries, d => d.active, d => d.activeDiff);
-    outputHistoryHtmlTable("fatalityHistory", dates, stat, countries, d => (100 * d.fatalityRate).toFixed(1), d => (100*d.fatalityRateDiff).toFixed(1));
-    outputHistoryHtmlTable("deathRateHistory", dates, stat, countries, d => (100 * d.deathRate).toFixed(1), d => (100*d.deathRateDiff).toFixed(1));
-</script>
+<script>displayData();</script>
 <script id="latestStatTemplate" language="xTemplate">
 </script>
 </body>
