@@ -6,3 +6,21 @@
   font-size: 0.7em;
   color: green;
 }
+.diff-name-up{
+  background-color: white;
+}
+.diff-name-down{
+  background-color: lightgreen;
+}
+.confirmed-diff-diff-down{
+//  background-color: lightgreen;
+}
+.active-diff-diff-down{
+//  background-color: lightgreen;
+}
+.active-diff-diff-up{
+//  background-color: red;
+}
+.diff-diff-undefined{
+//  background-color: lightblue;
+}

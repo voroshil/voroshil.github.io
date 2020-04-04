@@ -21,7 +21,7 @@ var names = {
   "Australia": "Австралия",
   "Sweden": "Швеция",
 
-  "Total": "Всего"
+  "Total": "В мире"
 };
 function buildCountries(stat, threshold) {
     let countries = [];
@@ -41,7 +41,7 @@ function buildCountries(stat, threshold) {
 function totalStat(data){
     let s = {
         name: "Total",
-        code: "Всего",
+        code: names["Total"],
         confirmed: 0,
         deaths: 0,
         recovered: 0,
@@ -82,8 +82,8 @@ function totalStat(data){
     s.deathRatePrev = s.confirmedPrev !== 0 ? s.deathsPrev / s.confirmedPrev : 0;
     s.fatalityRatePrev = s.inactivePrev !== 0 ? s.deathsPrev / s.inactivePrev : 0;
 
-    s.deathsEstimated = s.active * s.fatalityRate;
-    s.deathsEstimatedPrev = s.activePred * s.fatalityRatePrev;
+    s.deathsEstimated = (s.active * s.fatalityRate).toFixed(0);
+    s.deathsEstimatedPrev = (s.activePred * s.fatalityRatePrev).toFixed(0);
 
     s.deathRateDiff = s.deathRate - s.deathRatePrev;
     s.fatalityRateDiff = s.fatalityRate - s.fatalityRatePrev;
@@ -135,7 +135,7 @@ function convertData(data){
               dd.active = dd.confirmed - dd.inactive;
               dd.deathRate = dd.confirmed > 0 ? dd.deaths / dd.confirmed : 0;
               dd.fatalityRate = dd.inactive > 0 ? dd.deaths / dd.inactive : 0;
-              dd.deathsEstimated = dd.active * dd.fatalityRate;
+              dd.deathsEstimated = (dd.active * dd.fatalityRate).toFixed(0);
               if (prevD !== undefined){
                 dd.confirmedDiff = dd.confirmed - prevD.confirmed;
                 dd.recoveredDiff = dd.recovered - prevD.recovered;
@@ -145,8 +145,20 @@ function convertData(data){
                 dd.deathRateDiff = dd.deathRate - prevD.deathRate;
                 dd.fatalityRateDiff = dd.fatalityRate - prevD.fatalityRate;
                 dd.deathsEstimatedDiff = dd.deathsEstimated - prevD.deathsEstimated;
+                if (prevD.confirmedDiff !== undefined){
+                  dd.confirmedDiffDiff = dd.confirmedDiff - prevD.confirmedDiff;
+                }else{
+                  dd.confirmedDiffDiff = 0;
+                }
+                if (prevD.activeDiff !== undefined){
+                  dd.activeDiffDiff = dd.activeDiff - prevD.activeDiff;
+                }else{
+                  dd.activeDiffDiff = 0;
+                }
               }else{
                 dd.confirmedDiff = 0;
+                dd.confirmedDiffDiff = 0;
+                dd.activeDiffDiff = 0;
                 dd.recoveredDiff = 0;
                 dd.deathsDiff = 0;
                 dd.activeDiff = 0;
@@ -173,7 +185,7 @@ function outputStatHtmlTable(elementId, stat, countries){
       html += `<td align="right">${stat[c].active}</td>`
       html += `<td align="right">${(100 * stat[c].fatalityRate).toFixed(1)}</td>`
       html += `<td align="right">${(100 * stat[c].deathRate).toFixed(1)}</td>`
-      html += `<td align="right">${stat[c].deathsEstimated.toFixed(0)}</td>`
+      html += `<td align="right">${stat[c].deathsEstimated}</td>`
       html += "</tr>";
     });
     let table = document.getElementById(elementId);
@@ -195,27 +207,28 @@ function outputBetterStatHtmlTable(elementId, stat, countries){
       let recoveredDiff = getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red");
       let deathsDiff = getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green");
       let activeDiff = getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green");
+      let nameClass  = stat[c].activeDiff < 0 ? "diff-name-down" : "diff-name-up";
       let fatalityRateDiff = getColoredDiff((100 * stat[c].fatalityRateDiff).toFixed(1), "diff-red", "diff-green");
       let deathRateDiff = getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green");
       let deathsEstimatedDiff = "";
       if (stat[c].deathsEstimatedDiff !== undefined){
-          deathsEstimatedDiff = getColoredDiff(stat[c].deathsEstimatedDiff.toFixed(0), "diff-red", "diff-green");
+          deathsEstimatedDiff = getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green");
       }
       html += "<tr>";
-      html += `<td>${stat[c].code}</td>`;
+      html += `<td class="${nameClass}">${stat[c].code}</td>`;
       html += `<td align="right" >${stat[c].confirmed.toLocaleString()}${confirmedDiff}</td>`;
       html += `<td align="right">${stat[c].recovered.toLocaleString()}${recoveredDiff}</td>`
       html += `<td align="right">${stat[c].deaths.toLocaleString()}${deathsDiff}</td>`
       html += `<td align="right">${stat[c].active.toLocaleString()}${activeDiff}</td>`
       html += `<td align="right">${(100 * stat[c].fatalityRate).toFixed(1)}${fatalityRateDiff}</td>`
       html += `<td align="right">${(100 * stat[c].deathRate).toFixed(1)}${deathRateDiff}</td>`
-      html += `<td align="right">${stat[c].deathsEstimated.toFixed(0).toLocaleString()}${deathsEstimatedDiff}</td>`
+      html += `<td align="right">${stat[c].deathsEstimated.toLocaleString()}${deathsEstimatedDiff}</td>`
       html += "</tr>";
     });
     let table = document.getElementById(elementId);
     table.innerHTML = html;
 }
-function outputHistoryHtmlTable(elementId, classUp, classDown, dates, stat, countries, getValue, getDiff){
+function outputHistoryHtmlTable(elementId, dates, stat, countries, formatter){
     let html = "";
     html += "<tr>";
     html += "<th>Date</th>";
@@ -239,8 +252,7 @@ function outputHistoryHtmlTable(elementId, classUp, classDown, dates, stat, coun
       countries.forEach(c => {
         let dd = dates[d][c];
         if (dd !== undefined){
-          diff = getColoredDiff(getDiff(dd), classUp, classDown);
-          html += `<td>${getValue(dd).toLocaleString()}${diff}</td>`
+          html += formatter(dd)
         }else{
           html += "<td></td>"
         }
@@ -251,6 +263,23 @@ function outputHistoryHtmlTable(elementId, classUp, classDown, dates, stat, coun
     });
     let table = document.getElementById(elementId);
     table.innerHTML = html;
+}
+function diffClass(v, classUp, classDown){
+  if (v === undefined)
+    return "diff-diff-undefined";
+  if (v < 0)
+    return classDown;
+  if (v > 0)
+    return classUp;
+  return "";
+}
+function confirmedFormatter(d) {
+  const tdClass = diffClass(d.confirmedDiffDiff, "", "confirmed-diff-diff-down");
+  return `<td class="${tdClass}">${d.confirmed.toLocaleString()}${getColoredDiff(d.confirmedDiff, "diff-red", "diff-green")}</td>`
+}
+function activeFormatter(d) {
+  const tdClass = diffClass(d.activeDiffDiff, "active-diff-diff-up", "active-diff-diff-down");
+  return `<td class="${tdClass}">${d.active.toLocaleString()}${getColoredDiff(d.activeDiff, "diff-red", "diff-green")}</td>`;
 }
 function displayData(){
     var dates = convertData(data);
@@ -267,7 +296,11 @@ function displayData(){
       dates[d]["Total"] = totalStat(dates[d]);
     });
     let d0 = dds[0];
-    var threshold = dates[d0]["Russia"].confirmed-1;
+    var threshold0 = dates[dds[0]]["Russia"].confirmed-1;
+    var threshold1 = dates[dds[1]]["Russia"].confirmed-1;
+    var threshold = threshold0;
+    if (threshold1 < threshold)
+      threshold = threshold1;
 
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     stat["Total"] = dates[d0]["Total"];
@@ -275,11 +308,11 @@ function displayData(){
 
     outputBetterStatHtmlTable("latestStat", stat, countries);
 
-    outputHistoryHtmlTable("confirmedHistory", "diff-red", "diff-green", dates, stat, countries, d => d.confirmed, d => d.confirmedDiff);
-    outputHistoryHtmlTable("recoveredHistory", "diff-green", "diff-red", dates, stat, countries, d => d.recovered, d => d.recoveredDiff);
-    outputHistoryHtmlTable("deathHistory", "diff-red", "diff-green", dates, stat, countries, d => d.deaths, d => d.deathsDiff);
-    outputHistoryHtmlTable("activeHistory", "diff-red", "diff-green", dates, stat, countries, d => d.active, d => d.activeDiff);
-    outputHistoryHtmlTable("fatalityHistory", "diff-red", "diff-green", dates, stat, countries, d => (100 * d.fatalityRate).toFixed(1), d => (100*d.fatalityRateDiff).toFixed(1));
-    outputHistoryHtmlTable("deathRateHistory", "diff-red", "diff-green", dates, stat, countries, d => (100 * d.deathRate).toFixed(1), d => (100*d.deathRateDiff).toFixed(1));
-    outputHistoryHtmlTable("deathsEstimatedHistory", "diff-red", "diff-green", dates, stat, countries, d => d.deathsEstimated.toFixed(0), d => d.deathsEstimatedDiff.toFixed(0));
+    outputHistoryHtmlTable("confirmedHistory",       dates, stat, countries, confirmedFormatter);
+    outputHistoryHtmlTable("recoveredHistory",       dates, stat, countries, d => `<td>${d.recovered.toLocaleString()}${getColoredDiff(d.recoveredDiff, "diff-green", "diff-red")}</td>`);
+    outputHistoryHtmlTable("deathHistory",           dates, stat, countries, d => `<td>${d.deaths.toLocaleString()}${getColoredDiff(d.deathsDiff, "diff-red", "diff-green")}</td>`);
+    outputHistoryHtmlTable("activeHistory",          dates, stat, countries, activeFormatter);
+    outputHistoryHtmlTable("fatalityHistory",        dates, stat, countries, d => `<td>${(100 * d.fatalityRate).toFixed(1).toLocaleString()}${getColoredDiff((100*d.fatalityRateDiff).toFixed(1), "diff-red", "diff-green")}</td>`);
+    outputHistoryHtmlTable("deathRateHistory",       dates, stat, countries, d => `<td>${(100 * d.deathRate).toFixed(1).toLocaleString()}${getColoredDiff((100*d.deathRateDiff).toFixed(1), "diff-red", "diff-green")}</td>`);
+    outputHistoryHtmlTable("deathsEstimatedHistory", dates, stat, countries, d => `<td>${d.deathsEstimated.toLocaleString()}${getColoredDiff(d.deathsEstimatedDiff.toFixed(0), "diff-red", "diff-green")}</td>`);
 }
