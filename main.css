@@ -24,3 +24,15 @@
 .diff-diff-undefined{
 //  background-color: lightblue;
 }
+tr:hover > td.death-rate-higher{
+  background-color: #ca973b;
+}
+tr > td.death-rate-higher{
+  background-color: orange;
+}
+tr:hover > td.death-rate-lower{
+  background-color: #6cb46c;
+}
+tr > td.death-rate-lower{
+  background-color: lightgreen;
+}
