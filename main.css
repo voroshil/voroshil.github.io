@@ -1,13 +1,37 @@
+th.rotated-text{
+  height: 150px;
+  white-space: nowrap;
+  padding: 0 !important;
+}
+th.rotated-text > div{
+  transform:
+    translate(13px, 0px)
+    rotate(270deg);
+  width: 30px;
+}
+th.rotated-text > div > span {
+  padding: 5px 10px;
+}
+.table td {
+  padding: 0.3rem;
+}
 .diff-red{
   font-size: 0.7em;
   color: red;
+  padding: 0 !important;
 }
 .diff-green{
   font-size: 0.7em;
   color: green;
 }
+tr:hover > td.diff-name-up{
+  background-color: #f0f0f0;
+}
 .diff-name-up{
   background-color: white;
+}
+tr:hover > td.diff-name-down{
+  background-color: #6cb46c;
 }
 .diff-name-down{
   background-color: lightgreen;
