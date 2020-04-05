@@ -39,8 +39,8 @@ tr:hover > td.diff-name-down{
 .confirmed-diff-diff-down{
 //  background-color: lightgreen;
 }
-.active-diff-diff-down{
-//  background-color: lightgreen;
+.active-diff-down{
+  background-color: lightgreen;
 }
 .active-diff-diff-up{
 //  background-color: red;

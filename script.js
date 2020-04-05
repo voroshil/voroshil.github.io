@@ -211,7 +211,7 @@ function outputBetterStatHtmlTable(elementId, stat, countries){
       let deathRateClass = "";
       if (stat[c].deathRate > 0.5){
           deathRateClass = "death-rate-higher"
-      }else if (stat[c].deathRate < 0.3){
+      }else if (stat[c].deathRate < 0.1){
           deathRateClass = "death-rate-lower"
       }
       let activeClass = "";
@@ -272,25 +272,28 @@ function outputHistoryHtmlTable(elementId, dates, stat, countries, formatter){
     let table = document.getElementById(elementId);
     table.innerHTML = html;
 }
-function diffClass(v, classUp, classDown){
+function diffClassTriple(v, lowBound, highBound, classUp, classDown){
   if (v === undefined)
     return "diff-diff-undefined";
-  if (v < 0)
+  if (v < lowBound)
     return classDown;
-  if (v > 0)
+  if (v > highBound)
     return classUp;
   return "";
+}
+function diffClass(v, classUp, classDown){
+  return diffClassTriple(v, 0, 0, classUp, classDown)
 }
 function confirmedFormatter(d) {
   const tdClass = diffClass(d.confirmedDiffDiff, "", "confirmed-diff-diff-down");
   return `<td class="${tdClass}">${d.confirmed.toLocaleString()}${getColoredDiff(d.confirmedDiff, "diff-red", "diff-green")}</td>`
 }
 function activeFormatter(d) {
-  const tdClass = diffClass(d.activeDiffDiff, "active-diff-diff-up", "active-diff-diff-down");
+  const tdClass = diffClass(d.activeDiff, "active-diff-up", "active-diff-down");
   return `<td class="${tdClass}" align="right">${d.active.toLocaleString()}${getColoredDiff(d.activeDiff, "diff-red", "diff-green")}</td>`;
 }
 function deathRateFormatter(d) {
-  const tdClass = diffClass(d.deathRate - 0.5, "death-rate-higher", "death-rate-lower");
+  const tdClass = diffClassTriple(d.deathRate, 0.1, 0.5, "death-rate-higher", "death-rate-lower");
   return `<td class="${tdClass}">${(100 * d.deathRate).toFixed(1).toLocaleString()}${getColoredDiff((100*d.deathRateDiff).toFixed(1), "diff-red", "diff-green")}</td>`;
 }
 function recoveredFormatter(d) {
