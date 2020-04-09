@@ -37,7 +37,7 @@ tr:hover > td.diff-name-down{
   background-color: lightgreen;
 }
 .confirmed-diff-diff-down{
-//  background-color: lightgreen;
+  background-color: lightgreen;
 }
 .active-diff-down{
   background-color: lightgreen;
@@ -47,6 +47,9 @@ tr:hover > td.diff-name-down{
 }
 .diff-diff-undefined{
 //  background-color: lightblue;
+}
+.deaths-diff-diff-down{
+  background-color: lightgreen;
 }
 tr:hover > td.death-rate-higher{
   background-color: #ca973b;

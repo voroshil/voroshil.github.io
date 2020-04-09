@@ -12,7 +12,7 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Последние</a>
+    <a class="nav-link" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="false">Последние</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="confirmed-history-tab" data-toggle="tab" href="#confirmed-history" role="tab" aria-controls="confirmed-history" aria-selected="false">Зараженные</a>
@@ -35,9 +35,12 @@
   <li class="nav-item">
     <a class="nav-link" id="deaths-estimated-history-tab" data-toggle="tab" href="#deaths-estimated-history" role="tab" aria-controls="deaths-estimated-history" aria-selected="false">Прогноз</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="graph-tab" data-toggle="tab" href="#graph" role="tab" aria-controls="graph" aria-selected="true">Графики</a>
+  </li>
 </ul>
 <div class="tab-content">
-  <div class="tab-pane active" id="latest" role="tabpanel" aria-labelledby="latest-tab">
+  <div class="tab-pane" id="latest" role="tabpanel" aria-labelledby="latest-tab">
     <div class="col-sm-4">
       <table class="table table-condensed table-hover" border="1">
         <thead>
@@ -77,12 +80,22 @@
   <div class="tab-pane" id="deaths-estimated-history" role="tabpanel" aria-labelledby="deaths-estimated--history-tab">
     <table id = "deathsEstimatedHistory" class="table table-condensed table-hover"></table>
   </div>
+  <div class="tab-pane-active" id="graph" role="tabpanel" aria-labelledby="graph-tab">
+    <table>
+      <tbody id="graphTableBody">
+      <tr><td><h4>Россия</h4><div id = "graphRussia"></div></td><td><h4>Италия</h4><div id = "graphItaly"></div></td></tr>
+      <tr><td><h4>США</h4><div id = "graphUS"></div></td><td><h4>Япония</h4><div id = "graphJapan"></div></td></tr>
+      <tr><td><h4>Германия</h4><div id = "graphGermany"></div></td><td><h4>Китай</h4><div id = "graphChina"></div></td></tr>
+      <tbody>
+    </table>
+  </div>
 </div>
 
 <script language="javascript" src="vendor/jquery-3.4.1.min.js"></script>
 <script language="javascript" src="vendor/popper.min.js"></script>
 <script language="javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script language="javascript" src="vendor/moment.js"></script>
+<script language="javascript" src="vendor/d3.js"></script>
 
 <script language="javascript" src="timeseries.js"></script>
 <script language="javascript" src="script.js"></script>
