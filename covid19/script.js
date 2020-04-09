@@ -260,10 +260,12 @@ function onCurrentUpdate(id){
   el = document.getElementById("recovered"+id);
   if (el !== null)
     obj.recovered = parseInt(el.value);
-
+  el = document.getElementById("modified"+id);
+  if (el !== null){
+    el.innerHTML = "сохранено";
+  }
   console.log(obj)
   localStorage["covid"+id] = JSON.stringify(obj);
-  console.log(localStorage);
 }
 function outputBetterStatHtmlTableForm(elementId, stat, countries){
     let html = "";
@@ -302,7 +304,7 @@ function outputBetterStatHtmlTableForm(elementId, stat, countries){
       html += `<td align="right" class="${deathRateClass}">${(100 * stat[c].deathRate).toFixed(1)}${deathRateDiff}</td>`
       html += `<td align="right">${(100 * stat[c].somethingRate).toFixed(1)}${somethingRateDiff}</td>`
       html += `<td align="right">${stat[c].deathsEstimated.toLocaleString()}${deathsEstimatedDiff}</td>`
-      html += `<td><button onClick="${cb}">Обновить</button></td>`
+      html += `<td><button onClick="${cb}">Сохранить</button><span id="modified${cid}"</span></td>`
       html += "</tr>";
     });
     let table = document.getElementById(elementId);
@@ -398,10 +400,8 @@ function outputGraph(id, d, accessor, width, height, yName){
     for(var j=0; j<5; j++){
       var idx1 = +i-j;
       var idx2 = +i+j;
-      if (idx1 >=0 && data[idx1] !== undefined){
+      if (idx1 >=0 && idx2 >=0 && data[idx1] !== undefined && data[idx2] !== undefined){
         vs.push(data[idx1].v)
-      }
-      if (idx2>=0 && data[idx2] !== undefined){
         vs.push(data[idx2].v)
       }
     }
@@ -410,17 +410,20 @@ function outputGraph(id, d, accessor, width, height, yName){
     cnt = 0
     vs.forEach(v => { vsa += v; cnt += 1 })
     if (cnt > 0){
-      data[i].vsa = vsa / cnt
+      data[i].vsa = Math.round(vsa / cnt)
     }else{
       data[i].vsa = 0
     }
   })
-  Object.assign(data, {x: "Дни", y: yName});
+  const vsa_max = d3.max(data, d => d.vsa)
+  const idx_max = data.findIndex(d => d.vsa === vsa_max)
+  const rising = idx_max === (data.length - 1) ? "(Растет)" : ""
+  Object.assign(data, {x: "Дни", y: yName + rising});
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
   y = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.v)]).nice()
+        .domain([0, d3.max(data, d => d.v)])
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
@@ -434,12 +437,12 @@ function outputGraph(id, d, accessor, width, height, yName){
 
   yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
-      .call(d3.axisLeft(y).ticks(null, "").tickFormat(x => x.toLocaleString()))
-      .call(g => g.select(".domain").remove())
+      .call(d3.axisLeft(y).ticks(6).tickFormat(x => x.toLocaleString()))
+//      .call(g => g.select(".domain").remove())
       .call(g => g.append("text")
           .attr("x", -margin.left)
           .attr("y", 10)
-          .attr("fill", "currentColot")
+          .attr("fill", "currentColor")
           .attr("text-anchor", "start")
           .text(data.y))
 
@@ -457,12 +460,13 @@ function outputGraph(id, d, accessor, width, height, yName){
       .attr("opacity", 1)
       .attr("x", d => x(d.d)+1)
       .attr("width", d => width / data.length-2)
+      .attr("fill", d => d.vsa === vsa_max ? "steelblue" : "orange")
       .attr("y", d => y(d.v))
       .attr("height", d => y(0)-y(d.v));
 
     line = d3.line()
       .defined(d => !isNaN(d.vsa))
-      .x(d => x(d.d))
+      .x(d => x(d.d) + width /data.length - 2)
       .y(d => y(d.vsa))
 
     svg.append("path")
@@ -502,7 +506,7 @@ function outputDeathRecoveryGraph(id, d, width, height){
 
   yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
-      .call(d3.axisLeft(y).ticks(null, "").tickFormat(x => x.toLocaleString()))
+      .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
       .call(g => g.select(".domain").remove())
       .call(g => g.append("text")
           .attr("x", -margin.left)
@@ -620,7 +624,7 @@ function displayData(){
     if (tbody !== null)
         tbody.innerHTML = htmlRows;
     const width = 300
-    const height = 200
+    const height = 160
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = c.replace(" ","").replace(",","");
