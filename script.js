@@ -316,8 +316,8 @@ function somethingRateFormatter(d) {
 function deathsEstimatedFormatter(d) {
   return `<td align="right">${d.deathsEstimated.toLocaleString()}${getColoredDiff(d.deathsEstimatedDiff.toFixed(0), "diff-red", "diff-green")}</td>`;
 }
-function outputGraph(id, d, accessor, width, height){
-  const margin = {top: 20, right: 20, bottom: 100, left: 40};
+function outputGraph(id, d, accessor, width, height, yName){
+  const margin = {top: 20, right: 20, bottom: 100, left: 70};
   var data = []
   d.forEach(k => {
     data.push({d: new Date(1000 * k.date), v:accessor(k)})
@@ -344,6 +344,7 @@ function outputGraph(id, d, accessor, width, height){
       data[i].vsa = 0
     }
   })
+  Object.assign(data, {x: "Дни", y: yName});
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
@@ -406,6 +407,70 @@ function outputGraph(id, d, accessor, width, height){
     svg.append("g")
       .call(yAxis);
 }
+function outputDeathRecoveryGraph(id, d, width, height){
+  const margin = {top: 20, right: 20, bottom: 100, left: 70};
+  var data = []
+  d.forEach(k => {
+    data.push({d: new Date(1000 * k.date), deaths:k.deathsDiff, recovery: k.recoveredDiff})
+  })
+  x = d3.scaleTime()
+        .domain(d3.extent(data.map(d => d.d))).nice()
+        .range([margin.left, width - margin.right]);
+  y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d3.max([d.deaths,d.recovery]))]).nice()
+        .range([height - margin.bottom, margin.top]);
+  xAxis = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+      .call(d3.axisBottom(x).tickSizeOuter(0))
+      .selectAll("text")
+      .attr("x", 10)
+      .attr("y", 0)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(90)")
+      .attr("text-anchor", "start");
+
+  yAxis = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(null, ""))
+      .call(g => g.select(".domain").remove())
+      .call(g => g.append("text")
+          .attr("x", -margin.left)
+          .attr("y", 10)
+          .attr("fill", "currentColot")
+          .attr("text-anchor", "start")
+          .text(data.y))
+
+    const svg = d3.select("#"+id)
+      .append("svg")
+//      .attr("viewBox", [0, 0, width, height])
+      .attr("width", width)
+      .attr("height", height);
+    svg.append("g")
+      .attr("fill", "red")
+      .selectAll("rect")
+      .data(data)
+      .join("rect")
+      .attr("opacity", 0.5)
+      .attr("x", d => x(d.d)+1)
+      .attr("width", d => width / data.length-2)
+      .attr("y", d => y(d.deaths))
+      .attr("height", d => y(0)-y(d.deaths));
+    svg.append("g")
+      .attr("fill", "green")
+      .selectAll("rect")
+      .data(data)
+      .join("rect")
+      .attr("opacity", 0.5)
+      .attr("x", d => x(d.d)+1)
+      .attr("width", d => width / data.length-2)
+      .attr("y", d => y(d.recovery))
+      .attr("height", d => y(0)-y(d.recovery));
+
+    svg.append("g")
+      .call(xAxis);
+    svg.append("g")
+      .call(yAxis);
+}
 
 function displayData(){
     var dates = convertData(data);
@@ -445,32 +510,32 @@ function displayData(){
     outputHistoryHtmlTable("deathsEstimatedHistory", dates, stat, countries, deathsEstimatedFormatter);
 
     tbody = document.getElementById("graphTableBody")
-    var cnt = 0
-    const cols = 3
     var htmlRows = ""
     countries.forEach(c => {
       if (data[c] !== undefined){
-        if (cnt === 0){
-          htmlRows += "<tr>";
-        }
-        htmlRows += `<td><h4>${c}</h4><div id="graph${c}"></div></td>`
-
-        cnt = cnt + 1
-        if (cnt === cols){
-          htmlRows += "</tr>";
-          cnt = 0
-        }
+        id = c.replace(" ","").replace(",","")
+        var name = c;
+        if (names[c] !== undefined)
+          name = names[c];
+        htmlRows += "<tr>"
+        htmlRows +=`<td>${name}</td>`;
+        htmlRows +=`<td><div id="graph${id}"></div></td>`;
+        htmlRows +=`<td><div id="graphDeathRecovery${id}"></div></td>`;
+        htmlRows +=`<td><div id="graphActive${id}"></div></td>`;
+        htmlRows +="</tr>"
       }
     })
-    if(cnt < cols){
-          htmlRows += "</tr>";
-    }
     tbody.innerHTML = htmlRows;
     const width = 300
     const height = 250
     countries.forEach(c => {
       if (data[c] !== undefined){
-        outputGraph("graph"+c, data[c], d => d.confirmedDiff, width, height)
+        const id = c.replace(" ","").replace(",","");
+        outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, "Зараженные")
+        outputGraph("graphActive"+id, data[c], d => d.active, width, height, "Болеющие")
+        outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height)
+      }else{
+        console.log(c);
       }
     })
 }
