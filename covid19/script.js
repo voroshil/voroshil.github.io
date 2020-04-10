@@ -8,17 +8,30 @@ var names = {
   "China": "Китай",
   "Czechia" : "Чехия",
   "Denmark": "Дания",
+  "Ecuador": "Эквадор",
   "France": "Франция",
   "Germany": "Германия",
+  "Japan": "Япония",
+  "India": "Индия",
+  "Indonesia": "Индонезия",
   "Iran": "Иран",
   "Ireland": "Ирландия",
   "Israel": "Израиль",
   "Italy": "Италия",
   "Korea, South": "Ю.Корея",
+  "Luxembourg": "Люксембург",
+  "Malaysia": "Малайзия",
+  "Mexico" :"Мексика",
   "Netherlands": "Голландия",
   "Norway": "Норвегия",
+  "Pakistan": "Пакистан",
+  "Philippines": "Филиппины",
+  "Poland": "Польша",
+  "Peru": "Перу",
   "Portugal": "Португалия",
+  "Romania": "Румыния",
   "Russia": "Россия",
+  "Saudi Arabia": "Саудовская Аравия", 
   "Spain": "Испания",
   "Sweden": "Швеция",
   "Switzerland": "Швейцария",
@@ -423,9 +436,11 @@ function outputGraph(id, d, accessor, width, height, yName){
   data.pop();
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const vsa_max = d3.max(data, d => d.vsa)
+  const v_max = d3.max(data, d => d.v)
+
   const idx_max = data.findIndex(d => d.vsa === vsa_max)
-  const rising = idx_max === (data.length - 1) ? "(Растет)" : ""
-  Object.assign(data, {x: "Дни", y: yName + rising});
+  const rising = idx_max === (data.length - 1) ? ", Растет" : ""
+  Object.assign(data, {x: "Дни", y: yName + "Макс: "+(v_max.toLocaleString())+rising});
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
@@ -447,7 +462,7 @@ function outputGraph(id, d, accessor, width, height, yName){
       .call(d3.axisLeft(y).ticks(6).tickFormat(x => x.toLocaleString()))
 //      .call(g => g.select(".domain").remove())
       .call(g => g.append("text")
-          .attr("x", -margin.left)
+          .attr("x", -margin.left+5)
           .attr("y", 10)
           .attr("fill", "currentColor")
           .attr("text-anchor", "start")
@@ -492,7 +507,7 @@ function outputGraph(id, d, accessor, width, height, yName){
 function outputDeathRecoveryGraph(id, d, width, height){
   if (document.getElementById(id) == null)
     return;
-  const margin = {top: 20, right: 20, bottom: 50, left: 70};
+  const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
     data.push({d: new Date(1000 * k.date), deaths:k.deathsDiff, recovery: k.recoveredDiff})
@@ -500,6 +515,22 @@ function outputDeathRecoveryGraph(id, d, width, height){
   data.pop();
   calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
   calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
+  const deathsSA_max = d3.max(data, d => d.deathsSA)
+  const recoverySA_max = d3.max(data, d => d.recoverySA)
+
+  const deaths_max = d3.max(data, d => d.deaths)
+  const recovery_max = d3.max(data, d => d.recovery)
+
+  const recoverySA_idx = data.findIndex(d => d.recoverySA === recoverySA_max)
+  const deathsSA_idx = data.findIndex(d => d.deathsSA === deathsSA_max)
+  const risingDeaths = deathsSA_idx === (data.length - 1) ? ", Растет" : ""
+  const risingRecovery = recoverySA_idx === (data.length - 1) ? ", Растет" : ""
+  Object.assign(data, {
+    x: "Дни", 
+    yDeaths: "Смерти, Макс: "+(deaths_max.toLocaleString())+risingDeaths, 
+    yRecovery: "Выздоровления, Макс: "+(recovery_max.toLocaleString())+risingRecovery
+  });
+
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
@@ -520,12 +551,20 @@ function outputDeathRecoveryGraph(id, d, width, height){
       .attr("transform", `translate (${margin.left},0)`)
       .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
       .call(g => g.select(".domain").remove())
-      .call(g => g.append("text")
-          .attr("x", -margin.left)
+      .call(g => g
+          .append("text")
+          .append("tspan")
+          .attr("x", -margin.left+5)
           .attr("y", 10)
-          .attr("fill", "currentColot")
+          .attr("fill", "red")
           .attr("text-anchor", "start")
-          .text(data.y))
+          .text(data.yDeaths)
+          .append("tspan")
+          .attr("x", -margin.left+5)
+          .attr("y", 25)
+          .attr("fill", "green")
+          .attr("text-anchor", "start")
+          .text(data.yRecovery))
 
     const svg = d3.select("#"+id)
       .append("svg")
@@ -724,7 +763,7 @@ function displayData(){
         htmlRows +=`<td>${name}</td>`;
         htmlRows +=`<td><div id="graph${id}"></div></td>`;
         htmlRows +=`<td><div id="graphDeathRecovery${id}"></div></td>`;
-        htmlRows +=`<td><div id="graphDeathVsRecovery${id}"></div></td>`;
+//        htmlRows +=`<td><div id="graphDeathVsRecovery${id}"></div></td>`;
         htmlRows +=`<td><div id="graphActive${id}"></div></td>`;
         htmlRows +="</tr>"
       }
@@ -737,8 +776,8 @@ function displayData(){
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = c.replace(" ","").replace(",","");
-        outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, "Зараженные")
-        outputGraph("graphActive"+id, data[c], d => d.active, width, height, "Болеющие")
+        outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, "")
+        outputGraph("graphActive"+id, data[c], d => d.active, width, height, "")
         outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height)
 //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
       }else{
