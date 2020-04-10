@@ -75,6 +75,7 @@ function totalStat(data){
         deathsEstimatedDiff: 0,
     };
     Object.keys(data).forEach(country => {
+        if (country !== "Total"){
         let d = data[country];
         s.confirmed += d.confirmed;
         s.deaths += d.deaths;
@@ -88,6 +89,7 @@ function totalStat(data){
         s.activeDiff += d.activeDiff;
         s.closedDiff += d.closedDiff;
         s.deathsEstimatedDiff += d.deathsEstimatedDiff;
+        }
     });
     s.somethingRate = s.confirmed !== 0 ? s.deaths / s.confirmed : 0;
     s.deathRate = s.closed !== 0 ? s.deaths / s.closed : 0;
@@ -121,7 +123,7 @@ function countryStat(data, codes, index){
       return stat;
 }
 function addCurrent(data){
-      const now = moment().format("YYYY-MM-DD");
+      var stringMode = data[Object.keys(data)[0]].findIndex(d => typeof d.date === "number") < 0
       Object.keys(data).forEach(country => {
         const id = countryId(country);
         try{
@@ -132,23 +134,32 @@ function addCurrent(data){
         }catch(e){
           currentValue = undefined
         }
-        cv = Object.assign({}, data[country][data[country].length-1], {date: now});
+        last = data[country][data[country].length-1]
+        let now = undefined
+        if (stringMode){
+          now = moment().format("YYYY-M-D");
+        }else{
+          now = moment(moment().format("YYYY-MM-DD"), "YYYY-MM-DD").unix()
+        }
+        cv = Object.assign({}, last, {date: now});
         if (currentValue !== undefined){
           cv = Object.assign(cv, currentValue) 
         }
-        data[country].push(cv);
+        if (now !== undefined && last.date !== now && country !== "Total"){
+          data[country].push(cv);
+        }else if (now !== undefined && last.date === now){
+          data[country][data[country].length-1] = cv
+        }
       });
-
 }
 function convertData(data){
       var dates = {}
 
       Object.keys(data).forEach(country => {
           let prevD = undefined;
-          dates
           // preprocessing
           data[country].forEach(dd => {
-              let d = moment(dd.date, "YYYY-MM-DD").unix();
+              let d = typeof dd.date === "string" ? moment(dd.date, "YYYY-M-D").unix() : dd.date;
               if (typeof(dates[d]) === "undefined"){
                 dates[d] = {}
               }
@@ -277,9 +288,69 @@ function onCurrentUpdate(id){
   if (el !== null){
     el.innerHTML = "сохранено";
   }
-  console.log(obj)
   localStorage["covid"+id] = JSON.stringify(obj);
+
+  addCurrent(data)
+  var dates = convertData(data);
+  let dds = Object.keys(dates);
+    dds.sort((a,b) => {
+      if (a > b)
+        return -1;
+      if (a < b)
+        return 1;
+      return 0;
+  });
+//  dates[dds[0]]["Total"] = totalStat(dates[dds[0]]);
+//  currentStat["Total"] = dates[dds[0]]["Total"];
+//  outputBetterStatHtmlTableForm("currentStat", currentStat, countries);
+  var currentStat = countryStat(data, names, 0);
+
+  const cid = id
+  const countries = Object.keys(currentStat)
+  const cidx = countries.findIndex(d => countryId(d) === cid)
+  if (cidx < 0)
+    return
+  const c = countries[cidx]
+
+  el = document.getElementById("currentRow"+cid)
+  if (el === null)
+    return
+
+  let confirmedDiff = getColoredDiff(currentStat[c].confirmedDiff, "diff-red", "diff-green");
+  let recoveredDiff = getColoredDiff(currentStat[c].recoveredDiff, "diff-green", "diff-red");
+  let deathsDiff = getColoredDiff(currentStat[c].deathsDiff, "diff-red", "diff-green");
+  let activeDiff = getColoredDiff(currentStat[c].activeDiff, "diff-red", "diff-green");
+  let nameClass  = currentStat[c].activeDiff < 0 ? "diff-name-down" : "diff-name-up";
+  let deathRateDiff = getColoredDiff((100 * currentStat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green");
+  let somethingRateDiff = getColoredDiff((100 * currentStat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green");
+  let deathsEstimatedDiff = "";
+  if (currentStat[c].deathsEstimatedDiff !== undefined){
+      deathsEstimatedDiff = getColoredDiff(currentStat[c].deathsEstimatedDiff, "diff-red", "diff-green");
+  }
+  let deathRateClass = "";
+  if (currentStat[c].deathRate > 0.5){
+      deathRateClass = "death-rate-higher"
+  }else if (currentStat[c].deathRate < 0.1){
+      deathRateClass = "death-rate-lower"
+  }
+  let activeClass = "";
+  if (currentStat[c].activeDiff < 0){
+      activeClass = "death-rate-lower"
+  }
+  cb = `onCurrentUpdate('${cid}');`
+  html = "";
+  html += `<td>${currentStat[c].code}</td>`;
+  html += `<td align="right"><input id="confirmed${cid}" value="${currentStat[c].confirmed}"/>${confirmedDiff}</td>`;
+  html += `<td align="right"><input id="recovered${cid}" value="${currentStat[c].recovered}"/>${recoveredDiff}</td>`
+  html += `<td align="right"><input id="deaths${cid}" value="${currentStat[c].deaths}"/>${deathsDiff}</td>`
+  html += `<td align="right" class="${activeClass}">${currentStat[c].active.toLocaleString()}${activeDiff}</td>`
+  html += `<td align="right" class="${deathRateClass}">${(100 * currentStat[c].deathRate).toFixed(1)}${deathRateDiff}</td>`
+  html += `<td align="right">${(100 * currentStat[c].somethingRate).toFixed(1)}${somethingRateDiff}</td>`
+  html += `<td align="right">${currentStat[c].deathsEstimated.toLocaleString()}${deathsEstimatedDiff}</td>`
+  html += `<td><button onClick="${cb}">Сохранить</button><span id="modified${cid}"</span></td>`
+  el.innerHTML = html
 }
+
 function outputBetterStatHtmlTableForm(elementId, stat, countries){
     let html = "";
     countries.forEach(c => {
@@ -308,7 +379,7 @@ function outputBetterStatHtmlTableForm(elementId, stat, countries){
           activeClass = "death-rate-lower"
       }
       cb = `onCurrentUpdate('${cid}');`
-      html += "<tr>";
+      html += `<tr id ="currentRow${cid}">`;
       html += `<td>${stat[c].code}</td>`;
       html += `<td align="right"><input id="confirmed${cid}" value="${stat[c].confirmed}"/>${confirmedDiff}</td>`;
       html += `<td align="right"><input id="recovered${cid}" value="${stat[c].recovered}"/>${recoveredDiff}</td>`
@@ -706,8 +777,9 @@ function displayData(){
       return 0;
     });
     dds.forEach(d => {
-      dates[d]["Total"] = totalStat(dates[d]);
+      dates[d]["Total"] = Object.assign(totalStat(dates[d]), {date:d});
     });
+
     v = localStorage["covidTotal"]
     if (v !== undefined){
       try{ v = JSON.parse(v) } catch { v = undefined }
@@ -722,11 +794,11 @@ function displayData(){
     }
     data["Total"] = []
     dds.forEach(d => {
-      data["Total"].unshift(Object.assign(dates[d]["Total"],{date: d}));
+      obj = Object.assign(dates[d]["Total"],{date: +d})
+      data["Total"].unshift(obj);
     })
     var stat = countryStat(data, names, 1);
     var currentStat = countryStat(data, names, 0);
-
     let d0 = dds[1];
     var threshold0 = dates[dds[1]]["Japan"].confirmed-1;
     var threshold1 = dates[dds[2]]["Japan"].confirmed-1;
