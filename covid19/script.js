@@ -389,6 +389,29 @@ function somethingRateFormatter(d) {
 function deathsEstimatedFormatter(d) {
   return `<td align="right">${d.deathsEstimated.toLocaleString()}${getColoredDiff(d.deathsEstimatedDiff.toFixed(0), "diff-red", "diff-green")}</td>`;
 }
+function calcSA(data, width, getter, setter){
+  Object.keys(data).forEach(i => {
+    vs = []
+    for(var j=0; j<width; j++){
+      var idx1 = +i-j;
+      var idx2 = +i+j;
+      if (idx1 >=0 && idx2 >=0 && data[idx1] !== undefined && data[idx2] !== undefined){
+        vs.push(getter(data[idx1]))
+        vs.push(getter(data[idx2]))
+      }
+    }
+    vs.push(getter(data[i]));
+    vsa = 0
+    cnt = 0
+    vs.forEach(v => { vsa += v; cnt += 1 })
+    if (cnt > 0){
+      setter(data[i], Math.round(vsa / cnt))
+    }else{
+      setter(data[i], 0)
+    }
+  })
+}
+
 function outputGraph(id, d, accessor, width, height, yName){
   const margin = {top: 20, right: 20, bottom: 50, left: 70};
   var data = []
@@ -396,26 +419,7 @@ function outputGraph(id, d, accessor, width, height, yName){
     data.push({d: new Date(1000 * k.date), v:accessor(k)})
   })
   data.pop();
-  Object.keys(data).forEach(i => {
-    vs = []
-    for(var j=0; j<5; j++){
-      var idx1 = +i-j;
-      var idx2 = +i+j;
-      if (idx1 >=0 && idx2 >=0 && data[idx1] !== undefined && data[idx2] !== undefined){
-        vs.push(data[idx1].v)
-        vs.push(data[idx2].v)
-      }
-    }
-    vs.push(data[i].v);
-    vsa = 0
-    cnt = 0
-    vs.forEach(v => { vsa += v; cnt += 1 })
-    if (cnt > 0){
-      data[i].vsa = Math.round(vsa / cnt)
-    }else{
-      data[i].vsa = 0
-    }
-  })
+  calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const vsa_max = d3.max(data, d => d.vsa)
   const idx_max = data.findIndex(d => d.vsa === vsa_max)
   const rising = idx_max === (data.length - 1) ? "(Растет)" : ""
@@ -490,6 +494,8 @@ function outputDeathRecoveryGraph(id, d, width, height){
     data.push({d: new Date(1000 * k.date), deaths:k.deathsDiff, recovery: k.recoveredDiff})
   })
   data.pop();
+  calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
+  calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
@@ -543,6 +549,31 @@ function outputDeathRecoveryGraph(id, d, width, height){
       .attr("y", d => y(d.recovery))
       .attr("height", d => y(0)-y(d.recovery));
 
+    lineDeaths = d3.line()
+      .defined(d => !isNaN(d.deathsSA))
+      .x(d => x(d.d) + width /data.length - 2)
+      .y(d => y(d.deathsSA))
+    lineRecovery = d3.line()
+      .defined(d => !isNaN(d.recoverySA))
+      .x(d => x(d.d) + width /data.length - 2)
+      .y(d => y(d.recoverySA))
+
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "green")
+      .attr("stroke-width", 1)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("d", lineRecovery);
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "red")
+      .attr("stroke-width", 1)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("d", lineDeaths);
     svg.append("g")
       .call(xAxis);
     svg.append("g")
