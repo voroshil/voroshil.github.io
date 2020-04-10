@@ -42,6 +42,20 @@ var names = {
   "Total": "В мире"
 };
 const countryId = c => c.replace(" ","").replace(",","").replace("`","").replace("'","")
+
+function checkUpdate(){
+  fetch("https://pomber.github.io/covid19/timeseries.json", {method: 'HEAD'})
+  .then(response => {
+    lastModifiedStr = response.headers.get('last-modified')
+    if (lastModifiedStr !== undefined && lastModifiedStr !== null){
+      el = document.getElementById("lastFileUpdate")
+      if (el !== null){
+        el.innerHTML = moment(lastModifiedStr).format("DD.MM.YYYY HH:MM");
+      }
+    }
+  });
+
+}
 function buildCountries(stat, threshold) {
     let countries = [];
     Object.keys(stat).forEach(c => {
