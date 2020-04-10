@@ -499,7 +499,7 @@ function calcSA(data, width, getter, setter){
 function outputGraph(id, d, accessor, width, height, yName){
   if (document.getElementById(id) == null)
     return;
-  const margin = {top: 20, right: 20, bottom: 50, left: 70};
+  const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
     data.push({d: new Date(1000 * k.date), v:accessor(k)})
@@ -508,10 +508,13 @@ function outputGraph(id, d, accessor, width, height, yName){
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const vsa_max = d3.max(data, d => d.vsa)
   const v_max = d3.max(data, d => d.v)
-
   const idx_max = data.findIndex(d => d.vsa === vsa_max)
   const rising = idx_max === (data.length - 1) ? ", Растет" : ""
-  Object.assign(data, {x: "Дни", y: yName + "Макс: "+(v_max.toLocaleString())+rising});
+  Object.assign(data, {
+    x: "Дни", 
+    yMax: "Макс: "+(v_max.toLocaleString()),
+    yLast: "Посл: " + (data[data.length-1].v.toLocaleString()+rising),
+    });
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
@@ -533,11 +536,18 @@ function outputGraph(id, d, accessor, width, height, yName){
       .call(d3.axisLeft(y).ticks(6).tickFormat(x => x.toLocaleString()))
 //      .call(g => g.select(".domain").remove())
       .call(g => g.append("text")
+          .append("tspan")
           .attr("x", -margin.left+5)
           .attr("y", 10)
           .attr("fill", "currentColor")
           .attr("text-anchor", "start")
-          .text(data.y))
+          .text(data.yMax)
+          .append("tspan")
+          .attr("x", -margin.left+5)
+          .attr("y", 25)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "start")
+          .text(data.yLast))
 
     const svg = d3.select("#"+id)
       .append("svg")
