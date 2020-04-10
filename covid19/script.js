@@ -523,12 +523,12 @@ function outputGraph(id, d, accessor, width, height, yName){
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickSizeOuter(0))
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d.%m")).tickSizeOuter(0))
       .selectAll("text")
-      .attr("x", 10)
+      .attr("x", -margin.bottom+10)
       .attr("y", 0)
       .attr("dy", ".35em")
-      .attr("transform", "rotate(90)")
+      .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
 
   yAxis = g => g
@@ -620,12 +620,12 @@ function outputDeathRecoveryGraph(id, d, width, height){
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickSizeOuter(0))
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d.%m")).tickSizeOuter(0))
       .selectAll("text")
-      .attr("x", 10)
+      .attr("x", -margin.bottom+10)
       .attr("y", 0)
       .attr("dy", ".35em")
-      .attr("transform", "rotate(90)")
+      .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
 
   yAxis = g => g
@@ -721,12 +721,12 @@ function outputDeathVsRecoveryGraph(id, d, width, height){
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickSizeOuter(0))
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d.%m")).tickSizeOuter(0))
       .selectAll("text")
-      .attr("x", 10)
+      .attr("x", -margin.bottom+10)
       .attr("y", 0)
       .attr("dy", ".35em")
-      .attr("transform", "rotate(90)")
+      .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
 
   yAxis = g => g
@@ -815,8 +815,8 @@ function displayData(){
     var threshold = threshold0;
     if (threshold1 < threshold)
       threshold = threshold1;
-    if (threshold > 3000)
-      threshold = 3000;
+    if (threshold > 4000)
+      threshold = 4000;
 
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     stat["Total"] = dates[dds[1]]["Total"];
