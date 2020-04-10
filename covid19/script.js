@@ -395,6 +395,7 @@ function outputGraph(id, d, accessor, width, height, yName){
   d.forEach(k => {
     data.push({d: new Date(1000 * k.date), v:accessor(k)})
   })
+  data.pop();
   Object.keys(data).forEach(i => {
     vs = []
     for(var j=0; j<5; j++){
@@ -488,6 +489,7 @@ function outputDeathRecoveryGraph(id, d, width, height){
   d.forEach(k => {
     data.push({d: new Date(1000 * k.date), deaths:k.deathsDiff, recovery: k.recoveredDiff})
   })
+  data.pop();
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
