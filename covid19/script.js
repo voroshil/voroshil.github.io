@@ -363,6 +363,8 @@ function onCurrentUpdate(id){
   html += `<td align="right">${currentStat[c].deathsEstimated.toLocaleString()}${deathsEstimatedDiff}</td>`
   html += `<td><button onClick="${cb}">Сохранить</button><span id="modified${cid}"</span></td>`
   el.innerHTML = html
+
+  updateGraphCurrent(countries)
 }
 
 function outputBetterStatHtmlTableForm(elementId, stat, countries){
@@ -516,19 +518,21 @@ function outputGraph(id, d, accessor, width, height, yName){
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
-    data.push({d: new Date(1000 * k.date), v:accessor(k)})
+    data.push({d: new Date(1000 * k.date), v:accessor(k), confirmed:k.confirmed})
   })
-  data.pop();
+  current = data.pop();
+  var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const vsa_max = d3.max(data, d => d.vsa)
   const v_max = d3.max(data, d => d.v)
   const idx_max = data.findIndex(d => d.vsa === vsa_max)
-  const rising = idx_max === (data.length - 1) ? ", Растет" : ""
+  const rising = idx_max === latest ? ", Растет" : ""
   Object.assign(data, {
     x: "Дни", 
     yMax: "Макс: "+(v_max.toLocaleString()),
-    yLast: "Посл: " + (data[data.length-1].v.toLocaleString()+rising),
-    });
+    yLast: "Посл: " + (data[latest].v.toLocaleString()+rising),
+  });
+
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
@@ -544,7 +548,6 @@ function outputGraph(id, d, accessor, width, height, yName){
       .attr("dy", ".35em")
       .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
-
   yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
       .call(d3.axisLeft(y).ticks(6).tickFormat(x => x.toLocaleString()))
@@ -789,6 +792,29 @@ function outputDeathVsRecoveryGraph(id, d, width, height){
       .call(yAxis);
 }
 
+function updateGraphCurrent(countries){
+    countries.forEach(c => {
+      if (data[c] !== undefined){
+        const id = countryId(c);
+        el = document.getElementById("confirmedDiffCurrent"+id)
+        if (el !== null){
+          el.innerHTML =  data[c][data[c].length - 1].confirmedDiff.toLocaleString()
+        }
+        el = document.getElementById("recoveredDiffCurrent"+id)
+        if (el !== null){
+          el.innerHTML =  data[c][data[c].length - 1].recovered.toLocaleString()
+        }
+        el = document.getElementById("deathsDiffCurrent"+id)
+        if (el !== null){
+          el.innerHTML =  data[c][data[c].length - 1].deathsDiff.toLocaleString()
+        }
+        el = document.getElementById("activeCurrent"+id)
+        if (el !== null){
+          el.innerHTML =  data[c][data[c].length - 1].active.toLocaleString()
+        }
+      }
+    })
+} 
 function displayData(){
     addCurrent(data);
     var dates = convertData(data);
@@ -856,7 +882,13 @@ function displayData(){
         if (names[c] !== undefined)
           name = names[c];
         htmlRows += "<tr>"
-        htmlRows +=`<td>${name}</td>`;
+        htmlRows +="<td>"
+        htmlRows += `<span>${name}</span><br/>`
+        htmlRows += `<span style="color:orange" id="confirmedDiffCurrent${id}"></span><br/>`
+        htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${id}"></span><br/>`
+        htmlRows += `<span style="color:red"  id="deathsDiffCurrent${id}"></span><br/>`
+        htmlRows += `<span style="color:orange"  id="activeCurrent${id}"></span><br/>`
+        htmlRows += "</td>";
         htmlRows +=`<td><div id="graph${id}"></div></td>`;
         htmlRows +=`<td><div id="graphDeathRecovery${id}"></div></td>`;
 //        htmlRows +=`<td><div id="graphDeathVsRecovery${id}"></div></td>`;
@@ -868,10 +900,10 @@ function displayData(){
     if (tbody !== null)
         tbody.innerHTML = htmlRows;
     const width = 300
-    const height = 160
+    const height = 180
     countries.forEach(c => {
       if (data[c] !== undefined){
-        const id = c.replace(" ","").replace(",","");
+        const id = countryId(c);
         outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, "")
         outputGraph("graphActive"+id, data[c], d => d.active, width, height, "")
         outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height)
@@ -880,4 +912,5 @@ function displayData(){
         console.log(c);
       }
     })
+    updateGraphCurrent(countries);
 }
