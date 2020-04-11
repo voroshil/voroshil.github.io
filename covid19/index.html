@@ -19,7 +19,7 @@
     <a class="nav-link" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="false">Последние</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="confirmed-history-tab" data-toggle="tab" href="#confirmed-history" role="tab" aria-controls="confirmed-history" aria-selected="false">Зараженные</a>
+    <a class="nav-link" id="confirmed-history-tab" data-toggle="tab" href="#confirmed-history" role="tab" aria-controls="confirmed-history" aria-selected="false">Заразившиеся</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="recovered-history-tab" data-toggle="tab" href="#recovered-history" role="tab" aria-controls="recovered-history" aria-selected="false">Вылечившиеся</a>
@@ -50,7 +50,7 @@
         <thead>
         <tr>
           <th>Страна</th>
-          <th align="right">Зараженных</th>
+          <th align="right">Заразившихся</th>
           <th>Выздоровлений</th>
           <th>Смертей</th>
           <th>Болеющих</th>
@@ -70,7 +70,7 @@
         <thead>
         <tr>
           <th>Страна</th>
-          <th align="right">Зараженных</th>
+          <th align="right">Заразившихся</th>
           <th>Выздоровлений</th>
           <th>Смертей</th>
           <th>Болеющих</th>
@@ -110,14 +110,20 @@
       <thead>
       <tr>
         <th>Страна</th>
-        <th>Прирост зараженных</th>
+        <th>Прирост заразившихся</th>
         <th>Смерти / Выздоровления</th>
 <!--        <th>Выздоровления - Смерти</th> -->
         <th>Болеющие</th>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>Ежедневный прирост зараженных. <br/>Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
+        <td>
+          Данные, введенные вручную</br>
+          <span style="color:orange">Заразившиеся</span>
+          <span style="color:green">Вылечившиеся(+/-)</span>
+          <span style="color:red">Смерти(+/-)</span>
+          <span style="color:orange">Болеющие</span>
+        </td>
+        <td>Ежедневный прирост заразившихся. <br/>Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
         <td>Ежедневнй прирост выздоровевших и умерших. <br/><span style="color:green;">Зеленая</span> и <span style="color:red;">красная</span> линии - центрированное скользящее среднее по 11 точкам</td>
         <td>Количество болеющих. <Br/>Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
       </tr>
