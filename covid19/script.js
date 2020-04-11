@@ -802,7 +802,7 @@ function updateGraphCurrent(countries){
         }
         el = document.getElementById("recoveredDiffCurrent"+id)
         if (el !== null){
-          el.innerHTML =  data[c][data[c].length - 1].recovered.toLocaleString()
+          el.innerHTML =  data[c][data[c].length - 1].recoveredDiff.toLocaleString()
         }
         el = document.getElementById("deathsDiffCurrent"+id)
         if (el !== null){
