@@ -259,7 +259,7 @@ function getColoredDiff(v, cp, cm){
       return "";
 }
 
-function outputBetterStatHtmlTable(stat, countries){
+function outputBetterStatHtmlTable(rowIdPrefix, stat, countries){
   const rows = countries.map(c => {
       return {
         id: countryId(c),
@@ -283,7 +283,7 @@ function outputBetterStatHtmlTable(stat, countries){
       }
   });
   rows.forEach(row => {
-    renderStatTableRow("latestRow"+row.id, row);
+    renderStatTableRow(rowIdPrefix+row.id, row);
   });
 }
 function onCurrentUpdate(id){
@@ -357,7 +357,7 @@ function onCurrentUpdate(id){
   updateGraphCurrent(countries, current)
 }
 
-function outputBetterStatHtmlTableForm(stat, countries){
+function outputBetterStatHtmlTableForm(rowIdPrefix, stat, countries){
   const rows = countries.map(c => { 
     return {
       id: countryId(c),
@@ -381,7 +381,7 @@ function outputBetterStatHtmlTableForm(stat, countries){
       }
   });
   rows.forEach(row => {
-    renderStatTableFormRow("currentRow"+row.id, row);
+    renderStatTableFormRow(rowIdPrefix+row.id, row);
   });
 }
 function diffClassTriple(v, lowBound, highBound, classUp, classDown){
@@ -852,19 +852,6 @@ function renderHistoryTable(elementId, params){
     html += "</tbody>";
     table.innerHTML = html;
 }
-function renderStatTable(elementId, rows){
-  let table = document.getElementById(elementId);
-  if (table === null)
-    return;
-
-  let html = "";
-  rows.forEach(row => {
-      html += `<tr id ="latestRow${row.id}"></tr>`;
-  });
-
-  table.innerHTML = html;
-
-}
 function renderStatTableRow(elementId, row){
   let table = document.getElementById(elementId);
   if (table === null)
@@ -879,20 +866,8 @@ function renderStatTableRow(elementId, row){
   html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
   html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
   html += `<td align="right">${row.deathsEstimated}${row.deathsEstimatedDiff}</td>`
-
   table.innerHTML = html;
 
-}
-function renderStatTableForm(elementId, rows){
-  let table = document.getElementById(elementId);
-  if (table === null)
-    return;
-
-  let html = "";
-  rows.forEach(row => {
-      html += `<tr id ="currentRow${row.id}"></tr>`;
-  });
-  table.innerHTML = html;
 }
 function renderStatTableFormRow(elementId, row){
   let el = document.getElementById(elementId);
@@ -911,6 +886,19 @@ function renderStatTableFormRow(elementId, row){
   html += `<td><button onClick="onCurrentUpdate('${row.id}');">Сохранить</button><span id="modified${row.id}"</span></td>`
   html += "</tr>";
   el.innerHTML = html;
+}
+function renderStatTable(elementId, rowIdPrefix, rows){
+  let table = document.getElementById(elementId);
+  if (table === null)
+    return;
+
+  let html = "";
+  rows.forEach(row => {
+      html += `<tr id ="${rowIdPrefix}${row.id}"></tr>`;
+  });
+
+  table.innerHTML = html;
+
 }
 
 function onLoad(){
@@ -955,11 +943,11 @@ function displayData(){
     cols.unshift({id: "Total", c:"Total", name:names["Total"]})
     rows = dds.map(d => {return {unix: d, date: moment.unix(d).format("DD.MM.YYYY")}})
 
-    renderStatTable("latestStat", cols);
-    renderStatTableForm("currentStat", cols);
+    renderStatTable("latestStat", "latestRow", cols);
+    renderStatTable("currentStat", "currentRow", cols);
 
-    outputBetterStatHtmlTable(dates[dds[0]], countries);
-    outputBetterStatHtmlTableForm(current, countries);
+    outputBetterStatHtmlTable("latestRow", dates[dds[0]], countries);
+    outputBetterStatHtmlTableForm("currentRow", current, countries);
 
     renderHistoryTable("confirmedHistory",       {rows:rows, dates:dates, cols:cols, formatter:confirmedFormatter});
     renderHistoryTable("recoveredHistory",       {rows:rows, dates:dates, cols:cols, formatter:recoveredFormatter});
@@ -1001,8 +989,8 @@ function displayData(){
     });
     var totalDates = convertData(totals)
 
-    outputBetterStatHtmlTable(totalDates[dds[0]], totalCountries);
-    outputBetterStatHtmlTableForm(currentTotal, totalCountries);
+    outputBetterStatHtmlTable("latestRow", totalDates[dds[0]], totalCountries);
+    outputBetterStatHtmlTableForm("currentRow", currentTotal, totalCountries);
 
     totalCountries.forEach(c => {
       let id = countryId(c);
