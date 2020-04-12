@@ -258,9 +258,10 @@ function getColoredDiff(v, cp, cm){
       return "";
 }
 
-function outputBetterStatHtmlTable(elementId, stat, countries){
-  const rows = countries.map(c => { 
+function outputBetterStatHtmlTable(stat, countries){
+  const rows = countries.map(c => {
       return {
+        id: countryId(c),
         name: stat[c].code,
         confirmed: stat[c].confirmed.toLocaleString(),
         recovered: stat[c].recovered.toLocaleString(),
@@ -280,7 +281,9 @@ function outputBetterStatHtmlTable(elementId, stat, countries){
         deathsEstimatedDiff: stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
       }
   });
-  renderStatTable(elementId, {rows: rows});
+  rows.forEach(row => {
+    renderStatTableRow("latestRow"+row.id, row);
+  });
 }
 function onCurrentUpdate(id){
 
@@ -345,30 +348,35 @@ function onCurrentUpdate(id){
   }
   renderStatTableFormRow("currentRow"+row.id, row);
 
+//  outputGraph("graph"+row.id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,currentTotal[c].confirmedDiff))
+//  outputGraph("graphActive"+row.id, totals[c], d => d.active, width, height, currentTotal[c].active)
+//  outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height)
+//  outputGraph("graphDeathRate"+row.id, totals[c], d => (100*d.deathRate), width, height, 100*currentTotal[c].deathRate)
+
   updateGraphCurrent(countries, current)
 }
 
-function outputBetterStatHtmlTableForm(elementId, countries){
+function outputBetterStatHtmlTableForm(stat, countries){
   const rows = countries.map(c => { 
     return {
       id: countryId(c),
-      name: current[c].code,
-      confirmed: current[c].confirmed,
-      recovered: current[c].recovered,
-      deaths: current[c].deaths,
-      active: current[c].active.toLocaleString(),
-      deathRate: (100 * current[c].deathRate).toFixed(1),
-      somethingRate: (100 * current[c].somethingRate).toFixed(1),
-      deathsEstimated: current[c].deathsEstimated.toLocaleString(),
-      confirmedDiff: getColoredDiff(current[c].confirmedDiff, "diff-red", "diff-green"),
-      recoveredDiff: getColoredDiff(current[c].recoveredDiff, "diff-green", "diff-red"),
-      deathsDiff: getColoredDiff(current[c].deathsDiff, "diff-red", "diff-green"),
-      activeDiff: getColoredDiff(current[c].activeDiff, "diff-red", "diff-green"),
-      deathRateDiff: getColoredDiff((100 * current[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"),
-      somethingRateDiff: getColoredDiff((100 * current[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"),
-      deathsEstimatedDiff: current[c].deathsEstimatedDiff !== undefined ? getColoredDiff(current[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
-      activeClass: current[c].activeDiff < 0 ? "death-rate-lower" : "",
-      deathRateClass: current[c].deathRate > 0.5 ? "death-rate-higher" : (current[c].deathRate < 0.1 ? "death-rate-lower" : ""),
+      name: stat[c].code,
+      confirmed: stat[c].confirmed,
+      recovered: stat[c].recovered,
+      deaths: stat[c].deaths,
+      active: stat[c].active.toLocaleString(),
+      deathRate: (100 * stat[c].deathRate).toFixed(1),
+      somethingRate: (100 * stat[c].somethingRate).toFixed(1),
+      deathsEstimated: stat[c].deathsEstimated.toLocaleString(),
+      confirmedDiff: getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green"),
+      recoveredDiff: getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red"),
+      deathsDiff: getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green"),
+      activeDiff: getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green"),
+      deathRateDiff: getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"),
+      somethingRateDiff: getColoredDiff((100 * stat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"),
+      deathsEstimatedDiff: stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
+      activeClass: stat[c].activeDiff < 0 ? "death-rate-lower" : "",
+      deathRateClass: stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
       }
   });
   rows.forEach(row => {
@@ -843,24 +851,33 @@ function renderHistoryTable(elementId, params){
     html += "</tbody>";
     table.innerHTML = html;
 }
-function renderStatTable(elementId, params){
+function renderStatTable(elementId, rows){
   let table = document.getElementById(elementId);
   if (table === null)
     return;
 
   let html = "";
-  params.rows.forEach(row => {
-      html += "<tr>";
-      html += `<td>${row.name}</td>`;
-      html += `<td align="right" >${row.confirmed}${row.confirmedDiff}</td>`;
-      html += `<td align="right">${row.recovered}${row.recoveredDiff}</td>`
-      html += `<td align="right">${row.deaths}${row.deathsDiff}</td>`
-      html += `<td align="right" class="${row.activeClass}">${row.active}${row.activeDiff}</td>`
-      html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
-      html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
-      html += `<td align="right">${row.deathsEstimated}${row.deathsEstimatedDiff}</td>`
-      html += "</tr>";
+  rows.forEach(row => {
+      html += `<tr id ="latestRow${row.id}"></tr>`;
   });
+
+  table.innerHTML = html;
+
+}
+function renderStatTableRow(elementId, row){
+  let table = document.getElementById(elementId);
+  if (table === null)
+    return;
+
+  let html = "";
+  html += `<td>${row.name}</td>`;
+  html += `<td align="right" >${row.confirmed}${row.confirmedDiff}</td>`;
+  html += `<td align="right">${row.recovered}${row.recoveredDiff}</td>`
+  html += `<td align="right">${row.deaths}${row.deathsDiff}</td>`
+  html += `<td align="right" class="${row.activeClass}">${row.active}${row.activeDiff}</td>`
+  html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
+  html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
+  html += `<td align="right">${row.deathsEstimated}${row.deathsEstimatedDiff}</td>`
 
   table.innerHTML = html;
 
@@ -914,13 +931,8 @@ function displayData(){
     preprocess(totals);
 
     current = createCurrent(data);
-    currentTotal = createCurrent(totals);
-
     Object.keys(current).forEach(country => {
       updateDiff(current[country], data[country][data[country].length-1]);
-    });
-    Object.keys(currentTotal).forEach(country => {
-      updateDiff(currentTotal[country], totals[country][totals[country].length-1]);
     });
 
     var dates = convertData(data);
@@ -938,12 +950,16 @@ function displayData(){
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     countries = buildCountries(dates[dds[0]], threshold);
     cols = countries.map(c => {return {id:countryId(c), c:c, name: names[c]}});
+    cols.unshift({id: "Europe", c:"Europe", name:names["Europe"]})
+    cols.unshift({id: "Total", c:"Total", name:names["Total"]})
 
     rows = dds.map(d => {return {unix: d, date: moment.unix(d).format("DD.MM.YYYY")}})
 
+    renderStatTable("latestStat", cols);
     renderStatTableForm("currentStat", cols);
-    outputBetterStatHtmlTable("latestStat", dates[dds[0]], countries);
-    outputBetterStatHtmlTableForm("currentStat", countries);
+
+    outputBetterStatHtmlTable(dates[dds[0]], countries);
+    outputBetterStatHtmlTableForm(current, countries);
 
     renderHistoryTable("confirmedHistory",       {rows:rows, dates:dates, cols:cols, formatter:confirmedFormatter});
     renderHistoryTable("recoveredHistory",       {rows:rows, dates:dates, cols:cols, formatter:recoveredFormatter});
@@ -985,6 +1001,10 @@ function displayData(){
     Object.keys(currentTotal).forEach(country => {
       updateDiff(currentTotal[country], totals[country][totals[country].length-1]);
     });
+    var totalDates = convertData(totals)
+
+    outputBetterStatHtmlTable(totalDates[dds[0]], totalCountries);
+    outputBetterStatHtmlTableForm(currentTotal, totalCountries);
 
     totalCountries.forEach(c => {
       let id = countryId(c);
