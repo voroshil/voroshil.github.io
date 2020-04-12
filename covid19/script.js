@@ -418,7 +418,7 @@ function calcSA(data, width, getter, setter){
     cnt = 0
     vs.forEach(v => { vsa += v; cnt += 1 })
     if (cnt > 0){
-      setter(data[i], Math.round(vsa / cnt))
+      setter(data[i], vsa / cnt)
     }else{
       setter(data[i], 0)
     }
@@ -748,6 +748,7 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows +=`<td><div id="graphDeathRecovery${c.id}"></div></td>`;
 //        htmlRows +=`<td><div id="graphDeathVsRecovery${c.id}"></div></td>`;
     htmlRows +=`<td><div id="graphActive${c.id}"></div></td>`;
+    htmlRows +=`<td><div id="graphDeathRate${c.id}"></div></td>`;
     htmlRows +="</tr>"
   })
 
@@ -911,7 +912,8 @@ function displayData(){
         outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, "")
         outputGraph("graphActive"+id, data[c], d => d.active, width, height, "")
         outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height)
-        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
+//        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
+        outputGraph("graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, "")
       }else{
         console.log(c);
       }
@@ -930,7 +932,8 @@ function displayData(){
       outputGraph("graph"+id, totals[c], d => d.confirmedDiff, width, height, "")
       outputGraph("graphActive"+id, totals[c], d => d.active, width, height, "")
       outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height)
-      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
+//      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
+        outputGraph("graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, "")
     });
     updateGraphCurrent(countries, current);
 }
