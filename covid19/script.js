@@ -435,9 +435,10 @@ function calcSA(data, width, getter, setter){
   })
 }
 
-function outputGraph(id, d, accessor, width, height, yName){
+function outputGraph(id, d, accessor, width, height, currentValue){
   if (document.getElementById(id) == null)
     return;
+
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
@@ -459,9 +460,15 @@ function outputGraph(id, d, accessor, width, height, yName){
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
+
+  yMax = d3.max(data, d => d.v)
+  if (currentValue !== undefined)
+    yMax = Math.max(currentValue, yMax)
+
   y = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.v)])
+        .domain([0, yMax])
         .range([height - margin.bottom, margin.top]);
+
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
       .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d.%m")).tickSizeOuter(0))
@@ -512,6 +519,7 @@ function outputGraph(id, d, accessor, width, height, yName){
       .x(d => x(d.d) + width /data.length - 2)
       .y(d => y(d.vsa))
 
+
     svg.append("path")
       .datum(data)
       .attr("fill", "none")
@@ -520,6 +528,18 @@ function outputGraph(id, d, accessor, width, height, yName){
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .attr("d", line);
+    if (currentValue !== undefined){
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(currentValue))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(currentValue))
+      .attr("stroke-dasharray", [5,5])
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      ;
+    }
+
     svg.append("g")
       .call(xAxis);
     svg.append("g")
@@ -638,6 +658,27 @@ function outputDeathRecoveryGraph(id, d, width, height){
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .attr("d", lineDeaths);
+
+
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(data[data.length-1].recovery))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(data[data.length-1].recovery))
+      .attr("stroke-dasharray", [5,5])
+      .attr("stroke", "green")
+      .attr("stroke-width", 1)
+      ;
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(data[data.length-1].deaths))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(data[data.length-1].deaths))
+      .attr("stroke-dasharray", [5,5])
+      .attr("stroke", "red")
+      .attr("stroke-width", 1)
+      ;
+
     svg.append("g")
       .call(xAxis);
     svg.append("g")
@@ -715,25 +756,25 @@ function outputDeathVsRecoveryGraph(id, d, width, height){
       .call(yAxis);
 }
 
-function updateGraphCurrent(countries, current){
-    countries.forEach(c => {
-      if (data[c] !== undefined){
+function updateGraphCurrent(cs, cur){
+    cs.forEach(c => {
+      if (cur[c] !== undefined){
         const id = countryId(c);
         el = document.getElementById("confirmedDiffCurrent"+id)
         if (el !== null){
-          el.innerHTML =  current[c].confirmedDiff.toLocaleString()
+          el.innerHTML =  cur[c].confirmedDiff.toLocaleString()
         }
         el = document.getElementById("recoveredDiffCurrent"+id)
         if (el !== null){
-          el.innerHTML =  current[c].recoveredDiff.toLocaleString()
+          el.innerHTML =  cur[c].recoveredDiff.toLocaleString()
         }
         el = document.getElementById("deathsDiffCurrent"+id)
         if (el !== null){
-          el.innerHTML =  current[c].deathsDiff.toLocaleString()
+          el.innerHTML =  cur[c].deathsDiff.toLocaleString()
         }
         el = document.getElementById("activeCurrent"+id)
         if (el !== null){
-          el.innerHTML =  current[c].active.toLocaleString()
+          el.innerHTML =  cur[c].active.toLocaleString()
         }
       }
     })
@@ -922,11 +963,11 @@ function displayData(){
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = countryId(c);
-        outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, "")
-        outputGraph("graphActive"+id, data[c], d => d.active, width, height, "")
+        outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, current[c].confirmedDiff))
+        outputGraph("graphActive"+id, data[c], d => d.active, width, height, current[c].active)
         outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height)
 //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
-        outputGraph("graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, "")
+        outputGraph("graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*current[c].deathRate)
       }else{
         console.log(c);
       }
@@ -940,13 +981,19 @@ function displayData(){
     preprocess(totals);
     const totalCountries =  ["Total", "Europe"];
 
+    currentTotal = createCurrent(totals);
+    Object.keys(currentTotal).forEach(country => {
+      updateDiff(currentTotal[country], totals[country][totals[country].length-1]);
+    });
+
     totalCountries.forEach(c => {
       let id = countryId(c);
-      outputGraph("graph"+id, totals[c], d => d.confirmedDiff, width, height, "")
-      outputGraph("graphActive"+id, totals[c], d => d.active, width, height, "")
+      outputGraph("graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,currentTotal[c].confirmedDiff))
+      outputGraph("graphActive"+id, totals[c], d => d.active, width, height, currentTotal[c].active)
       outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height)
 //      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
-        outputGraph("graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, "")
+        outputGraph("graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*currentTotal[c].deathRate)
     });
     updateGraphCurrent(countries, current);
+    updateGraphCurrent(totalCountries, currentTotal);
 }
