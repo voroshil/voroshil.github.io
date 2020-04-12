@@ -1,3 +1,38 @@
+var europe = [
+//  "Albania",
+  "Austria",
+  "Belgium",
+  "Bulgaria",
+  "Croatia",
+  "Czechia",
+  "Denmark",
+  "Estonia",
+  "Finland",
+  "France",
+  "Germany",
+  "Greece",
+  "Hungary",
+  "Iceland",
+  "Italy",
+  "Ireland",
+  "Latvia",
+  "Lithuania",
+  "Bosnia and Herzegovina",
+  "Luxembourg",
+  "Moldova",
+  "Netherlands",
+  "Norway",
+  "Poland",
+  "Serbia",
+  "Slovakia",
+  "Slovenia",
+  "Romania",
+  "Portugal",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "United Kingdom",
+];
 var names = {
   "Australia": "Австралия",
   "Austria": "Австрия",
@@ -62,28 +97,36 @@ function createDates(data){
   return res;
 }
 
-function createDateTotal(data, dateIndex){
+function createDateTotal(data, dateIndex, desiredCountries){
   var total = {
     date: undefined,
     confirmed: 0,
     recovered: 0,
     deaths: 0
   };
-
-  data.forEach(v => {
+  let first = true;
+  desiredCountries.forEach(c => {
+    let v = data[c]
+    if (first && (v === undefined || isNaN(v[dateIndex].confirmed))){
+      console.log(v[dateIndex]);
+      first = false;
+    }
     total.date = v[dateIndex].date;
-    total.confirmed += v[dateIndex].configmed;
+    total.confirmed += v[dateIndex].confirmed;
     total.recovered += v[dateIndex].recovered;
     total.deaths += v[dateIndex].deaths;
   });
 
   return total;
 }
-function createAllTotal(data){
+function createAllTotal(data, desiredCountries){
   res = [];
-  firstCountry = Object.keys(data)[0];
-  for(var i=0; i<data[firstCountry].lenth; i++){
-    res.push(createDateTotal(data, i));
+  if (desiredCountries === undefined){
+    desiredCountries = Object.keys(data)
+  }
+  firstCountry = desiredCountries[0];
+  for(var i=0; i<data[firstCountry].length; i++){
+    res.push(createDateTotal(data, i, desiredCountries));
   }
   return res;
 }
@@ -686,13 +729,13 @@ function updateGraphCurrent(countries, current){
     })
 } 
 
-function renderGraphTable(tableBodyId, countries){
+function renderGraphTable(tableBodyId, rows){
   tbody = document.getElementById(tableBodyId)
   if (tbody === null)
     return;
 
   var htmlRows = ""
-  countries.forEach(c => {
+  rows.forEach(c => {
     htmlRows += "<tr>"
     htmlRows +="<td>"
     htmlRows += `<span>${c.name}</span><br/>`
@@ -855,7 +898,11 @@ function displayData(){
     renderHistoryTable("somethingRateHistory",   {rows:rows, dates:dates, cols:cols, formatter:somethingRateFormatter});
     renderHistoryTable("deathsEstimatedHistory", {rows:rows, dates:dates, cols:cols, formatter:deathsEstimatedFormatter});
 
-    renderGraphTable("graphTableBody", cols);
+    graphRows = cols.map(c => c)
+    graphRows.unshift({id:countryId("Europe"), c:"Europe", name:"В Европе"});
+    graphRows.unshift({id:countryId("Total"), c:"Total", name:"В мире"});
+
+    renderGraphTable("graphTableBody", graphRows);
     const width = 300
     const height = 180
     countries.forEach(c => {
@@ -869,5 +916,21 @@ function displayData(){
         console.log(c);
       }
     })
+
+    totals = {}
+
+    totals["Europe"] = createAllTotal(data, europe);
+    totals["Total"] = createAllTotal(data, countries);
+
+    preprocess(totals);
+    const totalCountries =  ["Total", "Europe"];
+
+    totalCountries.forEach(c => {
+      let id = countryId(c);
+      outputGraph("graph"+id, totals[c], d => d.confirmedDiff, width, height, "")
+      outputGraph("graphActive"+id, totals[c], d => d.active, width, height, "")
+      outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height)
+      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
+    });
     updateGraphCurrent(countries, current);
 }
