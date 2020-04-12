@@ -978,7 +978,7 @@ function displayData(){
     totals = {}
 
     totals["Europe"] = createAllTotal(data, europe);
-    totals["Total"] = createAllTotal(data, countries);
+    totals["Total"] = createAllTotal(data, Object.keys(data));
 
     preprocess(totals);
     const totalCountries =  ["Total", "Europe"];
