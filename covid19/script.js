@@ -566,7 +566,7 @@ function outputGraph(id, d, accessor, width, height, currentValue){
     svg.append("g")
       .call(yAxis);
 }
-function outputDeathRecoveryGraph(id, d, width, height){
+function outputDeathRecoveryGraph(id, d, width, height, current){
   if (document.getElementById(id) == null)
     return;
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
@@ -596,8 +596,15 @@ function outputDeathRecoveryGraph(id, d, width, height){
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
+
+  yMax = d3.max(data, d => d3.max([d.deaths,d.recovery]))
+  if (current !== undefined){
+    yMax = Math.max(yMax, current.recoveredDiff)
+    yMax = Math.max(yMax, current.deathsDiff)
+  }
+
   y = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d3.max([d.deaths,d.recovery]))]).nice()
+        .domain([0, yMax]).nice()
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
@@ -679,27 +686,26 @@ function outputDeathRecoveryGraph(id, d, width, height){
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .attr("d", lineDeaths);
-
-
+if (current !== undefined){
     svg.append("line")
       .attr("x1", margin.left)
-      .attr("y1", y(data[data.length-1].recovery))
+      .attr("y1", y(current.recoveredDiff))
       .attr("x2", width - margin.right)
-      .attr("y2", y(data[data.length-1].recovery))
+      .attr("y2", y(current.recoveredDiff))
       .attr("stroke-dasharray", [5,5])
       .attr("stroke", "green")
       .attr("stroke-width", 1)
       ;
     svg.append("line")
       .attr("x1", margin.left)
-      .attr("y1", y(data[data.length-1].deaths))
+      .attr("y1", y(current.deathsDiff))
       .attr("x2", width - margin.right)
-      .attr("y2", y(data[data.length-1].deaths))
+      .attr("y2", y(current.deathsDiff))
       .attr("stroke-dasharray", [5,5])
       .attr("stroke", "red")
       .attr("stroke-width", 1)
       ;
-
+}
     svg.append("g")
       .call(xAxis);
     svg.append("g")
@@ -979,7 +985,7 @@ function displayData(){
         const id = countryId(c);
         outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, current[c].confirmedDiff))
         outputGraph("graphActive"+id, data[c], d => d.active, width, height, current[c].active)
-        outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height)
+        outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height, current[c])
 //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
         outputGraph("graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*current[c].deathRate)
       }else{
@@ -1008,7 +1014,7 @@ function displayData(){
       let id = countryId(c);
       outputGraph("graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,currentTotal[c].confirmedDiff))
       outputGraph("graphActive"+id, totals[c], d => d.active, width, height, currentTotal[c].active)
-      outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height)
+      outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height, currentTotal[c])
 //      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
         outputGraph("graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*currentTotal[c].deathRate)
     });
