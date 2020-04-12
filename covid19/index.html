@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body onLoad="onLoad();">
 <a href="https://pomber.github.io/covid19/timeseries.json">timeseries.json</a>
 <button onClick="checkUpdate();">Проверить обновление</button>
 <span id="lastFileUpdate"></span>
@@ -145,7 +145,6 @@
 
 <script language="javascript" src="timeseries.js"></script>
 <script language="javascript" src="script.js"></script>
-<script>displayData();</script>
 <script id="latestStatTemplate" language="xTemplate">
 </script>
 </body>

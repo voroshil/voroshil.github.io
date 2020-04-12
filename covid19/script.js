@@ -185,6 +185,16 @@ function checkUpdate(){
   });
 
 }
+
+function loadData(){
+  fetch("https://pomber.github.io/covid19/timeseries.json")
+  .then(response => response.json())
+  .then(d => {
+    data = d
+    displayData();
+  });
+}
+
 function buildCountries(stat, threshold) {
     let countries = [];
     Object.keys(stat).forEach(c => {
@@ -844,6 +854,9 @@ function renderStatTableFormRow(elementId, row){
   el.innerHTML = html;
 }
 
+function onLoad(){
+  loadData();
+}
 function displayData(){
     dds = createDates(data);
     Object.keys(data).forEach(c => {
