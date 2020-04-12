@@ -74,7 +74,8 @@ var names = {
   "United Kingdom": "Великобритания",
   "US": "США",
 
-  "Total": "В мире"
+  "Total": "В мире",
+  "Europe": "В Европе",
 };
 
 var countries = [];
@@ -952,7 +953,6 @@ function displayData(){
     cols = countries.map(c => {return {id:countryId(c), c:c, name: names[c]}});
     cols.unshift({id: "Europe", c:"Europe", name:names["Europe"]})
     cols.unshift({id: "Total", c:"Total", name:names["Total"]})
-
     rows = dds.map(d => {return {unix: d, date: moment.unix(d).format("DD.MM.YYYY")}})
 
     renderStatTable("latestStat", cols);
@@ -970,8 +970,6 @@ function displayData(){
     renderHistoryTable("deathsEstimatedHistory", {rows:rows, dates:dates, cols:cols, formatter:deathsEstimatedFormatter});
 
     graphRows = cols.map(c => c)
-    graphRows.unshift({id:countryId("Europe"), c:"Europe", name:"В Европе"});
-    graphRows.unshift({id:countryId("Total"), c:"Total", name:"В мире"});
 
     renderGraphTable("graphTableBody", graphRows);
     const width = 300
