@@ -258,7 +258,7 @@ function onCurrentUpdate(id){
   localStorage["covid"+id] = JSON.stringify(obj);
 
 
-  el = document.getElementById("currentRow"+cid)
+  el = document.getElementById("currentRow"+id)
   if (el === null)
     return
 
