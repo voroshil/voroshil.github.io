@@ -370,7 +370,7 @@ function onCurrentUpdate(id, isTotal){
   renderStatTableFormRow("currentRow"+row.id, row);
   outputGraph("graph"+row.id, source[c], d => d.confirmedDiff, width, height, Math.max(0,stat[c].confirmedDiff))
   outputGraph("graphActive"+row.id, source[c], d => d.active, width, height, stat[c].active)
-  outputDeathRecoveryGraph("graphDeathRecovery"+id, source[c], width, height)
+  outputDeathRecoveryGraph("graphDeathRecovery"+id, source[c], width, height, stat[c])
   outputGraph("graphDeathRate"+row.id, source[c], d => (100*d.deathRate), width, height, 100*stat[c].deathRate)
 
   updateGraphCurrent(statCountries, stat)
