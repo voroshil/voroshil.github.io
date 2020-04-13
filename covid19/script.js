@@ -91,9 +91,12 @@ var names = {
 var countries = [];
 var dds = [];
 var totals = {"Total": []};
-var current = {}
-
+var current = {};
+var currentTotal = {};
 const countryId = c => c.replace(" ","").replace(",","").replace("`","").replace("'","")
+const totalCountries =  ["Total", "Europe"];
+const width = 300
+const height = 180
 
 function createDates(data){
   let v = Object.values(data)[0];
@@ -232,7 +235,8 @@ function createCurrentCountry(nowDate, countryId, country_data){
     if (currentValue !== undefined){
       currentValue = JSON.parse(currentValue);
       res = Object.assign(res, currentValue);
-      }
+      updateDiff(res, country_data)
+    }
   }catch(e){
   }
   return res;
@@ -271,9 +275,10 @@ function getColoredDiff(v, cp, cm){
       return "";
 }
 
-function outputBetterStatHtmlTable(rowIdPrefix, stat, countries){
+function outputBetterStatHtmlTable(rowIdPrefix, stat, countries, isTotal){
   const rows = countries.map(c => {
       return {
+        isTotal: isTotal,
         id: countryId(c),
         name: stat[c].code,
         confirmed: stat[c].confirmed.toLocaleString(),
@@ -298,8 +303,7 @@ function outputBetterStatHtmlTable(rowIdPrefix, stat, countries){
     renderStatTableRow(rowIdPrefix+row.id, row);
   });
 }
-function onCurrentUpdate(id){
-
+function onCurrentUpdate(id, isTotal){
 
   obj = localStorage["covid"+id]
   if (obj === undefined){
@@ -331,47 +335,51 @@ function onCurrentUpdate(id){
   if (el === null)
     return
 
-  const cidx = countries.findIndex(d => countryId(d) === id)
+  const stat = isTotal ? currentTotal : current
+  const source = isTotal ? totals : data
+  const statCountries = isTotal ? totalCountries: countries
+
+  const cidx = statCountries.findIndex(d => countryId(d) === id)
   if (cidx < 0)
     return
-  const c = countries[cidx]
+  const c = statCountries[cidx]
 
-  current[c] = createCurrentCountry(moment().format("YYYY-M-D"), id, data[c][data[c].length-1])
-  updateDiff(current[c], data[c][data[c].length-1])
+  stat[c] = createCurrentCountry(moment().format("YYYY-M-D"), id, source[c][source[c].length-1])
 
   row = {
+    isTotal: isTotal,
     id: countryId(c),
-    name: current[c].code,
-    confirmed: current[c].confirmed,
-    recovered: current[c].recovered,
-    deaths: current[c].deaths,
-    active: current[c].active.toLocaleString(),
-    deathRate: (100 * current[c].deathRate).toFixed(1),
-    somethingRate: (100 * current[c].somethingRate).toFixed(1),
-    deathsEstimated: current[c].deathsEstimated.toLocaleString(),
-    confirmedDiff: getColoredDiff(current[c].confirmedDiff, "diff-red", "diff-green"),
-    recoveredDiff: getColoredDiff(current[c].recoveredDiff, "diff-green", "diff-red"),
-    deathsDiff: getColoredDiff(current[c].deathsDiff, "diff-red", "diff-green"),
-    activeDiff: getColoredDiff(current[c].activeDiff, "diff-red", "diff-green"),
-    deathRateDiff: getColoredDiff((100 * current[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"),
-    somethingRateDiff: getColoredDiff((100 * current[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"),
-    deathsEstimatedDiff: current[c].deathsEstimatedDiff !== undefined ? getColoredDiff(current[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
-    activeClass: current[c].activeDiff < 0 ? "death-rate-lower" : "",
-    deathRateClass: current[c].deathRate > 0.5 ? "death-rate-higher" : (current[c].deathRate < 0.1 ? "death-rate-lower" : ""),
+    name: stat[c].code,
+    confirmed: stat[c].confirmed,
+    recovered: stat[c].recovered,
+    deaths: stat[c].deaths,
+    active: stat[c].active.toLocaleString(),
+    deathRate: (100 * stat[c].deathRate).toFixed(1),
+    somethingRate: (100 * stat[c].somethingRate).toFixed(1),
+    deathsEstimated: stat[c].deathsEstimated.toLocaleString(),
+    confirmedDiff: getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green"),
+    recoveredDiff: getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red"),
+    deathsDiff: getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green"),
+    activeDiff: getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green"),
+    deathRateDiff: getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"),
+    somethingRateDiff: getColoredDiff((100 * stat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"),
+    deathsEstimatedDiff: stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
+    activeClass: stat[c].activeDiff < 0 ? "death-rate-lower" : "",
+    deathRateClass: stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
   }
   renderStatTableFormRow("currentRow"+row.id, row);
+  outputGraph("graph"+row.id, source[c], d => d.confirmedDiff, width, height, Math.max(0,stat[c].confirmedDiff))
+  outputGraph("graphActive"+row.id, source[c], d => d.active, width, height, stat[c].active)
+  outputDeathRecoveryGraph("graphDeathRecovery"+id, source[c], width, height)
+  outputGraph("graphDeathRate"+row.id, source[c], d => (100*d.deathRate), width, height, 100*stat[c].deathRate)
 
-//  outputGraph("graph"+row.id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,currentTotal[c].confirmedDiff))
-//  outputGraph("graphActive"+row.id, totals[c], d => d.active, width, height, currentTotal[c].active)
-//  outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height)
-//  outputGraph("graphDeathRate"+row.id, totals[c], d => (100*d.deathRate), width, height, 100*currentTotal[c].deathRate)
-
-  updateGraphCurrent(countries, current)
+  updateGraphCurrent(statCountries, stat)
 }
 
-function outputBetterStatHtmlTableForm(rowIdPrefix, stat, countries){
+function outputBetterStatHtmlTableForm(rowIdPrefix, stat, countries, isTotal){
   const rows = countries.map(c => { 
     return {
+      isTotal: isTotal,
       id: countryId(c),
       name: stat[c].code,
       confirmed: stat[c].confirmed,
@@ -457,8 +465,10 @@ function calcSA(data, width, getter, setter){
 }
 
 function outputGraph(id, d, accessor, width, height, currentValue){
-  if (document.getElementById(id) == null)
+  const el = document.getElementById(id)
+  if (el == null)
     return;
+  el.innerHTML = "";
 
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
@@ -567,8 +577,11 @@ function outputGraph(id, d, accessor, width, height, currentValue){
       .call(yAxis);
 }
 function outputDeathRecoveryGraph(id, d, width, height, current){
-  if (document.getElementById(id) == null)
+  const el = document.getElementById(id)
+  if (el == null)
     return;
+  el.innerHTML = "";
+
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
@@ -901,7 +914,7 @@ function renderStatTableFormRow(elementId, row){
   html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
   html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
   html += `<td align="right">${row.deathsEstimated}${row.deathsEstimatedDiff}</td>`
-  html += `<td><button onClick="onCurrentUpdate('${row.id}');">Сохранить</button><span id="modified${row.id}"</span></td>`
+  html += `<td><button onClick="onCurrentUpdate('${row.id}', ${row.isTotal});">Сохранить</button><span id="modified${row.id}"</span></td>`
   html += "</tr>";
   el.innerHTML = html;
 }
@@ -965,7 +978,7 @@ function displayData(){
     renderStatTable("currentStat", "currentRow", cols);
 
     outputBetterStatHtmlTable("latestRow", dates[dds[0]], countries);
-    outputBetterStatHtmlTableForm("currentRow", current, countries);
+    outputBetterStatHtmlTableForm("currentRow", current, countries, false);
 
     renderHistoryTable("confirmedHistory",       {rows:rows, dates:dates, cols:cols, formatter:confirmedFormatter});
     renderHistoryTable("recoveredHistory",       {rows:rows, dates:dates, cols:cols, formatter:recoveredFormatter});
@@ -978,8 +991,6 @@ function displayData(){
     graphRows = cols.map(c => c)
 
     renderGraphTable("graphTableBody", graphRows);
-    const width = 300
-    const height = 180
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = countryId(c);
@@ -999,7 +1010,6 @@ function displayData(){
     totals["Total"] = createAllTotal(data, Object.keys(data));
 
     preprocess(totals);
-    const totalCountries =  ["Total", "Europe"];
 
     currentTotal = createCurrent(totals);
     Object.keys(currentTotal).forEach(country => {
@@ -1008,7 +1018,7 @@ function displayData(){
     var totalDates = convertData(totals)
 
     outputBetterStatHtmlTable("latestRow", totalDates[dds[0]], totalCountries);
-    outputBetterStatHtmlTableForm("currentRow", currentTotal, totalCountries);
+    outputBetterStatHtmlTableForm("currentRow", currentTotal, totalCountries, true);
 
     totalCountries.forEach(c => {
       let id = countryId(c);
