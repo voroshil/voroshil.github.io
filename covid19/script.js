@@ -235,10 +235,10 @@ function createCurrentCountry(nowDate, countryId, country_data){
     if (currentValue !== undefined){
       currentValue = JSON.parse(currentValue);
       res = Object.assign(res, currentValue);
-      updateDiff(res, country_data)
     }
   }catch(e){
   }
+  updateDiff(res, country_data)
   return res;
 }
 function createCurrent(data){
@@ -303,34 +303,8 @@ function outputBetterStatHtmlTable(rowIdPrefix, stat, countries, isTotal){
     renderStatTableRow(rowIdPrefix+row.id, row);
   });
 }
-function onCurrentUpdate(id, isTotal){
 
-  obj = localStorage["covid"+id]
-  if (obj === undefined){
-    obj = {}
-  }else{
-    try{
-    obj = JSON.parse(obj);
-    }catch(e){
-      obj = {};
-    }
-  }
-  el = document.getElementById("confirmed"+id);
-  if (el !== null)
-    obj.confirmed = parseInt(el.value);
-  el = document.getElementById("deaths"+id);
-  if (el !== null)
-    obj.deaths = parseInt(el.value);
-  el = document.getElementById("recovered"+id);
-  if (el !== null)
-    obj.recovered = parseInt(el.value);
-  el = document.getElementById("modified"+id);
-  if (el !== null){
-    el.innerHTML = "сохранено";
-  }
-  localStorage["covid"+id] = JSON.stringify(obj);
-
-
+function rerenderCurrent(id, isTotal){
   el = document.getElementById("currentRow"+id)
   if (el === null)
     return
@@ -374,6 +348,41 @@ function onCurrentUpdate(id, isTotal){
   outputGraph("graphDeathRate"+row.id, source[c], d => (100*d.deathRate), width, height, 100*stat[c].deathRate)
 
   updateGraphCurrent(statCountries, stat)
+}
+
+function onCurrentReset(id, isTotal){
+  localStorage.removeItem("covid"+id)
+  rerenderCurrent(id, isTotal);
+}
+function onCurrentUpdate(id, isTotal){
+
+  obj = localStorage["covid"+id]
+  if (obj === undefined){
+    obj = {}
+  }else{
+    try{
+    obj = JSON.parse(obj);
+    }catch(e){
+      obj = {};
+    }
+  }
+  el = document.getElementById("confirmed"+id);
+  if (el !== null)
+    obj.confirmed = parseInt(el.value);
+  el = document.getElementById("deaths"+id);
+  if (el !== null)
+    obj.deaths = parseInt(el.value);
+  el = document.getElementById("recovered"+id);
+  if (el !== null)
+    obj.recovered = parseInt(el.value);
+  el = document.getElementById("modified"+id);
+  if (el !== null){
+    el.innerHTML = "сохранено";
+  }
+  localStorage["covid"+id] = JSON.stringify(obj);
+
+
+  rerenderCurrent(id, isTotal);
 }
 
 function outputBetterStatHtmlTableForm(rowIdPrefix, stat, countries, isTotal){
@@ -581,7 +590,6 @@ function outputDeathRecoveryGraph(id, d, width, height, current){
   if (el == null)
     return;
   el.innerHTML = "";
-
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
@@ -914,7 +922,13 @@ function renderStatTableFormRow(elementId, row){
   html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
   html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
   html += `<td align="right">${row.deathsEstimated}${row.deathsEstimatedDiff}</td>`
-  html += `<td><button onClick="onCurrentUpdate('${row.id}', ${row.isTotal});">Сохранить</button><span id="modified${row.id}"</span></td>`
+  html += "<td>"
+  html += "<div class=\"btn-group\" role=\"group\">";
+  html += `<button type="button" class="btn btn-success btn-sm" onClick="onCurrentUpdate('${row.id}', ${row.isTotal});">Сохранить</button>`
+  html += `<button type="button" class="btn btn-warning btn-sm" onClick="onCurrentReset('${row.id}', ${row.isTotal});">Сброс</button>`
+  html += "</div>";
+  html += `<span id="modified${row.id}"</span>`
+  html += "</td>"
   html += "</tr>";
   el.innerHTML = html;
 }
