@@ -97,6 +97,7 @@ const countryId = c => c.replace(" ","").replace(",","").replace("`","").replace
 const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
+const maxThreshold = 4000
 
 function createDates(data){
   let v = Object.values(data)[0];
@@ -978,8 +979,8 @@ function displayData(){
     var threshold = threshold0;
     if (threshold1 < threshold)
       threshold = threshold1;
-    if (threshold > 4000)
-      threshold = 4000;
+    if (threshold > maxThreshold)
+      threshold = maxThreshold;
 
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     countries = buildCountries(dates[dds[0]], threshold);
