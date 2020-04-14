@@ -343,10 +343,10 @@ function rerenderCurrent(id, isTotal){
     deathRateClass: stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
   }
   renderStatTableFormRow("currentRow"+row.id, row);
-  outputGraph("graph"+row.id, source[c], d => d.confirmedDiff, width, height, Math.max(0,stat[c].confirmedDiff))
-  outputGraph("graphActive"+row.id, source[c], d => d.active, width, height, stat[c].active)
-  outputDeathRecoveryGraph("graphDeathRecovery"+id, source[c], width, height, stat[c])
-  outputGraph("graphDeathRate"+row.id, source[c], d => (100*d.deathRate), width, height, 100*stat[c].deathRate)
+  outputGraph("Заразившиеся (прирост)", names[c], "graph"+row.id, source[c], d => d.confirmedDiff, width, height, Math.max(0,stat[c].confirmedDiff))
+  outputGraph("Болеющие", names[c], "graphActive"+row.id, source[c], d => d.active, width, height, stat[c].active)
+  outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, source[c], width, height, stat[c])
+  outputGraph("Летальность", names[c], "graphDeathRate"+row.id, source[c], d => (100*d.deathRate), width, height, 100*stat[c].deathRate)
 
   updateGraphCurrent(statCountries, stat)
 }
@@ -474,7 +474,7 @@ function calcSA(data, width, getter, setter){
   })
 }
 
-function outputGraph(id, d, accessor, width, height, currentValue){
+function outputGraph(title, name, id, d, accessor, width, height, currentValue){
   const el = document.getElementById(id)
   if (el == null)
     return;
@@ -524,6 +524,18 @@ function outputGraph(id, d, accessor, width, height, currentValue){
       .call(d3.axisLeft(y).ticks(6).tickFormat(x => x.toLocaleString()))
 //      .call(g => g.select(".domain").remove())
       .call(g => g.append("text")
+          .append("tspan")
+          .attr("x", margin.left + (width-margin.left-margin.right)/2)
+          .attr("y", 10)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "center")
+          .text(title)
+          .append("tspan")
+          .attr("x", margin.left + (width-margin.left-margin.right)/2)
+          .attr("y", 25)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "center")
+          .text(name)
           .append("tspan")
           .attr("x", -margin.left+5)
           .attr("y", 10)
@@ -586,7 +598,7 @@ function outputGraph(id, d, accessor, width, height, currentValue){
     svg.append("g")
       .call(yAxis);
 }
-function outputDeathRecoveryGraph(id, d, width, height, current){
+function outputDeathRecoveryGraph(title, name, id, d, width, height, current){
   const el = document.getElementById(id)
   if (el == null)
     return;
@@ -644,6 +656,12 @@ function outputDeathRecoveryGraph(id, d, width, height, current){
       .call(g => g.select(".domain").remove())
       .call(g => g
           .append("text")
+          .append("tspan")
+          .attr("x", margin.left + (width-margin.left-margin.right)/2)
+          .attr("y", 25)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "center")
+          .text(name)
           .append("tspan")
           .attr("x", -margin.left+5)
           .attr("y", 25)
@@ -1009,11 +1027,11 @@ function displayData(){
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = countryId(c);
-        outputGraph("graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, current[c].confirmedDiff))
-        outputGraph("graphActive"+id, data[c], d => d.active, width, height, current[c].active)
-        outputDeathRecoveryGraph("graphDeathRecovery"+id, data[c], width, height, current[c])
+        outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, current[c].confirmedDiff))
+        outputGraph("Болеющие", names[c], "graphActive"+id, data[c], d => d.active, width, height, current[c].active)
+        outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, data[c], width, height, current[c])
 //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
-        outputGraph("graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*current[c].deathRate)
+        outputGraph("Летальность", names[c], "graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*current[c].deathRate)
       }else{
         console.log(c);
       }
@@ -1037,11 +1055,11 @@ function displayData(){
 
     totalCountries.forEach(c => {
       let id = countryId(c);
-      outputGraph("graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,currentTotal[c].confirmedDiff))
-      outputGraph("graphActive"+id, totals[c], d => d.active, width, height, currentTotal[c].active)
-      outputDeathRecoveryGraph("graphDeathRecovery"+id, totals[c], width, height, currentTotal[c])
+      outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,currentTotal[c].confirmedDiff))
+      outputGraph("Болеющие", names[c], "graphActive"+id, totals[c], d => d.active, width, height, currentTotal[c].active)
+      outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, totals[c], width, height, currentTotal[c])
 //      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
-        outputGraph("graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*currentTotal[c].deathRate)
+        outputGraph("Летальность", names[c], "graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*currentTotal[c].deathRate)
     });
     updateGraphCurrent(countries, current);
     updateGraphCurrent(totalCountries, currentTotal);
