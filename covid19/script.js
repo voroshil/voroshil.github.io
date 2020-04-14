@@ -485,7 +485,6 @@ function outputGraph(title, name, id, d, accessor, width, height, currentValue){
   d.forEach(k => {
     data.push({d: new Date(1000 * k.unix), v:accessor(k), confirmed:k.confirmed})
   })
-  data.pop();
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const vsa_max = d3.max(data, d => d.vsa)
@@ -608,7 +607,6 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current){
   d.forEach(k => {
     data.push({d: new Date(1000 * k.unix), deaths:k.deathsDiff, recovery: k.recoveredDiff})
   })
-  data.pop();
   calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
   calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
   const deathsSA_max = d3.max(data, d => d.deathsSA)
