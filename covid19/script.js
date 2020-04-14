@@ -93,7 +93,7 @@ var dds = [];
 var totals = {"Total": []};
 var current = {};
 var currentTotal = {};
-const countryId = c => c.replace(" ","").replace(",","").replace("`","").replace("'","")
+const countryId = c => c.replace(/[ ,`\']/g,"")
 const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
