@@ -51,6 +51,7 @@
     <li class="nav-item"> -->
       <a class="dropdown-item" id="deaths-estimated-history-tab" data-toggle="tab" href="#deaths-estimated-history" role="tab" aria-controls="deaths-estimated-history" aria-selected="false">Прогноз</a>
 <!--    </li> -->
+      <a class="dropdown-item" id="graph-rate-tab" data-toggle="tab" href="#graphRate" role="tab" aria-controls="graph-rate" aria-selected="false">Графики летальности</a>
     </div>
   </li>
   <li class="nav-item">
@@ -138,7 +139,6 @@
         <th>Смерти / Выздоровления</th>
 <!--        <th>Выздоровления - Смерти</th> -->
         <th>Болеющие</th>
-        <th>Летальность</th>
       </tr>
       <tr>
         <td>
@@ -152,10 +152,31 @@
         <td>Ежедневный прирост заразившихся. <br/>Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
         <td>Ежедневнй прирост выздоровевших и умерших. <br/><span style="color:green;">Зеленая</span> и <span style="color:red;">красная</span> линии - центрированное скользящее среднее по 11 точкам</td>
         <td>Количество болеющих. <Br/>Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
-        <td>летальность = умерших / (умерших+излечившихся) * 100%<br/><b>Аномально высокие значения в некоторых странах связаны с отсутствием информации об излечившихся.</b><br/> Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
       </tr>
       </thead>
       <tbody id="graphTableBody">
+      <tbody>
+    </table>
+    </div>
+  </div>
+  <div class="tab-pane" id="graphRate" role="tabpanel" aria-labelledby="graph-rate-tab">
+  <h3 align="center">Графики летальности</h3>
+    <div class="col-sm-4">
+    <table border="1">
+      <thead>
+      <tr>
+        <th>Страна</th>
+        <th>Летальность</th>
+        <th>Летальность-14</th>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>летальность = умерших / (умерших+излечившихся) * 100%<br/><b>Аномально высокие значения в некоторых странах связаны с отсутствием информации об излечившихся.</b><br/> Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
+        <td>летальность-14 = умерших / (умерших+излечившихся спустя 14 дней) * 100%<br/><b>Аномально высокие значения в некоторых странах связаны с отсутствием информации об излечившихся.</b><br/> Черная линия - центрированное скользящее среднее по 11 точкам. <br/><span style="color:steelblue;">Синим</span> цветом выделена точка максимума скользящего среднего.</td>
+      </tr>
+      </thead>
+      <tbody id="graphRateTableBody">
       <tbody>
     </table>
     </div>

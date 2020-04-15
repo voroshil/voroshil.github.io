@@ -154,6 +154,8 @@ function updateDiff(c,p, notValid){
   c.active = +c.confirmed - c.closed;
   c.somethingRate = c.confirmed !== 0 ? c.deaths / c.confirmed : 0;
   c.deathRate = c.closed !== 0 ? c.deaths / c.closed : 0;
+  c.deathsRateLag = c.recoveredLag > 0 ? c.deaths / (c.recoveredLag + c.deaths) : undefined
+
   c.recoveryRate = c.closed !== 0 ? c.recovered / c.closed : 0;
   c.deathsEstimated = Math.round(c.active * c.deathRate);
   if (p !== undefined && notValid === true ){
@@ -188,12 +190,20 @@ function updateDiff(c,p, notValid){
 function preprocess(data){
   Object.entries(data).forEach(entry => {
     let prev = undefined
+    for(var i=Math.max(entry[1].length-14, 0); i<entry[1].length; i++){
+      entry[1][i].recoveredLag = undefined;
+    }
+    for(var i=0; i<entry[1].length-14; i++){
+      entry[1][i].recoveredLag = entry[1][i+14].recovered;
+    }
+
     entry[1].forEach(d => {
       d.name = entry[0];
       d.code = names[entry[0]] !== undefined ? names[entry[0]] : entry[0]
       updateDiff(d, prev);
       prev = d
     });
+    
   });
 }
 
@@ -462,8 +472,12 @@ function calcSA(data, width, getter, setter){
       var idx1 = +i-j;
       var idx2 = +i+j;
       if (idx1 >=0 && idx2 >=0 && data[idx1] !== undefined && data[idx2] !== undefined){
-        vs.push(getter(data[idx1]))
-        vs.push(getter(data[idx2]))
+        v1 = getter(data[idx1])
+        v2 = getter(data[idx2])
+        if(!isNaN(v1) && !isNaN(v2)){
+          vs.push(v1)
+          vs.push(v2)
+        }
       }
     }
     vs.push(getter(data[i]));
@@ -478,7 +492,7 @@ function calcSA(data, width, getter, setter){
   })
 }
 
-function outputGraph(title, name, id, d, accessor, width, height, currentValue){
+function outputGraph(title, name, id, d2, accessor, width, height, currentValue){
   const el = document.getElementById(id)
   if (el == null)
     return;
@@ -486,8 +500,9 @@ function outputGraph(title, name, id, d, accessor, width, height, currentValue){
 
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
-  d.forEach(k => {
-    data.push({d: new Date(1000 * k.unix), v:accessor(k), confirmed:k.confirmed})
+  d2.forEach(k => {
+    const  v = accessor(k)
+    data.push({d: new Date(1000 * k.unix), v:v, confirmed:k.confirmed})
   })
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
@@ -504,9 +519,8 @@ function outputGraph(title, name, id, d, accessor, width, height, currentValue){
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
-
   yMax = d3.max(data, d => d.v)
-  if (currentValue !== undefined)
+  if (currentValue !== undefined && !isNaN(currentValue))
     yMax = Math.max(currentValue, yMax)
 
   y = d3.scaleLinear()
@@ -565,10 +579,10 @@ function outputGraph(title, name, id, d, accessor, width, height, currentValue){
       .join("rect")
       .attr("opacity", 1)
       .attr("x", d => x(d.d)+1)
-      .attr("width", d => width / data.length-2)
+      .attr("width", d => (width - margin.left - margin.right) / data.length-1)
       .attr("fill", d => d.vsa === vsa_max ? "steelblue" : "orange")
       .attr("y", d => y(d.v))
-      .attr("height", d => y(0)-y(d.v));
+      .attr("height", d => !isNaN(d.v) ? y(0)-y(d.v): 0);
 
     line = d3.line()
       .defined(d => !isNaN(d.vsa))
@@ -584,7 +598,7 @@ function outputGraph(title, name, id, d, accessor, width, height, currentValue){
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .attr("d", line);
-    if (currentValue !== undefined){
+    if (currentValue !== undefined && !isNaN(currentValue)){
     svg.append("line")
       .attr("x1", margin.left)
       .attr("y1", y(currentValue))
@@ -873,7 +887,25 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows +=`<td><div id="graphDeathRecovery${c.id}"></div></td>`;
 //        htmlRows +=`<td><div id="graphDeathVsRecovery${c.id}"></div></td>`;
     htmlRows +=`<td><div id="graphActive${c.id}"></div></td>`;
+    htmlRows +="</tr>"
+  })
+
+  tbody.innerHTML = htmlRows;
+
+}
+function renderGraphRateTable(tableBodyId, rows){
+  tbody = document.getElementById(tableBodyId)
+  if (tbody === null)
+    return;
+
+  var htmlRows = ""
+  rows.forEach(c => {
+    htmlRows += "<tr>"
+    htmlRows +="<td>"
+    htmlRows += `<span>${c.name}</span><hr/>`
+    htmlRows += "</td>";
     htmlRows +=`<td><div id="graphDeathRate${c.id}"></div></td>`;
+    htmlRows +=`<td><div id="graphDeathsRateLag${c.id}"></div></td>`;
     htmlRows +="</tr>"
   })
 
@@ -1028,6 +1060,7 @@ function displayData(){
     graphRows = cols.map(c => c)
 
     renderGraphTable("graphTableBody", graphRows);
+    renderGraphRateTable("graphRateTableBody", graphRows);
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = countryId(c);
@@ -1036,6 +1069,7 @@ function displayData(){
         outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, data[c], width, height, dates[dds[0]][c])
 //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
         outputGraph("Летальность", names[c], "graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*dates[dds[0]][c].deathRate)
+        outputGraph("Летальность-14", names[c], "graphDeathsRateLag"+id, data[c], d => (100*d.deathsRateLag), width, height, 100*dates[dds[14]][c].deathsRateLag)
       }else{
         console.log(c);
       }
@@ -1061,6 +1095,7 @@ function displayData(){
       outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, totals[c], width, height, totalDates[dds[0]][c])
 //      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
         outputGraph("Летальность", names[c], "graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*totalDates[dds[0]][c].deathRate)
+        outputGraph("Летальность-14", names[c], "graphDeathsRateLag"+id, totals[c], d => (100*d.deathsRateLag), width, height, 100*totalDates[dds[14]][c].deathsRateLag)
     });
     updateGraphCurrent(countries, dates[dds[0]]);
     updateGraphCurrent(totalCountries, totalDates[dds[0]]);
