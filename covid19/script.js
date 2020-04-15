@@ -373,13 +373,13 @@ function onCurrentUpdate(id, isTotal){
   }
   el = document.getElementById("confirmed"+id);
   if (el !== null)
-    obj.confirmed = parseInt(el.value.replace(/[ ,]/g,""));
+    obj.confirmed = parseInt(el.value.replace(/[^0-9]/g,""));
   el = document.getElementById("deaths"+id);
   if (el !== null)
-    obj.deaths = parseInt(el.value.replace(/[ ,]/g,""));
+    obj.deaths = parseInt(el.value.replace(/[^0-9]/g,""));
   el = document.getElementById("recovered"+id);
   if (el !== null)
-    obj.recovered = parseInt(el.value.replace(/[ ,]/g,""));
+    obj.recovered = parseInt(el.value.replace(/[^0-9]/g,""));
   el = document.getElementById("modified"+id);
   if (el !== null){
     el.innerHTML = "сохранено";
