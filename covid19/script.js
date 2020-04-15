@@ -373,13 +373,13 @@ function onCurrentUpdate(id, isTotal){
   }
   el = document.getElementById("confirmed"+id);
   if (el !== null)
-    obj.confirmed = parseInt(el.value);
+    obj.confirmed = parseInt(el.value.replace(/[ ,]/g,""));
   el = document.getElementById("deaths"+id);
   if (el !== null)
-    obj.deaths = parseInt(el.value);
+    obj.deaths = parseInt(el.value.replace(/[ ,]/g,""));
   el = document.getElementById("recovered"+id);
   if (el !== null)
-    obj.recovered = parseInt(el.value);
+    obj.recovered = parseInt(el.value.replace(/[ ,]/g,""));
   el = document.getElementById("modified"+id);
   if (el !== null){
     el.innerHTML = "сохранено";
@@ -941,9 +941,9 @@ function renderStatTableFormRow(elementId, row){
 
   let html = "";
   html += `<td>${row.name}</td>`;
-  html += `<td align="right"><input id="confirmed${row.id}" value="${row.confirmed}"/>${row.confirmedDiff}</td>`;
-  html += `<td align="right"><input id="recovered${row.id}" value="${row.recovered}"/>${row.recoveredDiff}</td>`
-  html += `<td align="right"><input id="deaths${row.id}" value="${row.deaths}"/>${row.deathsDiff}</td>`
+  html += `<td align="right"><input id="confirmed${row.id}" value="${row.confirmed.toLocaleString()}"/>${row.confirmedDiff}</td>`;
+  html += `<td align="right"><input id="recovered${row.id}" value="${row.recovered.toLocaleString()}"/>${row.recoveredDiff}</td>`
+  html += `<td align="right"><input id="deaths${row.id}" value="${row.deaths.toLocaleString()}"/>${row.deathsDiff}</td>`
   html += `<td align="right" class="${row.activeClass}">${row.active}${row.activeDiff}</td>`
   html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
   html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
