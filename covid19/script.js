@@ -94,6 +94,7 @@ var totals = {"Total": []};
 var current = {};
 var currentTotal = {};
 const countryId = c => c.replace(/[ ,`\']/g,"")
+/* ' */
 const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
@@ -825,6 +826,10 @@ function updateGraphCurrent(cs, cur){
     cs.forEach(c => {
       if (cur[c] !== undefined){
         const id = countryId(c);
+        el = document.getElementById("confirmedCurrent"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].confirmed.toLocaleString()
+        }
         el = document.getElementById("confirmedDiffCurrent"+id)
         if (el !== null){
           el.innerHTML =  cur[c].confirmedDiff.toLocaleString()
@@ -854,7 +859,8 @@ function renderGraphTable(tableBodyId, rows){
   rows.forEach(c => {
     htmlRows += "<tr>"
     htmlRows +="<td>"
-    htmlRows += `<span>${c.name}</span><br/>`
+    htmlRows += `<span>${c.name}</span><hr/>`
+    htmlRows += `<span style="color:black" id="confirmedCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange" id="confirmedDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:red"  id="deathsDiffCurrent${c.id}"></span><br/>`
