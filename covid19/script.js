@@ -148,7 +148,7 @@ function createAllTotal(data, desiredCountries){
   }
   return res;
 }
-function updateDiff(c,p){
+function updateDiff(c,p, notValid){
   c.unix = moment(c.date, "YYYY-M-D").unix()
   c.closed = +c.deaths + c.recovered;
   c.active = +c.confirmed - c.closed;
@@ -156,16 +156,15 @@ function updateDiff(c,p){
   c.deathRate = c.closed !== 0 ? c.deaths / c.closed : 0;
   c.recoveryRate = c.closed !== 0 ? c.recovered / c.closed : 0;
   c.deathsEstimated = Math.round(c.active * c.deathRate);
-
-  if (p == undefined){
-    c.confirmedDiff = 0;
-    c.recoveredDiff = 0;
-    c.deathsDiff = 0;
-    c.somethingRateDiff = 0;
-    c.deathRateDiff = 0;
-    c.recoveryRateDiff = 0;
-    c.deathsEstimatedDiff = 0;
-  }else{
+  if (p !== undefined && notValid === true ){
+    c.confirmedDiff = p.confirmedDiff;
+    c.recoveredDiff = p.recoveredDiff;
+    c.deathsDiff    = p.deathsDiff;
+    c.somethingRateDiff = p.somethingRateDiff;
+    c.deathRateDiff = p.deathRateDiff;
+    c.recoveryRateDiff = p.recoveryRateDiff;
+    c.deathsEstimatedDiff = p.deathsEstimatedDiff;
+  } else if (p != undefined){
     c.confirmedDiff = +c.confirmed - p.confirmed;
     c.recoveredDiff = +c.recovered - p.recovered;
     c.deathsDiff    = +c.deaths - p.deaths;
@@ -173,6 +172,14 @@ function updateDiff(c,p){
     c.deathRateDiff = c.deathRate - p.deathRate;
     c.recoveryRateDiff = c.recoveryRate - p.recoveryRate;
     c.deathsEstimatedDiff = c.deathsEstimated - p.deathsEstimated;
+  }else{
+    c.confirmedDiff = 0;
+    c.recoveredDiff = 0;
+    c.deathsDiff = 0;
+    c.somethingRateDiff = 0;
+    c.deathRateDiff = 0;
+    c.recoveryRateDiff = 0;
+    c.deathsEstimatedDiff = 0;
   }
 
   c.closedDiff = +c.deathsDiff + c.recoveredDiff;
@@ -230,17 +237,18 @@ function buildCountries(stat, threshold) {
 }
 
 function createCurrentCountry(nowDate, countryId, country_data){
-  res = Object.assign({}, country_data, {date: nowDate});
+  res = Object.assign({isValid: false}, country_data, {date: nowDate});
 
   try{
     currentValue = localStorage["covid"+countryId];
     if (currentValue !== undefined){
       currentValue = JSON.parse(currentValue);
       res = Object.assign(res, currentValue);
+      res.isValid = true
     }
   }catch(e){
   }
-  updateDiff(res, country_data)
+  updateDiff(res, country_data, !res.isValid)
   return res;
 }
 function createCurrent(data){
@@ -325,6 +333,7 @@ function rerenderCurrent(id, isTotal){
   row = {
     isTotal: isTotal,
     id: countryId(c),
+    isValid: stat[c].isValid,
     name: stat[c].code,
     confirmed: stat[c].confirmed,
     recovered: stat[c].recovered,
@@ -400,15 +409,15 @@ function outputBetterStatHtmlTableForm(rowIdPrefix, stat, countries, isTotal){
       deathRate: (100 * stat[c].deathRate).toFixed(1),
       somethingRate: (100 * stat[c].somethingRate).toFixed(1),
       deathsEstimated: stat[c].deathsEstimated.toLocaleString(),
-      confirmedDiff: getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green"),
-      recoveredDiff: getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red"),
-      deathsDiff: getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green"),
-      activeDiff: getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green"),
-      deathRateDiff: getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"),
-      somethingRateDiff: getColoredDiff((100 * stat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"),
-      deathsEstimatedDiff: stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
-      activeClass: stat[c].activeDiff < 0 ? "death-rate-lower" : "",
-      deathRateClass: stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
+      confirmedDiff: stat[c].isValid ? getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green"): "",
+      recoveredDiff: stat[c].isValid ? getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red"): "",
+      deathsDiff: stat[c].isValid ? getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green"): "",
+      activeDiff: stat[c].isValid ? getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green"): "",
+      deathRateDiff: stat[c].isValid ? getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"): "",
+      somethingRateDiff: stat[c].isValid ? getColoredDiff((100 * stat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"): "",
+      deathsEstimatedDiff: stat[c].isValid ? (stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "") : "",
+      activeClass: stat[c].isValid && stat[c].activeDiff < 0 ? "death-rate-lower" : "",
+      deathRateClass: stat[c].isValid && stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].isValid && stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
       }
   });
   rows.forEach(row => {
@@ -988,9 +997,6 @@ function displayData(){
     preprocess(totals);
 
     current = createCurrent(data);
-    Object.keys(current).forEach(country => {
-      updateDiff(current[country], data[country][data[country].length-1]);
-    });
 
     var dates = convertData(data);
     var totalDates = convertData(totals)
@@ -1049,9 +1055,6 @@ function displayData(){
     preprocess(totals);
 
     currentTotal = createCurrent(totals);
-    Object.keys(currentTotal).forEach(country => {
-      updateDiff(currentTotal[country], totals[country][totals[country].length-1]);
-    });
     var totalDates = convertData(totals)
 
     outputBetterStatHtmlTable("latestRow", totalDates[dds[0]], totalCountries);
