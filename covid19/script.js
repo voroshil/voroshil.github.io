@@ -465,7 +465,7 @@ function somethingRateFormatter(d) {
 function deathsEstimatedFormatter(d) {
   return `<td align="right">${d.deathsEstimated.toLocaleString()}${getColoredDiff(d.deathsEstimatedDiff.toFixed(0), "diff-red", "diff-green")}</td>`;
 }
-function calcSA(data, width, getter, setter){
+function calcSA_1(data, width, getter, setter){
   Object.keys(data).forEach(i => {
     vs = []
     for(var j=0; j<width; j++){
@@ -491,7 +491,45 @@ function calcSA(data, width, getter, setter){
     }
   })
 }
+function calcSA_2(data, width, getter, setter){
+  Object.keys(data).forEach(i => {
+    vs = []
+    v = getter(data[i])
+    for(var j=0; j<width; j++){
+      var idx1 = +i-j;
+      if (idx1 >=0 && data[idx1] !== undefined){
+        v1 = getter(data[idx1])
+        if(!isNaN(v1)){
+          vs.push(v1)
+        }else{
+          vs.push(v)
+        }
+      }else{
+        vs.push(v)
+      }
 
+      var idx2 = +i+j;
+      if (idx2 >=0 && data[idx2] !== undefined){
+        v2 = getter(data[idx2])
+        if(!isNaN(v2)){
+          vs.push(v2)
+        }else{
+          vs.push(v)
+        }
+      }else{
+        vs.push(v)
+      }
+    }
+    vs.push(v);
+    vsa = 0
+    cnt = 0
+    vs.forEach(v => { vsa += v; cnt += 1 })
+    setter(data[i], vsa / cnt)
+  })
+}
+function calcSA(data, width, getter, setter){
+  return calcSA_2(data, width, getter, setter);
+}
 function outputGraph(title, name, id, d2, accessor, width, height, currentValue){
   const el = document.getElementById(id)
   if (el == null)
