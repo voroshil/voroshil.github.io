@@ -7,18 +7,19 @@
 </head>
 <body onLoad="onLoad();">
 <h4 align="center">Пандемия COVID-19</h4>
-<p>
+<p align="center">
 На основе данных Johns Hopkins University of Medicine
 (<a href="https://coronavirus.jhu.edu/map.html">интерактивная карта</a>).
 </p>
-<p>
+<p align="center">
 Источник предобработанных данных <a href="https://coronavirus.jhu.edu/map.html">
 <a href="https://pomber.github.io/covid19/timeseries.json">timeseries.json</a>
 (<a href="https://github.com/pomber/covid19">описание</a>)
 обновляется ежедневно, приблизительно в полночь по Гринвичу.
 </p>
 
-<ul class="nav nav-pills navbar navbar-expand-lg">
+<div class="container">
+<ul class="nav nav-pills navbar navbar-expand-sm navbar-light navbar-center">
   <li class="nav-item">
     <a class="nav-link active" id="graph-tab" data-toggle="tab" href="#graph" role="tab" aria-controls="graph" aria-selected="true">Графики</a>
   </li>
@@ -58,10 +59,11 @@
     <a class="nav-link" id="current-tab" data-toggle="tab" href="#current" role="tab" aria-controls="current" aria-selected="false">Текущие</a>
   </li>
 </ul>
+</div>
 <div class="tab-content">
   <div class="tab-pane" id="current" role="tabpanel" aria-labelledby="current-tab">
   <h3 align="center">Данные, вводимые вручную</h3>
-    <div class="col-sm-4">
+    <div class="col-sm-12 container">
       <table class="table table-condensed table-hover" border="1">
         <thead>
         <tr>
@@ -82,7 +84,7 @@
   </div>
   <div class="tab-pane" id="latest" role="tabpanel" aria-labelledby="latest-tab">
   <h3 align="center">Последний отчет</h3>
-    <div class="col-sm-4">
+    <div class="col-sm-12 container">
       <table class="table table-condensed table-hover" border="1">
         <thead>
         <tr>
@@ -102,35 +104,49 @@
   </div>
   <div class="tab-pane" id="confirmed-history" role="tabpanel" aria-labelledby="confirmed-history-tab">
   <h3 align="center">Заразившиеся</h3>
+  <div class="col-sm-12 container">
     <table id = "confirmedHistory" class="table table-condensed table-hover" border="1"></table>
+  </div>
   </div> 
   <div class="tab-pane" id="recovered-history" role="tabpanel" aria-labelledby="recovered-history-tab">
+  <div class="col-sm-12 container">
   <h3 align="center">Выздоровевшие</h3>
     <table id = "recoveredHistory" class="table table-condensed table-hover"></table>
   </div> 
+  </div> 
   <div class="tab-pane" id="death-history" role="tabpanel" aria-labelledby="death-history-tab">
+  <div class="col-sm-12 container">
   <h3 align="center">Умершие</h3>
     <table id = "deathHistory" class="table table-condensed table-hover"></table>
   </div> 
+  </div> 
   <div class="tab-pane" id="active-history" role="tabpanel" aria-labelledby="active-history-tab">
+  <div class="col-sm-12 container">
   <h3 align="center">Болеющие</h3>
     <table id = "activeHistory" class="table table-condensed table-hover"></table>
+  </div> 
   </div>
   <div class="tab-pane" id="death-rate-history" role="tabpanel" aria-labelledby="death-rate-history-tab">
+  <div class="col-sm-12 container">
   <h3 align="center">Летальность</h3>
     <table id = "deathRateHistory" class="table table-condensed table-hover"></table>
+  </div> 
   </div>
   <div class="tab-pane" id="something-rate-history" role="tabpanel" aria-labelledby="something-rate-history-tab">
+  <div class="col-sm-12 container">
   <h3 align="center">Смертность</h3>
     <table id = "somethingRateHistory" class="table table-condensed table-hover"></table>
+  </div> 
   </div>
   <div class="tab-pane" id="deaths-estimated-history" role="tabpanel" aria-labelledby="deaths-estimated--history-tab">
+  <div class="col-sm-12 container">
   <h3 align="center">Прогноз смертей</h3>
     <table id = "deathsEstimatedHistory" class="table table-condensed table-hover"></table>
+  </div> 
   </div>
   <div class="tab-pane active" id="graph" role="tabpanel" aria-labelledby="graph-tab">
   <h3 align="center">Графики</h3>
-    <div class="col-sm-4">
+    <div class="col-sm-12 container">
     <table border="1">
       <thead>
       <tr>
@@ -161,7 +177,7 @@
   </div>
   <div class="tab-pane" id="graphRate" role="tabpanel" aria-labelledby="graph-rate-tab">
   <h3 align="center">Графики летальности</h3>
-    <div class="col-sm-4">
+    <div class="col-sm-8 container">
     <table border="1">
       <thead>
       <tr>
