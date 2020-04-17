@@ -154,7 +154,7 @@ function createAllTotal(data, desiredCountries){
   }
   return res;
 }
-function updateDiff(c,p, notValid){
+function updateDiff(c,p){
   c.unix = moment(c.date, "YYYY-M-D").unix()
   c.closed = +c.deaths + c.recovered;
   c.active = +c.confirmed - c.closed;
@@ -164,15 +164,7 @@ function updateDiff(c,p, notValid){
 
   c.recoveryRate = c.closed !== 0 ? c.recovered / c.closed : 0;
   c.deathsEstimated = Math.round(c.active * c.deathRate);
-  if (p !== undefined && notValid === true ){
-    c.confirmedDiff = p.confirmedDiff;
-    c.recoveredDiff = p.recoveredDiff;
-    c.deathsDiff    = p.deathsDiff;
-    c.somethingRateDiff = p.somethingRateDiff;
-    c.deathRateDiff = p.deathRateDiff;
-    c.recoveryRateDiff = p.recoveryRateDiff;
-    c.deathsEstimatedDiff = p.deathsEstimatedDiff;
-  } else if (p != undefined){
+  if (p !== undefined){
     c.confirmedDiff = +c.confirmed - p.confirmed;
     c.recoveredDiff = +c.recovered - p.recovered;
     c.deathsDiff    = +c.deaths - p.deaths;
@@ -264,7 +256,7 @@ function createCurrentCountry(nowDate, countryId, country_data){
     }
   }catch(e){
   }
-  updateDiff(res, country_data, !res.isValid)
+  updateDiff(res, country_data)
   return res;
 }
 function createCurrent(data){
