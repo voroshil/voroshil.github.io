@@ -1122,9 +1122,10 @@ function renderGraphTable(tableBodyId, rows){
   var htmlRows = ""
   rows.forEach(c => {
     htmlRows += "<tr>"
-    htmlRows +="<td><table width=\"100%\"><tr><td width=\"50%\">"
+    htmlRows +="<td><table width=\"100%\"><tr>";
+    htmlRows += "<td colspan=\"2\">"
     htmlRows += `<span>${c.name}</span><hr/>`
-    htmlRows += "</td><td width=\"50%\"></td><tr><td>"
+    htmlRows += "</td></tr><tr><td>"
     htmlRows += `<span style="color:black" id="confirmedCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange" id="confirmedDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${c.id}"></span><br/>`
