@@ -218,6 +218,44 @@
   </div>
 </div>
 
+
+<div class="modal" tabindex="-1" role="dialog" id="manualModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Актуальные данные: <span id="manualName"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form>
+        <input type="hidden" id="manualCountry">
+        <div class="form-group">
+          <label for="manualConfirmed">Заразившихся</label>
+          <input type="number" class="form-control" aria-describedBy="manualConfirmedHelp" placeHolder="Введите количество" id="manualConfirmed" value=""/>
+        </div>
+        <div class="form-group">
+          <label for="manualRecovered">Излечившихся</label>
+          <input type="number" class="form-control" aria-describedBy="manualRecoveredHelp" placeHolder="Введите количество" id="manualRecovered" value=""/>
+        </div>
+        <div class="form-group">
+          <label for="manualDeaths">Смертей</label>
+          <input type="number" class="form-control" aria-describedBy="manualDeathsHelp" placeHolder="Введите количество" id="manualDeaths" value=""/>
+        </div>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" onClick="onManualUpdate()" class="btn btn-primary">Сохранить</button>
+        <button type="button" onClick="onManualReset()" class="btn btn-primary">Сброс</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script language="javascript" src="vendor/jquery-3.4.1.min.js"></script>
 <script language="javascript" src="vendor/popper.js"></script>
 <script language="javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>

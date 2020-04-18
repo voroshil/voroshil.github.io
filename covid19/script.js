@@ -435,8 +435,92 @@ function rerenderCurrent(id, isTotal){
     deathRateClass: stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
   }
   renderStatTableFormRow("currentRow"+row.id, row);
-
   outputCountryGraph(c, id, isTotal)
+  updateGraphManual([c], stat);
+}
+
+function onManualDblClick(id, isTotal){
+
+  const statCountries = isTotal ? totalCountries: countries
+
+  const cidx = statCountries.findIndex(d => countryId(d) === id)
+  if (cidx < 0)
+    return
+  const c = statCountries[cidx]
+
+  let d = {}
+  if (isTotal){
+    d = currentTotal[c]
+  }else{
+    d= current[c]
+  }
+
+  let el = document.getElementById("manualName")
+  if (el !== null){
+    el.innerHTML = names[c];
+  }
+  el = document.getElementById("manualCountry")
+  if (el !== null){
+    el.value = c;
+  }
+  el = document.getElementById("manualConfirmed")
+  if (el !== null){
+    el.value = +d.confirmed;
+  }
+  el = document.getElementById("manualRecovered")
+  if (el !== null){
+    el.value = +d.recovered;
+  }
+  el = document.getElementById("manualDeaths")
+  if (el !== null){
+    el.value = +d.deaths;
+  }
+
+  $('#manualModal').modal(d)
+}
+function onManualUpdate(){
+  let el = document.getElementById("manualCountry")
+  if (el === null)
+    return
+
+  const c = el.value
+  const id = countryId(c)
+
+
+  obj = localStorage["covid"+id]
+  if (obj === undefined){
+    obj = {}
+  }else{
+    try{
+    obj = JSON.parse(obj);
+    }catch(e){
+      obj = {};
+    }
+  }
+  el = document.getElementById("manualConfirmed");
+  if (el !== null)
+    obj.confirmed = parseInt(el.value.replace(/[^0-9]/g,""));
+
+  el = document.getElementById("manualDeaths");
+  if (el !== null)
+    obj.deaths = parseInt(el.value.replace(/[^0-9]/g,""));
+  el = document.getElementById("manualRecovered");
+  if (el !== null)
+    obj.recovered = parseInt(el.value.replace(/[^0-9]/g,""));
+
+  localStorage["covid"+id] = JSON.stringify(obj);
+
+
+  rerenderCurrent(id, currentTotal[c] !== undefined);
+}
+function onManualReset(){
+  let el = document.getElementById("manualCountry")
+  if (el === null)
+    return
+
+  const c = el.value
+  const id = countryId(c)
+  onCurrentReset(id, currentTotal[c] !== undefined);
 }
 
 function onCurrentReset(id, isTotal){
@@ -1036,6 +1120,33 @@ function updateGraphCurrent(cs, cur){
       }
     })
 } 
+function updateGraphManual(cs, cur){
+    cs.forEach(c => {
+      if (cur[c] !== undefined && cur[c].isValid == true){
+        const id = countryId(c);
+        el = document.getElementById("confirmedManual"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].confirmed.toLocaleString()
+        }
+        el = document.getElementById("confirmedDiffManual"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].confirmedDiff.toLocaleString()
+        }
+        el = document.getElementById("recoveredDiffManual"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].recoveredDiff.toLocaleString()
+        }
+        el = document.getElementById("deathsDiffManual"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].deathsDiff.toLocaleString()
+        }
+        el = document.getElementById("activeManual"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].active.toLocaleString()
+        }
+      }
+    })
+} 
 
 function renderGraphTable(tableBodyId, rows){
   tbody = document.getElementById(tableBodyId)
@@ -1045,14 +1156,21 @@ function renderGraphTable(tableBodyId, rows){
   var htmlRows = ""
   rows.forEach(c => {
     htmlRows += "<tr>"
-    htmlRows +="<td>"
+    htmlRows +="<td><table width=\"100%\"><tr><td width=\"50%\">"
     htmlRows += `<span>${c.name}</span><hr/>`
+    htmlRows += "</td><td width=\"50%\"></td><tr><td>"
     htmlRows += `<span style="color:black" id="confirmedCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange" id="confirmedDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:red"  id="deathsDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange"  id="activeCurrent${c.id}"></span><br/>`
-    htmlRows += "</td>";
+    htmlRows += "</td><td ondblclick=\"onManualDblClick('"+c.id+"',"+c.isTotal+")\">";
+    htmlRows += `<span style="color:black" id="confirmedManual${c.id}"></span><br/>`
+    htmlRows += `<span style="color:orange" id="confirmedDiffManual${c.id}"></span><br/>`
+    htmlRows += `<span style="color:green"  id="recoveredDiffManual${c.id}"></span><br/>`
+    htmlRows += `<span style="color:red"  id="deathsDiffManual${c.id}"></span><br/>`
+    htmlRows += `<span style="color:orange"  id="activeManual${c.id}"></span><br/>`
+    htmlRows += "</td></tr></table></td>";
     htmlRows +=`<td><div id="graph${c.id}"></div></td>`;
     htmlRows +=`<td><div id="graphDeathRecovery${c.id}"></div></td>`;
 //        htmlRows +=`<td><div id="graphDeathVsRecovery${c.id}"></div></td>`;
@@ -1212,9 +1330,9 @@ function displayData(){
 
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     countries = buildCountries(dates[dds[0]], threshold);
-    cols = countries.map(c => {return {id:countryId(c), c:c, name: names[c]}});
-    cols.unshift({id: "Europe", c:"Europe", name:names["Europe"]})
-    cols.unshift({id: "Total", c:"Total", name:names["Total"]})
+    cols = countries.map(c => {return {id:countryId(c), c:c, name: names[c], isTotal: false}});
+    cols.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
+    cols.unshift({id: "Total", c:"Total", name:names["Total"], isTotal: true})
     rows = dds.map(d => {return {unix: d, date: moment.unix(d).format("DD.MM.YYYY")}})
 
     renderStatTable("latestStat", "latestRow", cols);
@@ -1266,4 +1384,6 @@ function displayData(){
 
     updateGraphCurrent(countries, dates[dds[0]]);
     updateGraphCurrent(totalCountries, totalDates[dds[0]]);
+    updateGraphManual(countries, current);
+    updateGraphManual(totalCountries, currentTotal);
 }
