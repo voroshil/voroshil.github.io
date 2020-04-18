@@ -1251,8 +1251,8 @@ function displayData(){
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     countries = buildCountries(dates[dds[0]], threshold);
     cols = countries.map(c => {return {id:countryId(c), c:c, name: names[c], isTotal: false}});
-    cols.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
-    cols.unshift({id: "Total", c:"Total", name:names["Total"], isTotal: true})
+//    cols.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
+//    cols.unshift({id: "Total", c:"Total", name:names["Total"], isTotal: true})
     rows = dds.map(d => {return {unix: d, date: moment.unix(d).format("DD.MM.YYYY")}})
 
     renderStatTable("latestStat", "latestRow", cols);
@@ -1269,6 +1269,8 @@ function displayData(){
     renderHistoryTable("deathsEstimatedHistory", {rows:rows, dates:dates, cols:cols, formatter:deathsEstimatedFormatter});
 
     graphRows = cols.map(c => c)
+    graphRows.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
+    graphRows.unshift({id: "Total", c:"Total", name:names["Total"], isTotal: true})
 
     renderGraphTable("graphTableBody", graphRows);
     renderGraphRateTable("graphRateTableBody", graphRows);
