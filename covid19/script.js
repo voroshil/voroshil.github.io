@@ -580,7 +580,7 @@ function calcSA_2(data, width, getter, setter){
 function calcSA(data, width, getter, setter){
   return calcSA_2(data, width, getter, setter);
 }
-function outputGraph(title, name, id, d2, accessor, width, height, currentValue){
+function outputGraph(title, name, id, d2, accessor, width, height, currentValue, manual){
   const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
 
   const el = document.getElementById(id)
@@ -614,6 +614,8 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue)
   yMax = d3.max(data, d => d.v)
   if (currentValue !== undefined && !isNaN(currentValue))
     yMax = Math.max(currentValue, yMax)
+  if (manual !== undefined && manual.isValid === true)
+    yMax = Math.max(accessor(manual), yMax)
 
   y = d3.scaleLinear()
         .domain([0, yMax])
@@ -701,13 +703,25 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue)
       .attr("stroke-width", 1)
       ;
     }
+    if (manual !== undefined && manual.isValid === true){
+      const v = accessor(manual)
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(v))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(v))
+      .attr("stroke-dasharray", [1,3])
+      .attr("stroke", "#808080")
+      .attr("stroke-width", 1)
+      ;
+    }
 
     svg.append("g")
       .call(xAxis);
     svg.append("g")
       .call(yAxis);
 }
-function outputDeathRecoveryGraph(title, name, id, d, width, height, current){
+function outputDeathRecoveryGraph(title, name, id, d, width, height, current, manual){
   const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
   const el = document.getElementById(id)
   if (el == null)
@@ -747,7 +761,9 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current){
     yMax = Math.max(yMax, current.recoveredDiff)
     yMax = Math.max(yMax, current.deathsDiff)
   }
-
+  if (manual !== undefined && manual.isValid === true){
+    yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
+  }
   y = d3.scaleLinear()
         .domain([0, yMax]).nice()
         .range([height - margin.bottom, margin.top]);
@@ -857,6 +873,29 @@ if (current !== undefined){
       .attr("stroke-width", 1)
       ;
 }
+    if (manual !== undefined && manual.isValid === true){
+
+      const vd = manual.deathsDiff;
+      const vr = manual.recoveredDiff;
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(vr))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(vr))
+      .attr("stroke-dasharray", [8,16])
+      .attr("stroke", "#20ff20")
+      .attr("stroke-width", 1)
+      ;
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(vd))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(vd))
+      .attr("stroke-dasharray", [8,16])
+      .attr("stroke", "#ff2020")
+      .attr("stroke-width", 1)
+      ;
+    }
     svg.append("g")
       .call(xAxis);
     svg.append("g")
@@ -875,8 +914,20 @@ function outputDeathVsRecoveryGraph(id, d, width, height){
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
+
+  const [yMinDeath, yMaxDeath] = d3.extent(data, d => d.deathsDiff)
+  const [yMinRecovered, yMAxRecovered] = d3.extent(data, d => d.recoveredDiff)
+
+  console.log(manual);
+  let yMax = Math.max(yMaxDeath, yMaxRecovered);
+  let yMin = Math.min(yMinDeath, yMinRecovered);
+  if (manual !== undefined && manual.isValid === true){
+    yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
+    yMin = Math.min(yMin, Math.min(manual.deathsDiff, manual.recoveredDiff));
+  }
+
   y = d3.scaleLinear()
-        .domain(d3.extent(data, d => d.v)).nice()
+        .domain([yMin, yMax]).nice()
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
@@ -1163,9 +1214,9 @@ function displayData(){
     countries.forEach(c => {
       if (data[c] !== undefined){
         const id = countryId(c);
-        outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, dates[dds[0]][c].confirmedDiff))
-        outputGraph("Болеющие", names[c], "graphActive"+id, data[c], d => d.active, width, height, dates[dds[0]][c].active)
-        outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, data[c], width, height, dates[dds[0]][c])
+        outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, dates[dds[0]][c].confirmedDiff), current[c])
+        outputGraph("Болеющие", names[c], "graphActive"+id, data[c], d => d.active, width, height, dates[dds[0]][c].active, current[c])
+        outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, data[c], width, height, dates[dds[0]][c], current[c])
 //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
         outputGraph("Летальность", names[c], "graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*dates[dds[0]][c].deathRate)
         outputGraph("Летальность-14", names[c], "graphDeathsRateLag"+id, data[c], d => (100*d.deathsRateLag), width, height, 100*dates[dds[14]][c].deathsRateLag)
@@ -1189,9 +1240,9 @@ function displayData(){
 
     totalCountries.forEach(c => {
       let id = countryId(c);
-      outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,totalDates[dds[0]][c].confirmedDiff))
-      outputGraph("Болеющие", names[c], "graphActive"+id, totals[c], d => d.active, width, height, totalDates[dds[0]][c].active)
-      outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, totals[c], width, height, totalDates[dds[0]][c])
+      outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,totalDates[dds[0]][c].confirmedDiff), currentTotal[c])
+      outputGraph("Болеющие", names[c], "graphActive"+id, totals[c], d => d.active, width, height, totalDates[dds[0]][c].active, currentTotal[c])
+      outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, totals[c], width, height, totalDates[dds[0]][c], currentTotal[c])
 //      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
         outputGraph("Летальность", names[c], "graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*totalDates[dds[0]][c].deathRate)
         outputGraph("Летальность-14", names[c], "graphDeathsRateLag"+id, totals[c], d => (100*d.deathsRateLag), width, height, 100*totalDates[dds[14]][c].deathsRateLag)
