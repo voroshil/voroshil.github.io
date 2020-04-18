@@ -1122,7 +1122,7 @@ function renderGraphTable(tableBodyId, rows){
   var htmlRows = ""
   rows.forEach(c => {
     htmlRows += "<tr>"
-    htmlRows +="<td><table width=\"100%\"><tr>";
+    htmlRows +=`<td ondblclick="onManualDblClick('${c.id}',${c.isTotal})"><table width="100%"><tr>`;
     htmlRows += "<td colspan=\"2\">"
     htmlRows += `<span>${c.name}</span><hr/>`
     htmlRows += "</td></tr><tr><td width=\"50%\">"
@@ -1131,7 +1131,7 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:red"  id="deathsDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange"  id="activeCurrent${c.id}"></span><br/>`
-    htmlRows += "</td><td ondblclick=\"onManualDblClick('"+c.id+"',"+c.isTotal+")\">";
+    htmlRows += "</td><td>";
     htmlRows += `<span style="color:black" id="confirmedManual${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange" id="confirmedDiffManual${c.id}"></span><br/>`
     htmlRows += `<span style="color:green"  id="recoveredDiffManual${c.id}"></span><br/>`
@@ -1140,7 +1140,6 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows += "</td></tr></table></td>";
     htmlRows +=`<td><div id="graph${c.id}"></div></td>`;
     htmlRows +=`<td><div id="graphDeathRecovery${c.id}"></div></td>`;
-//        htmlRows +=`<td><div id="graphDeathVsRecovery${c.id}"></div></td>`;
     htmlRows +=`<td><div id="graphActive${c.id}"></div></td>`;
     htmlRows +="</tr>"
   })
