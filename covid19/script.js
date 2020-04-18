@@ -1125,7 +1125,7 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows +="<td><table width=\"100%\"><tr>";
     htmlRows += "<td colspan=\"2\">"
     htmlRows += `<span>${c.name}</span><hr/>`
-    htmlRows += "</td></tr><tr><td>"
+    htmlRows += "</td></tr><tr><td width=\"50%\">"
     htmlRows += `<span style="color:black" id="confirmedCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange" id="confirmedDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${c.id}"></span><br/>`
