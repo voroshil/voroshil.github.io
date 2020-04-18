@@ -1066,8 +1066,8 @@ function updateGraphCurrent(cs, cur){
 } 
 function updateGraphManual(cs, cur){
     cs.forEach(c => {
+      const id = countryId(c);
       if (cur[c] !== undefined && cur[c].isValid == true){
-        const id = countryId(c);
         el = document.getElementById("confirmedManual"+id)
         if (el !== null){
           el.innerHTML =  cur[c].confirmed.toLocaleString()
@@ -1088,8 +1088,30 @@ function updateGraphManual(cs, cur){
         if (el !== null){
           el.innerHTML =  cur[c].active.toLocaleString()
         }
+      }else{
+        el = document.getElementById("confirmedManual"+id)
+        if (el !== null){
+          el.innerHTML = ""
+        }
+        el = document.getElementById("confirmedDiffManual"+id)
+        if (el !== null){
+          el.innerHTML = ""
+        }
+        el = document.getElementById("recoveredDiffManual"+id)
+        if (el !== null){
+          el.innerHTML = ""
+        }
+        el = document.getElementById("deathsDiffManual"+id)
+        if (el !== null){
+          el.innerHTML = ""
+        }
+        el = document.getElementById("activeManual"+id)
+        if (el !== null){
+          el.innerHTML = ""
+        }
       }
     })
+
 } 
 
 function renderGraphTable(tableBodyId, rows){
