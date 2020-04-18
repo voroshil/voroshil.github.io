@@ -397,10 +397,6 @@ function outputCountryGraph(c, id, isTotal){
 }
 
 function rerenderCurrent(id, isTotal){
-  el = document.getElementById("currentRow"+id)
-  if (el === null)
-    return
-
   const stat = isTotal ? currentTotal : current
   const source = isTotal ? totals : data
   const statCountries = isTotal ? totalCountries: countries
@@ -412,29 +408,6 @@ function rerenderCurrent(id, isTotal){
 
   stat[c] = createCurrentCountry(moment().format("YYYY-M-D"), id, source[c][source[c].length-1])
 
-  row = {
-    isTotal: isTotal,
-    id: countryId(c),
-    isValid: stat[c].isValid,
-    name: stat[c].code,
-    confirmed: stat[c].confirmed,
-    recovered: stat[c].recovered,
-    deaths: stat[c].deaths,
-    active: stat[c].active.toLocaleString(),
-    deathRate: (100 * stat[c].deathRate).toFixed(1),
-    somethingRate: (100 * stat[c].somethingRate).toFixed(1),
-    deathsEstimated: stat[c].deathsEstimated.toLocaleString(),
-    confirmedDiff: getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green"),
-    recoveredDiff: getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red"),
-    deathsDiff: getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green"),
-    activeDiff: getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green"),
-    deathRateDiff: getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"),
-    somethingRateDiff: getColoredDiff((100 * stat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"),
-    deathsEstimatedDiff: stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "",
-    activeClass: stat[c].activeDiff < 0 ? "death-rate-lower" : "",
-    deathRateClass: stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
-  }
-  renderStatTableFormRow("currentRow"+row.id, row);
   outputCountryGraph(c, id, isTotal)
   updateGraphManual([c], stat);
 }
@@ -507,7 +480,6 @@ function onManualUpdate(){
   el = document.getElementById("manualRecovered");
   if (el !== null)
     obj.recovered = parseInt(el.value.replace(/[^0-9]/g,""));
-
   localStorage["covid"+id] = JSON.stringify(obj);
 
 
@@ -558,34 +530,6 @@ function onCurrentUpdate(id, isTotal){
   rerenderCurrent(id, isTotal);
 }
 
-function outputBetterStatHtmlTableForm(rowIdPrefix, stat, countries, isTotal){
-  const rows = countries.map(c => { 
-    return {
-      isTotal: isTotal,
-      id: countryId(c),
-      name: stat[c].code,
-      confirmed: stat[c].confirmed,
-      recovered: stat[c].recovered,
-      deaths: stat[c].deaths,
-      active: stat[c].active.toLocaleString(),
-      deathRate: (100 * stat[c].deathRate).toFixed(1),
-      somethingRate: (100 * stat[c].somethingRate).toFixed(1),
-      deathsEstimated: stat[c].deathsEstimated.toLocaleString(),
-      confirmedDiff: stat[c].isValid ? getColoredDiff(stat[c].confirmedDiff, "diff-red", "diff-green"): "",
-      recoveredDiff: stat[c].isValid ? getColoredDiff(stat[c].recoveredDiff, "diff-green", "diff-red"): "",
-      deathsDiff: stat[c].isValid ? getColoredDiff(stat[c].deathsDiff, "diff-red", "diff-green"): "",
-      activeDiff: stat[c].isValid ? getColoredDiff(stat[c].activeDiff, "diff-red", "diff-green"): "",
-      deathRateDiff: stat[c].isValid ? getColoredDiff((100 * stat[c].deathRateDiff).toFixed(1), "diff-red", "diff-green"): "",
-      somethingRateDiff: stat[c].isValid ? getColoredDiff((100 * stat[c].somethingRateDiff).toFixed(1), "diff-red", "diff-green"): "",
-      deathsEstimatedDiff: stat[c].isValid ? (stat[c].deathsEstimatedDiff !== undefined ? getColoredDiff(stat[c].deathsEstimatedDiff, "diff-red", "diff-green") : "") : "",
-      activeClass: stat[c].isValid && stat[c].activeDiff < 0 ? "death-rate-lower" : "",
-      deathRateClass: stat[c].isValid && stat[c].deathRate > 0.5 ? "death-rate-higher" : (stat[c].isValid && stat[c].deathRate < 0.1 ? "death-rate-lower" : ""),
-      }
-  });
-  rows.forEach(row => {
-    renderStatTableFormRow(rowIdPrefix+row.id, row);
-  });
-}
 function diffClassTriple(v, lowBound, highBound, classUp, classDown){
   if (v === undefined)
     return "diff-diff-undefined";
@@ -1254,30 +1198,6 @@ function renderStatTableRow(elementId, row){
   table.innerHTML = html;
 
 }
-function renderStatTableFormRow(elementId, row){
-  let el = document.getElementById(elementId);
-  if (el === null)
-    return;
-
-  let html = "";
-  html += `<td>${row.name}</td>`;
-  html += `<td align="right"><input id="confirmed${row.id}" value="${row.confirmed.toLocaleString()}"/>${row.confirmedDiff}</td>`;
-  html += `<td align="right"><input id="recovered${row.id}" value="${row.recovered.toLocaleString()}"/>${row.recoveredDiff}</td>`
-  html += `<td align="right"><input id="deaths${row.id}" value="${row.deaths.toLocaleString()}"/>${row.deathsDiff}</td>`
-  html += `<td align="right" class="${row.activeClass}">${row.active}${row.activeDiff}</td>`
-  html += `<td align="right" class="${row.deathRateClass}">${row.deathRate}${row.deathRateDiff}</td>`
-  html += `<td align="right">${row.somethingRate}${row.somethingRateDiff}</td>`
-  html += `<td align="right">${row.deathsEstimated}${row.deathsEstimatedDiff}</td>`
-  html += "<td>"
-  html += "<div class=\"btn-group\" role=\"group\">";
-  html += `<button type="button" class="btn btn-success btn-sm" onClick="onCurrentUpdate('${row.id}', ${row.isTotal});">Сохранить</button>`
-  html += `<button type="button" class="btn btn-warning btn-sm" onClick="onCurrentReset('${row.id}', ${row.isTotal});">Сброс</button>`
-  html += "</div>";
-  html += `<span id="modified${row.id}"</span>`
-  html += "</td>"
-  html += "</tr>";
-  el.innerHTML = html;
-}
 function renderStatTable(elementId, rowIdPrefix, rows){
   let table = document.getElementById(elementId);
   if (table === null)
@@ -1339,7 +1259,6 @@ function displayData(){
     renderStatTable("currentStat", "currentRow", cols);
 
     outputBetterStatHtmlTable("latestRow", dates[dds[0]], countries);
-    outputBetterStatHtmlTableForm("currentRow", current, countries, false);
 
     renderHistoryTable("confirmedHistory",       {rows:rows, dates:dates, cols:cols, formatter:confirmedFormatter});
     renderHistoryTable("recoveredHistory",       {rows:rows, dates:dates, cols:cols, formatter:recoveredFormatter});
@@ -1365,7 +1284,6 @@ function displayData(){
     totalDates = convertData(totals)
 
     outputBetterStatHtmlTable("latestRow", totalDates[dds[0]], totalCountries);
-    outputBetterStatHtmlTableForm("currentRow", currentTotal, totalCountries, true);
 
     countries.forEach(c => {
       if (data[c] !== undefined){
