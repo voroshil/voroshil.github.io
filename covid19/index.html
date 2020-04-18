@@ -53,6 +53,7 @@
       <a class="dropdown-item" id="deaths-estimated-history-tab" data-toggle="tab" href="#deaths-estimated-history" role="tab" aria-controls="deaths-estimated-history" aria-selected="false">Прогноз</a>
 <!--    </li> -->
       <a class="dropdown-item" id="graph-rate-tab" data-toggle="tab" href="#graphRate" role="tab" aria-controls="graph-rate" aria-selected="false">Графики летальности</a>
+      <a class="dropdown-item" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
     </div>
   </li>
   <li class="nav-item">
@@ -195,6 +196,24 @@
       <tbody id="graphRateTableBody">
       <tbody>
     </table>
+    </div>
+  </div>
+  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+  <h3 align="center">Настройки</h3>
+    <div class="col-sm-8 container">
+      <form>
+        <div class="form-group">
+          <label for="settingsMaxThreshold">Минимально заразившихся</label>
+          <input type="number" class="form-control" aria-describedBy="settingsMaxThresholdHelp" placeHolder="Введите количество" id="settingsMaxThreshold" value=""/>
+          <small id="settingsMathThresholdHelp" class="form-text text-muted">Минимальное количество заразившихся для отображения страны в таблицах</small>
+        </div>
+        <div class="form-group">
+          <label for="settingsPeriodThreshold">Период отображения</label>
+          <input type="number" class="form-control" aria-describedBy="settingsPeriodThresholdHelp" placeHolder="Введите количество" id="settingsPeriodThreshold" value=""/>
+          <small id="settingsPeriodThresholdHelp" class="form-text text-muted">Длина периода (в днях) для отображения на графиках</small>
+        </div>
+        <button type="button" class="btn btn-primary" onClick="updateConfig()">Сохранить и перерисовать</button>
+      </form>
     </div>
   </div>
 </div>

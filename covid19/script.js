@@ -96,6 +96,8 @@ var names = {
   "Europe": "В Европе",
 };
 
+var config = loadConfig()
+
 var countries = [];
 var dds = [];
 var totals = {"Total": []};
@@ -106,8 +108,56 @@ const countryId = c => c.replace(/[ ,`\']/g,"")
 const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
-const maxThreshold = 4000
 
+function loadConfig(){
+  let defaultConfig = {
+    maxThreshold: 4000,
+    periodThreshold: 1000
+  };
+  let res = defaultConfig;
+  try{
+    const cfgJson = localStorage["covid_config"]
+    if (cfgJson !== undefined){
+      cfg = JSON.parse(cfgJson);
+      res = Object.assign(defaultConfig, cfg);
+    }
+  }catch(e){
+  }
+  return res;
+}
+function saveConfig(newConfig){
+  localStorage["covid_config"] = JSON.stringify(newConfig);
+}
+function configToForm(c){
+  let el = document.getElementById("settingsMaxThreshold")
+  if (el !== null){
+    el.value = c.maxThreshold;
+  }
+  el = document.getElementById("settingsPeriodThreshold")
+  if (el !== null){
+    el.value = c.periodThreshold;
+  }
+}
+function formToConfig(){
+  let newConfig = {};
+
+  let el = document.getElementById("settingsMaxThreshold")
+  if (el !== null){
+    newConfig.maxThreshold = +el.value;
+  }
+  el = document.getElementById("settingsPeriodThreshold")
+  if (el !== null){
+    newConfig.periodThreshold = +el.value;
+  }
+  return newConfig;
+}
+
+
+function updateConfig(){
+  const newConfig = Object.assign(config, formToConfig());
+  saveConfig(newConfig);
+  displayData();
+}
 function createDates(data){
   let v = Object.values(data)[0];
   let res = v.map(t => moment(t.date, "YYYY-M-D").unix())
@@ -531,6 +581,8 @@ function calcSA(data, width, getter, setter){
   return calcSA_2(data, width, getter, setter);
 }
 function outputGraph(title, name, id, d2, accessor, width, height, currentValue){
+  const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
+
   const el = document.getElementById(id)
   if (el == null)
     return;
@@ -539,8 +591,10 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue)
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d2.forEach(k => {
+    if (k.unix > dateThr){
     const  v = accessor(k)
     data.push({d: new Date(1000 * k.unix), v:v, confirmed:k.confirmed})
+    }
   })
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
@@ -654,6 +708,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue)
       .call(yAxis);
 }
 function outputDeathRecoveryGraph(title, name, id, d, width, height, current){
+  const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
   const el = document.getElementById(id)
   if (el == null)
     return;
@@ -661,7 +716,9 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current){
   const margin = {top: 35, right: 20, bottom: 50, left: 70};
   var data = []
   d.forEach(k => {
+    if (k.unix > dateThr){
     data.push({d: new Date(1000 * k.unix), deaths:k.deathsDiff, recovery: k.recoveredDiff})
+    }
   })
   calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
   calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
@@ -1041,11 +1098,15 @@ function renderStatTable(elementId, rowIdPrefix, rows){
   table.innerHTML = html;
 
 }
-
+function renderSettings(){
+  configToForm(config);
+}
 function onLoad(){
   loadData();
 }
 function displayData(){
+    renderSettings();
+
     dds = createDates(data);
     Object.keys(data).forEach(c => {
       if (names[c] === undefined){
@@ -1071,8 +1132,8 @@ function displayData(){
     var threshold = threshold0;
     if (threshold1 < threshold)
       threshold = threshold1;
-    if (threshold > maxThreshold)
-      threshold = maxThreshold;
+    if (threshold > config.maxThreshold)
+      threshold = config.maxThreshold;
 
     document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
     countries = buildCountries(dates[dds[0]], threshold);
