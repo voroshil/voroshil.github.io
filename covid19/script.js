@@ -990,7 +990,7 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .join("rect")
       .attr("opacity", 0.5)
       .attr("x", d => x(d.d)+1)
-      .attr("width", d => width / data.length-2)
+      .attr("width", d => (width -margin.left - margin.right)/ data.length-1)
       .attr("y", d => y(d.deaths))
       .attr("height", d => y(0)-y(d.deaths));
     svg.append("g")
@@ -1000,7 +1000,7 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .join("rect")
       .attr("opacity", 0.5)
       .attr("x", d => x(d.d)+1)
-      .attr("width", d => width / data.length-2)
+      .attr("width", d => (width-margin.left-margin.right) / data.length-1)
       .attr("y", d => y(d.recovery))
       .attr("height", d => y(0)-y(d.recovery));
 
