@@ -1369,6 +1369,7 @@ function renderSettings(){
   configToForm(config);
 }
 function onLoad(){
+  displayData();
   loadData();
 }
 function displayData(){
