@@ -1,4 +1,4 @@
-var europe = [
+const europe = [
 "Spain",
 "Italy",
 "France",
@@ -43,7 +43,7 @@ var europe = [
 "Monaco",
 "Liechtenstein",
 ];
-var names = {
+const names = {
   "Australia": "Австралия",
   "Austria": "Австрия",
   "Belarus": "Беларусь",
@@ -96,6 +96,8 @@ var names = {
   "Europe": "В Европе",
 };
 
+
+var model = {}
 var config = loadConfig()
 
 var countries = [];
@@ -113,6 +115,78 @@ const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
 
+// Used globals: names, europe
+function createModel(rawData){
+  let m = {
+    countries: {}
+  }
+
+  Object.keys(rawData).forEach( c => {
+    const id = countryId(c);
+    m.countries[id] = {
+      id: id,
+      country: c,
+      name: names[c] === undefined ? c : names[c],
+      isTotal: false,
+      isEurope: false,
+      history: rawData[c],
+      latest: rawData[c].length-1,
+      manual : {},
+    };
+  });
+  europe.forEach(c => {
+    const id = countryId(c);
+    m.countries[id].isEurope = true;
+  });
+
+  const totalFilter = c => !c.isTotal
+  const europeFilter = c => (!c.isTotal && c.isEurope)
+  const mtotals = {
+    "Total": rebuildModelTotals(m, totalFilter),
+    "Europe": rebuildModelTotals(m, europeFilter)
+  }
+  Object.keys(mtotals).forEach( c => {
+    m.countries[c] = {
+      id: countryId(c),
+      country: c,
+      name: names[c] === undefined ? c : names[c],
+      isTotal: true,
+      isEurope: false,
+      history: mtotals[c],
+      latest: mtotals[c].length-1,
+      manual : {},
+    }
+  });
+
+  Object.keys(m.countries).forEach( c => {
+    updateDiff(m.countries[c].history[0])
+    for(var i=1; i<m.countries[c].history.length; i++){
+      updateDiff(m.countries[c].history[i], m.countries[c].history[i-1]);
+    }
+  });
+
+  console.log(m.countries["Total"]);
+  return m;
+}
+function rebuildModelTotals(m, filter){
+  let res = [];
+
+  Object.keys(m.countries).forEach(c => {
+    if (filter(m.countries[c])){
+      const hist = m.countries[c].history;
+      for(var i=0; i<hist.length; i++){
+        if (res.length <= i){
+          res.push(Object.assign({}, hist[i]));
+        }else{
+          res[i].confirmed += hist[i].confirmed;
+          res[i].recovered += hist[i].recovered;
+          res[i].deaths += hist[i].deaths;
+        }
+      }
+    }
+  });
+  return res;
+}
 function loadConfig(){
   let defaultConfig = {
     maxThreshold: 4000,
@@ -1244,6 +1318,8 @@ function onLoad(){
   loadData();
 }
 function displayData(){
+//    model = createModel(data);
+
     renderSettings();
 
     dds = createDates(data);
