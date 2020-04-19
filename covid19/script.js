@@ -1262,9 +1262,9 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows += `<span style="color:red"  id="deathsDiffManual${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange"  id="activeManual${c.id}"></span><br/>`
     htmlRows += "</td></tr></table></td>";
-    htmlRows +=`<td><div id="graph${c.id}" ondblclick="onGraphDblClick('${c.id}',${c.isTotal},1)" ></div></td>`;
-    htmlRows +=`<td><div id="graphDeathRecovery${c.id}" ondblclick="onGraphDblClick('${c.id}',${c.isTotal},2)" ></div></td>`;
-    htmlRows +=`<td><div id="graphActive${c.id}" ondblclick="onGraphDblClick('${c.id}',${c.isTotal},3)" ></div></td>`;
+    htmlRows +=`<td><div id="graph${c.id}" onclick="onGraphDblClick('${c.id}',${c.isTotal},1)" ></div></td>`;
+    htmlRows +=`<td><div id="graphDeathRecovery${c.id}" onclick="onGraphDblClick('${c.id}',${c.isTotal},2)" ></div></td>`;
+    htmlRows +=`<td><div id="graphActive${c.id}" onclick="onGraphDblClick('${c.id}',${c.isTotal},3)" ></div></td>`;
     htmlRows +="</tr>"
   })
 
