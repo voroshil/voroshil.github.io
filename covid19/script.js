@@ -114,6 +114,8 @@ var totalDates = []
 const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
+const largeWidth = 700
+const largeHeight = 360
 
 // Used globals: names, europe
 function createModel(rawData){
@@ -452,22 +454,38 @@ function outputBetterStatHtmlTable(rowIdPrefix, stat, countries, isTotal){
   });
 }
 
-function outputCountryGraph(c, id, isTotal){
-  if (isTotal){
-    outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, totals[c], d => d.confirmedDiff, width, height, Math.max(0,totalDates[dds[0]][c].confirmedDiff), currentTotal[c])
-    outputGraph("Болеющие", names[c], "graphActive"+id, totals[c], d => d.active, width, height, totalDates[dds[0]][c].active, currentTotal[c])
-    outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, totals[c], width, height, totalDates[dds[0]][c], currentTotal[c])
-    //      outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, totals[c], width, height)
-    outputGraph("Летальность", names[c], "graphDeathRate"+id, totals[c], d => (100*d.deathRate), width, height, 100*totalDates[dds[0]][c].deathRate)
-    outputGraph("Летальность-14", names[c], "graphDeathsRateLag"+id, totals[c], d => (100*d.deathsRateLag), width, height, 100*totalDates[dds[14]][c].deathsRateLag)
-  }else{
-    outputGraph("Заразившиеся (прирост)", names[c], "graph"+id, data[c], d => d.confirmedDiff, width, height, Math.max(0, dates[dds[0]][c].confirmedDiff), current[c])
-    outputGraph("Болеющие", names[c], "graphActive"+id, data[c], d => d.active, width, height, dates[dds[0]][c].active, current[c])
-    outputDeathRecoveryGraph("Смерти / выздоровления", names[c], "graphDeathRecovery"+id, data[c], width, height, dates[dds[0]][c], current[c])
-    //        outputDeathVsRecoveryGraph("graphDeathVsRecovery"+id, data[c], width, height)
-    outputGraph("Летальность", names[c], "graphDeathRate"+id, data[c], d => (100*d.deathRate), width, height, 100*dates[dds[0]][c].deathRate)
-    outputGraph("Летальность-14", names[c], "graphDeathsRateLag"+id, data[c], d => (100*d.deathsRateLag), width, height, 100*dates[dds[14]][c].deathsRateLag)
-  }
+function outputGraph1(elementId, width, height, c, isTotal){
+  const history = isTotal ? totals[c] : data[c];
+  const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
+  outputGraph("Заразившиеся (прирост)", names[c], elementId,              history, d => d.confirmedDiff,       width, height, Math.max(0,latest.confirmedDiff), currentTotal[c])
+
+}
+function outputGraph3(elementId, width, height, c, isTotal){
+  const history = isTotal ? totals[c] : data[c];
+  const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
+  outputGraph("Болеющие",               names[c], elementId,        history, d => d.active,              width, height, latest.active, currentTotal[c])
+}
+function outputGraph2(elementId, width, height, c, isTotal){
+  const history = isTotal ? totals[c] : data[c];
+  const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
+  outputDeathRecoveryGraph("Смерти / выздоровления", names[c], elementId, history,                width, height, latest, currentTotal[c])
+}
+function outputGraph4(elementId, width, height, c, isTotal){
+  const history = isTotal ? totals[c] : data[c];
+  const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
+  outputGraph("Летальность",            names[c], elementId,     history, d => (100*d.deathRate),     width, height, 100*latest.deathRate)
+}
+function outputGraph5(elementId, width, height, c, isTotal){
+  const history = isTotal ? totals[c] : data[c];
+  const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
+  outputGraph("Летальность-14",         names[c], elementId, history, d => (100*d.deathsRateLag), width, height, 100*latest.deathsRateLag)
+}
+function outputCountryGraph(c, elementId, isTotal){
+  outputGraph1("graph"+elementId, width, height, c, isTotal);
+  outputGraph3("graphActive"+elementId, width, height, c, isTotal);
+  outputGraph2("graphDeathRecovery"+elementId, width, height, c, isTotal);
+  outputGraph4("graphDeathRate"+elementId, width, height, c, isTotal);
+  outputGraph4("graphDeathsRateLag"+elementId, width, height, c, isTotal);
 }
 
 function rerenderCurrent(id, isTotal){
@@ -486,6 +504,35 @@ function rerenderCurrent(id, isTotal){
   updateGraphManual([c], stat);
 }
 
+function onGraphDblClick(id, isTotal, gr){
+
+  const statCountries = isTotal ? totalCountries: countries
+
+  const cidx = statCountries.findIndex(d => countryId(d) === id)
+  if (cidx < 0)
+    return
+  const c = statCountries[cidx]
+
+  let d = {}
+  if (isTotal){
+    d = currentTotal[c]
+  }else{
+    d= current[c]
+  }
+  if (gr === 1){
+    outputGraph1("largeGraph", largeWidth, largeHeight, c, isTotal);
+  }else if (gr === 2){
+    outputGraph2("largeGraph", largeWidth, largeHeight, c, isTotal);
+  }else if (gr === 3){
+    outputGraph3("largeGraph", largeWidth, largeHeight, c, isTotal);
+  }
+
+  let el = document.getElementById("graphName");
+  if (el !== null){
+    el.innerHTML = names[c];
+  }
+  $('#graphModal').modal()
+}
 function onManualDblClick(id, isTotal){
 
   const statCountries = isTotal ? totalCountries: countries
@@ -1212,9 +1259,9 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows += `<span style="color:red"  id="deathsDiffManual${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange"  id="activeManual${c.id}"></span><br/>`
     htmlRows += "</td></tr></table></td>";
-    htmlRows +=`<td><div id="graph${c.id}"></div></td>`;
-    htmlRows +=`<td><div id="graphDeathRecovery${c.id}"></div></td>`;
-    htmlRows +=`<td><div id="graphActive${c.id}"></div></td>`;
+    htmlRows +=`<td><div id="graph${c.id}" ondblclick="onGraphDblClick('${c.id}',${c.isTotal},1)" ></div></td>`;
+    htmlRows +=`<td><div id="graphDeathRecovery${c.id}" ondblclick="onGraphDblClick('${c.id}',${c.isTotal},2)" ></div></td>`;
+    htmlRows +=`<td><div id="graphActive${c.id}" ondblclick="onGraphDblClick('${c.id}',${c.isTotal},3)" ></div></td>`;
     htmlRows +="</tr>"
   })
 
