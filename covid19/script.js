@@ -457,18 +457,21 @@ function outputBetterStatHtmlTable(rowIdPrefix, stat, countries, isTotal){
 function outputGraph1(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
-  outputGraph("Заразившиеся (прирост)", names[c], elementId,              history, d => d.confirmedDiff,       width, height, Math.max(0,latest.confirmedDiff), currentTotal[c])
+  const cur = isTotal ? currentTotal[c] : current[c]
+  outputGraph("Заразившиеся (прирост)", names[c], elementId,              history, d => d.confirmedDiff,       width, height, Math.max(0,latest.confirmedDiff), cur)
 
 }
 function outputGraph3(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
-  outputGraph("Болеющие",               names[c], elementId,        history, d => d.active,              width, height, latest.active, currentTotal[c])
+  const cur = isTotal ? currentTotal[c] : current[c]
+  outputGraph("Болеющие",               names[c], elementId,        history, d => d.active,              width, height, latest.active, cur)
 }
 function outputGraph2(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
-  outputDeathRecoveryGraph("Смерти / выздоровления", names[c], elementId, history,                width, height, latest, currentTotal[c])
+  const cur = isTotal ? currentTotal[c] : current[c]
+  outputDeathRecoveryGraph("Смерти / выздоровления", names[c], elementId, history,                width, height, latest, cur)
 }
 function outputGraph4(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
