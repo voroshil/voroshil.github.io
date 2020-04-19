@@ -782,7 +782,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
 
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
-  const vsa_max = d3.max(data, d => d.vsa)
+  const [vsa_min, vsa_max] = d3.extent(data, d => d.vsa)
   const v_max = d3.max(data, d => d.v)
   const idx_max = data.findIndex(d => d.vsa === vsa_max)
   const rising = idx_max === latest ? ", Растет" : ""
@@ -864,7 +864,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .attr("opacity", 1)
       .attr("x", d => x(d.d)+1)
       .attr("width", d => (width - margin.left - margin.right) / data.length-1)
-      .attr("fill", d => d.vsa === vsa_max ? "steelblue" : "orange")
+      .attr("fill", d => d.vsa === vsa_max || d.vsa === vsa_min ? "steelblue" : "orange")
       .attr("y",      d => d.v >= 0 ? y(d.v) : y(0))
       .attr("height", d => d.v > 0 ? y(0)-y(d.v): y(d.v)-y(0));
 
