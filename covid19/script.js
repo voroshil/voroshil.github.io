@@ -803,6 +803,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue,
     yMax = Math.max(accessor(manual), yMax)
     yMin = Math.min(accessor(manual), yMin)
   }
+  yMin = Math.min(yMin, 0)
 
   y = d3.scaleLinear()
         .domain([yMin, yMax])
@@ -955,6 +956,8 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
     yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
     yMin = Math.min(yMin, Math.min(manual.deathsDiff, manual.recoveredDiff));
   }
+  yMin = Math.min(yMin, 0)
+
   y = d3.scaleLinear()
         .domain([yMin, yMax]).nice()
         .range([height - margin.bottom, margin.top]);
