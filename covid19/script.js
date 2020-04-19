@@ -971,7 +971,7 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
   yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
       .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
-      .call(g => g.select(".domain").remove())
+//      .call(g => g.select(".domain").remove())
       .call(g => g
           .append("text")
           .append("tspan")
