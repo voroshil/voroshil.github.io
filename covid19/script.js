@@ -772,8 +772,10 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue,
   var data = []
   d2.forEach(k => {
     if (k.unix > dateThr){
-    const  v = accessor(k)
-    data.push({d: new Date(1000 * k.unix), v:v, confirmed:k.confirmed})
+      const  v = accessor(k)
+      if (!isNaN(v)){
+        data.push({d: new Date(1000 * k.unix), v:v, confirmed:k.confirmed})
+      }
     }
   })
   var latest = data.length - 1
@@ -791,14 +793,19 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue,
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
-  yMax = d3.max(data, d => d.v)
-  if (currentValue !== undefined && !isNaN(currentValue))
+  let [yMin, yMax] = d3.extent(data, d => d.v)
+
+  if (currentValue !== undefined && !isNaN(currentValue)){
     yMax = Math.max(currentValue, yMax)
-  if (manual !== undefined && manual.isValid === true)
+    yMin = Math.min(currentValue, yMin)
+  }
+  if (manual !== undefined && manual.isValid === true){
     yMax = Math.max(accessor(manual), yMax)
+    yMin = Math.min(accessor(manual), yMin)
+  }
 
   y = d3.scaleLinear()
-        .domain([0, yMax])
+        .domain([yMin, yMax])
         .range([height - margin.bottom, margin.top]);
 
   xAxis = g => g
@@ -855,8 +862,8 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue,
       .attr("x", d => x(d.d)+1)
       .attr("width", d => (width - margin.left - margin.right) / data.length-1)
       .attr("fill", d => d.vsa === vsa_max ? "steelblue" : "orange")
-      .attr("y", d => y(d.v))
-      .attr("height", d => !isNaN(d.v) ? y(0)-y(d.v): 0);
+      .attr("y",      d => d.v >= 0 ? y(d.v) : y(0))
+      .attr("height", d => d.v > 0 ? y(0)-y(d.v): y(d.v)-y(0));
 
     line = d3.line()
       .defined(d => !isNaN(d.vsa))
@@ -936,16 +943,20 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
 
-  yMax = d3.max(data, d => d3.max([d.deaths,d.recovery]))
+  let yMax = d3.max(data, d => d3.max([d.deaths,d.recovery]))
+  let yMin = d3.min(data, d => d3.min([d.deaths,d.recovery]))
   if (current !== undefined){
     yMax = Math.max(yMax, current.recoveredDiff)
     yMax = Math.max(yMax, current.deathsDiff)
+    yMin = Math.min(yMin, current.recoveredDiff)
+    yMin = Math.min(yMin, current.deathsDiff)
   }
   if (manual !== undefined && manual.isValid === true){
     yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
+    yMin = Math.min(yMin, Math.min(manual.deathsDiff, manual.recoveredDiff));
   }
   y = d3.scaleLinear()
-        .domain([0, yMax]).nice()
+        .domain([yMin, yMax]).nice()
         .range([height - margin.bottom, margin.top]);
   xAxis = g => g
       .attr("transform", `translate (0, ${height - margin.bottom})`)
@@ -995,8 +1006,8 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .attr("opacity", 0.5)
       .attr("x", d => x(d.d)+1)
       .attr("width", d => (width -margin.left - margin.right)/ data.length-1)
-      .attr("y", d => y(d.deaths))
-      .attr("height", d => y(0)-y(d.deaths));
+      .attr("y", d => d.deaths > 0 ? y(d.deaths): y(0))
+      .attr("height", d => d.deaths > 0 ? y(0)-y(d.deaths) : y(d.deaths)-y(0));
     svg.append("g")
       .attr("fill", "green")
       .selectAll("rect")
@@ -1005,8 +1016,8 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .attr("opacity", 0.5)
       .attr("x", d => x(d.d)+1)
       .attr("width", d => (width-margin.left-margin.right) / data.length-1)
-      .attr("y", d => y(d.recovery))
-      .attr("height", d => y(0)-y(d.recovery));
+      .attr("y", d => d.recovery > 0 ? y(d.recovery) : y(0))
+      .attr("height", d => d.recovery > 0 ? y(0)-y(d.recovery): y(d.recovery)-y(0));
 
     lineDeaths = d3.line()
       .defined(d => !isNaN(d.deathsSA))
@@ -1076,89 +1087,6 @@ if (current !== undefined){
       .attr("stroke-width", 1)
       ;
     }
-    svg.append("g")
-      .call(xAxis);
-    svg.append("g")
-      .call(yAxis);
-}
-function outputDeathVsRecoveryGraph(id, d, width, height){
-  if (document.getElementById(id) == null)
-    return;
-  const margin = {top: 20, right: 20, bottom: 50, left: 70};
-  var data = []
-  d.forEach(k => {
-    data.push({d: new Date(1000 * k.date), v:k.recoveredDiff - k.deathsDiff })
-  })
-  data.pop();
-  calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
-  x = d3.scaleTime()
-        .domain(d3.extent(data.map(d => d.d))).nice()
-        .range([margin.left, width - margin.right]);
-
-  const [yMinDeath, yMaxDeath] = d3.extent(data, d => d.deathsDiff)
-  const [yMinRecovered, yMAxRecovered] = d3.extent(data, d => d.recoveredDiff)
-
-  console.log(manual);
-  let yMax = Math.max(yMaxDeath, yMaxRecovered);
-  let yMin = Math.min(yMinDeath, yMinRecovered);
-  if (manual !== undefined && manual.isValid === true){
-    yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
-    yMin = Math.min(yMin, Math.min(manual.deathsDiff, manual.recoveredDiff));
-  }
-
-  y = d3.scaleLinear()
-        .domain([yMin, yMax]).nice()
-        .range([height - margin.bottom, margin.top]);
-  xAxis = g => g
-      .attr("transform", `translate (0, ${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d.%m")).tickSizeOuter(0))
-      .selectAll("text")
-      .attr("x", -margin.bottom+10)
-      .attr("y", 0)
-      .attr("dy", ".35em")
-      .attr("transform", "rotate(270)")
-      .attr("text-anchor", "start");
-
-  yAxis = g => g
-      .attr("transform", `translate (${margin.left},0)`)
-      .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
-      .call(g => g.select(".domain").remove())
-      .call(g => g.append("text")
-          .attr("x", -margin.left)
-          .attr("y", 10)
-          .attr("fill", "currentColot")
-          .attr("text-anchor", "start")
-          .text(data.y))
-
-    const svg = d3.select("#"+id)
-      .append("svg")
-//      .attr("viewBox", [0, 0, width, height])
-      .attr("width", width)
-      .attr("height", height);
-    svg.append("g")
-      .selectAll("rect")
-      .data(data)
-      .join("rect")
-      .attr("opacity", 0.5)
-      .attr("fill", d => d.v >= 0 ? "green" : "red")
-      .attr("x", d => x(d.d)+1)
-      .attr("width", d => width / data.length-2)
-      .attr("y", d => d.v >=0 ? y(d.v) : y(0))
-      .attr("height", d => d.v >=0? y(0)-y(d.v): y(d.v)-y(0));
-
-    line = d3.line()
-      .defined(d => !isNaN(d.vsa))
-      .x(d => x(d.d) + width /data.length - 2)
-      .y(d => y(d.vsa))
-
-    svg.append("path")
-      .datum(data)
-      .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1)
-      .attr("stroke-linejoin", "round")
-      .attr("stroke-linecap", "round")
-      .attr("d", line);
     svg.append("g")
       .call(xAxis);
     svg.append("g")
