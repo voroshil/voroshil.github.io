@@ -492,7 +492,7 @@ function outputCountryGraph(c, elementId, isTotal){
   outputGraph3("graphActive"+elementId, width, height, c, isTotal);
   outputGraph2("graphDeathRecovery"+elementId, width, height, c, isTotal);
   outputGraph4("graphDeathRate"+elementId, width, height, c, isTotal);
-  outputGraph4("graphDeathsRateLag"+elementId, width, height, c, isTotal);
+  outputGraph5("graphDeathsRateLag"+elementId, width, height, c, isTotal);
 }
 
 function rerenderCurrent(id, isTotal){
