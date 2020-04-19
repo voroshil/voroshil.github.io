@@ -1166,15 +1166,15 @@ function renderGraphRateTable(tableBodyId, rows){
   tbody.innerHTML = htmlRows;
 
 }
-function renderHistoryTable(elementId, params){
+function renderHistoryTable2(elementId, params){
     let table = document.getElementById(elementId);
     if (table === null)
       return;
 
-    dates = params.dates;
-    rows = params.rows;
-    cols = params.cols;
-    formatter = params.formatter;
+    const data = params.data;
+    const cols = params.rows;
+    const rows = params.cols;
+    const formatter = params.formatter;
 
     let html = "";
     html += "<thead>";
@@ -1182,22 +1182,26 @@ function renderHistoryTable(elementId, params){
     html += "<th>Date</th>";
 
     cols.forEach(c => {
-        html += `<th class="rotated-text"><div><span>${c.name}</span></div></th>`;
+        html += `<th class="rotated-text"><div><span>${c.date}</span></div></th>`;
     });
     html += "</tr>";
     html += "</thead>";
     html += "<tbody>";
     rows.forEach(row => {
       html += "<tr>";
-      html += `<td>${row.date}</td>`;
-      cols.forEach(c => {
-        let dd = dates[row.unix][c.c];
+      html += `<td>${row.name}</td>`;
+      const cd =  data[row.c];
+      if (cd === undefined){
+        console.log(row);
+      }
+      for(var i=0; i<cd.length; i++){
+        let dd = cd[cd.length-1-i];
         if (dd !== undefined){
           html += formatter(dd)
         }else{
           html += "<td></td>"
         }
-      });
+      }
       html += "</tr>";
     });
     html += "</tbody>";
@@ -1282,13 +1286,13 @@ function displayData(){
 
     outputBetterStatHtmlTable("latestRow", dates[dds[0]], countries);
 
-    renderHistoryTable("confirmedHistory",       {rows:rows, dates:dates, cols:cols, formatter:confirmedFormatter});
-    renderHistoryTable("recoveredHistory",       {rows:rows, dates:dates, cols:cols, formatter:recoveredFormatter});
-    renderHistoryTable("deathHistory",           {rows:rows, dates:dates, cols:cols, formatter:deathFormatter});
-    renderHistoryTable("activeHistory",          {rows:rows, dates:dates, cols:cols, formatter:activeFormatter});
-    renderHistoryTable("deathRateHistory",       {rows:rows, dates:dates, cols:cols, formatter:deathRateFormatter});
-    renderHistoryTable("somethingRateHistory",   {rows:rows, dates:dates, cols:cols, formatter:somethingRateFormatter});
-    renderHistoryTable("deathsEstimatedHistory", {rows:rows, dates:dates, cols:cols, formatter:deathsEstimatedFormatter});
+    renderHistoryTable2("confirmedHistory",       {data:data, rows:rows, cols:cols, formatter:confirmedFormatter});
+    renderHistoryTable2("recoveredHistory",       {data:data, rows:rows, cols:cols, formatter:recoveredFormatter});
+    renderHistoryTable2("deathHistory",           {data:data, rows:rows, cols:cols, formatter:deathFormatter});
+    renderHistoryTable2("activeHistory",          {data:data, rows:rows, cols:cols, formatter:activeFormatter});
+    renderHistoryTable2("deathRateHistory",       {data:data, rows:rows, cols:cols, formatter:deathRateFormatter});
+    renderHistoryTable2("somethingRateHistory",   {data:data, rows:rows, cols:cols, formatter:somethingRateFormatter});
+    renderHistoryTable2("deathsEstimatedHistory", {data:data, rows:rows, cols:cols, formatter:deathsEstimatedFormatter});
 
     graphRows = cols.map(c => c)
     graphRows.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
