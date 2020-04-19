@@ -462,14 +462,14 @@ function outputGraph1(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
   const cur = isTotal ? currentTotal[c] : current[c]
-  outputGraph("Заразившиеся (прирост)", names[c], elementId,              history, d => d.confirmedDiff,       width, height, Math.max(0,latest.confirmedDiff), cur)
+  outputGraph("Заразившиеся (прирост)", names[c], elementId,              history, d => d.confirmedDiff,       width, height, latest.confirmedDiff, cur)
 
 }
 function outputGraph3(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
   const cur = isTotal ? currentTotal[c] : current[c]
-  outputGraph("Болеющие",               names[c], elementId,        history, d => d.active,              width, height, latest.active, cur)
+  outputGraph("Болеющие (прирост)",               names[c], elementId,        history, d => (d.confirmedDiff - d.deathsDiff - d.recoveredDiff),              width, height, latest, cur)
 }
 function outputGraph2(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
@@ -480,12 +480,12 @@ function outputGraph2(elementId, width, height, c, isTotal){
 function outputGraph4(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
-  outputGraph("Летальность",            names[c], elementId,     history, d => (100*d.deathRate),     width, height, 100*latest.deathRate)
+  outputGraph("Летальность",            names[c], elementId,     history, d => (100*d.deathRate),     width, height, latest)
 }
 function outputGraph5(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
-  outputGraph("Летальность-14",         names[c], elementId, history, d => (100*d.deathsRateLag), width, height, 100*latest.deathsRateLag)
+  outputGraph("Летальность-14",         names[c], elementId, history, d => (100*d.deathsRateLag), width, height, latest)
 }
 function outputCountryGraph(c, elementId, isTotal){
   outputGraph1("graph"+elementId, width, height, c, isTotal);
@@ -760,7 +760,7 @@ function calcSA_2(data, width, getter, setter){
 function calcSA(data, width, getter, setter){
   return calcSA_2(data, width, getter, setter);
 }
-function outputGraph(title, name, id, d2, accessor, width, height, currentValue, manual){
+function outputGraph(title, name, id, d2, accessor, width, height, currentObject, manual){
   const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
 
   const el = document.getElementById(id)
@@ -778,6 +778,8 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue,
       }
     }
   })
+  const currentValue = accessor(currentObject);
+
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const vsa_max = d3.max(data, d => d.vsa)
@@ -903,6 +905,15 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentValue,
       .attr("stroke-width", 1)
       ;
     }
+
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(0))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(0))
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      ;
 
     svg.append("g")
       .call(xAxis);
@@ -1090,6 +1101,14 @@ if (current !== undefined){
       .attr("stroke-width", 1)
       ;
     }
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(0))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(0))
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      ;
     svg.append("g")
       .call(xAxis);
     svg.append("g")
