@@ -774,11 +774,15 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
     if (k.unix > dateThr){
       const  v = accessor(k)
       if (!isNaN(v)){
-        data.push({d: new Date(1000 * k.unix), v:v, confirmed:k.confirmed})
+        data.push({d: new Date(1000 * k.unix), v:v, manual: false})
       }
     }
   })
   const currentValue = accessor(currentObject);
+  if (manual !== undefined && manual.isValid){
+    const manualValue = accessor(manual)
+    data.push({d: new Date(1000 * manual.unix), v: manualValue, manual: true})
+  }
 
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
@@ -864,7 +868,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .attr("opacity", 1)
       .attr("x", d => x(d.d)+1)
       .attr("width", d => (width - margin.left - margin.right) / data.length-1)
-      .attr("fill", d => d.vsa === vsa_max || d.vsa === vsa_min ? "steelblue" : "orange")
+      .attr("fill", d => d.vsa === vsa_max || d.vsa === vsa_min ? "steelblue" : (d.manual ? "magenta": "orange"))
       .attr("y",      d => d.v >= 0 ? y(d.v) : y(0))
       .attr("height", d => d.v > 0 ? y(0)-y(d.v): y(d.v)-y(0));
 
