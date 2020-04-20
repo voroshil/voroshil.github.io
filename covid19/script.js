@@ -1320,7 +1320,7 @@ function renderSettings(){
 }
 function onLoad(){
   displayData();
-  loadData();
+  setTimeout(loadData, 100)
 }
 function displayData(){
 //    model = createModel(data);
