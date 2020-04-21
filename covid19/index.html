@@ -192,6 +192,10 @@
           <input type="number" class="form-control" aria-describedBy="settingsPeriodThresholdHelp" placeHolder="Введите количество" id="settingsPeriodThreshold" value=""/>
           <small id="settingsPeriodThresholdHelp" class="form-text text-muted">Длина периода (в днях) для отображения на графиках</small>
         </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="settingsShowHorizontal"/>
+          <label class="Form-check-label" for="settingsShowHorizontal">Отображение горизонтальных линий на графиках</label>
+        </div>
         <button type="button" class="btn btn-primary" onClick="updateConfig()">Сохранить и перерисовать</button>
       </form>
     </div>

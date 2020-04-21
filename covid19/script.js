@@ -99,6 +99,12 @@ const names = {
   "Total": "В мире",
   "Europe": "В Европе",
 };
+const defaultConfig = {
+    maxThreshold: 4000,
+    periodThreshold: 1000,
+    showManualHorizontal: false,
+    showHorizontal: true
+};
 
 
 var model = {}
@@ -194,11 +200,7 @@ function rebuildModelTotals(m, filter){
   return res;
 }
 function loadConfig(){
-  let defaultConfig = {
-    maxThreshold: 4000,
-    periodThreshold: 1000
-  };
-  let res = defaultConfig;
+  let res = Object.assign({}, defaultConfig);
   try{
     const cfgJson = localStorage["covid_config"]
     if (cfgJson !== undefined){
@@ -221,6 +223,10 @@ function configToForm(c){
   if (el !== null){
     el.value = c.periodThreshold;
   }
+  el = document.getElementById("settingsShowHorizontal")
+  if (el !== null){
+    el.checked = c.showHorizontal;
+  }
 }
 function formToConfig(){
   let newConfig = {};
@@ -232,6 +238,10 @@ function formToConfig(){
   el = document.getElementById("settingsPeriodThreshold")
   if (el !== null){
     newConfig.periodThreshold = +el.value;
+  }
+  el = document.getElementById("settingsShowHorizontal")
+  if (el !== null){
+    newConfig.showHorizontal = el.checked;
   }
   return newConfig;
 }
@@ -783,7 +793,6 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
     const manualValue = accessor(manual)
     data.push({d: new Date(1000 * manual.unix), v: manualValue, manual: true})
   }
-
   var latest = data.length - 1
   calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
   const [vsa_min, vsa_max] = d3.extent(data, d => d.vsa)
@@ -799,6 +808,10 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
+
+  const [dMin, dMax] = d3.extent(data, d => d.d);
+  const xWidth = (x(dMax) - x(dMin)) / data.length - 1
+
   let [yMin, yMax] = d3.extent(data, d => d.v)
 
   if (currentValue !== undefined && !isNaN(currentValue)){
@@ -867,7 +880,8 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .join("rect")
       .attr("opacity", 1)
       .attr("x", d => x(d.d)+1)
-      .attr("width", d => (width - margin.left - margin.right) / data.length-1)
+//      .attr("width", d => (width - margin.left - margin.right) / data.length-1)
+      .attr("width", d => xWidth)
       .attr("fill", d => d.vsa === vsa_max || d.vsa === vsa_min ? "steelblue" : (d.manual ? "magenta": "orange"))
       .attr("y",      d => d.v >= 0 ? y(d.v) : y(0))
       .attr("height", d => d.v > 0 ? y(0)-y(d.v): y(d.v)-y(0));
@@ -886,7 +900,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .attr("d", line);
-    if (currentValue !== undefined && !isNaN(currentValue)){
+    if (config.showHorizontal === true && currentValue !== undefined && !isNaN(currentValue)){
     svg.append("line")
       .attr("x1", margin.left)
       .attr("y1", y(currentValue))
@@ -897,7 +911,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .attr("stroke-width", 1)
       ;
     }
-    if (manual !== undefined && manual.isValid === true){
+    if (config.showManualHorizontal === true && manual !== undefined && manual.isValid === true){
       const v = accessor(manual)
     svg.append("line")
       .attr("x1", margin.left)
@@ -958,6 +972,9 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
   x = d3.scaleTime()
         .domain(d3.extent(data.map(d => d.d))).nice()
         .range([margin.left, width - margin.right]);
+
+  const [dMin, dMax] = d3.extent(data, d => d.d);
+  const xWidth = (x(dMax) - x(dMin)) / data.length - 1
 
   let yMax = d3.max(data, d => d3.max([d.deaths,d.recovery]))
   let yMin = d3.min(data, d => d3.min([d.deaths,d.recovery]))
@@ -1023,7 +1040,8 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .join("rect")
       .attr("opacity", 0.5)
       .attr("x", d => x(d.d)+1)
-      .attr("width", d => (width -margin.left - margin.right)/ data.length-1)
+//      .attr("width", d => (width -margin.left - margin.right)/ data.length-1)
+      .attr("width", d => xWidth)
       .attr("y", d => d.deaths > 0 ? y(d.deaths): y(0))
       .attr("height", d => d.deaths > 0 ? y(0)-y(d.deaths) : y(d.deaths)-y(0));
     svg.append("g")
@@ -1033,7 +1051,8 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .join("rect")
       .attr("opacity", 0.5)
       .attr("x", d => x(d.d)+1)
-      .attr("width", d => (width-margin.left-margin.right) / data.length-1)
+//      .attr("width", d => (width-margin.left-margin.right) / data.length-1)
+      .attr("width", d => xWidth)
       .attr("y", d => d.recovery > 0 ? y(d.recovery) : y(0))
       .attr("height", d => d.recovery > 0 ? y(0)-y(d.recovery): y(d.recovery)-y(0));
 
@@ -1062,7 +1081,7 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .attr("d", lineDeaths);
-if (current !== undefined){
+if (config.showHorizontal === true && current !== undefined){
     svg.append("line")
       .attr("x1", margin.left)
       .attr("y1", y(current.recoveredDiff))
@@ -1082,7 +1101,7 @@ if (current !== undefined){
       .attr("stroke-width", 1)
       ;
 }
-    if (manual !== undefined && manual.isValid === true){
+    if (config.showManualHorizontal === true && manual !== undefined && manual.isValid === true){
 
       const vd = manual.deathsDiff;
       const vr = manual.recoveredDiff;
