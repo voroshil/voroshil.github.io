@@ -789,12 +789,14 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
     }
   })
   const currentValue = accessor(currentObject);
+  var latest = data.length - 1
+  calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
+
   if (manual !== undefined && manual.isValid){
     const manualValue = accessor(manual)
     data.push({d: new Date(1000 * manual.unix), v: manualValue, manual: true})
   }
-  var latest = data.length - 1
-  calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
+
   const [vsa_min, vsa_max] = d3.extent(data, d => d.vsa)
   const v_max = d3.max(data, d => d.v)
   const idx_max = data.findIndex(d => d.vsa === vsa_max)
@@ -948,11 +950,15 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
   var data = []
   d.forEach(k => {
     if (k.unix > dateThr){
-    data.push({d: new Date(1000 * k.unix), deaths:k.deathsDiff, recovery: k.recoveredDiff})
+    data.push({d: new Date(1000 * k.unix), deaths:k.deathsDiff, recovery: k.recoveredDiff, manual: false})
     }
   })
   calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
   calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
+  if (manual !== undefined && manual.isValid){
+    data.push({d: new Date(1000 * manual.unix), deaths: manual.deathsDiff, recovery: manual.recoveredDiff, manual: true})
+  }
+
   const deathsSA_max = d3.max(data, d => d.deathsSA)
   const recoverySA_max = d3.max(data, d => d.recoverySA)
 
@@ -1034,22 +1040,22 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .attr("width", width)
       .attr("height", height);
     svg.append("g")
-      .attr("fill", "red")
       .selectAll("rect")
       .data(data)
       .join("rect")
       .attr("opacity", 0.5)
+      .attr("fill", d => d.manual ? "#ff3030": "red")
       .attr("x", d => x(d.d)+1)
 //      .attr("width", d => (width -margin.left - margin.right)/ data.length-1)
       .attr("width", d => xWidth)
       .attr("y", d => d.deaths > 0 ? y(d.deaths): y(0))
       .attr("height", d => d.deaths > 0 ? y(0)-y(d.deaths) : y(d.deaths)-y(0));
     svg.append("g")
-      .attr("fill", "green")
       .selectAll("rect")
       .data(data)
       .join("rect")
       .attr("opacity", 0.5)
+      .attr("fill", d => d.manual ? "#30ff30" : "green")
       .attr("x", d => x(d.d)+1)
 //      .attr("width", d => (width-margin.left-margin.right) / data.length-1)
       .attr("width", d => xWidth)
