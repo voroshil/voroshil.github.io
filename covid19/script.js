@@ -365,12 +365,18 @@ function checkUpdate(){
 
 }
 
+function needUpdate(oldData, newData){
+  return oldData["Germany"].length < newData["Germany"].length
+}
+
 function loadData(){
   fetch("https://pomber.github.io/covid19/timeseries.json")
   .then(response => response.json())
   .then(d => {
-    data = d
-    displayData();
+    if (needUpdate(data, d)){
+      data = d
+      displayData();
+    }
   });
 }
 
