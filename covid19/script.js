@@ -109,7 +109,7 @@ const defaultConfig = {
 
 var model = {}
 var config = loadConfig()
-
+var manualDate = moment().format("YYYY-M-D")
 var countries = [];
 var dds = [];
 var totals = {"Total": []};
@@ -412,12 +412,11 @@ function createCurrentCountry(nowDate, countryId, country_data){
   return res;
 }
 function createCurrent(data){
-  let nowDate = moment().format("YYYY-M-D")
   let res = {}
   Object.entries(data).forEach(entry => {
     const id = countryId(entry[0]);
     country_data = entry[1]
-    res[entry[0]] = createCurrentCountry(nowDate, id, country_data[country_data.length-1]);
+    res[entry[0]] = createCurrentCountry(manualDate, id, country_data[country_data.length-1]);
   });
   return res;
 }
@@ -521,7 +520,7 @@ function rerenderCurrent(id, isTotal){
     return
   const c = statCountries[cidx]
 
-  stat[c] = createCurrentCountry(moment().format("YYYY-M-D"), id, source[c][source[c].length-1])
+  stat[c] = createCurrentCountry(manualDate, id, source[c][source[c].length-1])
 
   outputCountryGraph(c, id, isTotal)
   updateGraphManual([c], stat);
@@ -1363,6 +1362,8 @@ function displayData(){
     renderSettings();
 
     dds = createDates(data);
+    manualDate = moment.unix(dds[0]).add(1,'days').format('YYYY-M-D')
+    console.log(manualDate)
     Object.keys(data).forEach(c => {
       if (names[c] === undefined){
         names[c] = c
