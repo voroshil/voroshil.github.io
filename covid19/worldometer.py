@@ -57,6 +57,9 @@ for i in range(0, len(rows)):
       pass
     data.append({'country': cols[0], 'confirmed': confirmed, 'recovered': recovered, 'deaths': deaths})
 
+print "var manual_data = {"
 for row in data:
+    id = row["country"].replace(" ","").replace(",","").replace("'","").replace("`","")
 #  if row['country'] == 'Mexico':
-    print row
+    print "\"covid%s\": {\"confirmed\": %d, \"recovered\": %d, \"deaths\": %d}," % (id, row["confirmed"], row["recovered"], row["deaths"])
+print "};"
