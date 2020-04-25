@@ -58,6 +58,9 @@
     </div>
   </li>
   <li class="nav-item">
+      <a class="nav-link" id="dynamic-tab" data-toggle="tab" href="#dynamic" role="tab" aria-controls="dynamic" aria-selected="false">Динамика</a>
+  </li>
+  <li class="nav-item">
       <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
   </li>
 </ul>
@@ -196,9 +199,22 @@
           <input type="checkbox" class="form-check-input" id="settingsShowHorizontal"/>
           <label class="Form-check-label" for="settingsShowHorizontal">Отображение горизонтальных линий на графиках</label>
         </div>
+        <div class="form-group">
+          <label for="settingsDynamicThreshold">Минимальный порог для графиков динамики пандемии</label>
+          <input type="number" class="form-control" aria-describedBy="settingsDynamicThresholdHelp" placeHolder="Введите количество" id="settingsDynamicThreshold" value=""/>
+          <small id="settingsDynamicThresholdHelp" class="form-text text-muted">Длина периода (в днях) для отображения на графиках</small>
+        </div>
         <button type="button" class="btn btn-primary" onClick="updateConfig()">Сохранить и перерисовать</button>
       </form>
     </div>
+  </div>
+  <div class="tab-pane" id="dynamic" role="tabpanel" aria-labelledby="dynamic-tab">
+  <h3 align="center">Динамика</h3>
+    <p align="center">Начало графика - день, когда количество заразившихся в стране превысило значение <span id="dynamic-threshold"></span></p>
+    <div class="col-sm-8 container" id="dynamic-confirmed"></div>
+    <div class="col-sm-8 container" id="dynamic-recovered"></div>
+    <div class="col-sm-8 container" id="dynamic-deaths"></div>
+    <div class="col-sm-8 container" id="dynamic-active"></div>
   </div>
 </div>
 

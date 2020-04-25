@@ -99,11 +99,14 @@ const names = {
   "Total": "В мире",
   "Europe": "В Европе",
 };
+const colors = ["red", "green", "blue", "black", "orange", "steelblue", "magenta",  "cyan", "yellow", "brown", "pink"];
+
 const defaultConfig = {
     maxThreshold: 4000,
     periodThreshold: 1000,
     showManualHorizontal: false,
-    showHorizontal: true
+    showHorizontal: true,
+    dynamicThreshold: 500
 };
 
 
@@ -227,6 +230,10 @@ function configToForm(c){
   if (el !== null){
     el.checked = c.showHorizontal;
   }
+  el = document.getElementById("settingsDynamicThreshold")
+  if (el !== null){
+    el.value = c.dynamicThreshold;
+  }
 }
 function formToConfig(){
   let newConfig = {};
@@ -242,6 +249,10 @@ function formToConfig(){
   el = document.getElementById("settingsShowHorizontal")
   if (el !== null){
     newConfig.showHorizontal = el.checked;
+  }
+  el = document.getElementById("settingsDynamicThreshold")
+  if (el !== null){
+    newConfig.dynamicThreshold = +el.value;
   }
   return newConfig;
 }
@@ -945,6 +956,124 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
     svg.append("g")
       .call(yAxis);
 }
+function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
+  const el = document.getElementById(id)
+  if (el == null)
+    return;
+  el.innerHTML = "";
+
+  const margin = {top: 35, right: 170, bottom: 50, left: 70};
+  var data = {}
+  var dataMax = []
+  var iMax = 0
+  var vMax = 1
+  Object.keys(d2).forEach(c => {
+    data[c] = [];
+
+    const first = d2[c].findIndex(e => e.confirmed > minThr)
+    if (first >= 0){
+      dm={c: c, v:0}
+      for(var i=first; i<d2[c].length; i++){
+        const idx = i-first;
+        const v = accessor(d2[c][i])
+        if (idx > iMax)
+          iMax = idx
+        if (v > dm.v)
+          dm.v = v
+        data[c].push({d: idx, v:v});
+      }
+      if (dm.v > vMax)
+        vMax = dm.v
+      dataMax.push(dm)
+      calcSA(data[c], 5, d => d.v, (d,v) => {d.vsa = v})
+    }
+  });
+
+  dataMax.sort((a,b) => {
+      if (a.v > b.v)
+        return -1;
+      if (a.v < b.v)
+        return 1;
+      return 0;
+  })
+  x = d3.scaleLinear()
+        .domain([0, iMax]).nice()
+        .range([margin.left, width - margin.right]);
+
+  y = d3.scaleLog()
+        .domain([1, vMax]).nice()
+        .range([height - margin.bottom, margin.top]);
+
+  const xAxis = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+//      .call(d3.axisBottom(x).tickFormat(x => x.toLocaleString()))
+      .call(d3.axisBottom(x).tickFormat(x => x.toLocaleString()))
+      .selectAll("text")
+      .attr("x", -margin.bottom+10)
+      .attr("y", 0)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(270)")
+      .attr("text-anchor", "start");
+
+  const yAxis = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
+
+    const svg = d3.select("#"+id)
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    svg.call(g => g.append("text")
+          .append("tspan")
+          .attr("x", margin.left + (width-margin.left-margin.right)/2)
+          .attr("y", 12)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "center")
+          .text(title))
+     svg
+      .call(g => {
+           let t = g.append("text")
+           for(var i =0; i<Math.min(dataMax.length,colors.length); i++){
+             const c = dataMax[i].c
+             const color = colors[i]
+             if (color !== undefined && data[c].length > 0){
+               t = t.append("tspan")
+                    .attr("x", width - margin.right)
+                    .attr("y", margin.top + 10+i*15)
+                    .attr("fill", color)
+                    .attr("text-anchor", "center")
+                    .text(c)
+                    .append("tspan")
+             }
+           }
+    })
+
+    const xWidth = (x(iMax) - x(0)) / iMax
+    for(var i =0; i<Math.min(dataMax.length,colors.length); i++){
+      const c = dataMax[i].c
+      const color = colors[i]
+      if (color !== undefined && data[c].length > 0){
+      let line = d3.line()
+        .defined(d => !isNaN(d.vsa) && d.vsa > 1)
+        .x(d => x(d.d) + xWidth/2)
+        .y(d => y(d.vsa))
+
+       svg.append("path")
+          .datum(data[c])
+          .attr("fill", "none")
+          .attr("stroke", color)
+          .attr("stroke-width", 1)
+          .attr("stroke-linejoin", "round")
+          .attr("stroke-linecap", "round")
+          .attr("d", line);
+      }
+    }
+    svg.append("g")
+      .call(xAxis);
+    svg.append("g")
+      .call(yAxis);
+}
 function outputDeathRecoveryGraph(title, name, id, d, width, height, current, manual){
   const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
   const el = document.getElementById(id)
@@ -1363,7 +1492,7 @@ function displayData(){
 
     dds = createDates(data);
     manualDate = moment.unix(dds[0]).add(1,'days').format('YYYY-M-D')
-    console.log(manualDate)
+//    console.log(manualDate)
     Object.keys(data).forEach(c => {
       if (names[c] === undefined){
         names[c] = c
@@ -1449,4 +1578,15 @@ function displayData(){
     updateGraphCurrent(totalCountries, totalDates[dds[0]]);
     updateGraphManual(countries, current);
     updateGraphManual(totalCountries, currentTotal);
+
+    const el1 = document.getElementById("dynamic-threshold");
+    if (el1 !== null){
+      el1.innerHTML = config.dynamicThreshold
+    }
+    outputDynamicGraph("Динамика заразившихся", "dynamic-confirmed", data, d => d.confirmed, config.dynamicThreshold, 800, 400);
+    outputDynamicGraph("Динамика выздоровлений", "dynamic-recovered", data, d => d.recovered, config.dynamicThreshold, 800, 400);
+    outputDynamicGraph("Динамика смертей", "dynamic-deaths", data, d => d.deaths, config.dynamicThreshold, 800, 400);
+    outputDynamicGraph("Динамика болеющих", "dynamic-active", data, d => d.active, config.dynamicThreshold, 800, 400);
+
+
 }
