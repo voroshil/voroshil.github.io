@@ -6,8 +6,10 @@ import json
 parser = argparse.ArgumentParser(description="Convert JHU daily tada to JSON")
 parser.add_argument("--csv", required = True, help="CSV with JHU Daily data")
 parser.add_argument("--json", required = True, help="Prevously parsed data JSON")
+parser.add_argument("--force-date", help="Force date")
 
 args = parser.parse_args()
+
 
 countries = {}
 
@@ -67,6 +69,10 @@ for line in fcsv.readlines():
   countries[name][0]["recovered"] += recovered
 
 fcsv.close()
+
+if args.force_date is not None:
+  new_d = args.force_date
+
 
 
 #print "%s vs %s " % (last_d,new_d)
