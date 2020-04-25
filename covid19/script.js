@@ -99,7 +99,7 @@ const names = {
   "Total": "В мире",
   "Europe": "В Европе",
 };
-const colors = ["red", "green", "blue", "black", "orange", "steelblue", "magenta",  "cyan", "yellow", "brown", "pink"];
+const colors = ["green", "blue", "black", "orange", "steelblue", "magenta",  "cyan", "yellow", "brown", "pink"];
 
 const defaultConfig = {
     maxThreshold: 4000,
@@ -996,6 +996,10 @@ function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
         return 1;
       return 0;
   })
+  const russiaIdx = dataMax.findIndex(dm => dm.c == "Russia")
+  if (russiaIdx >= colors.length)
+    dataMax.unshift(dataMax[russiaIdx])
+
   x = d3.scaleLinear()
         .domain([0, iMax]).nice()
         .range([margin.left, width - margin.right]);
@@ -1041,9 +1045,9 @@ function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
                t = t.append("tspan")
                     .attr("x", width - margin.right)
                     .attr("y", margin.top + 10+i*15)
-                    .attr("fill", color)
+                    .attr("fill", c == "Russia" ? "red" : color)
                     .attr("text-anchor", "center")
-                    .text(c)
+                    .text(names[c])
                     .append("tspan")
              }
            }
@@ -1062,8 +1066,9 @@ function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
        svg.append("path")
           .datum(data[c])
           .attr("fill", "none")
-          .attr("stroke", color)
-          .attr("stroke-width", 1)
+          .attr("stroke", c == "Russia" ? "red" : color)
+          .attr("stroke-width", c == "Russia" ? 2 : 0.5)
+//          .attr("stroke-dasharray", c == "Russia" ? [1] :  [5,5])
           .attr("stroke-linejoin", "round")
           .attr("stroke-linecap", "round")
           .attr("d", line);
