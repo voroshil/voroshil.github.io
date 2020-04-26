@@ -855,6 +855,15 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .attr("dy", ".35em")
       .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
+
+  const xAxis2 = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisBottom(x)
+        .tickSize(-height+margin.top+margin.bottom)
+        .tickFormat("")
+      )
+
   yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
       .call(d3.axisLeft(y).ticks(6).tickFormat(x => x.toLocaleString()))
@@ -884,6 +893,16 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
           .attr("fill", "currentColor")
           .attr("text-anchor", "start")
           .text(data.yLast))
+
+  const yAxis2 = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisLeft(y)
+        .ticks(6)
+        .tickSize(-width+margin.right+margin.left)
+        .tickFormat("")
+      )
+
 
     const svg = d3.select("#"+id)
       .append("svg")
@@ -955,6 +974,12 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       .call(xAxis);
     svg.append("g")
       .call(yAxis);
+    if (width > 300){
+    svg.append("g")
+      .call(xAxis2);
+    svg.append("g")
+      .call(yAxis2);
+    }
 }
 function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
   const el = document.getElementById(id)
@@ -1019,14 +1044,40 @@ function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
       .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
 
+  const xAxis2 = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisBottom(x)
+        .tickSize(-height+margin.top+margin.bottom)
+        .tickFormat("")
+      )
+
   const yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
       .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
+
+  const yAxis2 = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisLeft(y)
+        .ticks(4)
+        .tickSize(-width+margin.right+margin.left)
+        .tickFormat("")
+      )
 
     const svg = d3.select("#"+id)
       .append("svg")
       .attr("width", width)
       .attr("height", height);
+
+     svg.append("g")
+      .attr("class", "grid")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisLeft(y)
+          .ticks(4)
+          .tickSize(-height)
+          .tickFormat("")
+      )
 
     svg.call(g => g.append("text")
           .append("tspan")
@@ -1077,7 +1128,11 @@ function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
     svg.append("g")
       .call(xAxis);
     svg.append("g")
+      .call(xAxis2);
+    svg.append("g")
       .call(yAxis);
+    svg.append("g")
+      .call(yAxis2);
 }
 function outputDeathRecoveryGraph(title, name, id, d, width, height, current, manual){
   const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
@@ -1148,6 +1203,14 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
       .attr("transform", "rotate(270)")
       .attr("text-anchor", "start");
 
+  const xAxis2 = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisBottom(x)
+        .tickSize(-height+margin.top+margin.bottom)
+        .tickFormat("")
+      )
+
   yAxis = g => g
       .attr("transform", `translate (${margin.left},0)`)
       .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
@@ -1172,6 +1235,15 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
           .attr("fill", "green")
           .attr("text-anchor", "start")
           .text(data.yRecovery))
+
+    const yAxis2 = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisLeft(y)
+        .ticks(4)
+        .tickSize(-width+margin.right+margin.left)
+        .tickFormat("")
+      )
 
     const svg = d3.select("#"+id)
       .append("svg")
@@ -1281,6 +1353,13 @@ if (config.showHorizontal === true && current !== undefined){
       .call(xAxis);
     svg.append("g")
       .call(yAxis);
+
+    if (width > 300){
+    svg.append("g")
+      .call(xAxis2);
+    svg.append("g")
+      .call(yAxis2);
+    }
 }
 
 function updateGraphCurrent(cs, cur){
