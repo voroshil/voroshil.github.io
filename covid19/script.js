@@ -925,6 +925,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
 
     line = d3.line()
       .defined(d => !isNaN(d.vsa))
+      .curve(d3.curveBasis)
       .x(d => x(d.d) + xWidth/2)
       .y(d => y(d.vsa))
 
@@ -1275,10 +1276,12 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
 
     lineDeaths = d3.line()
       .defined(d => !isNaN(d.deathsSA))
+      .curve(d3.curveBasis)
       .x(d => x(d.d) + xWidth / 2)
       .y(d => y(d.deathsSA))
     lineRecovery = d3.line()
       .defined(d => !isNaN(d.recoverySA))
+      .curve(d3.curveBasis)
       .x(d => x(d.d) + xWidth / 2)
       .y(d => y(d.recoverySA))
 
