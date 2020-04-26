@@ -806,12 +806,12 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
   })
   const currentValue = accessor(currentObject);
   var latest = data.length - 1
-  calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
 
   if (manual !== undefined && manual.isValid){
     const manualValue = accessor(manual)
     data.push({d: new Date(1000 * manual.unix), v: manualValue, manual: true})
   }
+  calcSA(data, 5, d => d.v, (d,v) => {d.vsa = v})
 
   const [vsa_min, vsa_max] = d3.extent(data, d => d.vsa)
   const v_max = d3.max(data, d => d.v)
@@ -1148,11 +1148,11 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
     data.push({d: new Date(1000 * k.unix), deaths:k.deathsDiff, recovery: k.recoveredDiff, manual: false})
     }
   })
-  calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
-  calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
   if (manual !== undefined && manual.isValid){
     data.push({d: new Date(1000 * manual.unix), deaths: manual.deathsDiff, recovery: manual.recoveredDiff, manual: true})
   }
+  calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
+  calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
 
   const deathsSA_max = d3.max(data, d => d.deathsSA)
   const recoverySA_max = d3.max(data, d => d.recoverySA)
