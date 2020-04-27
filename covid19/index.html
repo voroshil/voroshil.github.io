@@ -188,8 +188,15 @@
         <div class="form-group">
           <label for="settingsMaxThreshold">Минимально заразившихся</label>
           <input type="number" class="form-control" aria-describedBy="settingsMaxThresholdHelp" placeHolder="Введите количество" id="settingsMaxThreshold" value=""/>
-          <small id="settingsMathThresholdHelp" class="form-text text-muted">Минимальное количество заразившихся для отображения страны в таблицах</small>
+          <small id="settingsMaxThresholdHelp" class="form-text text-muted">Минимальное количество заразившихся для отображения страны в таблицах</small>
         </div>
+        <div class="form-group">
+          <label for="settingsThresholdCountry">Ограничить список страной</label>
+          <select class="form-control" aria-describedBy="settingsThresholdCountryHelp" placeHolder="Укажите страну" id="settingsThresholdCountry" value="">
+          </select>
+          <small id="settingsThresholdCountryHelp" class="form-text text-muted">Не выводить страны с количеством заразившихся менее чем в указанной</small>
+        </div>
+
         <div class="form-group">
           <label for="settingsPeriodThreshold">Период отображения</label>
           <input type="number" class="form-control" aria-describedBy="settingsPeriodThresholdHelp" placeHolder="Введите количество" id="settingsPeriodThreshold" value=""/>

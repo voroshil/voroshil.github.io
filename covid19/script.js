@@ -102,6 +102,7 @@ const names = {
 const colors = ["green", "blue", "black", "orange", "steelblue", "magenta",  "cyan", "yellow", "brown", "pink"];
 
 const defaultConfig = {
+    thresholdCountry: "Japan",
     maxThreshold: 4000,
     periodThreshold: 1000,
     showManualHorizontal: false,
@@ -234,6 +235,10 @@ function configToForm(c){
   if (el !== null){
     el.value = c.dynamicThreshold;
   }
+  el = document.getElementById("settingsThresholdCountry")
+  if (el !== null){
+    el.value = c.thresholdCountry;
+  }
 }
 function formToConfig(){
   let newConfig = {};
@@ -253,6 +258,10 @@ function formToConfig(){
   el = document.getElementById("settingsDynamicThreshold")
   if (el !== null){
     newConfig.dynamicThreshold = +el.value;
+  }
+  el = document.getElementById("settingsThresholdCountry")
+  if (el !== null){
+    newConfig.thresholdCountry = el.value;
   }
   return newConfig;
 }
@@ -1566,6 +1575,17 @@ function renderStatTable(elementId, rowIdPrefix, rows){
 
 }
 function renderSettings(){
+  const el = document.getElementById("settingsThresholdCountry")
+  if (el !== null){
+    let html = ""
+    Object.keys(data).forEach(c => {
+      let name = names[c];
+      if (name === undefined)
+        name = c
+      html += `<option value="${c}">${name}</option>`
+    });
+    el.innerHTML = html;
+  }
   configToForm(config);
 }
 function onLoad(){
@@ -1598,16 +1618,13 @@ function displayData(){
     dates = convertData(data);
     totalDates = convertData(totals)
 
-    let d0 = dds[0];
-    var threshold0 = dates[dds[0]]["Japan"].confirmed-1;
-    var threshold1 = dates[dds[1]]["Japan"].confirmed-1;
-    var threshold = threshold0;
-    if (threshold1 < threshold)
-      threshold = threshold1;
-    if (threshold > config.maxThreshold)
-      threshold = config.maxThreshold;
-
-    document.getElementById("latestDate").innerHTML=moment.unix(d0).format("DD.MM.YYYY");
+    var threshold = config.maxThreshold;
+    if (config.thresholdCountry !== undefined){
+      if (dates[dds[0]][config.thresholdCountry] !== undefined){
+        threshold = Math.min(threshold, dates[dds[0]][config.thresholdCountry].confirmed-1);
+      }
+    }
+    document.getElementById("latestDate").innerHTML=moment.unix(dds[0]).format("DD.MM.YYYY");
     countries = buildCountries(dates[dds[0]], threshold);
     cols = countries.map(c => {return {id:countryId(c), c:c, name: names[c], isTotal: false}});
 //    cols.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
