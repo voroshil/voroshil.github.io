@@ -129,7 +129,7 @@ if args.json is not None:
         else:
           sd = ""
 
-        sys.stderr.write("%s: %d / %d / %d => %s / %s / %s\n" %(c, wc, wr, wd, sc, sr, sd))
+        sys.stderr.write("%15s: %7d / %6d / %6d => %6s / %6s / %6s\n" %(c, wc, wr, wd, sc, sr, sd))
     else:
       print c
 print "var manual_data = {"
