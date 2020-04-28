@@ -107,7 +107,8 @@ const defaultConfig = {
     periodThreshold: 1000,
     showManualHorizontal: false,
     showHorizontal: true,
-    dynamicThreshold: 500
+    dynamicThreshold: 500,
+    recoveryShift: 14
 };
 
 
@@ -354,10 +355,10 @@ function updateDiff(c,p){
 function preprocess(data){
   Object.entries(data).forEach(entry => {
     let prev = undefined
-    for(var i=Math.max(entry[1].length-14, 0); i<entry[1].length; i++){
+    for(var i=Math.max(entry[1].length-config.recoveryShift, 0); i<entry[1].length; i++){
       entry[1][i].recoveredLag = undefined;
     }
-    for(var i=0; i<entry[1].length-14; i++){
+    for(var i=0; i<entry[1].length-config.recoveryShift; i++){
       entry[1][i].recoveredLag = entry[1][i+14].recovered;
     }
 
@@ -520,7 +521,7 @@ function outputGraph4(elementId, width, height, c, isTotal){
 function outputGraph5(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
-  outputGraph("Летальность-14",         names[c], elementId, history, d => (100*d.deathsRateLag), width, height, latest)
+  outputGraph(`Летальность-${config.recoveryShift}`,         names[c], elementId, history, d => (100*d.deathsRateLag), width, height, latest)
 }
 function outputCountryGraph(c, elementId, isTotal){
   outputGraph1("graph"+elementId, width, height, c, isTotal);
