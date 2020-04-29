@@ -108,7 +108,8 @@ const defaultConfig = {
     showManualHorizontal: false,
     showHorizontal: true,
     dynamicThreshold: 500,
-    recoveryShift: 14
+    recoveryShift: 14,
+    activeAbsolute: false
 };
 
 
@@ -505,7 +506,11 @@ function outputGraph3(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
   const cur = isTotal ? currentTotal[c] : current[c]
-  outputGraph("Болеющие (прирост)",               names[c], elementId,        history, d => (d.confirmedDiff - d.deathsDiff - d.recoveredDiff),              width, height, latest, cur)
+  if (config.activeAbsolute)
+    outputGraph("Болеющие",           names[c], elementId,        history, d => (d.confirmed - d.deaths - d.recovered),              width, height, latest, cur)
+  else
+    outputGraph("Болеющие (прирост)", names[c], elementId,        history, d => (d.confirmedDiff - d.deathsDiff - d.recoveredDiff),              width, height, latest, cur)
+
 }
 function outputGraph2(elementId, width, height, c, isTotal){
   const history = isTotal ? totals[c] : data[c];
