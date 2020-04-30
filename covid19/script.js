@@ -99,7 +99,8 @@ const names = {
   "Total": "В мире",
   "Europe": "В Европе",
 };
-const colors = ["green", "blue", "black", "orange", "steelblue", "magenta",  "cyan", "yellow", "brown", "pink"];
+const colors = ["green", "blue", "black", "orange", "magenta",  "cyan", "brown",
+"#808080","#808080","#808080","#808080","#808080","#808080","#808080","#808080","#808080","#808080"];
 
 const defaultConfig = {
     thresholdCountry: "Japan",
