@@ -1,4 +1,4 @@
-{
+var data = {
     "Afghanistan": [
         {
             "confirmed": 0, 
@@ -111369,4 +111369,4 @@
             "recovered": 5
         }
     ]
-}
+};
