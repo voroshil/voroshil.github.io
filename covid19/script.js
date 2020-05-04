@@ -110,7 +110,7 @@ const defaultConfig = {
     showHorizontal: true,
     dynamicThreshold: 500,
     recoveryShift: 14,
-    activeAbsolute: true
+    activeAbsolute: false
 };
 
 
