@@ -110,7 +110,7 @@ const defaultConfig = {
     showHorizontal: true,
     dynamicThreshold: 500,
     recoveryShift: 14,
-    activeAbsolute: false
+    activeAbsolute: true
 };
 
 
@@ -242,6 +242,14 @@ function configToForm(c){
   if (el !== null){
     el.value = c.thresholdCountry;
   }
+  el = document.getElementById("settingsActiveAbsoluteTrue")
+  if (el !== null){
+    el.checked = c.activeAbsolute;
+  }
+  el = document.getElementById("settingsActiveAbsoluteFalse")
+  if (el !== null){
+    el.checked = !c.activeAbsolute;
+  }
 }
 function formToConfig(){
   let newConfig = {};
@@ -265,6 +273,10 @@ function formToConfig(){
   el = document.getElementById("settingsThresholdCountry")
   if (el !== null){
     newConfig.thresholdCountry = el.value;
+  }
+  el = document.getElementById("settingsActiveAbsoluteTrue")
+  if (el !== null){
+    newConfig.activeAbsolute = el.checked;
   }
   return newConfig;
 }

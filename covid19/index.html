@@ -212,6 +212,17 @@
           <input type="number" class="form-control" aria-describedBy="settingsDynamicThresholdHelp" placeHolder="Введите количество" id="settingsDynamicThreshold" value=""/>
           <small id="settingsDynamicThresholdHelp" class="form-text text-muted">Количество заразившихся, превышение которого считается началом отсчета графика</small>
         </div>
+        <div class="form-group">
+          <label>Значения графика болеющих:</label>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="settingsActiveAbsoluteTrue">абсолютные</label>
+            <input class="form-check-input" type="radio" name="settingsActiveAbsolute" id="settingsActiveAbsoluteTrue" value="true"/>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="settingsActiveAbsoluteFalse">прирост</label>
+            <input class="form-check-input" type="radio" name="settingsActiveAbsolute" id="settingsActiveAbsoluteFalse" value="false"/>
+          </div>
+        </div>
         <button type="button" class="btn btn-primary" onClick="updateConfig()">Сохранить и перерисовать</button>
       </form>
     </div>
