@@ -856,7 +856,12 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
         .range([margin.left, width - margin.right]);
 
   const [dMin, dMax] = d3.extent(data, d => d.d);
-  const xWidth = (x(dMax) - x(dMin)) / data.length - 1
+  let xWidth = (x(dMax) - x(dMin)) / data.length;
+  if (xWidth < 1){
+    xWidth = 1;
+  }else if (xWidth > 4){
+    xWidth = xWidth - 1;
+  }
 
   let [yMin, yMax] = d3.extent(data, d => d.v)
 
@@ -937,6 +942,7 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
 //      .attr("viewBox", [0, 0, width, height])
       .attr("width", width)
       .attr("height", height);
+
 
     svg.append("g")
       .attr("fill", "orange")
