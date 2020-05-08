@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Материалы для игры "Тайны Аркхема"</title>
+   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+ </head>
+<body onload="onLoad()">
+
+<h4>Адресная книга Аркхэма</h4>
+<p>В адресной книге перечислены люди, учреждения и места для досуга, 
+которые могут вам встретиться в ходе расследования. Для вашего
+удобства записи в адресной книге отсортированы по алфавиту. чаще
+всего - по фамилиям.</p>
+<p>Например, Альберту Н. Уилмарту соответствует запись “Уилмарт А.»
+и адрес А15, его дом. Также его можно найти по месту работы в 
+списке адресов Мискатоникского университета под индексом У15 
+(корпус гуманитарных наук).</p>
+<p>Когда вы работаете над делом, используйте адресную книгу вместе
+со списком союзников, картой и газетами. Они дополнят вам 
+сведения, полученные в ходе расследования.</p>
+
+<p>Каждому адресу в этой книге соответествует точка на карте Аркхэма. 
+Город поделен на 9 районов:
+<ul>
+<li>А - Аптаун</li>
+<li>Д - Даунтаун</li>
+<li>И - Исттаун</li>
+<li>Н - Нортсайд</li>
+<li>Р - Ривертаун</li>
+<li>С - Саутсайд</li>
+<li>Т - Торговый район</li>
+<li>У - Университетский район</li>
+<li>Ф - Френч-хилл</li>
+</ul>
+</p>
+<table class="table table-striped table-condensed" id = "aBookTable">
+  </table>
+<script language="javascript" src="vendor/jquery-3.4.1.min.js"></script>
+<script language="javascript" src="vendor/popper.js"></script>
+<script language="javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script language="javascript" src="abook-data.js" ></script>
+<script language="javascript" src="abook.js" ></script>
+</body>
+</html>
