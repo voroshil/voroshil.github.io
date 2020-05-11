@@ -46,6 +46,7 @@ const europe = [
 const names = {
   "Australia": "Австралия",
   "Austria": "Австрия",
+  "Bangladesh":"Бангладеш",
   "Belarus": "Беларусь",
   "Belgium": "Бельгия",
   "Brazil": "Бразилия",
