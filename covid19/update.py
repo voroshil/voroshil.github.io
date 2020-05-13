@@ -2,12 +2,13 @@
 
 import argparse
 import json
+import sys
 
 parser = argparse.ArgumentParser(description="Convert JHU daily tada to JSON")
 parser.add_argument("--csv", required = True, help="CSV with JHU Daily data")
 parser.add_argument("--json", required = True, help="Prevously parsed data JSON")
 parser.add_argument("--force-date", help="Force date")
-
+parser.add_argument("--format", default="js", help="Output format (fs or json")
 args = parser.parse_args()
 
 
@@ -35,7 +36,7 @@ new_d = "0000-00-00"
 
 fcsv = open(args.csv,"r")
 for line in fcsv.readlines():
-  line = unicode(line.strip())
+  line = line.strip().decode("utf-8")
   cols = line.split(",")
   if cols[0] == "FIPS":
     continue
@@ -73,6 +74,8 @@ fcsv.close()
 if args.force_date is not None:
   new_d = args.force_date
 
+#sys.stderr.write(new_d+"\n")
+
 
 
 #print "%s vs %s " % (last_d,new_d)
@@ -83,7 +86,14 @@ if new_d > last_d:
     if c in old_data:
       old_data[c].append(countries[c][0])
 
-res = json.dumps(old_data, sort_keys=True, indent=4)
-print res
+res = json.dumps(old_data, sort_keys=True, ensure_ascii=False, indent=4)
+
+if args.format == "js":
+  output = "var data = %s ;" % res
+  print output.encode("utf-8")
+elif args.format == "json":
+  print res.encode("utf-8")
+
+
 
 
