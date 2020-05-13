@@ -1,120 +1,5 @@
-const europe = [
-"Spain",
-"Italy",
-"France",
-"Germany",
-"United Kingdom",
-"Belgium",
-"Switzerland",
-"Netherlands",
-"Portugal",
-"Austria",
-"Russia",
-"Sweden",
-"Ireland",
-"Norway",
-"Poland",
-"Denmark",
-"Romania",
-"Czechia",
-"Serbia",
-"Luxembourg",
-"Finland",
-"Ukraine",
-"Belarus",
-"Greece",
-"Iceland",
-"Moldova",
-"Croatia",
-"Hungary",
-"Estonia",
-"Slovenia",
-"Lithuania",
-"Bosnia and Herzegovina",
-"North Macedonia",
-"Slovakia",
-"Bulgaria",
-"Latvia",
-"Andorra",
-"Albania",
-"Malta",
-"San Marino",
-"Montenegro",
-"Monaco",
-"Liechtenstein",
-];
-const names = {
-  "Australia": "Австралия",
-  "Austria": "Австрия",
-  "Bangladesh":"Бангладеш",
-  "Belarus": "Беларусь",
-  "Belgium": "Бельгия",
-  "Brazil": "Бразилия",
-  "Canada": "Канада",
-  "Chile": "Чили",
-  "China": "Китай",
-  "Colombia": "Колумбия",
-  "Czechia" : "Чехия",
-  "Denmark": "Дания",
-  "Dominican Republic": "Доминикана",
-  "Ecuador": "Эквадор",
-  "Egypt": "Египет",
-  "Finland": "Финляндия",
-  "France": "Франция",
-  "Germany": "Германия",
-  "Japan": "Япония",
-  "India": "Индия",
-  "Indonesia": "Индонезия",
-  "Iran": "Иран",
-  "Ireland": "Ирландия",
-  "Israel": "Израиль",
-  "Italy": "Италия",
-  "Korea, South": "Ю.Корея",
-  "Luxembourg": "Люксембург",
-  "Malaysia": "Малайзия",
-  "Mexico" :"Мексика",
-  "Netherlands": "Голландия",
-  "Norway": "Норвегия",
-  "Pakistan": "Пакистан",
-  "Panama": "Панама",
-  "Philippines": "Филиппины",
-  "Poland": "Польша",
-  "Peru": "Перу",
-  "Portugal": "Португалия",
-  "Qatar": "Катар",
-  "Romania": "Румыния",
-  "Russia": "Россия",
-  "Saudi Arabia": "Саудовская Аравия", 
-  "Serbia": "Сербия",
-  "Singapore": "Сингапур",
-  "South Africa": "ЮАР",
-  "Spain": "Испания",
-  "Sweden": "Швеция",
-  "Switzerland": "Швейцария",
-  "Turkey": "Турция",
-  "Ukraine": "Украина",
-  "United Arab Emirates": "ОАЭ",
-  "United Kingdom": "Великобритания",
-  "US": "США",
 
-  "Total": "В мире",
-  "Europe": "В Европе",
-};
-const colors = ["green", "blue", "black", "orange", "magenta",  "cyan", "brown",
-"#808080","#808080","#808080","#808080","#808080","#808080","#808080","#808080","#808080","#808080"];
-
-const defaultConfig = {
-    thresholdCountry: "Japan",
-    maxThreshold: 4000,
-    periodThreshold: 1000,
-    showManualHorizontal: false,
-    showHorizontal: true,
-    dynamicThreshold: 500,
-    recoveryShift: 14,
-    activeAbsolute: false
-};
-
-
+var allTotalCountries = Object.keys(totalCountries).concat("Total");
 var model = {}
 var config = loadConfig()
 var manualDate = moment().format("YYYY-M-D")
@@ -129,7 +14,6 @@ var totalDates = []
 
 
 /* ' */
-const totalCountries =  ["Total", "Europe"];
 const width = 300
 const height = 180
 const largeWidth = 700
@@ -210,7 +94,7 @@ function rebuildModelTotals(m, filter){
 function loadConfig(){
   let res = Object.assign({}, defaultConfig);
   try{
-    const cfgJson = localStorage["covid_config"]
+    const cfgJson = localStorage[configPrefix]
     if (cfgJson !== undefined){
       cfg = JSON.parse(cfgJson);
       res = Object.assign(defaultConfig, cfg);
@@ -220,7 +104,7 @@ function loadConfig(){
   return res;
 }
 function saveConfig(newConfig){
-  localStorage["covid_config"] = JSON.stringify(newConfig);
+  localStorage[configPrefix] = JSON.stringify(newConfig);
 }
 function configToForm(c){
   let el = document.getElementById("settingsMaxThreshold")
@@ -330,9 +214,11 @@ function createAllTotal(data, desiredCountries){
   if (desiredCountries === undefined){
     desiredCountries = Object.keys(data)
   }
+  if (desiredCountries.length > 0){
   firstCountry = desiredCountries[0];
   for(var i=0; i<data[firstCountry].length; i++){
     res.push(createDateTotal(data, i, desiredCountries));
+  }
   }
   return res;
 }
@@ -402,7 +288,8 @@ function checkUpdate(){
 }
 
 function needUpdate(oldData, newData){
-  return oldData["Germany"].length < newData["Germany"].length
+  return false;
+//  return oldData["Germany"].length < newData["Germany"].length
 }
 
 function loadData(){
@@ -436,7 +323,7 @@ function createCurrentCountry(nowDate, countryId, country_data){
   res = Object.assign({isValid: false}, country_data, {date: nowDate});
 
   try{
-    currentValue = localStorage["covid"+countryId];
+    currentValue = localStorage[currentPrefix+countryId];
     if (currentValue !== undefined){
       currentValue = JSON.parse(currentValue);
       res = Object.assign(res, currentValue);
@@ -553,7 +440,7 @@ function outputCountryGraph(c, elementId, isTotal){
 function rerenderCurrent(id, isTotal){
   const stat = isTotal ? currentTotal : current
   const source = isTotal ? totals : data
-  const statCountries = isTotal ? totalCountries: countries
+  const statCountries = isTotal ? allTotalCountries: countries
 
   const cidx = statCountries.findIndex(d => countryId(d) === id)
   if (cidx < 0)
@@ -568,7 +455,7 @@ function rerenderCurrent(id, isTotal){
 
 function onGraphDblClick(id, isTotal, gr){
 
-  const statCountries = isTotal ? totalCountries: countries
+  const statCountries = isTotal ? allTotalCountries: countries
 
   const cidx = statCountries.findIndex(d => countryId(d) === id)
   if (cidx < 0)
@@ -597,7 +484,7 @@ function onGraphDblClick(id, isTotal, gr){
 }
 function onManualDblClick(id, isTotal){
 
-  const statCountries = isTotal ? totalCountries: countries
+  const statCountries = isTotal ? allTotalCountries: countries
 
   const cidx = statCountries.findIndex(d => countryId(d) === id)
   if (cidx < 0)
@@ -643,7 +530,7 @@ function onManualUpdate(){
   const id = countryId(c)
 
 
-  obj = localStorage["covid"+id]
+  obj = localStorage[currentPrefix+id]
   if (obj === undefined){
     obj = {}
   }else{
@@ -663,7 +550,7 @@ function onManualUpdate(){
   el = document.getElementById("manualRecovered");
   if (el !== null)
     obj.recovered = parseInt(el.value.replace(/[^0-9]/g,""));
-  localStorage["covid"+id] = JSON.stringify(obj);
+  localStorage[currentPrefix+id] = JSON.stringify(obj);
 
 
   rerenderCurrent(id, currentTotal[c] !== undefined);
@@ -679,12 +566,12 @@ function onManualReset(){
 }
 
 function onCurrentReset(id, isTotal){
-  localStorage.removeItem("covid"+id)
+  localStorage.removeItem(currentPrefix+id)
   rerenderCurrent(id, isTotal);
 }
 function onCurrentUpdate(id, isTotal){
 
-  obj = localStorage["covid"+id]
+  obj = localStorage[currentPrefix+id]
   if (obj === undefined){
     obj = {}
   }else{
@@ -707,7 +594,7 @@ function onCurrentUpdate(id, isTotal){
   if (el !== null){
     el.innerHTML = "сохранено";
   }
-  localStorage["covid"+id] = JSON.stringify(obj);
+  localStorage[currentPrefix+id] = JSON.stringify(obj);
 
 
   rerenderCurrent(id, isTotal);
@@ -833,6 +720,9 @@ function outputGraph(title, name, id, d2, accessor, width, height, currentObject
       }
     }
   })
+  if (data.length == 0)
+    return;
+
   const currentValue = accessor(currentObject);
   var latest = data.length - 1
 
@@ -1614,10 +1504,6 @@ function renderSettings(){
   }
   configToForm(config);
 }
-function onLoad(){
-  displayData();
-  setTimeout(loadData, 100)
-}
 function displayData(){
 //    model = createModel(data);
 
@@ -1671,23 +1557,27 @@ function displayData(){
     renderHistoryTable2("deathsEstimatedHistory", {data:data, rows:rows, cols:cols, formatter:deathsEstimatedFormatter});
 
     graphRows = cols.map(c => c)
-    graphRows.unshift({id: "Europe", c:"Europe", name:names["Europe"], isTotal: true})
-    graphRows.unshift({id: "Total", c:"Total", name:names["Total"], isTotal: true})
+    for(var tc in allTotalCountries){
+      graphRows.unshift({id: allTotalCountries[tc], c:allTotalCountries[tc], name:names[allTotalCountries[tc]], isTotal: true})
+    }
+//    graphRows.unshift({id: "Total", c:"Total", name:names["Total"], isTotal: true})
 
     renderGraphTable("graphTableBody", graphRows);
     renderGraphRateTable("graphRateTableBody", graphRows);
 
     totals = {}
 
-    totals["Europe"] = createAllTotal(data, europe);
-    totals["Total"] = createAllTotal(data, Object.keys(data));
 
+    totals["Total"] = createAllTotal(data, Object.keys(data));
+    for(var tc in  totalCountries){
+      totals[tc] = createAllTotal(data, totalCountries[tc]);
+    }
     preprocess(totals);
 
     currentTotal = createCurrent(totals);
     totalDates = convertData(totals)
 
-    outputBetterStatHtmlTable("latestRow", totalDates[dds[0]], totalCountries);
+    outputBetterStatHtmlTable("latestRow", totalDates[dds[0]], allTotalCountries);
 
     countries.forEach(c => {
       if (data[c] !== undefined){
@@ -1699,15 +1589,15 @@ function displayData(){
     })
 
 
-    totalCountries.forEach(c => {
+    allTotalCountries.forEach(c => {
       let id = countryId(c);
       outputCountryGraph(c, id, true)
     });
 
     updateGraphCurrent(countries, dates[dds[0]]);
-    updateGraphCurrent(totalCountries, totalDates[dds[0]]);
+    updateGraphCurrent(allTotalCountries, totalDates[dds[0]]);
     updateGraphManual(countries, current);
-    updateGraphManual(totalCountries, currentTotal);
+    updateGraphManual(allTotalCountries, currentTotal);
 
     const el1 = document.getElementById("dynamic-threshold");
     if (el1 !== null){
