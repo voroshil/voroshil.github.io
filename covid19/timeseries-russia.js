@@ -365,6 +365,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 26, 
             "recovered": 1318
+        }, 
+        {
+            "confirmed": 3192, 
+            "date": "2020-5-15", 
+            "deaths": 27, 
+            "recovered": 1490
         }
     ], 
     "Краснодарский край": [
@@ -733,6 +739,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 24, 
             "recovered": 858
+        }, 
+        {
+            "confirmed": 2418, 
+            "date": "2020-5-15", 
+            "deaths": 24, 
+            "recovered": 979
         }
     ], 
     "Москва": [
@@ -1101,6 +1113,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 1290, 
             "recovered": 23327
+        }, 
+        {
+            "confirmed": 135464, 
+            "date": "2020-5-15", 
+            "deaths": 1358, 
+            "recovered": 24562
         }
     ], 
     "Московская область": [
@@ -1469,6 +1487,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 240, 
             "recovered": 1987
+        }, 
+        {
+            "confirmed": 25525, 
+            "date": "2020-5-15", 
+            "deaths": 253, 
+            "recovered": 2468
         }
     ], 
     "Мурманская область": [
@@ -1837,6 +1861,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 6, 
             "recovered": 448
+        }, 
+        {
+            "confirmed": 2551, 
+            "date": "2020-5-15", 
+            "deaths": 6, 
+            "recovered": 489
         }
     ], 
     "Нижегородская область": [
@@ -2205,6 +2235,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 37, 
             "recovered": 1085
+        }, 
+        {
+            "confirmed": 5903, 
+            "date": "2020-5-15", 
+            "deaths": 40, 
+            "recovered": 1220
         }
     ], 
     "Омская область": [
@@ -2573,6 +2609,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 7, 
             "recovered": 70
+        }, 
+        {
+            "confirmed": 436, 
+            "date": "2020-5-15", 
+            "deaths": 7, 
+            "recovered": 74
         }
     ], 
     "Санкт-Петербург": [
@@ -2941,6 +2983,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 69, 
             "recovered": 1899
+        }, 
+        {
+            "confirmed": 9486, 
+            "date": "2020-5-15", 
+            "deaths": 74, 
+            "recovered": 2005
         }
     ], 
     "Свердловская область": [
@@ -3309,6 +3357,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 4, 
             "recovered": 501
+        }, 
+        {
+            "confirmed": 2466, 
+            "date": "2020-5-15", 
+            "deaths": 5, 
+            "recovered": 546
         }
     ], 
     "Ставропольский край": [
@@ -3677,6 +3731,12 @@ var data ={
             "date": "2020-5-14", 
             "deaths": 23, 
             "recovered": 408
+        }, 
+        {
+            "confirmed": 1308, 
+            "date": "2020-5-15", 
+            "deaths": 26, 
+            "recovered": 462
         }
     ]
 }
