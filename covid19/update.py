@@ -21,6 +21,8 @@ fjson.close()
 
 old_data = json.loads(jsonstr)
 
+old_countries = old_data.keys()
+
 last_d = "0000-00-00"
 for c in old_data.keys():
   for entry in old_data[c]:
@@ -69,7 +71,13 @@ for line in fcsv.readlines():
   countries[name][0]["deaths"] += deaths
   countries[name][0]["recovered"] += recovered
 
+
+
 fcsv.close()
+
+for name in old_countries:
+  if name not in countries:
+    countries[name] = [{"date": "", "confirmed": 0, "deaths": 0, "recovered": 0}]
 
 if args.force_date is not None:
   new_d = args.force_date

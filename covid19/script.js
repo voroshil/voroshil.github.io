@@ -8,7 +8,7 @@ var dds = [];
 var totals = {"Total": []};
 var current = {};
 var currentTotal = {};
-const countryId = c => c.replace(/[ ,`\']/g,"")
+const countryId = c => c.replace(/[ ,`\'\(\)]/g,"")
 var dates = [];
 var totalDates = []
 
