@@ -625,7 +625,8 @@ function diffClass(v, classUp, classDown){
 }
 function confirmedFormatter(d) {
   const tdClass = diffClass(d.confirmedDiffDiff, "", "confirmed-diff-diff-down");
-  return `<td class="${tdClass}">${d.confirmed.toLocaleString()}${getColoredDiff(d.confirmedDiff, "diff-red", "diff-green")}</td>`
+  const rt = d.rt !== undefined ? d.rt.toFixed(2) : ""
+  return `<td class="${tdClass}">${d.confirmed.toLocaleString()}${getColoredDiff(d.confirmedDiff, "diff-red", "diff-green")}<br/>${rt}</td>`
 }
 function activeFormatter(d) {
   const tdClass = diffClass(d.activeDiff, "active-diff-up", "active-diff-down");
