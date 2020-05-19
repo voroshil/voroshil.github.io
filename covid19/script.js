@@ -262,6 +262,17 @@ function preprocess(data){
     for(var i=0; i<entry[1].length-config.recoveryShift; i++){
       entry[1][i].recoveredLag = entry[1][i+14].recovered;
     }
+    for(var i=8; i<entry[1].length; i++){
+      const v1_c = entry[1][i-4].confirmed - entry[1][i-8].confirmed;
+      const v2_c = entry[1][i-0].confirmed - entry[1][i-4].confirmed;
+
+      const v1 = v1_c;
+      const v2 = v2_c;
+      if (v1 > 0)
+        entry[1][i].rt = v2 / v1;
+      else
+        entry[1][i].rt = undefined;
+    }
 
     entry[1].forEach(d => {
       d.name = entry[0];
@@ -1314,6 +1325,10 @@ function updateGraphCurrent(cs, cur){
         if (el !== null){
           el.innerHTML =  cur[c].active.toLocaleString()
         }
+        el = document.getElementById("rt"+id)
+        if (el !== null){
+          el.innerHTML =  cur[c].rt.toFixed(2)
+        }
       }
     })
 } 
@@ -1384,6 +1399,7 @@ function renderGraphTable(tableBodyId, rows){
     htmlRows += `<span style="color:green"  id="recoveredDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:red"  id="deathsDiffCurrent${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange"  id="activeCurrent${c.id}"></span><br/>`
+    htmlRows += `Rt=<span style="color:black"  id="rt${c.id}"></span><br/>`
     htmlRows += "</td><td>";
     htmlRows += `<span style="color:black" id="confirmedManual${c.id}"></span><br/>`
     htmlRows += `<span style="color:orange" id="confirmedDiffManual${c.id}"></span><br/>`
