@@ -271,7 +271,7 @@ function preprocess(data){
       if (v1 > 0)
         entry[1][i].rt = v2 / v1;
       else
-        entry[1][i].rt = undefined;
+        entry[1][i].rt = Infinity ;
     }
 
     entry[1].forEach(d => {
@@ -440,12 +440,19 @@ function outputGraph5(elementId, width, height, c, isTotal){
   const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
   outputGraph(`Летальность-${config.recoveryShift}`,         names[c], elementId, history, d => (100*d.deathsRateLag), width, height, latest)
 }
+function outputGraph6(elementId, width, height, c, isTotal){
+  const history = isTotal ? totals[c] : data[c];
+  const latest = isTotal ? totalDates[dds[0]][c] : dates[dds[0]][c]
+  const cur = isTotal ? currentTotal[c] : current[c]
+  outputRtGraph("Rt", names[c], elementId, history,                width, height, latest, cur)
+}
 function outputCountryGraph(c, elementId, isTotal){
   outputGraph1("graph"+elementId, width, height, c, isTotal);
   outputGraph3("graphActive"+elementId, width, height, c, isTotal);
   outputGraph2("graphDeathRecovery"+elementId, width, height, c, isTotal);
   outputGraph4("graphDeathRate"+elementId, width, height, c, isTotal);
   outputGraph5("graphDeathsRateLag"+elementId, width, height, c, isTotal);
+  outputGraph6("graphRt"+elementId, width, height, c, isTotal);
 }
 
 function rerenderCurrent(id, isTotal){
@@ -1072,7 +1079,7 @@ function outputDynamicGraph(title, id, d2, accessor, minThr, width, height){
     svg.append("g")
       .call(yAxis2);
 }
-function outputDeathRecoveryGraph(title, name, id, d, width, height, current, manual){
+function outputDoubleGraph(title, name, id, d, width, height, current, manual, deathsMapper, recoveryMapper){
   const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
   const el = document.getElementById(id)
   if (el == null)
@@ -1082,11 +1089,11 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
   var data = []
   d.forEach(k => {
     if (k.unix > dateThr){
-    data.push({d: new Date(1000 * k.unix), deaths:k.deathsDiff, recovery: k.recoveredDiff, manual: false})
+    data.push({d: new Date(1000 * k.unix), deaths: deathsMapper(k), recovery: recoveryMapper(k), manual: false})
     }
   })
   if (manual !== undefined && manual.isValid){
-    data.push({d: new Date(1000 * manual.unix), deaths: manual.deathsDiff, recovery: manual.recoveredDiff, manual: true})
+    data.push({d: new Date(1000 * manual.unix), deaths: deathsMapper(manual), recovery: recoveryMapper(manual), manual: true})
   }
   calcSA(data, 5, d => d.deaths, (d,v) => {d.deathsSA = v})
   calcSA(data, 5, d => d.recovery, (d,v) => {d.recoverySA = v})
@@ -1116,16 +1123,16 @@ function outputDeathRecoveryGraph(title, name, id, d, width, height, current, ma
 
   let yMax = d3.max(data, d => d3.max([d.deaths,d.recovery]))
   let yMin = d3.min(data, d => d3.min([d.deaths,d.recovery]))
-  if (current !== undefined){
-    yMax = Math.max(yMax, current.recoveredDiff)
-    yMax = Math.max(yMax, current.deathsDiff)
-    yMin = Math.min(yMin, current.recoveredDiff)
-    yMin = Math.min(yMin, current.deathsDiff)
-  }
-  if (manual !== undefined && manual.isValid === true){
-    yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
-    yMin = Math.min(yMin, Math.min(manual.deathsDiff, manual.recoveredDiff));
-  }
+//  if (current !== undefined){
+//    yMax = Math.max(yMax, current.recoveredDiff)
+//    yMax = Math.max(yMax, current.deathsDiff)
+//    yMin = Math.min(yMin, current.recoveredDiff)
+//    yMin = Math.min(yMin, current.deathsDiff)
+//  }
+//  if (manual !== undefined && manual.isValid === true){
+//    yMax = Math.max(yMax, Math.max(manual.deathsDiff, manual.recoveredDiff));
+//    yMin = Math.min(yMin, Math.min(manual.deathsDiff, manual.recoveredDiff));
+//  }
   yMin = Math.min(yMin, 0)
 
   y = d3.scaleLinear()
@@ -1301,7 +1308,181 @@ if (config.showHorizontal === true && current !== undefined){
       .call(yAxis2);
     }
 }
+function outputRtGraph(title, name, id, d, width, height, current, manual){
 
+  const dateThr = moment().unix() - config.periodThreshold * 24 * 60 * 60;
+  const el = document.getElementById(id)
+  if (el == null)
+    return;
+  el.innerHTML = "";
+  const margin = {top: 35, right: 20, bottom: 50, left: 70};
+  var data = []
+  d.forEach(k => {
+    if (k.unix > dateThr){
+    data.push({d: new Date(1000 * k.unix), rt: Math.min(k.rt,2), manual: false})
+    }
+  })
+  if (manual !== undefined && manual.isValid){
+    data.push({d: new Date(1000 * manual.unix), rt: Math.min(manual.rt,2), manual: true})
+  }
+  calcSA(data, 5, d => d.rt, (d,v) => {d.rtSA = v})
+
+  const rtSA_max = d3.max(data, d => d.rtSA)
+
+  const rt_max = d3.max(data, d => d.rt)
+
+  const rtSA_idx = data.findIndex(d => d.rtSA === rtSA_max)
+  Object.assign(data, {
+    x: "Дни", 
+    yRt: "Rt, Макс: "+(rt_max.toLocaleString()), 
+  });
+
+  x = d3.scaleTime()
+        .domain(d3.extent(data.map(d => d.d))).nice()
+        .range([margin.left, width - margin.right]);
+
+  const [dMin, dMax] = d3.extent(data, d => d.d);
+  const xWidth = (x(dMax) - x(dMin)) / data.length - 1
+
+  let yMax = d3.max(data, d => d.rt)
+  let yMin = d3.min(data, d => d.rt)
+//  yMin = Math.min(yMin, 0)
+
+  y = d3.scaleLinear()
+        .domain([yMin, yMax]).nice()
+        .range([height - margin.bottom, margin.top]);
+  xAxis = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d.%m")).tickSizeOuter(0))
+      .selectAll("text")
+      .attr("x", -margin.bottom+10)
+      .attr("y", 0)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(270)")
+      .attr("text-anchor", "start");
+
+  const xAxis2 = g => g
+      .attr("transform", `translate (0, ${height - margin.bottom})`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisBottom(x)
+        .tickSize(-height+margin.top+margin.bottom)
+        .tickFormat("")
+      )
+
+  yAxis = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .call(d3.axisLeft(y).ticks(4).tickFormat(x => x.toLocaleString()))
+//      .call(g => g.select(".domain").remove())
+      .call(g => g
+          .append("text")
+          .append("tspan")
+          .attr("x", margin.left + (width-margin.left-margin.right)/2)
+          .attr("y", 25)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "center")
+          .text(name)
+          .append("tspan")
+          .attr("x", -margin.left+5)
+          .attr("y", 25)
+          .attr("fill", "black")
+          .attr("text-anchor", "start")
+          .text(data.yRt))
+
+    const yAxis2 = g => g
+      .attr("transform", `translate (${margin.left},0)`)
+      .attr("stroke-dasharray", [1, 3])
+      .call(d3.axisLeft(y)
+        .ticks(4)
+        .tickSize(-width+margin.right+margin.left)
+        .tickFormat("")
+      )
+
+    const svg = d3.select("#"+id)
+      .append("svg")
+//      .attr("viewBox", [0, 0, width, height])
+      .attr("width", width)
+      .attr("height", height);
+    svg.append("g")
+      .selectAll("rect")
+      .data(data)
+      .join("rect")
+      .attr("opacity", 0.5)
+      .attr("fill", d => d.manual ? "#ff3030": (d.rt > 1 ?"red":"green"))
+      .attr("x", d => x(d.d)-xWidth/2)
+//      .attr("width", d => (width -margin.left - margin.right)/ data.length-1)
+          .attr("width", d => xWidth)
+      .attr("y", d => d.rt > 1 ? y(d.rt): y(1))
+      .attr("height", d => d.rt > 1 ? y(1)-y(d.rt) : y(d.rt)-y(1));
+
+    lineRt = d3.line()
+      .defined(d => !isNaN(d.rtSA))
+      .curve(d3.curveBasis)
+      .x(d => x(d.d))
+      .y(d => y(d.rtSA))
+
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("d", lineRt);
+if (config.showHorizontal === true && current !== undefined){
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(current.rt))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(current.rt))
+      .attr("stroke-dasharray", [5,5])
+      .attr("stroke", "red")
+      .attr("stroke-width", 1)
+      ;
+}
+    if (config.showManualHorizontal === true && manual !== undefined && manual.isValid === true){
+
+      const vd = manual.rt;
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(vd))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(vd))
+      .attr("stroke-dasharray", [8,16])
+      .attr("stroke", "#ff2020")
+      .attr("stroke-width", 1)
+      ;
+    }
+//    svg.append("line")
+//      .attr("x1", margin.left)
+//      .attr("y1", y(0))
+//      .attr("x2", width - margin.right)
+//      .attr("y2", y(0))
+//      .attr("stroke", "black")
+//      .attr("stroke-width", 1)
+//      ;
+    svg.append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(1))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(1))
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      ;
+    svg.append("g")
+      .call(xAxis);
+    svg.append("g")
+      .call(yAxis);
+
+    if (width > 300){
+    svg.append("g")
+      .call(xAxis2);
+    svg.append("g")
+      .call(yAxis2);
+    }
+}
+function outputDeathRecoveryGraph(title, name, id, d, width, height, current, manual){
+  outputDoubleGraph(title, name, id, d, width, height, current, manual, d => d.deathsDiff, d => d.recoveredDiff);
+}
 function updateGraphCurrent(cs, cur){
     cs.forEach(c => {
       if (cur[c] !== undefined){
@@ -1430,6 +1611,7 @@ function renderGraphRateTable(tableBodyId, rows){
     htmlRows += "</td>";
     htmlRows +=`<td><div id="graphDeathRate${c.id}"></div></td>`;
     htmlRows +=`<td><div id="graphDeathsRateLag${c.id}"></div></td>`;
+    htmlRows +=`<td><div id="graphRt${c.id}"></div></td>`;
     htmlRows +="</tr>"
   })
 
