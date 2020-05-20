@@ -113840,7 +113840,7 @@ var data = {
             "confirmed": 232037, 
             "date": "2020-5-19", 
             "deaths": 27778, 
-            "recovered": 0
+            "recovered": 150376
         }
     ], 
     "Sri Lanka": [
