@@ -395,6 +395,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 529
+        }, 
+        {
+            "confirmed": 1054, 
+            "date": "2020-5-20", 
+            "deaths": 6, 
+            "recovered": 555
         }
     ], 
     "Амурская область": [
@@ -793,6 +799,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 1, 
             "recovered": 65
+        }, 
+        {
+            "confirmed": 277, 
+            "date": "2020-5-20", 
+            "deaths": 1, 
+            "recovered": 71
         }
     ], 
     "Архангельская область": [
@@ -1191,6 +1203,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 299
+        }, 
+        {
+            "confirmed": 817, 
+            "date": "2020-5-20", 
+            "deaths": 4, 
+            "recovered": 315
         }
     ], 
     "Астраханская область": [
@@ -1589,6 +1607,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 492
+        }, 
+        {
+            "confirmed": 1154, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 546
         }
     ], 
     "Белгородская область": [
@@ -1987,6 +2011,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 395
+        }, 
+        {
+            "confirmed": 1428, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 443
         }
     ], 
     "Брянская область": [
@@ -2385,6 +2415,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 30, 
             "recovered": 1042
+        }, 
+        {
+            "confirmed": 2515, 
+            "date": "2020-5-20", 
+            "deaths": 31, 
+            "recovered": 1129
         }
     ], 
     "Владимирская область": [
@@ -2781,6 +2817,12 @@ var data ={
         {
             "confirmed": 1920, 
             "date": "2020-5-19", 
+            "deaths": 15, 
+            "recovered": 267
+        }, 
+        {
+            "confirmed": 1986, 
+            "date": "2020-5-20", 
             "deaths": 15, 
             "recovered": 267
         }
@@ -3181,6 +3223,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 13, 
             "recovered": 519
+        }, 
+        {
+            "confirmed": 1831, 
+            "date": "2020-5-20", 
+            "deaths": 13, 
+            "recovered": 590
         }
     ], 
     "Вологодская область": [
@@ -3579,6 +3627,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 3, 
             "recovered": 196
+        }, 
+        {
+            "confirmed": 502, 
+            "date": "2020-5-20", 
+            "deaths": 3, 
+            "recovered": 204
         }
     ], 
     "Воронежская область": [
@@ -3977,6 +4031,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 16, 
             "recovered": 721
+        }, 
+        {
+            "confirmed": 1266, 
+            "date": "2020-5-20", 
+            "deaths": 16, 
+            "recovered": 758
         }
     ], 
     "Еврейская автономная область": [
@@ -4375,6 +4435,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 2, 
             "recovered": 87
+        }, 
+        {
+            "confirmed": 246, 
+            "date": "2020-5-20", 
+            "deaths": 2, 
+            "recovered": 89
         }
     ], 
     "Забайкальский край": [
@@ -4773,6 +4839,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 6, 
             "recovered": 254
+        }, 
+        {
+            "confirmed": 615, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 268
         }
     ], 
     "Ивановская область": [
@@ -5171,6 +5243,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 15, 
             "recovered": 397
+        }, 
+        {
+            "confirmed": 1360, 
+            "date": "2020-5-20", 
+            "deaths": 16, 
+            "recovered": 426
         }
     ], 
     "Иркутская область": [
@@ -5569,6 +5647,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 6, 
             "recovered": 160
+        }, 
+        {
+            "confirmed": 746, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 169
         }
     ], 
     "Кабардино-Балкарская Республика": [
@@ -5967,6 +6051,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 461
+        }, 
+        {
+            "confirmed": 1952, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 515
         }
     ], 
     "Калининградская область": [
@@ -6365,6 +6455,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 18, 
             "recovered": 423
+        }, 
+        {
+            "confirmed": 1042, 
+            "date": "2020-5-20", 
+            "deaths": 18, 
+            "recovered": 459
         }
     ], 
     "Калужская область": [
@@ -6763,6 +6859,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 19, 
             "recovered": 613
+        }, 
+        {
+            "confirmed": 2750, 
+            "date": "2020-5-20", 
+            "deaths": 20, 
+            "recovered": 664
         }
     ], 
     "Камчатский край": [
@@ -7161,6 +7263,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 2, 
             "recovered": 167
+        }, 
+        {
+            "confirmed": 536, 
+            "date": "2020-5-20", 
+            "deaths": 3, 
+            "recovered": 179
         }
     ], 
     "Карачаево-Черкесская Республика": [
@@ -7559,6 +7667,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 210
+        }, 
+        {
+            "confirmed": 689, 
+            "date": "2020-5-20", 
+            "deaths": 4, 
+            "recovered": 222
         }
     ], 
     "Кемеровская область": [
@@ -7957,6 +8071,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 118
+        }, 
+        {
+            "confirmed": 342, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 126
         }
     ], 
     "Кировская область": [
@@ -8355,6 +8475,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 5, 
             "recovered": 591
+        }, 
+        {
+            "confirmed": 1064, 
+            "date": "2020-5-20", 
+            "deaths": 5, 
+            "recovered": 647
         }
     ], 
     "Костромская область": [
@@ -8753,6 +8879,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 221
+        }, 
+        {
+            "confirmed": 516, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 243
         }
     ], 
     "Краснодарский край": [
@@ -9151,6 +9283,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 26, 
             "recovered": 1361
+        }, 
+        {
+            "confirmed": 2883, 
+            "date": "2020-5-20", 
+            "deaths": 26, 
+            "recovered": 1540
         }
     ], 
     "Красноярский край": [
@@ -9549,6 +9687,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 20, 
             "recovered": 565
+        }, 
+        {
+            "confirmed": 2445, 
+            "date": "2020-5-20", 
+            "deaths": 21, 
+            "recovered": 614
         }
     ], 
     "Курганская область": [
@@ -9947,6 +10091,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 0, 
             "recovered": 52
+        }, 
+        {
+            "confirmed": 133, 
+            "date": "2020-5-20", 
+            "deaths": 0, 
+            "recovered": 54
         }
     ], 
     "Курская область": [
@@ -10345,6 +10495,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 606
+        }, 
+        {
+            "confirmed": 2177, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 661
         }
     ], 
     "Ленинградская область": [
@@ -10743,6 +10899,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 728
+        }, 
+        {
+            "confirmed": 2208, 
+            "date": "2020-5-20", 
+            "deaths": 8, 
+            "recovered": 803
         }
     ], 
     "Липецкая область": [
@@ -11141,6 +11303,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 318
+        }, 
+        {
+            "confirmed": 1377, 
+            "date": "2020-5-20", 
+            "deaths": 4, 
+            "recovered": 341
         }
     ], 
     "Магаданская область": [
@@ -11539,6 +11707,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 3, 
             "recovered": 112
+        }, 
+        {
+            "confirmed": 201, 
+            "date": "2020-5-20", 
+            "deaths": 3, 
+            "recovered": 127
         }
     ], 
     "Москва": [
@@ -11937,6 +12111,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 1651, 
             "recovered": 31496
+        }, 
+        {
+            "confirmed": 152306, 
+            "date": "2020-5-20", 
+            "deaths": 1726, 
+            "recovered": 36936
         }
     ], 
     "Московская область": [
@@ -12335,6 +12515,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 271, 
             "recovered": 3614
+        }, 
+        {
+            "confirmed": 30091, 
+            "date": "2020-5-20", 
+            "deaths": 285, 
+            "recovered": 3897
         }
     ], 
     "Мурманская область": [
@@ -12733,6 +12919,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 6, 
             "recovered": 1340
+        }, 
+        {
+            "confirmed": 2714, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 1425
         }
     ], 
     "Ненецкий автономный округ": [
@@ -13129,6 +13321,12 @@ var data ={
         {
             "confirmed": 57, 
             "date": "2020-5-19", 
+            "deaths": 0, 
+            "recovered": 7
+        }, 
+        {
+            "confirmed": 58, 
+            "date": "2020-5-20", 
             "deaths": 0, 
             "recovered": 7
         }
@@ -13529,6 +13727,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 45, 
             "recovered": 1539
+        }, 
+        {
+            "confirmed": 7209, 
+            "date": "2020-5-20", 
+            "deaths": 49, 
+            "recovered": 1637
         }
     ], 
     "Новгородская область": [
@@ -13927,6 +14131,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 190
+        }, 
+        {
+            "confirmed": 695, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 217
         }
     ], 
     "Новосибирская область": [
@@ -14325,6 +14535,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 22, 
             "recovered": 692
+        }, 
+        {
+            "confirmed": 1805, 
+            "date": "2020-5-20", 
+            "deaths": 22, 
+            "recovered": 730
         }
     ], 
     "Омская область": [
@@ -14723,6 +14939,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 16, 
             "recovered": 105
+        }, 
+        {
+            "confirmed": 717, 
+            "date": "2020-5-20", 
+            "deaths": 16, 
+            "recovered": 115
         }
     ], 
     "Оренбургская область": [
@@ -15121,6 +15343,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 5, 
             "recovered": 701
+        }, 
+        {
+            "confirmed": 1392, 
+            "date": "2020-5-20", 
+            "deaths": 5, 
+            "recovered": 760
         }
     ], 
     "Орловская область": [
@@ -15519,6 +15747,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 10, 
             "recovered": 524
+        }, 
+        {
+            "confirmed": 1598, 
+            "date": "2020-5-20", 
+            "deaths": 10, 
+            "recovered": 576
         }
     ], 
     "Пензенская область": [
@@ -15917,6 +16151,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 12, 
             "recovered": 861
+        }, 
+        {
+            "confirmed": 1317, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 944
         }
     ], 
     "Пермский край": [
@@ -16313,6 +16553,12 @@ var data ={
         {
             "confirmed": 1125, 
             "date": "2020-5-19", 
+            "deaths": 13, 
+            "recovered": 600
+        }, 
+        {
+            "confirmed": 1178, 
+            "date": "2020-5-20", 
             "deaths": 13, 
             "recovered": 600
         }
@@ -16713,6 +16959,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 14, 
             "recovered": 459
+        }, 
+        {
+            "confirmed": 1446, 
+            "date": "2020-5-20", 
+            "deaths": 14, 
+            "recovered": 487
         }
     ], 
     "Псковская область": [
@@ -17111,6 +17363,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 9, 
             "recovered": 142
+        }, 
+        {
+            "confirmed": 461, 
+            "date": "2020-5-20", 
+            "deaths": 9, 
+            "recovered": 161
         }
     ], 
     "Республика Адыгея": [
@@ -17509,6 +17767,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 249
+        }, 
+        {
+            "confirmed": 525, 
+            "date": "2020-5-20", 
+            "deaths": 8, 
+            "recovered": 263
         }
     ], 
     "Республика Алтай": [
@@ -17907,6 +18171,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 0, 
             "recovered": 36
+        }, 
+        {
+            "confirmed": 82, 
+            "date": "2020-5-20", 
+            "deaths": 0, 
+            "recovered": 37
         }
     ], 
     "Республика Башкортостан": [
@@ -18305,6 +18575,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 17, 
             "recovered": 669
+        }, 
+        {
+            "confirmed": 2335, 
+            "date": "2020-5-20", 
+            "deaths": 18, 
+            "recovered": 714
         }
     ], 
     "Республика Бурятия": [
@@ -18703,6 +18979,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 6, 
             "recovered": 384
+        }, 
+        {
+            "confirmed": 1015, 
+            "date": "2020-5-20", 
+            "deaths": 6, 
+            "recovered": 403
         }
     ], 
     "Республика Дагестан": [
@@ -19101,6 +19383,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 32, 
             "recovered": 2003
+        }, 
+        {
+            "confirmed": 3643, 
+            "date": "2020-5-20", 
+            "deaths": 36, 
+            "recovered": 2266
         }
     ], 
     "Республика Ингушетия": [
@@ -19499,6 +19787,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 35, 
             "recovered": 399
+        }, 
+        {
+            "confirmed": 1605, 
+            "date": "2020-5-20", 
+            "deaths": 35, 
+            "recovered": 607
         }
     ], 
     "Республика Калмыкия": [
@@ -19897,6 +20191,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 258
+        }, 
+        {
+            "confirmed": 744, 
+            "date": "2020-5-20", 
+            "deaths": 10, 
+            "recovered": 262
         }
     ], 
     "Республика Карелия": [
@@ -20295,6 +20595,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 1, 
             "recovered": 63
+        }, 
+        {
+            "confirmed": 241, 
+            "date": "2020-5-20", 
+            "deaths": 1, 
+            "recovered": 64
         }
     ], 
     "Республика Коми": [
@@ -20693,6 +20999,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 18, 
             "recovered": 425
+        }, 
+        {
+            "confirmed": 1019, 
+            "date": "2020-5-20", 
+            "deaths": 18, 
+            "recovered": 446
         }
     ], 
     "Республика Крым": [
@@ -21091,6 +21403,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 2, 
             "recovered": 113
+        }, 
+        {
+            "confirmed": 298, 
+            "date": "2020-5-20", 
+            "deaths": 2, 
+            "recovered": 122
         }
     ], 
     "Республика Марий Эл": [
@@ -21489,6 +21807,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 910
+        }, 
+        {
+            "confirmed": 1322, 
+            "date": "2020-5-20", 
+            "deaths": 8, 
+            "recovered": 959
         }
     ], 
     "Республика Мордовия": [
@@ -21887,6 +22211,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 9, 
             "recovered": 434
+        }, 
+        {
+            "confirmed": 1477, 
+            "date": "2020-5-20", 
+            "deaths": 9, 
+            "recovered": 463
         }
     ], 
     "Республика Саха (Якутия)": [
@@ -22285,6 +22615,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 355
+        }, 
+        {
+            "confirmed": 960, 
+            "date": "2020-5-20", 
+            "deaths": 5, 
+            "recovered": 372
         }
     ], 
     "Республика Северная Осетия — Алания": [
@@ -22683,6 +23019,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 15, 
             "recovered": 1105
+        }, 
+        {
+            "confirmed": 2314, 
+            "date": "2020-5-20", 
+            "deaths": 18, 
+            "recovered": 1164
         }
     ], 
     "Республика Татарстан": [
@@ -23081,6 +23423,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 1301
+        }, 
+        {
+            "confirmed": 2475, 
+            "date": "2020-5-20", 
+            "deaths": 8, 
+            "recovered": 1452
         }
     ], 
     "Республика Тыва": [
@@ -23479,6 +23827,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 1, 
             "recovered": 48
+        }, 
+        {
+            "confirmed": 407, 
+            "date": "2020-5-20", 
+            "deaths": 1, 
+            "recovered": 49
         }
     ], 
     "Республика Хакасия": [
@@ -23877,6 +24231,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 10, 
             "recovered": 299
+        }, 
+        {
+            "confirmed": 695, 
+            "date": "2020-5-20", 
+            "deaths": 10, 
+            "recovered": 329
         }
     ], 
     "Республика Чувашия": [
@@ -24275,6 +24635,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 8, 
             "recovered": 559
+        }, 
+        {
+            "confirmed": 1936, 
+            "date": "2020-5-20", 
+            "deaths": 8, 
+            "recovered": 599
         }
     ], 
     "Ростовская область": [
@@ -24673,6 +25039,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 31, 
             "recovered": 874
+        }, 
+        {
+            "confirmed": 2784, 
+            "date": "2020-5-20", 
+            "deaths": 33, 
+            "recovered": 989
         }
     ], 
     "Рязанская область": [
@@ -25071,6 +25443,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 422
+        }, 
+        {
+            "confirmed": 2577, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 452
         }
     ], 
     "Самарская область": [
@@ -25469,6 +25847,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 365
+        }, 
+        {
+            "confirmed": 1666, 
+            "date": "2020-5-20", 
+            "deaths": 11, 
+            "recovered": 419
         }
     ], 
     "Санкт-Петербург": [
@@ -25867,6 +26251,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 95, 
             "recovered": 2272
+        }, 
+        {
+            "confirmed": 11795, 
+            "date": "2020-5-20", 
+            "deaths": 99, 
+            "recovered": 2480
         }
     ], 
     "Саратовская область": [
@@ -26265,6 +26655,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 438
+        }, 
+        {
+            "confirmed": 2072, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 486
         }
     ], 
     "Сахалинская область": [
@@ -26661,6 +27057,12 @@ var data ={
         {
             "confirmed": 56, 
             "date": "2020-5-19", 
+            "deaths": 0, 
+            "recovered": 29
+        }, 
+        {
+            "confirmed": 57, 
+            "date": "2020-5-20", 
             "deaths": 0, 
             "recovered": 29
         }
@@ -27061,6 +27463,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 817
+        }, 
+        {
+            "confirmed": 3134, 
+            "date": "2020-5-20", 
+            "deaths": 8, 
+            "recovered": 890
         }
     ], 
     "Севастополь": [
@@ -27459,6 +27867,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 2, 
             "recovered": 83
+        }, 
+        {
+            "confirmed": 147, 
+            "date": "2020-5-20", 
+            "deaths": 2, 
+            "recovered": 101
         }
     ], 
     "Смоленская область": [
@@ -27857,6 +28271,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 395
+        }, 
+        {
+            "confirmed": 1357, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 410
         }
     ], 
     "Ставропольский край": [
@@ -28255,6 +28675,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 31, 
             "recovered": 562
+        }, 
+        {
+            "confirmed": 1659, 
+            "date": "2020-5-20", 
+            "deaths": 32, 
+            "recovered": 598
         }
     ], 
     "Тамбовская область": [
@@ -28653,6 +29079,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 574
+        }, 
+        {
+            "confirmed": 2154, 
+            "date": "2020-5-20", 
+            "deaths": 5, 
+            "recovered": 635
         }
     ], 
     "Тверская область": [
@@ -29051,6 +29483,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 620
+        }, 
+        {
+            "confirmed": 1164, 
+            "date": "2020-5-20", 
+            "deaths": 11, 
+            "recovered": 649
         }
     ], 
     "Томская область": [
@@ -29449,6 +29887,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 4, 
             "recovered": 95
+        }, 
+        {
+            "confirmed": 409, 
+            "date": "2020-5-20", 
+            "deaths": 4, 
+            "recovered": 103
         }
     ], 
     "Тульская область": [
@@ -29847,6 +30291,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 19, 
             "recovered": 842
+        }, 
+        {
+            "confirmed": 2735, 
+            "date": "2020-5-20", 
+            "deaths": 20, 
+            "recovered": 920
         }
     ], 
     "Тюменская область": [
@@ -30245,6 +30695,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 7, 
             "recovered": 462
+        }, 
+        {
+            "confirmed": 1267, 
+            "date": "2020-5-20", 
+            "deaths": 7, 
+            "recovered": 488
         }
     ], 
     "Удмуртская Республика": [
@@ -30643,6 +31099,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 12, 
             "recovered": 253
+        }, 
+        {
+            "confirmed": 458, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 270
         }
     ], 
     "Ульяновская область": [
@@ -31041,6 +31503,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 5, 
             "recovered": 370
+        }, 
+        {
+            "confirmed": 1526, 
+            "date": "2020-5-20", 
+            "deaths": 6, 
+            "recovered": 372
         }
     ], 
     "Хабаровский край": [
@@ -31439,6 +31907,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 9, 
             "recovered": 577
+        }, 
+        {
+            "confirmed": 1380, 
+            "date": "2020-5-20", 
+            "deaths": 9, 
+            "recovered": 617
         }
     ], 
     "Ханты-Мансийский АО": [
@@ -31837,6 +32311,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 453
+        }, 
+        {
+            "confirmed": 1371, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 478
         }
     ], 
     "Челябинская область": [
@@ -32235,6 +32715,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 9, 
             "recovered": 593
+        }, 
+        {
+            "confirmed": 1885, 
+            "date": "2020-5-20", 
+            "deaths": 10, 
+            "recovered": 644
         }
     ], 
     "Чеченская Республика": [
@@ -32633,6 +33119,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 11, 
             "recovered": 612
+        }, 
+        {
+            "confirmed": 1005, 
+            "date": "2020-5-20", 
+            "deaths": 11, 
+            "recovered": 620
         }
     ], 
     "Чукотский автономный округ": [
@@ -33029,6 +33521,12 @@ var data ={
         {
             "confirmed": 56, 
             "date": "2020-5-19", 
+            "deaths": 0, 
+            "recovered": 23
+        }, 
+        {
+            "confirmed": 56, 
+            "date": "2020-5-20", 
             "deaths": 0, 
             "recovered": 23
         }
@@ -33429,6 +33927,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 3, 
             "recovered": 251
+        }, 
+        {
+            "confirmed": 1838, 
+            "date": "2020-5-20", 
+            "deaths": 5, 
+            "recovered": 281
         }
     ], 
     "Ярославская область": [
@@ -33827,6 +34331,12 @@ var data ={
             "date": "2020-5-19", 
             "deaths": 12, 
             "recovered": 333
+        }, 
+        {
+            "confirmed": 2073, 
+            "date": "2020-5-20", 
+            "deaths": 12, 
+            "recovered": 386
         }
     ]
 }
