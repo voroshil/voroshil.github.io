@@ -5733,9 +5733,9 @@ var data ={
             "recovered": 169
         }, 
         {
-            "confirmed": 780, 
+            "confirmed": 863, 
             "date": "2020-5-21", 
-            "deaths": 7, 
+            "deaths": 8, 
             "recovered": 178
         }
     ], 
@@ -7375,8 +7375,8 @@ var data ={
         {
             "confirmed": 554, 
             "date": "2020-5-21", 
-            "deaths": 3, 
-            "recovered": 179
+            "deaths": 5, 
+            "recovered": 210
         }
     ], 
     "Карачаево-Черкесская Республика": [
@@ -19263,10 +19263,10 @@ var data ={
             "recovered": 403
         }, 
         {
-            "confirmed": 1042, 
+            "confirmed": 1090, 
             "date": "2020-5-21", 
             "deaths": 6, 
-            "recovered": 436
+            "recovered": 444
         }
     ], 
     "Республика Дагестан": [
@@ -33203,10 +33203,10 @@ var data ={
             "recovered": 644
         }, 
         {
-            "confirmed": 1969, 
+            "confirmed": 2052, 
             "date": "2020-5-21", 
             "deaths": 11, 
-            "recovered": 694
+            "recovered": 725
         }
     ], 
     "Чеченская Республика": [
