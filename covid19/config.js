@@ -44,6 +44,7 @@ const europe = [
 "Liechtenstein",
 ];
 const names = {
+  "Argentina": "Аргентина",
   "Australia": "Австралия",
   "Austria": "Австрия",
   "Bangladesh":"Бангладеш",
@@ -70,6 +71,7 @@ const names = {
   "Israel": "Израиль",
   "Italy": "Италия",
   "Korea, South": "Ю.Корея",
+  "Kuwait": "Кувейт",
   "Luxembourg": "Люксембург",
   "Malaysia": "Малайзия",
   "Mexico" :"Мексика",
