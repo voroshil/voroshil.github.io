@@ -83,7 +83,7 @@ const names = {
   "Malaysia": "Малайзия",
   "Mexico" :"Мексика",
   "Moldova": "Молдавия",
-  "Morocco", "Марокко",
+  "Morocco": "Марокко",
   "Netherlands": "Голландия",
   "Nigeria": "Нигерия",
   "Norway": "Норвегия",
