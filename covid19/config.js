@@ -44,6 +44,7 @@ const europe = [
 "Liechtenstein",
 ];
 const names = {
+  "Afghanistan": "Афганистан",
   "Algeria": "Алжир",
   "Argentina": "Аргентина",
   "Armenia": "Армения",
