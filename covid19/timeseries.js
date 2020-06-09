@@ -145221,31 +145221,31 @@ var data = {
         {
             "confirmed": 1851520, 
             "date": "2020-6-3", 
-            "deaths": 107175, 
+            "deaths": 107161, 
             "recovered": 479258
         }, 
         {
             "confirmed": 1872660, 
             "date": "2020-6-4", 
-            "deaths": 108211, 
+            "deaths": 108197, 
             "recovered": 485002
         }, 
         {
             "confirmed": 1897380, 
             "date": "2020-6-5", 
-            "deaths": 109132, 
+            "deaths": 109118, 
             "recovered": 491706
         }, 
         {
             "confirmed": 1920061, 
             "date": "2020-6-6", 
-            "deaths": 109802, 
+            "deaths": 109787, 
             "recovered": 500849
         }, 
         {
-            "confirmed": 1942363, 
+            "confirmed": 1943647, 
             "date": "2020-6-7", 
-            "deaths": 110514, 
+            "deaths": 110508, 
             "recovered": 506367
         }
     ], 
