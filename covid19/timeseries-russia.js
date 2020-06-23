@@ -8505,10 +8505,10 @@ var data ={
             "recovered": 2116
         }, 
         {
-            "confirmed": 5820, 
+            "confirmed": 6003, 
             "date": "2020-6-23", 
             "deaths": 40, 
-            "recovered": 2116
+            "recovered": 2275
         }
     ], 
     "Кабардино-Балкарская Республика": [
@@ -28569,10 +28569,10 @@ var data ={
             "recovered": 1714
         }, 
         {
-            "confirmed": 2634, 
+            "confirmed": 2682, 
             "date": "2020-6-23", 
             "deaths": 18, 
-            "recovered": 1762
+            "recovered": 1799
         }
     ], 
     "Республика Дагестан": [
@@ -49241,10 +49241,10 @@ var data ={
             "recovered": 3301
         }, 
         {
-            "confirmed": 6298, 
+            "confirmed": 6480, 
             "date": "2020-6-23", 
-            "deaths": 77, 
-            "recovered": 3301
+            "deaths": 80, 
+            "recovered": 3434
         }
     ], 
     "Чеченская Республика": [
