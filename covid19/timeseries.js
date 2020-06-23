@@ -21923,16 +21923,16 @@ var data = {
             "recovered": 551631
         }, 
         {
-            "confirmed": 1032913, 
+            "confirmed": 1067579, 
             "date": "2020-6-20", 
             "deaths": 49976, 
             "recovered": 576779
         }, 
         {
-            "confirmed": 1085038, 
+            "confirmed": 1083341, 
             "date": "2020-6-21", 
-            "deaths": 50617, 
-            "recovered": 600576
+            "deaths": 50591, 
+            "recovered": 588118
         }
     ], 
     "Brunei": [
@@ -148963,21 +148963,21 @@ var data = {
             "recovered": 0
         }, 
         {
-            "confirmed": 56043, 
+            "confirmed": 58076, 
             "date": "2020-6-19", 
-            "deaths": 5053, 
+            "deaths": 5105, 
             "recovered": 0
         }, 
         {
-            "confirmed": 56043, 
+            "confirmed": 58591, 
             "date": "2020-6-20", 
-            "deaths": 5053, 
+            "deaths": 5109, 
             "recovered": 0
         }, 
         {
-            "confirmed": 56043, 
+            "confirmed": 58848, 
             "date": "2020-6-21", 
-            "deaths": 5053, 
+            "deaths": 5111, 
             "recovered": 0
         }
     ], 
@@ -159943,9 +159943,9 @@ var data = {
             "recovered": 617460
         }, 
         {
-            "confirmed": 2279879, 
+            "confirmed": 2281290, 
             "date": "2020-6-21", 
-            "deaths": 119969, 
+            "deaths": 119977, 
             "recovered": 622133
         }
     ], 
