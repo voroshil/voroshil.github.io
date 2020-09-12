@@ -195,8 +195,9 @@ function createDateTotal(data, dateIndex, desiredCountries){
   let first = true;
   desiredCountries.forEach(c => {
     let v = data[c]
-    if (first && (v === undefined)){
+    if (first && (v === undefined || v[dateIndex] == undefined)){
       console.log(c);
+      return
     }else if (first && (v === undefined || isNaN(v[dateIndex].confirmed))){
       console.log(v[dateIndex]);
       first = false;
