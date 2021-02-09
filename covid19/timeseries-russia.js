@@ -1811,6 +1811,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 968, 
             "recovered": 32353
+        }, 
+        {
+            "confirmed": 35160, 
+            "date": "2021-1-11", 
+            "deaths": 980, 
+            "recovered": 32515
+        }, 
+        {
+            "confirmed": 35357, 
+            "date": "2021-1-12", 
+            "deaths": 988, 
+            "recovered": 32710
+        }, 
+        {
+            "confirmed": 35556, 
+            "date": "2021-1-13", 
+            "deaths": 1000, 
+            "recovered": 32890
+        }, 
+        {
+            "confirmed": 35752, 
+            "date": "2021-1-14", 
+            "deaths": 1007, 
+            "recovered": 33042
+        }, 
+        {
+            "confirmed": 35950, 
+            "date": "2021-1-15", 
+            "deaths": 1019, 
+            "recovered": 33147
+        }, 
+        {
+            "confirmed": 36150, 
+            "date": "2021-1-16", 
+            "deaths": 1030, 
+            "recovered": 33281
+        }, 
+        {
+            "confirmed": 36347, 
+            "date": "2021-1-17", 
+            "deaths": 1045, 
+            "recovered": 33362
+        }, 
+        {
+            "confirmed": 36542, 
+            "date": "2021-1-18", 
+            "deaths": 1055, 
+            "recovered": 33471
+        }, 
+        {
+            "confirmed": 36736, 
+            "date": "2021-1-19", 
+            "deaths": 1064, 
+            "recovered": 33601
+        }, 
+        {
+            "confirmed": 36929, 
+            "date": "2021-1-20", 
+            "deaths": 1075, 
+            "recovered": 33683
+        }, 
+        {
+            "confirmed": 37124, 
+            "date": "2021-1-21", 
+            "deaths": 1086, 
+            "recovered": 33785
+        }, 
+        {
+            "confirmed": 37316, 
+            "date": "2021-1-22", 
+            "deaths": 1095, 
+            "recovered": 33898
+        }, 
+        {
+            "confirmed": 37509, 
+            "date": "2021-1-23", 
+            "deaths": 1106, 
+            "recovered": 34026
+        }, 
+        {
+            "confirmed": 37703, 
+            "date": "2021-1-24", 
+            "deaths": 1116, 
+            "recovered": 34130
+        }, 
+        {
+            "confirmed": 37895, 
+            "date": "2021-1-25", 
+            "deaths": 1125, 
+            "recovered": 34248
+        }, 
+        {
+            "confirmed": 38084, 
+            "date": "2021-1-26", 
+            "deaths": 1132, 
+            "recovered": 34418
+        }, 
+        {
+            "confirmed": 38271, 
+            "date": "2021-1-27", 
+            "deaths": 1143, 
+            "recovered": 34537
+        }, 
+        {
+            "confirmed": 38455, 
+            "date": "2021-1-28", 
+            "deaths": 1155, 
+            "recovered": 34675
+        }, 
+        {
+            "confirmed": 38640, 
+            "date": "2021-1-29", 
+            "deaths": 1164, 
+            "recovered": 34823
+        }, 
+        {
+            "confirmed": 38823, 
+            "date": "2021-1-30", 
+            "deaths": 1177, 
+            "recovered": 34975
+        }, 
+        {
+            "confirmed": 39004, 
+            "date": "2021-1-31", 
+            "deaths": 1186, 
+            "recovered": 35103
+        }, 
+        {
+            "confirmed": 39184, 
+            "date": "2021-2-1", 
+            "deaths": 1199, 
+            "recovered": 35210
+        }, 
+        {
+            "confirmed": 39362, 
+            "date": "2021-2-2", 
+            "deaths": 1210, 
+            "recovered": 35365
+        }, 
+        {
+            "confirmed": 39544, 
+            "date": "2021-2-3", 
+            "deaths": 1224, 
+            "recovered": 35529
+        }, 
+        {
+            "confirmed": 39724, 
+            "date": "2021-2-4", 
+            "deaths": 1236, 
+            "recovered": 35637
+        }, 
+        {
+            "confirmed": 39905, 
+            "date": "2021-2-5", 
+            "deaths": 1249, 
+            "recovered": 35739
+        }, 
+        {
+            "confirmed": 40084, 
+            "date": "2021-2-6", 
+            "deaths": 1262, 
+            "recovered": 35902
+        }, 
+        {
+            "confirmed": 40261, 
+            "date": "2021-2-7", 
+            "deaths": 1276, 
+            "recovered": 36042
+        }, 
+        {
+            "confirmed": 40437, 
+            "date": "2021-2-8", 
+            "deaths": 1283, 
+            "recovered": 36171
+        }, 
+        {
+            "confirmed": 40611, 
+            "date": "2021-2-9", 
+            "deaths": 1296, 
+            "recovered": 36341
         }
     ], 
     "Амурская область": [
@@ -3625,6 +3805,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 105, 
             "recovered": 15282
+        }, 
+        {
+            "confirmed": 17269, 
+            "date": "2021-1-11", 
+            "deaths": 105, 
+            "recovered": 15375
+        }, 
+        {
+            "confirmed": 17388, 
+            "date": "2021-1-12", 
+            "deaths": 105, 
+            "recovered": 15476
+        }, 
+        {
+            "confirmed": 17503, 
+            "date": "2021-1-13", 
+            "deaths": 105, 
+            "recovered": 15589
+        }, 
+        {
+            "confirmed": 17621, 
+            "date": "2021-1-14", 
+            "deaths": 106, 
+            "recovered": 15705
+        }, 
+        {
+            "confirmed": 17736, 
+            "date": "2021-1-15", 
+            "deaths": 106, 
+            "recovered": 15818
+        }, 
+        {
+            "confirmed": 17852, 
+            "date": "2021-1-16", 
+            "deaths": 109, 
+            "recovered": 15932
+        }, 
+        {
+            "confirmed": 17972, 
+            "date": "2021-1-17", 
+            "deaths": 112, 
+            "recovered": 16056
+        }, 
+        {
+            "confirmed": 18095, 
+            "date": "2021-1-18", 
+            "deaths": 115, 
+            "recovered": 16176
+        }, 
+        {
+            "confirmed": 18221, 
+            "date": "2021-1-19", 
+            "deaths": 118, 
+            "recovered": 16302
+        }, 
+        {
+            "confirmed": 18346, 
+            "date": "2021-1-20", 
+            "deaths": 121, 
+            "recovered": 16423
+        }, 
+        {
+            "confirmed": 18468, 
+            "date": "2021-1-21", 
+            "deaths": 124, 
+            "recovered": 16551
+        }, 
+        {
+            "confirmed": 18585, 
+            "date": "2021-1-22", 
+            "deaths": 127, 
+            "recovered": 16679
+        }, 
+        {
+            "confirmed": 18698, 
+            "date": "2021-1-23", 
+            "deaths": 130, 
+            "recovered": 16809
+        }, 
+        {
+            "confirmed": 18813, 
+            "date": "2021-1-24", 
+            "deaths": 131, 
+            "recovered": 16941
+        }, 
+        {
+            "confirmed": 18924, 
+            "date": "2021-1-25", 
+            "deaths": 134, 
+            "recovered": 17075
+        }, 
+        {
+            "confirmed": 19031, 
+            "date": "2021-1-26", 
+            "deaths": 135, 
+            "recovered": 17211
+        }, 
+        {
+            "confirmed": 19126, 
+            "date": "2021-1-27", 
+            "deaths": 136, 
+            "recovered": 17342
+        }, 
+        {
+            "confirmed": 19217, 
+            "date": "2021-1-28", 
+            "deaths": 138, 
+            "recovered": 17472
+        }, 
+        {
+            "confirmed": 19306, 
+            "date": "2021-1-29", 
+            "deaths": 139, 
+            "recovered": 17587
+        }, 
+        {
+            "confirmed": 19396, 
+            "date": "2021-1-30", 
+            "deaths": 140, 
+            "recovered": 17696
+        }, 
+        {
+            "confirmed": 19481, 
+            "date": "2021-1-31", 
+            "deaths": 140, 
+            "recovered": 17779
+        }, 
+        {
+            "confirmed": 19564, 
+            "date": "2021-2-1", 
+            "deaths": 140, 
+            "recovered": 17857
+        }, 
+        {
+            "confirmed": 19651, 
+            "date": "2021-2-2", 
+            "deaths": 140, 
+            "recovered": 17952
+        }, 
+        {
+            "confirmed": 19734, 
+            "date": "2021-2-3", 
+            "deaths": 140, 
+            "recovered": 18050
+        }, 
+        {
+            "confirmed": 19822, 
+            "date": "2021-2-4", 
+            "deaths": 140, 
+            "recovered": 18145
+        }, 
+        {
+            "confirmed": 19906, 
+            "date": "2021-2-5", 
+            "deaths": 141, 
+            "recovered": 18235
+        }, 
+        {
+            "confirmed": 19986, 
+            "date": "2021-2-6", 
+            "deaths": 142, 
+            "recovered": 18327
+        }, 
+        {
+            "confirmed": 20062, 
+            "date": "2021-2-7", 
+            "deaths": 143, 
+            "recovered": 18416
+        }, 
+        {
+            "confirmed": 20134, 
+            "date": "2021-2-8", 
+            "deaths": 144, 
+            "recovered": 18484
+        }, 
+        {
+            "confirmed": 20194, 
+            "date": "2021-2-9", 
+            "deaths": 145, 
+            "recovered": 18546
         }
     ], 
     "Архангельская область": [
@@ -5439,6 +5799,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 451, 
             "recovered": 37028
+        }, 
+        {
+            "confirmed": 46196, 
+            "date": "2021-1-11", 
+            "deaths": 451, 
+            "recovered": 37263
+        }, 
+        {
+            "confirmed": 46439, 
+            "date": "2021-1-12", 
+            "deaths": 454, 
+            "recovered": 37515
+        }, 
+        {
+            "confirmed": 46678, 
+            "date": "2021-1-13", 
+            "deaths": 455, 
+            "recovered": 37786
+        }, 
+        {
+            "confirmed": 46915, 
+            "date": "2021-1-14", 
+            "deaths": 455, 
+            "recovered": 38163
+        }, 
+        {
+            "confirmed": 47173, 
+            "date": "2021-1-15", 
+            "deaths": 455, 
+            "recovered": 38544
+        }, 
+        {
+            "confirmed": 47446, 
+            "date": "2021-1-16", 
+            "deaths": 455, 
+            "recovered": 38928
+        }, 
+        {
+            "confirmed": 47721, 
+            "date": "2021-1-17", 
+            "deaths": 455, 
+            "recovered": 39299
+        }, 
+        {
+            "confirmed": 47985, 
+            "date": "2021-1-18", 
+            "deaths": 455, 
+            "recovered": 39558
+        }, 
+        {
+            "confirmed": 48246, 
+            "date": "2021-1-19", 
+            "deaths": 455, 
+            "recovered": 39836
+        }, 
+        {
+            "confirmed": 48503, 
+            "date": "2021-1-20", 
+            "deaths": 458, 
+            "recovered": 40154
+        }, 
+        {
+            "confirmed": 48755, 
+            "date": "2021-1-21", 
+            "deaths": 458, 
+            "recovered": 40510
+        }, 
+        {
+            "confirmed": 49004, 
+            "date": "2021-1-22", 
+            "deaths": 458, 
+            "recovered": 40897
+        }, 
+        {
+            "confirmed": 49257, 
+            "date": "2021-1-23", 
+            "deaths": 458, 
+            "recovered": 41291
+        }, 
+        {
+            "confirmed": 49507, 
+            "date": "2021-1-24", 
+            "deaths": 458, 
+            "recovered": 41698
+        }, 
+        {
+            "confirmed": 49765, 
+            "date": "2021-1-25", 
+            "deaths": 458, 
+            "recovered": 41992
+        }, 
+        {
+            "confirmed": 50013, 
+            "date": "2021-1-26", 
+            "deaths": 458, 
+            "recovered": 42289
+        }, 
+        {
+            "confirmed": 50256, 
+            "date": "2021-1-27", 
+            "deaths": 459, 
+            "recovered": 42579
+        }, 
+        {
+            "confirmed": 50500, 
+            "date": "2021-1-28", 
+            "deaths": 466, 
+            "recovered": 42875
+        }, 
+        {
+            "confirmed": 50742, 
+            "date": "2021-1-29", 
+            "deaths": 466, 
+            "recovered": 43173
+        }, 
+        {
+            "confirmed": 50980, 
+            "date": "2021-1-30", 
+            "deaths": 468, 
+            "recovered": 43474
+        }, 
+        {
+            "confirmed": 51223, 
+            "date": "2021-1-31", 
+            "deaths": 468, 
+            "recovered": 43760
+        }, 
+        {
+            "confirmed": 51465, 
+            "date": "2021-2-1", 
+            "deaths": 475, 
+            "recovered": 44016
+        }, 
+        {
+            "confirmed": 51705, 
+            "date": "2021-2-2", 
+            "deaths": 477, 
+            "recovered": 44291
+        }, 
+        {
+            "confirmed": 51946, 
+            "date": "2021-2-3", 
+            "deaths": 477, 
+            "recovered": 44598
+        }, 
+        {
+            "confirmed": 52187, 
+            "date": "2021-2-4", 
+            "deaths": 482, 
+            "recovered": 44944
+        }, 
+        {
+            "confirmed": 52427, 
+            "date": "2021-2-5", 
+            "deaths": 485, 
+            "recovered": 45302
+        }, 
+        {
+            "confirmed": 52664, 
+            "date": "2021-2-6", 
+            "deaths": 490, 
+            "recovered": 45686
+        }, 
+        {
+            "confirmed": 52899, 
+            "date": "2021-2-7", 
+            "deaths": 496, 
+            "recovered": 46062
+        }, 
+        {
+            "confirmed": 53130, 
+            "date": "2021-2-8", 
+            "deaths": 500, 
+            "recovered": 46424
+        }, 
+        {
+            "confirmed": 53357, 
+            "date": "2021-2-9", 
+            "deaths": 511, 
+            "recovered": 46783
         }
     ], 
     "Астраханская область": [
@@ -7253,6 +7793,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 425, 
             "recovered": 13470
+        }, 
+        {
+            "confirmed": 20894, 
+            "date": "2021-1-11", 
+            "deaths": 429, 
+            "recovered": 13549
+        }, 
+        {
+            "confirmed": 21065, 
+            "date": "2021-1-12", 
+            "deaths": 433, 
+            "recovered": 13630
+        }, 
+        {
+            "confirmed": 21233, 
+            "date": "2021-1-13", 
+            "deaths": 439, 
+            "recovered": 13712
+        }, 
+        {
+            "confirmed": 21408, 
+            "date": "2021-1-14", 
+            "deaths": 443, 
+            "recovered": 13797
+        }, 
+        {
+            "confirmed": 21588, 
+            "date": "2021-1-15", 
+            "deaths": 447, 
+            "recovered": 13880
+        }, 
+        {
+            "confirmed": 21770, 
+            "date": "2021-1-16", 
+            "deaths": 454, 
+            "recovered": 13966
+        }, 
+        {
+            "confirmed": 21955, 
+            "date": "2021-1-17", 
+            "deaths": 459, 
+            "recovered": 14037
+        }, 
+        {
+            "confirmed": 22140, 
+            "date": "2021-1-18", 
+            "deaths": 461, 
+            "recovered": 14111
+        }, 
+        {
+            "confirmed": 22328, 
+            "date": "2021-1-19", 
+            "deaths": 463, 
+            "recovered": 14194
+        }, 
+        {
+            "confirmed": 22514, 
+            "date": "2021-1-20", 
+            "deaths": 464, 
+            "recovered": 14282
+        }, 
+        {
+            "confirmed": 22700, 
+            "date": "2021-1-21", 
+            "deaths": 465, 
+            "recovered": 14372
+        }, 
+        {
+            "confirmed": 22887, 
+            "date": "2021-1-22", 
+            "deaths": 466, 
+            "recovered": 14465
+        }, 
+        {
+            "confirmed": 23072, 
+            "date": "2021-1-23", 
+            "deaths": 467, 
+            "recovered": 14547
+        }, 
+        {
+            "confirmed": 23252, 
+            "date": "2021-1-24", 
+            "deaths": 468, 
+            "recovered": 14618
+        }, 
+        {
+            "confirmed": 23431, 
+            "date": "2021-1-25", 
+            "deaths": 469, 
+            "recovered": 14702
+        }, 
+        {
+            "confirmed": 23606, 
+            "date": "2021-1-26", 
+            "deaths": 470, 
+            "recovered": 14793
+        }, 
+        {
+            "confirmed": 23780, 
+            "date": "2021-1-27", 
+            "deaths": 472, 
+            "recovered": 14889
+        }, 
+        {
+            "confirmed": 23951, 
+            "date": "2021-1-28", 
+            "deaths": 475, 
+            "recovered": 14983
+        }, 
+        {
+            "confirmed": 24123, 
+            "date": "2021-1-29", 
+            "deaths": 479, 
+            "recovered": 15076
+        }, 
+        {
+            "confirmed": 24293, 
+            "date": "2021-1-30", 
+            "deaths": 482, 
+            "recovered": 15159
+        }, 
+        {
+            "confirmed": 24461, 
+            "date": "2021-1-31", 
+            "deaths": 484, 
+            "recovered": 15232
+        }, 
+        {
+            "confirmed": 24630, 
+            "date": "2021-2-1", 
+            "deaths": 486, 
+            "recovered": 15307
+        }, 
+        {
+            "confirmed": 24794, 
+            "date": "2021-2-2", 
+            "deaths": 488, 
+            "recovered": 15396
+        }, 
+        {
+            "confirmed": 24956, 
+            "date": "2021-2-3", 
+            "deaths": 490, 
+            "recovered": 15489
+        }, 
+        {
+            "confirmed": 25112, 
+            "date": "2021-2-4", 
+            "deaths": 492, 
+            "recovered": 15587
+        }, 
+        {
+            "confirmed": 25269, 
+            "date": "2021-2-5", 
+            "deaths": 495, 
+            "recovered": 15691
+        }, 
+        {
+            "confirmed": 25424, 
+            "date": "2021-2-6", 
+            "deaths": 498, 
+            "recovered": 15807
+        }, 
+        {
+            "confirmed": 25577, 
+            "date": "2021-2-7", 
+            "deaths": 501, 
+            "recovered": 15885
+        }, 
+        {
+            "confirmed": 25729, 
+            "date": "2021-2-8", 
+            "deaths": 504, 
+            "recovered": 15958
+        }, 
+        {
+            "confirmed": 25884, 
+            "date": "2021-2-9", 
+            "deaths": 506, 
+            "recovered": 16087
         }
     ], 
     "Белгородская область": [
@@ -9067,6 +9787,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 280, 
             "recovered": 20993
+        }, 
+        {
+            "confirmed": 23867, 
+            "date": "2021-1-11", 
+            "deaths": 282, 
+            "recovered": 21050
+        }, 
+        {
+            "confirmed": 24043, 
+            "date": "2021-1-12", 
+            "deaths": 285, 
+            "recovered": 21397
+        }, 
+        {
+            "confirmed": 24222, 
+            "date": "2021-1-13", 
+            "deaths": 288, 
+            "recovered": 21658
+        }, 
+        {
+            "confirmed": 24403, 
+            "date": "2021-1-14", 
+            "deaths": 291, 
+            "recovered": 21916
+        }, 
+        {
+            "confirmed": 24587, 
+            "date": "2021-1-15", 
+            "deaths": 293, 
+            "recovered": 22151
+        }, 
+        {
+            "confirmed": 24769, 
+            "date": "2021-1-16", 
+            "deaths": 295, 
+            "recovered": 22379
+        }, 
+        {
+            "confirmed": 24952, 
+            "date": "2021-1-17", 
+            "deaths": 298, 
+            "recovered": 22427
+        }, 
+        {
+            "confirmed": 25132, 
+            "date": "2021-1-18", 
+            "deaths": 300, 
+            "recovered": 22444
+        }, 
+        {
+            "confirmed": 25310, 
+            "date": "2021-1-19", 
+            "deaths": 305, 
+            "recovered": 22872
+        }, 
+        {
+            "confirmed": 25494, 
+            "date": "2021-1-20", 
+            "deaths": 312, 
+            "recovered": 23111
+        }, 
+        {
+            "confirmed": 25686, 
+            "date": "2021-1-21", 
+            "deaths": 319, 
+            "recovered": 23361
+        }, 
+        {
+            "confirmed": 25875, 
+            "date": "2021-1-22", 
+            "deaths": 325, 
+            "recovered": 23557
+        }, 
+        {
+            "confirmed": 26058, 
+            "date": "2021-1-23", 
+            "deaths": 330, 
+            "recovered": 23803
+        }, 
+        {
+            "confirmed": 26238, 
+            "date": "2021-1-24", 
+            "deaths": 336, 
+            "recovered": 23860
+        }, 
+        {
+            "confirmed": 26413, 
+            "date": "2021-1-25", 
+            "deaths": 341, 
+            "recovered": 23873
+        }, 
+        {
+            "confirmed": 26586, 
+            "date": "2021-1-26", 
+            "deaths": 347, 
+            "recovered": 24106
+        }, 
+        {
+            "confirmed": 26762, 
+            "date": "2021-1-27", 
+            "deaths": 352, 
+            "recovered": 24305
+        }, 
+        {
+            "confirmed": 26934, 
+            "date": "2021-1-28", 
+            "deaths": 357, 
+            "recovered": 24492
+        }, 
+        {
+            "confirmed": 27108, 
+            "date": "2021-1-29", 
+            "deaths": 362, 
+            "recovered": 24647
+        }, 
+        {
+            "confirmed": 27279, 
+            "date": "2021-1-30", 
+            "deaths": 367, 
+            "recovered": 24764
+        }, 
+        {
+            "confirmed": 27451, 
+            "date": "2021-1-31", 
+            "deaths": 372, 
+            "recovered": 24842
+        }, 
+        {
+            "confirmed": 27620, 
+            "date": "2021-2-1", 
+            "deaths": 375, 
+            "recovered": 24920
+        }, 
+        {
+            "confirmed": 27791, 
+            "date": "2021-2-2", 
+            "deaths": 381, 
+            "recovered": 25121
+        }, 
+        {
+            "confirmed": 27959, 
+            "date": "2021-2-3", 
+            "deaths": 386, 
+            "recovered": 25396
+        }, 
+        {
+            "confirmed": 28125, 
+            "date": "2021-2-4", 
+            "deaths": 392, 
+            "recovered": 25513
+        }, 
+        {
+            "confirmed": 28295, 
+            "date": "2021-2-5", 
+            "deaths": 400, 
+            "recovered": 25658
+        }, 
+        {
+            "confirmed": 28460, 
+            "date": "2021-2-6", 
+            "deaths": 405, 
+            "recovered": 25864
+        }, 
+        {
+            "confirmed": 28628, 
+            "date": "2021-2-7", 
+            "deaths": 409, 
+            "recovered": 25911
+        }, 
+        {
+            "confirmed": 28789, 
+            "date": "2021-2-8", 
+            "deaths": 412, 
+            "recovered": 25930
+        }, 
+        {
+            "confirmed": 28952, 
+            "date": "2021-2-9", 
+            "deaths": 415, 
+            "recovered": 26057
         }
     ], 
     "Брянская область": [
@@ -10881,6 +11781,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 218, 
             "recovered": 22640
+        }, 
+        {
+            "confirmed": 25312, 
+            "date": "2021-1-11", 
+            "deaths": 218, 
+            "recovered": 22855
+        }, 
+        {
+            "confirmed": 25494, 
+            "date": "2021-1-12", 
+            "deaths": 218, 
+            "recovered": 23004
+        }, 
+        {
+            "confirmed": 25684, 
+            "date": "2021-1-13", 
+            "deaths": 218, 
+            "recovered": 23260
+        }, 
+        {
+            "confirmed": 25878, 
+            "date": "2021-1-14", 
+            "deaths": 220, 
+            "recovered": 23463
+        }, 
+        {
+            "confirmed": 26069, 
+            "date": "2021-1-15", 
+            "deaths": 220, 
+            "recovered": 23754
+        }, 
+        {
+            "confirmed": 26264, 
+            "date": "2021-1-16", 
+            "deaths": 220, 
+            "recovered": 23985
+        }, 
+        {
+            "confirmed": 26465, 
+            "date": "2021-1-17", 
+            "deaths": 220, 
+            "recovered": 24372
+        }, 
+        {
+            "confirmed": 26657, 
+            "date": "2021-1-18", 
+            "deaths": 220, 
+            "recovered": 24707
+        }, 
+        {
+            "confirmed": 26844, 
+            "date": "2021-1-19", 
+            "deaths": 220, 
+            "recovered": 25066
+        }, 
+        {
+            "confirmed": 27034, 
+            "date": "2021-1-20", 
+            "deaths": 225, 
+            "recovered": 25386
+        }, 
+        {
+            "confirmed": 27225, 
+            "date": "2021-1-21", 
+            "deaths": 229, 
+            "recovered": 25726
+        }, 
+        {
+            "confirmed": 27414, 
+            "date": "2021-1-22", 
+            "deaths": 235, 
+            "recovered": 26122
+        }, 
+        {
+            "confirmed": 27607, 
+            "date": "2021-1-23", 
+            "deaths": 235, 
+            "recovered": 26501
+        }, 
+        {
+            "confirmed": 27797, 
+            "date": "2021-1-24", 
+            "deaths": 238, 
+            "recovered": 26684
+        }, 
+        {
+            "confirmed": 27985, 
+            "date": "2021-1-25", 
+            "deaths": 238, 
+            "recovered": 26817
+        }, 
+        {
+            "confirmed": 28171, 
+            "date": "2021-1-26", 
+            "deaths": 238, 
+            "recovered": 26957
+        }, 
+        {
+            "confirmed": 28358, 
+            "date": "2021-1-27", 
+            "deaths": 238, 
+            "recovered": 27123
+        }, 
+        {
+            "confirmed": 28543, 
+            "date": "2021-1-28", 
+            "deaths": 239, 
+            "recovered": 27299
+        }, 
+        {
+            "confirmed": 28723, 
+            "date": "2021-1-29", 
+            "deaths": 239, 
+            "recovered": 27489
+        }, 
+        {
+            "confirmed": 28901, 
+            "date": "2021-1-30", 
+            "deaths": 239, 
+            "recovered": 27690
+        }, 
+        {
+            "confirmed": 29078, 
+            "date": "2021-1-31", 
+            "deaths": 239, 
+            "recovered": 27817
+        }, 
+        {
+            "confirmed": 29252, 
+            "date": "2021-2-1", 
+            "deaths": 239, 
+            "recovered": 27938
+        }, 
+        {
+            "confirmed": 29422, 
+            "date": "2021-2-2", 
+            "deaths": 239, 
+            "recovered": 28049
+        }, 
+        {
+            "confirmed": 29594, 
+            "date": "2021-2-3", 
+            "deaths": 241, 
+            "recovered": 28204
+        }, 
+        {
+            "confirmed": 29761, 
+            "date": "2021-2-4", 
+            "deaths": 241, 
+            "recovered": 28359
+        }, 
+        {
+            "confirmed": 29926, 
+            "date": "2021-2-5", 
+            "deaths": 245, 
+            "recovered": 28508
+        }, 
+        {
+            "confirmed": 30092, 
+            "date": "2021-2-6", 
+            "deaths": 245, 
+            "recovered": 28642
+        }, 
+        {
+            "confirmed": 30256, 
+            "date": "2021-2-7", 
+            "deaths": 246, 
+            "recovered": 28805
+        }, 
+        {
+            "confirmed": 30421, 
+            "date": "2021-2-8", 
+            "deaths": 246, 
+            "recovered": 28940
+        }, 
+        {
+            "confirmed": 30581, 
+            "date": "2021-2-9", 
+            "deaths": 247, 
+            "recovered": 29047
         }
     ], 
     "Владимирская область": [
@@ -12695,6 +13775,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 544, 
             "recovered": 17779
+        }, 
+        {
+            "confirmed": 20409, 
+            "date": "2021-1-11", 
+            "deaths": 544, 
+            "recovered": 17855
+        }, 
+        {
+            "confirmed": 20566, 
+            "date": "2021-1-12", 
+            "deaths": 552, 
+            "recovered": 17967
+        }, 
+        {
+            "confirmed": 20721, 
+            "date": "2021-1-13", 
+            "deaths": 561, 
+            "recovered": 18108
+        }, 
+        {
+            "confirmed": 20877, 
+            "date": "2021-1-14", 
+            "deaths": 566, 
+            "recovered": 18261
+        }, 
+        {
+            "confirmed": 21035, 
+            "date": "2021-1-15", 
+            "deaths": 570, 
+            "recovered": 18416
+        }, 
+        {
+            "confirmed": 21192, 
+            "date": "2021-1-16", 
+            "deaths": 578, 
+            "recovered": 18568
+        }, 
+        {
+            "confirmed": 21352, 
+            "date": "2021-1-17", 
+            "deaths": 582, 
+            "recovered": 18721
+        }, 
+        {
+            "confirmed": 21511, 
+            "date": "2021-1-18", 
+            "deaths": 590, 
+            "recovered": 18863
+        }, 
+        {
+            "confirmed": 21668, 
+            "date": "2021-1-19", 
+            "deaths": 598, 
+            "recovered": 18997
+        }, 
+        {
+            "confirmed": 21823, 
+            "date": "2021-1-20", 
+            "deaths": 607, 
+            "recovered": 19128
+        }, 
+        {
+            "confirmed": 21976, 
+            "date": "2021-1-21", 
+            "deaths": 615, 
+            "recovered": 19275
+        }, 
+        {
+            "confirmed": 22130, 
+            "date": "2021-1-22", 
+            "deaths": 623, 
+            "recovered": 19424
+        }, 
+        {
+            "confirmed": 22286, 
+            "date": "2021-1-23", 
+            "deaths": 629, 
+            "recovered": 19577
+        }, 
+        {
+            "confirmed": 22441, 
+            "date": "2021-1-24", 
+            "deaths": 635, 
+            "recovered": 19726
+        }, 
+        {
+            "confirmed": 22593, 
+            "date": "2021-1-25", 
+            "deaths": 641, 
+            "recovered": 19837
+        }, 
+        {
+            "confirmed": 22743, 
+            "date": "2021-1-26", 
+            "deaths": 648, 
+            "recovered": 19957
+        }, 
+        {
+            "confirmed": 22894, 
+            "date": "2021-1-27", 
+            "deaths": 654, 
+            "recovered": 20086
+        }, 
+        {
+            "confirmed": 23042, 
+            "date": "2021-1-28", 
+            "deaths": 662, 
+            "recovered": 20225
+        }, 
+        {
+            "confirmed": 23191, 
+            "date": "2021-1-29", 
+            "deaths": 669, 
+            "recovered": 20376
+        }, 
+        {
+            "confirmed": 23341, 
+            "date": "2021-1-30", 
+            "deaths": 676, 
+            "recovered": 20529
+        }, 
+        {
+            "confirmed": 23494, 
+            "date": "2021-1-31", 
+            "deaths": 683, 
+            "recovered": 20656
+        }, 
+        {
+            "confirmed": 23645, 
+            "date": "2021-2-1", 
+            "deaths": 689, 
+            "recovered": 20775
+        }, 
+        {
+            "confirmed": 23792, 
+            "date": "2021-2-2", 
+            "deaths": 694, 
+            "recovered": 20931
+        }, 
+        {
+            "confirmed": 23943, 
+            "date": "2021-2-3", 
+            "deaths": 699, 
+            "recovered": 21089
+        }, 
+        {
+            "confirmed": 24092, 
+            "date": "2021-2-4", 
+            "deaths": 704, 
+            "recovered": 21249
+        }, 
+        {
+            "confirmed": 24239, 
+            "date": "2021-2-5", 
+            "deaths": 709, 
+            "recovered": 21406
+        }, 
+        {
+            "confirmed": 24390, 
+            "date": "2021-2-6", 
+            "deaths": 714, 
+            "recovered": 21562
+        }, 
+        {
+            "confirmed": 24540, 
+            "date": "2021-2-7", 
+            "deaths": 719, 
+            "recovered": 21696
+        }, 
+        {
+            "confirmed": 24688, 
+            "date": "2021-2-8", 
+            "deaths": 724, 
+            "recovered": 21794
+        }, 
+        {
+            "confirmed": 24833, 
+            "date": "2021-2-9", 
+            "deaths": 731, 
+            "recovered": 21907
         }
     ], 
     "Волгоградская область": [
@@ -14509,6 +15769,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 507, 
             "recovered": 36126
+        }, 
+        {
+            "confirmed": 38301, 
+            "date": "2021-1-11", 
+            "deaths": 513, 
+            "recovered": 36375
+        }, 
+        {
+            "confirmed": 38561, 
+            "date": "2021-1-12", 
+            "deaths": 519, 
+            "recovered": 36637
+        }, 
+        {
+            "confirmed": 38823, 
+            "date": "2021-1-13", 
+            "deaths": 523, 
+            "recovered": 36902
+        }, 
+        {
+            "confirmed": 39086, 
+            "date": "2021-1-14", 
+            "deaths": 527, 
+            "recovered": 37171
+        }, 
+        {
+            "confirmed": 39345, 
+            "date": "2021-1-15", 
+            "deaths": 531, 
+            "recovered": 37432
+        }, 
+        {
+            "confirmed": 39607, 
+            "date": "2021-1-16", 
+            "deaths": 536, 
+            "recovered": 37700
+        }, 
+        {
+            "confirmed": 39871, 
+            "date": "2021-1-17", 
+            "deaths": 540, 
+            "recovered": 37950
+        }, 
+        {
+            "confirmed": 40129, 
+            "date": "2021-1-18", 
+            "deaths": 543, 
+            "recovered": 38204
+        }, 
+        {
+            "confirmed": 40384, 
+            "date": "2021-1-19", 
+            "deaths": 547, 
+            "recovered": 38447
+        }, 
+        {
+            "confirmed": 40640, 
+            "date": "2021-1-20", 
+            "deaths": 552, 
+            "recovered": 38708
+        }, 
+        {
+            "confirmed": 40891, 
+            "date": "2021-1-21", 
+            "deaths": 558, 
+            "recovered": 38948
+        }, 
+        {
+            "confirmed": 41144, 
+            "date": "2021-1-22", 
+            "deaths": 564, 
+            "recovered": 39205
+        }, 
+        {
+            "confirmed": 41399, 
+            "date": "2021-1-23", 
+            "deaths": 569, 
+            "recovered": 39466
+        }, 
+        {
+            "confirmed": 41651, 
+            "date": "2021-1-24", 
+            "deaths": 573, 
+            "recovered": 39704
+        }, 
+        {
+            "confirmed": 41897, 
+            "date": "2021-1-25", 
+            "deaths": 577, 
+            "recovered": 39937
+        }, 
+        {
+            "confirmed": 42140, 
+            "date": "2021-1-26", 
+            "deaths": 582, 
+            "recovered": 40187
+        }, 
+        {
+            "confirmed": 42381, 
+            "date": "2021-1-27", 
+            "deaths": 587, 
+            "recovered": 40421
+        }, 
+        {
+            "confirmed": 42623, 
+            "date": "2021-1-28", 
+            "deaths": 593, 
+            "recovered": 40660
+        }, 
+        {
+            "confirmed": 42868, 
+            "date": "2021-1-29", 
+            "deaths": 598, 
+            "recovered": 40896
+        }, 
+        {
+            "confirmed": 43111, 
+            "date": "2021-1-30", 
+            "deaths": 603, 
+            "recovered": 41138
+        }, 
+        {
+            "confirmed": 43352, 
+            "date": "2021-1-31", 
+            "deaths": 608, 
+            "recovered": 41371
+        }, 
+        {
+            "confirmed": 43589, 
+            "date": "2021-2-1", 
+            "deaths": 614, 
+            "recovered": 41596
+        }, 
+        {
+            "confirmed": 43821, 
+            "date": "2021-2-2", 
+            "deaths": 619, 
+            "recovered": 41825
+        }, 
+        {
+            "confirmed": 44050, 
+            "date": "2021-2-3", 
+            "deaths": 624, 
+            "recovered": 42056
+        }, 
+        {
+            "confirmed": 44277, 
+            "date": "2021-2-4", 
+            "deaths": 630, 
+            "recovered": 42278
+        }, 
+        {
+            "confirmed": 44510, 
+            "date": "2021-2-5", 
+            "deaths": 636, 
+            "recovered": 42507
+        }, 
+        {
+            "confirmed": 44745, 
+            "date": "2021-2-6", 
+            "deaths": 643, 
+            "recovered": 42739
+        }, 
+        {
+            "confirmed": 44986, 
+            "date": "2021-2-7", 
+            "deaths": 649, 
+            "recovered": 42966
+        }, 
+        {
+            "confirmed": 45223, 
+            "date": "2021-2-8", 
+            "deaths": 654, 
+            "recovered": 43196
+        }, 
+        {
+            "confirmed": 45455, 
+            "date": "2021-2-9", 
+            "deaths": 659, 
+            "recovered": 43425
         }
     ], 
     "Вологодская область": [
@@ -16323,6 +17763,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 469, 
             "recovered": 21911
+        }, 
+        {
+            "confirmed": 26850, 
+            "date": "2021-1-11", 
+            "deaths": 469, 
+            "recovered": 22230
+        }, 
+        {
+            "confirmed": 27153, 
+            "date": "2021-1-12", 
+            "deaths": 478, 
+            "recovered": 22541
+        }, 
+        {
+            "confirmed": 27455, 
+            "date": "2021-1-13", 
+            "deaths": 490, 
+            "recovered": 22831
+        }, 
+        {
+            "confirmed": 27760, 
+            "date": "2021-1-14", 
+            "deaths": 503, 
+            "recovered": 23111
+        }, 
+        {
+            "confirmed": 28067, 
+            "date": "2021-1-15", 
+            "deaths": 512, 
+            "recovered": 23413
+        }, 
+        {
+            "confirmed": 28376, 
+            "date": "2021-1-16", 
+            "deaths": 522, 
+            "recovered": 23718
+        }, 
+        {
+            "confirmed": 28688, 
+            "date": "2021-1-17", 
+            "deaths": 532, 
+            "recovered": 24007
+        }, 
+        {
+            "confirmed": 28998, 
+            "date": "2021-1-18", 
+            "deaths": 537, 
+            "recovered": 24315
+        }, 
+        {
+            "confirmed": 29303, 
+            "date": "2021-1-19", 
+            "deaths": 548, 
+            "recovered": 24605
+        }, 
+        {
+            "confirmed": 29604, 
+            "date": "2021-1-20", 
+            "deaths": 558, 
+            "recovered": 24912
+        }, 
+        {
+            "confirmed": 29911, 
+            "date": "2021-1-21", 
+            "deaths": 568, 
+            "recovered": 25222
+        }, 
+        {
+            "confirmed": 30211, 
+            "date": "2021-1-22", 
+            "deaths": 573, 
+            "recovered": 25524
+        }, 
+        {
+            "confirmed": 30512, 
+            "date": "2021-1-23", 
+            "deaths": 579, 
+            "recovered": 25830
+        }, 
+        {
+            "confirmed": 30811, 
+            "date": "2021-1-24", 
+            "deaths": 582, 
+            "recovered": 26128
+        }, 
+        {
+            "confirmed": 31111, 
+            "date": "2021-1-25", 
+            "deaths": 583, 
+            "recovered": 26407
+        }, 
+        {
+            "confirmed": 31402, 
+            "date": "2021-1-26", 
+            "deaths": 586, 
+            "recovered": 26680
+        }, 
+        {
+            "confirmed": 31692, 
+            "date": "2021-1-27", 
+            "deaths": 590, 
+            "recovered": 26947
+        }, 
+        {
+            "confirmed": 31977, 
+            "date": "2021-1-28", 
+            "deaths": 594, 
+            "recovered": 27219
+        }, 
+        {
+            "confirmed": 32264, 
+            "date": "2021-1-29", 
+            "deaths": 600, 
+            "recovered": 27506
+        }, 
+        {
+            "confirmed": 32550, 
+            "date": "2021-1-30", 
+            "deaths": 606, 
+            "recovered": 27808
+        }, 
+        {
+            "confirmed": 32839, 
+            "date": "2021-1-31", 
+            "deaths": 615, 
+            "recovered": 28062
+        }, 
+        {
+            "confirmed": 33124, 
+            "date": "2021-2-1", 
+            "deaths": 622, 
+            "recovered": 28309
+        }, 
+        {
+            "confirmed": 33405, 
+            "date": "2021-2-2", 
+            "deaths": 632, 
+            "recovered": 28552
+        }, 
+        {
+            "confirmed": 33685, 
+            "date": "2021-2-3", 
+            "deaths": 641, 
+            "recovered": 28830
+        }, 
+        {
+            "confirmed": 33967, 
+            "date": "2021-2-4", 
+            "deaths": 649, 
+            "recovered": 29129
+        }, 
+        {
+            "confirmed": 34243, 
+            "date": "2021-2-5", 
+            "deaths": 656, 
+            "recovered": 29436
+        }, 
+        {
+            "confirmed": 34517, 
+            "date": "2021-2-6", 
+            "deaths": 661, 
+            "recovered": 29748
+        }, 
+        {
+            "confirmed": 34777, 
+            "date": "2021-2-7", 
+            "deaths": 666, 
+            "recovered": 29982
+        }, 
+        {
+            "confirmed": 35031, 
+            "date": "2021-2-8", 
+            "deaths": 671, 
+            "recovered": 30259
+        }, 
+        {
+            "confirmed": 35276, 
+            "date": "2021-2-9", 
+            "deaths": 677, 
+            "recovered": 30508
         }
     ], 
     "Воронежская область": [
@@ -18137,6 +19757,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1268, 
             "recovered": 45043
+        }, 
+        {
+            "confirmed": 50497, 
+            "date": "2021-1-11", 
+            "deaths": 1276, 
+            "recovered": 45137
+        }, 
+        {
+            "confirmed": 50888, 
+            "date": "2021-1-12", 
+            "deaths": 1284, 
+            "recovered": 45268
+        }, 
+        {
+            "confirmed": 51276, 
+            "date": "2021-1-13", 
+            "deaths": 1301, 
+            "recovered": 45662
+        }, 
+        {
+            "confirmed": 51669, 
+            "date": "2021-1-14", 
+            "deaths": 1316, 
+            "recovered": 46124
+        }, 
+        {
+            "confirmed": 52064, 
+            "date": "2021-1-15", 
+            "deaths": 1329, 
+            "recovered": 46601
+        }, 
+        {
+            "confirmed": 52453, 
+            "date": "2021-1-16", 
+            "deaths": 1345, 
+            "recovered": 47080
+        }, 
+        {
+            "confirmed": 52840, 
+            "date": "2021-1-17", 
+            "deaths": 1365, 
+            "recovered": 47561
+        }, 
+        {
+            "confirmed": 53228, 
+            "date": "2021-1-18", 
+            "deaths": 1368, 
+            "recovered": 47918
+        }, 
+        {
+            "confirmed": 53619, 
+            "date": "2021-1-19", 
+            "deaths": 1381, 
+            "recovered": 48269
+        }, 
+        {
+            "confirmed": 54008, 
+            "date": "2021-1-20", 
+            "deaths": 1396, 
+            "recovered": 48644
+        }, 
+        {
+            "confirmed": 54394, 
+            "date": "2021-1-21", 
+            "deaths": 1412, 
+            "recovered": 49040
+        }, 
+        {
+            "confirmed": 54778, 
+            "date": "2021-1-22", 
+            "deaths": 1427, 
+            "recovered": 49442
+        }, 
+        {
+            "confirmed": 55165, 
+            "date": "2021-1-23", 
+            "deaths": 1443, 
+            "recovered": 49860
+        }, 
+        {
+            "confirmed": 55556, 
+            "date": "2021-1-24", 
+            "deaths": 1457, 
+            "recovered": 50257
+        }, 
+        {
+            "confirmed": 55941, 
+            "date": "2021-1-25", 
+            "deaths": 1472, 
+            "recovered": 50433
+        }, 
+        {
+            "confirmed": 56324, 
+            "date": "2021-1-26", 
+            "deaths": 1490, 
+            "recovered": 50654
+        }, 
+        {
+            "confirmed": 56708, 
+            "date": "2021-1-27", 
+            "deaths": 1512, 
+            "recovered": 50935
+        }, 
+        {
+            "confirmed": 57090, 
+            "date": "2021-1-28", 
+            "deaths": 1534, 
+            "recovered": 51255
+        }, 
+        {
+            "confirmed": 57468, 
+            "date": "2021-1-29", 
+            "deaths": 1546, 
+            "recovered": 51624
+        }, 
+        {
+            "confirmed": 57844, 
+            "date": "2021-1-30", 
+            "deaths": 1566, 
+            "recovered": 52005
+        }, 
+        {
+            "confirmed": 58219, 
+            "date": "2021-1-31", 
+            "deaths": 1566, 
+            "recovered": 52299
+        }, 
+        {
+            "confirmed": 58592, 
+            "date": "2021-2-1", 
+            "deaths": 1566, 
+            "recovered": 52579
+        }, 
+        {
+            "confirmed": 58963, 
+            "date": "2021-2-2", 
+            "deaths": 1579, 
+            "recovered": 52898
+        }, 
+        {
+            "confirmed": 59332, 
+            "date": "2021-2-3", 
+            "deaths": 1593, 
+            "recovered": 53254
+        }, 
+        {
+            "confirmed": 59703, 
+            "date": "2021-2-4", 
+            "deaths": 1607, 
+            "recovered": 53632
+        }, 
+        {
+            "confirmed": 60071, 
+            "date": "2021-2-5", 
+            "deaths": 1622, 
+            "recovered": 54007
+        }, 
+        {
+            "confirmed": 60440, 
+            "date": "2021-2-6", 
+            "deaths": 1636, 
+            "recovered": 54384
+        }, 
+        {
+            "confirmed": 60810, 
+            "date": "2021-2-7", 
+            "deaths": 1649, 
+            "recovered": 54707
+        }, 
+        {
+            "confirmed": 61178, 
+            "date": "2021-2-8", 
+            "deaths": 1661, 
+            "recovered": 54958
+        }, 
+        {
+            "confirmed": 61547, 
+            "date": "2021-2-9", 
+            "deaths": 1674, 
+            "recovered": 55290
         }
     ], 
     "Еврейская автономная область": [
@@ -19951,6 +21751,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 77, 
             "recovered": 3176
+        }, 
+        {
+            "confirmed": 3908, 
+            "date": "2021-1-11", 
+            "deaths": 78, 
+            "recovered": 3181
+        }, 
+        {
+            "confirmed": 3922, 
+            "date": "2021-1-12", 
+            "deaths": 78, 
+            "recovered": 3190
+        }, 
+        {
+            "confirmed": 3934, 
+            "date": "2021-1-13", 
+            "deaths": 80, 
+            "recovered": 3334
+        }, 
+        {
+            "confirmed": 3944, 
+            "date": "2021-1-14", 
+            "deaths": 80, 
+            "recovered": 3404
+        }, 
+        {
+            "confirmed": 3957, 
+            "date": "2021-1-15", 
+            "deaths": 85, 
+            "recovered": 3450
+        }, 
+        {
+            "confirmed": 3969, 
+            "date": "2021-1-16", 
+            "deaths": 88, 
+            "recovered": 3474
+        }, 
+        {
+            "confirmed": 3980, 
+            "date": "2021-1-17", 
+            "deaths": 90, 
+            "recovered": 3494
+        }, 
+        {
+            "confirmed": 3992, 
+            "date": "2021-1-18", 
+            "deaths": 93, 
+            "recovered": 3509
+        }, 
+        {
+            "confirmed": 4004, 
+            "date": "2021-1-19", 
+            "deaths": 94, 
+            "recovered": 3526
+        }, 
+        {
+            "confirmed": 4014, 
+            "date": "2021-1-20", 
+            "deaths": 95, 
+            "recovered": 3539
+        }, 
+        {
+            "confirmed": 4029, 
+            "date": "2021-1-21", 
+            "deaths": 97, 
+            "recovered": 3559
+        }, 
+        {
+            "confirmed": 4044, 
+            "date": "2021-1-22", 
+            "deaths": 98, 
+            "recovered": 3570
+        }, 
+        {
+            "confirmed": 4058, 
+            "date": "2021-1-23", 
+            "deaths": 99, 
+            "recovered": 3611
+        }, 
+        {
+            "confirmed": 4071, 
+            "date": "2021-1-24", 
+            "deaths": 100, 
+            "recovered": 3636
+        }, 
+        {
+            "confirmed": 4087, 
+            "date": "2021-1-25", 
+            "deaths": 101, 
+            "recovered": 3646
+        }, 
+        {
+            "confirmed": 4104, 
+            "date": "2021-1-26", 
+            "deaths": 103, 
+            "recovered": 3652
+        }, 
+        {
+            "confirmed": 4122, 
+            "date": "2021-1-27", 
+            "deaths": 104, 
+            "recovered": 3677
+        }, 
+        {
+            "confirmed": 4139, 
+            "date": "2021-1-28", 
+            "deaths": 104, 
+            "recovered": 3701
+        }, 
+        {
+            "confirmed": 4152, 
+            "date": "2021-1-29", 
+            "deaths": 104, 
+            "recovered": 3720
+        }, 
+        {
+            "confirmed": 4161, 
+            "date": "2021-1-30", 
+            "deaths": 106, 
+            "recovered": 3736
+        }, 
+        {
+            "confirmed": 4169, 
+            "date": "2021-1-31", 
+            "deaths": 106, 
+            "recovered": 3750
+        }, 
+        {
+            "confirmed": 4178, 
+            "date": "2021-2-1", 
+            "deaths": 106, 
+            "recovered": 3764
+        }, 
+        {
+            "confirmed": 4188, 
+            "date": "2021-2-2", 
+            "deaths": 107, 
+            "recovered": 3773
+        }, 
+        {
+            "confirmed": 4197, 
+            "date": "2021-2-3", 
+            "deaths": 107, 
+            "recovered": 3822
+        }, 
+        {
+            "confirmed": 4205, 
+            "date": "2021-2-4", 
+            "deaths": 107, 
+            "recovered": 3877
+        }, 
+        {
+            "confirmed": 4212, 
+            "date": "2021-2-5", 
+            "deaths": 108, 
+            "recovered": 3927
+        }, 
+        {
+            "confirmed": 4220, 
+            "date": "2021-2-6", 
+            "deaths": 108, 
+            "recovered": 3972
+        }, 
+        {
+            "confirmed": 4227, 
+            "date": "2021-2-7", 
+            "deaths": 108, 
+            "recovered": 4019
+        }, 
+        {
+            "confirmed": 4235, 
+            "date": "2021-2-8", 
+            "deaths": 109, 
+            "recovered": 4019
+        }, 
+        {
+            "confirmed": 4242, 
+            "date": "2021-2-9", 
+            "deaths": 110, 
+            "recovered": 4036
         }
     ], 
     "Забайкальский край": [
@@ -21765,6 +23745,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 407, 
             "recovered": 27738
+        }, 
+        {
+            "confirmed": 29837, 
+            "date": "2021-1-11", 
+            "deaths": 409, 
+            "recovered": 27851
+        }, 
+        {
+            "confirmed": 30067, 
+            "date": "2021-1-12", 
+            "deaths": 413, 
+            "recovered": 27959
+        }, 
+        {
+            "confirmed": 30295, 
+            "date": "2021-1-13", 
+            "deaths": 418, 
+            "recovered": 28211
+        }, 
+        {
+            "confirmed": 30522, 
+            "date": "2021-1-14", 
+            "deaths": 423, 
+            "recovered": 28366
+        }, 
+        {
+            "confirmed": 30745, 
+            "date": "2021-1-15", 
+            "deaths": 424, 
+            "recovered": 28587
+        }, 
+        {
+            "confirmed": 30970, 
+            "date": "2021-1-16", 
+            "deaths": 427, 
+            "recovered": 28797
+        }, 
+        {
+            "confirmed": 31197, 
+            "date": "2021-1-17", 
+            "deaths": 430, 
+            "recovered": 28925
+        }, 
+        {
+            "confirmed": 31421, 
+            "date": "2021-1-18", 
+            "deaths": 433, 
+            "recovered": 29022
+        }, 
+        {
+            "confirmed": 31641, 
+            "date": "2021-1-19", 
+            "deaths": 436, 
+            "recovered": 29298
+        }, 
+        {
+            "confirmed": 31859, 
+            "date": "2021-1-20", 
+            "deaths": 439, 
+            "recovered": 29543
+        }, 
+        {
+            "confirmed": 32080, 
+            "date": "2021-1-21", 
+            "deaths": 443, 
+            "recovered": 29807
+        }, 
+        {
+            "confirmed": 32299, 
+            "date": "2021-1-22", 
+            "deaths": 447, 
+            "recovered": 30061
+        }, 
+        {
+            "confirmed": 32519, 
+            "date": "2021-1-23", 
+            "deaths": 451, 
+            "recovered": 30307
+        }, 
+        {
+            "confirmed": 32740, 
+            "date": "2021-1-24", 
+            "deaths": 454, 
+            "recovered": 30479
+        }, 
+        {
+            "confirmed": 32957, 
+            "date": "2021-1-25", 
+            "deaths": 456, 
+            "recovered": 30601
+        }, 
+        {
+            "confirmed": 33172, 
+            "date": "2021-1-26", 
+            "deaths": 456, 
+            "recovered": 30846
+        }, 
+        {
+            "confirmed": 33383, 
+            "date": "2021-1-27", 
+            "deaths": 458, 
+            "recovered": 31222
+        }, 
+        {
+            "confirmed": 33588, 
+            "date": "2021-1-28", 
+            "deaths": 460, 
+            "recovered": 31549
+        }, 
+        {
+            "confirmed": 33800, 
+            "date": "2021-1-29", 
+            "deaths": 463, 
+            "recovered": 31875
+        }, 
+        {
+            "confirmed": 34015, 
+            "date": "2021-1-30", 
+            "deaths": 466, 
+            "recovered": 32131
+        }, 
+        {
+            "confirmed": 34225, 
+            "date": "2021-1-31", 
+            "deaths": 469, 
+            "recovered": 32332
+        }, 
+        {
+            "confirmed": 34432, 
+            "date": "2021-2-1", 
+            "deaths": 471, 
+            "recovered": 32529
+        }, 
+        {
+            "confirmed": 34642, 
+            "date": "2021-2-2", 
+            "deaths": 474, 
+            "recovered": 32766
+        }, 
+        {
+            "confirmed": 34845, 
+            "date": "2021-2-3", 
+            "deaths": 479, 
+            "recovered": 32983
+        }, 
+        {
+            "confirmed": 35046, 
+            "date": "2021-2-4", 
+            "deaths": 480, 
+            "recovered": 33215
+        }, 
+        {
+            "confirmed": 35245, 
+            "date": "2021-2-5", 
+            "deaths": 483, 
+            "recovered": 33421
+        }, 
+        {
+            "confirmed": 35447, 
+            "date": "2021-2-6", 
+            "deaths": 487, 
+            "recovered": 33629
+        }, 
+        {
+            "confirmed": 35645, 
+            "date": "2021-2-7", 
+            "deaths": 489, 
+            "recovered": 33776
+        }, 
+        {
+            "confirmed": 35846, 
+            "date": "2021-2-8", 
+            "deaths": 492, 
+            "recovered": 33843
+        }, 
+        {
+            "confirmed": 36043, 
+            "date": "2021-2-9", 
+            "deaths": 495, 
+            "recovered": 34083
         }
     ], 
     "Ивановская область": [
@@ -23579,6 +25739,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 586, 
             "recovered": 17713
+        }, 
+        {
+            "confirmed": 23274, 
+            "date": "2021-1-11", 
+            "deaths": 598, 
+            "recovered": 17757
+        }, 
+        {
+            "confirmed": 23452, 
+            "date": "2021-1-12", 
+            "deaths": 609, 
+            "recovered": 18144
+        }, 
+        {
+            "confirmed": 23628, 
+            "date": "2021-1-13", 
+            "deaths": 614, 
+            "recovered": 18617
+        }, 
+        {
+            "confirmed": 23803, 
+            "date": "2021-1-14", 
+            "deaths": 625, 
+            "recovered": 18702
+        }, 
+        {
+            "confirmed": 23980, 
+            "date": "2021-1-15", 
+            "deaths": 634, 
+            "recovered": 19191
+        }, 
+        {
+            "confirmed": 24156, 
+            "date": "2021-1-16", 
+            "deaths": 642, 
+            "recovered": 19471
+        }, 
+        {
+            "confirmed": 24334, 
+            "date": "2021-1-17", 
+            "deaths": 651, 
+            "recovered": 19517
+        }, 
+        {
+            "confirmed": 24509, 
+            "date": "2021-1-18", 
+            "deaths": 655, 
+            "recovered": 19579
+        }, 
+        {
+            "confirmed": 24683, 
+            "date": "2021-1-19", 
+            "deaths": 666, 
+            "recovered": 19836
+        }, 
+        {
+            "confirmed": 24859, 
+            "date": "2021-1-20", 
+            "deaths": 675, 
+            "recovered": 20257
+        }, 
+        {
+            "confirmed": 25033, 
+            "date": "2021-1-21", 
+            "deaths": 681, 
+            "recovered": 20620
+        }, 
+        {
+            "confirmed": 25208, 
+            "date": "2021-1-22", 
+            "deaths": 691, 
+            "recovered": 20977
+        }, 
+        {
+            "confirmed": 25384, 
+            "date": "2021-1-23", 
+            "deaths": 695, 
+            "recovered": 21282
+        }, 
+        {
+            "confirmed": 25561, 
+            "date": "2021-1-24", 
+            "deaths": 698, 
+            "recovered": 21493
+        }, 
+        {
+            "confirmed": 25736, 
+            "date": "2021-1-25", 
+            "deaths": 704, 
+            "recovered": 21535
+        }, 
+        {
+            "confirmed": 25909, 
+            "date": "2021-1-26", 
+            "deaths": 715, 
+            "recovered": 21885
+        }, 
+        {
+            "confirmed": 26085, 
+            "date": "2021-1-27", 
+            "deaths": 724, 
+            "recovered": 22298
+        }, 
+        {
+            "confirmed": 26259, 
+            "date": "2021-1-28", 
+            "deaths": 732, 
+            "recovered": 22674
+        }, 
+        {
+            "confirmed": 26429, 
+            "date": "2021-1-29", 
+            "deaths": 741, 
+            "recovered": 22977
+        }, 
+        {
+            "confirmed": 26598, 
+            "date": "2021-1-30", 
+            "deaths": 748, 
+            "recovered": 23105
+        }, 
+        {
+            "confirmed": 26769, 
+            "date": "2021-1-31", 
+            "deaths": 753, 
+            "recovered": 23132
+        }, 
+        {
+            "confirmed": 26938, 
+            "date": "2021-2-1", 
+            "deaths": 756, 
+            "recovered": 23188
+        }, 
+        {
+            "confirmed": 27105, 
+            "date": "2021-2-2", 
+            "deaths": 765, 
+            "recovered": 23555
+        }, 
+        {
+            "confirmed": 27269, 
+            "date": "2021-2-3", 
+            "deaths": 773, 
+            "recovered": 23896
+        }, 
+        {
+            "confirmed": 27434, 
+            "date": "2021-2-4", 
+            "deaths": 782, 
+            "recovered": 24182
+        }, 
+        {
+            "confirmed": 27597, 
+            "date": "2021-2-5", 
+            "deaths": 789, 
+            "recovered": 24444
+        }, 
+        {
+            "confirmed": 27761, 
+            "date": "2021-2-6", 
+            "deaths": 794, 
+            "recovered": 24732
+        }, 
+        {
+            "confirmed": 27923, 
+            "date": "2021-2-7", 
+            "deaths": 802, 
+            "recovered": 24771
+        }, 
+        {
+            "confirmed": 28086, 
+            "date": "2021-2-8", 
+            "deaths": 807, 
+            "recovered": 24843
+        }, 
+        {
+            "confirmed": 28241, 
+            "date": "2021-2-9", 
+            "deaths": 813, 
+            "recovered": 25179
         }
     ], 
     "Иркутская область": [
@@ -25393,6 +27733,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1339, 
             "recovered": 37640
+        }, 
+        {
+            "confirmed": 43431, 
+            "date": "2021-1-11", 
+            "deaths": 1350, 
+            "recovered": 37818
+        }, 
+        {
+            "confirmed": 43694, 
+            "date": "2021-1-12", 
+            "deaths": 1366, 
+            "recovered": 38073
+        }, 
+        {
+            "confirmed": 43954, 
+            "date": "2021-1-13", 
+            "deaths": 1382, 
+            "recovered": 38517
+        }, 
+        {
+            "confirmed": 44220, 
+            "date": "2021-1-14", 
+            "deaths": 1391, 
+            "recovered": 38898
+        }, 
+        {
+            "confirmed": 44484, 
+            "date": "2021-1-15", 
+            "deaths": 1402, 
+            "recovered": 39217
+        }, 
+        {
+            "confirmed": 44745, 
+            "date": "2021-1-16", 
+            "deaths": 1412, 
+            "recovered": 39514
+        }, 
+        {
+            "confirmed": 45004, 
+            "date": "2021-1-17", 
+            "deaths": 1422, 
+            "recovered": 39768
+        }, 
+        {
+            "confirmed": 45261, 
+            "date": "2021-1-18", 
+            "deaths": 1431, 
+            "recovered": 39886
+        }, 
+        {
+            "confirmed": 45520, 
+            "date": "2021-1-19", 
+            "deaths": 1442, 
+            "recovered": 40142
+        }, 
+        {
+            "confirmed": 45780, 
+            "date": "2021-1-20", 
+            "deaths": 1452, 
+            "recovered": 40459
+        }, 
+        {
+            "confirmed": 46043, 
+            "date": "2021-1-21", 
+            "deaths": 1461, 
+            "recovered": 40782
+        }, 
+        {
+            "confirmed": 46308, 
+            "date": "2021-1-22", 
+            "deaths": 1470, 
+            "recovered": 41051
+        }, 
+        {
+            "confirmed": 46570, 
+            "date": "2021-1-23", 
+            "deaths": 1480, 
+            "recovered": 41348
+        }, 
+        {
+            "confirmed": 46831, 
+            "date": "2021-1-24", 
+            "deaths": 1491, 
+            "recovered": 41568
+        }, 
+        {
+            "confirmed": 47091, 
+            "date": "2021-1-25", 
+            "deaths": 1501, 
+            "recovered": 41686
+        }, 
+        {
+            "confirmed": 47353, 
+            "date": "2021-1-26", 
+            "deaths": 1513, 
+            "recovered": 42005
+        }, 
+        {
+            "confirmed": 47612, 
+            "date": "2021-1-27", 
+            "deaths": 1523, 
+            "recovered": 42374
+        }, 
+        {
+            "confirmed": 47875, 
+            "date": "2021-1-28", 
+            "deaths": 1532, 
+            "recovered": 42764
+        }, 
+        {
+            "confirmed": 48140, 
+            "date": "2021-1-29", 
+            "deaths": 1540, 
+            "recovered": 43023
+        }, 
+        {
+            "confirmed": 48406, 
+            "date": "2021-1-30", 
+            "deaths": 1552, 
+            "recovered": 43360
+        }, 
+        {
+            "confirmed": 48670, 
+            "date": "2021-1-31", 
+            "deaths": 1563, 
+            "recovered": 43584
+        }, 
+        {
+            "confirmed": 48931, 
+            "date": "2021-2-1", 
+            "deaths": 1573, 
+            "recovered": 43680
+        }, 
+        {
+            "confirmed": 49188, 
+            "date": "2021-2-2", 
+            "deaths": 1582, 
+            "recovered": 43957
+        }, 
+        {
+            "confirmed": 49449, 
+            "date": "2021-2-3", 
+            "deaths": 1591, 
+            "recovered": 44315
+        }, 
+        {
+            "confirmed": 49712, 
+            "date": "2021-2-4", 
+            "deaths": 1600, 
+            "recovered": 44709
+        }, 
+        {
+            "confirmed": 49976, 
+            "date": "2021-2-5", 
+            "deaths": 1608, 
+            "recovered": 45092
+        }, 
+        {
+            "confirmed": 50237, 
+            "date": "2021-2-6", 
+            "deaths": 1617, 
+            "recovered": 45510
+        }, 
+        {
+            "confirmed": 50496, 
+            "date": "2021-2-7", 
+            "deaths": 1625, 
+            "recovered": 45866
+        }, 
+        {
+            "confirmed": 50753, 
+            "date": "2021-2-8", 
+            "deaths": 1634, 
+            "recovered": 46022
+        }, 
+        {
+            "confirmed": 51009, 
+            "date": "2021-2-9", 
+            "deaths": 1641, 
+            "recovered": 46359
         }
     ], 
     "Кабардино-Балкарская Республика": [
@@ -27207,6 +29727,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 281, 
             "recovered": 15165
+        }, 
+        {
+            "confirmed": 16912, 
+            "date": "2021-1-11", 
+            "deaths": 283, 
+            "recovered": 15299
+        }, 
+        {
+            "confirmed": 17008, 
+            "date": "2021-1-12", 
+            "deaths": 284, 
+            "recovered": 15427
+        }, 
+        {
+            "confirmed": 17105, 
+            "date": "2021-1-13", 
+            "deaths": 287, 
+            "recovered": 15561
+        }, 
+        {
+            "confirmed": 17202, 
+            "date": "2021-1-14", 
+            "deaths": 289, 
+            "recovered": 15692
+        }, 
+        {
+            "confirmed": 17300, 
+            "date": "2021-1-15", 
+            "deaths": 291, 
+            "recovered": 15822
+        }, 
+        {
+            "confirmed": 17398, 
+            "date": "2021-1-16", 
+            "deaths": 294, 
+            "recovered": 15955
+        }, 
+        {
+            "confirmed": 17495, 
+            "date": "2021-1-17", 
+            "deaths": 296, 
+            "recovered": 16084
+        }, 
+        {
+            "confirmed": 17592, 
+            "date": "2021-1-18", 
+            "deaths": 296, 
+            "recovered": 16219
+        }, 
+        {
+            "confirmed": 17689, 
+            "date": "2021-1-19", 
+            "deaths": 297, 
+            "recovered": 16353
+        }, 
+        {
+            "confirmed": 17785, 
+            "date": "2021-1-20", 
+            "deaths": 299, 
+            "recovered": 16483
+        }, 
+        {
+            "confirmed": 17880, 
+            "date": "2021-1-21", 
+            "deaths": 302, 
+            "recovered": 16612
+        }, 
+        {
+            "confirmed": 17973, 
+            "date": "2021-1-22", 
+            "deaths": 305, 
+            "recovered": 16747
+        }, 
+        {
+            "confirmed": 18065, 
+            "date": "2021-1-23", 
+            "deaths": 308, 
+            "recovered": 16880
+        }, 
+        {
+            "confirmed": 18155, 
+            "date": "2021-1-24", 
+            "deaths": 312, 
+            "recovered": 16961
+        }, 
+        {
+            "confirmed": 18245, 
+            "date": "2021-1-25", 
+            "deaths": 315, 
+            "recovered": 17044
+        }, 
+        {
+            "confirmed": 18334, 
+            "date": "2021-1-26", 
+            "deaths": 317, 
+            "recovered": 17123
+        }, 
+        {
+            "confirmed": 18423, 
+            "date": "2021-1-27", 
+            "deaths": 318, 
+            "recovered": 17201
+        }, 
+        {
+            "confirmed": 18512, 
+            "date": "2021-1-28", 
+            "deaths": 320, 
+            "recovered": 17282
+        }, 
+        {
+            "confirmed": 18600, 
+            "date": "2021-1-29", 
+            "deaths": 322, 
+            "recovered": 17361
+        }, 
+        {
+            "confirmed": 18688, 
+            "date": "2021-1-30", 
+            "deaths": 324, 
+            "recovered": 17438
+        }, 
+        {
+            "confirmed": 18775, 
+            "date": "2021-1-31", 
+            "deaths": 326, 
+            "recovered": 17513
+        }, 
+        {
+            "confirmed": 18862, 
+            "date": "2021-2-1", 
+            "deaths": 329, 
+            "recovered": 17584
+        }, 
+        {
+            "confirmed": 18948, 
+            "date": "2021-2-2", 
+            "deaths": 331, 
+            "recovered": 17662
+        }, 
+        {
+            "confirmed": 19034, 
+            "date": "2021-2-3", 
+            "deaths": 334, 
+            "recovered": 17745
+        }, 
+        {
+            "confirmed": 19120, 
+            "date": "2021-2-4", 
+            "deaths": 336, 
+            "recovered": 17825
+        }, 
+        {
+            "confirmed": 19205, 
+            "date": "2021-2-5", 
+            "deaths": 338, 
+            "recovered": 17906
+        }, 
+        {
+            "confirmed": 19290, 
+            "date": "2021-2-6", 
+            "deaths": 340, 
+            "recovered": 17985
+        }, 
+        {
+            "confirmed": 19374, 
+            "date": "2021-2-7", 
+            "deaths": 343, 
+            "recovered": 18066
+        }, 
+        {
+            "confirmed": 19458, 
+            "date": "2021-2-8", 
+            "deaths": 345, 
+            "recovered": 18148
+        }, 
+        {
+            "confirmed": 19541, 
+            "date": "2021-2-9", 
+            "deaths": 347, 
+            "recovered": 18226
         }
     ], 
     "Калининградская область": [
@@ -29021,6 +31721,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 194, 
             "recovered": 17999
+        }, 
+        {
+            "confirmed": 20050, 
+            "date": "2021-1-11", 
+            "deaths": 195, 
+            "recovered": 18185
+        }, 
+        {
+            "confirmed": 20250, 
+            "date": "2021-1-12", 
+            "deaths": 199, 
+            "recovered": 18380
+        }, 
+        {
+            "confirmed": 20451, 
+            "date": "2021-1-13", 
+            "deaths": 202, 
+            "recovered": 18577
+        }, 
+        {
+            "confirmed": 20659, 
+            "date": "2021-1-14", 
+            "deaths": 204, 
+            "recovered": 18776
+        }, 
+        {
+            "confirmed": 20868, 
+            "date": "2021-1-15", 
+            "deaths": 210, 
+            "recovered": 18978
+        }, 
+        {
+            "confirmed": 21080, 
+            "date": "2021-1-16", 
+            "deaths": 210, 
+            "recovered": 19182
+        }, 
+        {
+            "confirmed": 21298, 
+            "date": "2021-1-17", 
+            "deaths": 210, 
+            "recovered": 19388
+        }, 
+        {
+            "confirmed": 21506, 
+            "date": "2021-1-18", 
+            "deaths": 210, 
+            "recovered": 19503
+        }, 
+        {
+            "confirmed": 21709, 
+            "date": "2021-1-19", 
+            "deaths": 211, 
+            "recovered": 19614
+        }, 
+        {
+            "confirmed": 21916, 
+            "date": "2021-1-20", 
+            "deaths": 211, 
+            "recovered": 19727
+        }, 
+        {
+            "confirmed": 22127, 
+            "date": "2021-1-21", 
+            "deaths": 214, 
+            "recovered": 19843
+        }, 
+        {
+            "confirmed": 22333, 
+            "date": "2021-1-22", 
+            "deaths": 214, 
+            "recovered": 19958
+        }, 
+        {
+            "confirmed": 22534, 
+            "date": "2021-1-23", 
+            "deaths": 214, 
+            "recovered": 20076
+        }, 
+        {
+            "confirmed": 22732, 
+            "date": "2021-1-24", 
+            "deaths": 214, 
+            "recovered": 20192
+        }, 
+        {
+            "confirmed": 22923, 
+            "date": "2021-1-25", 
+            "deaths": 214, 
+            "recovered": 20298
+        }, 
+        {
+            "confirmed": 23115, 
+            "date": "2021-1-26", 
+            "deaths": 215, 
+            "recovered": 20410
+        }, 
+        {
+            "confirmed": 23305, 
+            "date": "2021-1-27", 
+            "deaths": 215, 
+            "recovered": 20547
+        }, 
+        {
+            "confirmed": 23503, 
+            "date": "2021-1-28", 
+            "deaths": 215, 
+            "recovered": 20706
+        }, 
+        {
+            "confirmed": 23698, 
+            "date": "2021-1-29", 
+            "deaths": 215, 
+            "recovered": 20888
+        }, 
+        {
+            "confirmed": 23890, 
+            "date": "2021-1-30", 
+            "deaths": 215, 
+            "recovered": 21076
+        }, 
+        {
+            "confirmed": 24078, 
+            "date": "2021-1-31", 
+            "deaths": 218, 
+            "recovered": 21256
+        }, 
+        {
+            "confirmed": 24262, 
+            "date": "2021-2-1", 
+            "deaths": 218, 
+            "recovered": 21429
+        }, 
+        {
+            "confirmed": 24449, 
+            "date": "2021-2-2", 
+            "deaths": 218, 
+            "recovered": 21630
+        }, 
+        {
+            "confirmed": 24629, 
+            "date": "2021-2-3", 
+            "deaths": 221, 
+            "recovered": 21836
+        }, 
+        {
+            "confirmed": 24810, 
+            "date": "2021-2-4", 
+            "deaths": 223, 
+            "recovered": 22039
+        }, 
+        {
+            "confirmed": 24989, 
+            "date": "2021-2-5", 
+            "deaths": 223, 
+            "recovered": 22240
+        }, 
+        {
+            "confirmed": 25166, 
+            "date": "2021-2-6", 
+            "deaths": 223, 
+            "recovered": 22442
+        }, 
+        {
+            "confirmed": 25335, 
+            "date": "2021-2-7", 
+            "deaths": 223, 
+            "recovered": 22646
+        }, 
+        {
+            "confirmed": 25500, 
+            "date": "2021-2-8", 
+            "deaths": 223, 
+            "recovered": 22805
+        }, 
+        {
+            "confirmed": 25670, 
+            "date": "2021-2-9", 
+            "deaths": 225, 
+            "recovered": 22978
         }
     ], 
     "Калужская область": [
@@ -30835,6 +33715,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 191, 
             "recovered": 20779
+        }, 
+        {
+            "confirmed": 22850, 
+            "date": "2021-1-11", 
+            "deaths": 193, 
+            "recovered": 20871
+        }, 
+        {
+            "confirmed": 23012, 
+            "date": "2021-1-12", 
+            "deaths": 193, 
+            "recovered": 20972
+        }, 
+        {
+            "confirmed": 23168, 
+            "date": "2021-1-13", 
+            "deaths": 194, 
+            "recovered": 21114
+        }, 
+        {
+            "confirmed": 23326, 
+            "date": "2021-1-14", 
+            "deaths": 194, 
+            "recovered": 21267
+        }, 
+        {
+            "confirmed": 23479, 
+            "date": "2021-1-15", 
+            "deaths": 198, 
+            "recovered": 21422
+        }, 
+        {
+            "confirmed": 23638, 
+            "date": "2021-1-16", 
+            "deaths": 209, 
+            "recovered": 21579
+        }, 
+        {
+            "confirmed": 23803, 
+            "date": "2021-1-17", 
+            "deaths": 209, 
+            "recovered": 21740
+        }, 
+        {
+            "confirmed": 23966, 
+            "date": "2021-1-18", 
+            "deaths": 209, 
+            "recovered": 21891
+        }, 
+        {
+            "confirmed": 24126, 
+            "date": "2021-1-19", 
+            "deaths": 209, 
+            "recovered": 22039
+        }, 
+        {
+            "confirmed": 24283, 
+            "date": "2021-1-20", 
+            "deaths": 209, 
+            "recovered": 22184
+        }, 
+        {
+            "confirmed": 24442, 
+            "date": "2021-1-21", 
+            "deaths": 209, 
+            "recovered": 22338
+        }, 
+        {
+            "confirmed": 24597, 
+            "date": "2021-1-22", 
+            "deaths": 209, 
+            "recovered": 22489
+        }, 
+        {
+            "confirmed": 24753, 
+            "date": "2021-1-23", 
+            "deaths": 209, 
+            "recovered": 22647
+        }, 
+        {
+            "confirmed": 24911, 
+            "date": "2021-1-24", 
+            "deaths": 209, 
+            "recovered": 22807
+        }, 
+        {
+            "confirmed": 25064, 
+            "date": "2021-1-25", 
+            "deaths": 209, 
+            "recovered": 22935
+        }, 
+        {
+            "confirmed": 25218, 
+            "date": "2021-1-26", 
+            "deaths": 209, 
+            "recovered": 23068
+        }, 
+        {
+            "confirmed": 25369, 
+            "date": "2021-1-27", 
+            "deaths": 212, 
+            "recovered": 23205
+        }, 
+        {
+            "confirmed": 25524, 
+            "date": "2021-1-28", 
+            "deaths": 214, 
+            "recovered": 23344
+        }, 
+        {
+            "confirmed": 25680, 
+            "date": "2021-1-29", 
+            "deaths": 214, 
+            "recovered": 23492
+        }, 
+        {
+            "confirmed": 25835, 
+            "date": "2021-1-30", 
+            "deaths": 218, 
+            "recovered": 23643
+        }, 
+        {
+            "confirmed": 25985, 
+            "date": "2021-1-31", 
+            "deaths": 218, 
+            "recovered": 23745
+        }, 
+        {
+            "confirmed": 26134, 
+            "date": "2021-2-1", 
+            "deaths": 218, 
+            "recovered": 23838
+        }, 
+        {
+            "confirmed": 26287, 
+            "date": "2021-2-2", 
+            "deaths": 218, 
+            "recovered": 23986
+        }, 
+        {
+            "confirmed": 26439, 
+            "date": "2021-2-3", 
+            "deaths": 222, 
+            "recovered": 24139
+        }, 
+        {
+            "confirmed": 26590, 
+            "date": "2021-2-4", 
+            "deaths": 222, 
+            "recovered": 24296
+        }, 
+        {
+            "confirmed": 26740, 
+            "date": "2021-2-5", 
+            "deaths": 226, 
+            "recovered": 24454
+        }, 
+        {
+            "confirmed": 26893, 
+            "date": "2021-2-6", 
+            "deaths": 228, 
+            "recovered": 24618
+        }, 
+        {
+            "confirmed": 27042, 
+            "date": "2021-2-7", 
+            "deaths": 228, 
+            "recovered": 24770
+        }, 
+        {
+            "confirmed": 27194, 
+            "date": "2021-2-8", 
+            "deaths": 231, 
+            "recovered": 24912
+        }, 
+        {
+            "confirmed": 27341, 
+            "date": "2021-2-9", 
+            "deaths": 231, 
+            "recovered": 25066
         }
     ], 
     "Камчатский край": [
@@ -32649,6 +35709,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 82, 
             "recovered": 9486
+        }, 
+        {
+            "confirmed": 10926, 
+            "date": "2021-1-11", 
+            "deaths": 82, 
+            "recovered": 9553
+        }, 
+        {
+            "confirmed": 10998, 
+            "date": "2021-1-12", 
+            "deaths": 82, 
+            "recovered": 9622
+        }, 
+        {
+            "confirmed": 11070, 
+            "date": "2021-1-13", 
+            "deaths": 82, 
+            "recovered": 9692
+        }, 
+        {
+            "confirmed": 11143, 
+            "date": "2021-1-14", 
+            "deaths": 82, 
+            "recovered": 9763
+        }, 
+        {
+            "confirmed": 11214, 
+            "date": "2021-1-15", 
+            "deaths": 82, 
+            "recovered": 9831
+        }, 
+        {
+            "confirmed": 11286, 
+            "date": "2021-1-16", 
+            "deaths": 82, 
+            "recovered": 9900
+        }, 
+        {
+            "confirmed": 11360, 
+            "date": "2021-1-17", 
+            "deaths": 82, 
+            "recovered": 9971
+        }, 
+        {
+            "confirmed": 11432, 
+            "date": "2021-1-18", 
+            "deaths": 82, 
+            "recovered": 10029
+        }, 
+        {
+            "confirmed": 11505, 
+            "date": "2021-1-19", 
+            "deaths": 83, 
+            "recovered": 10090
+        }, 
+        {
+            "confirmed": 11577, 
+            "date": "2021-1-20", 
+            "deaths": 83, 
+            "recovered": 10154
+        }, 
+        {
+            "confirmed": 11647, 
+            "date": "2021-1-21", 
+            "deaths": 83, 
+            "recovered": 10220
+        }, 
+        {
+            "confirmed": 11715, 
+            "date": "2021-1-22", 
+            "deaths": 83, 
+            "recovered": 10293
+        }, 
+        {
+            "confirmed": 11783, 
+            "date": "2021-1-23", 
+            "deaths": 83, 
+            "recovered": 10369
+        }, 
+        {
+            "confirmed": 11850, 
+            "date": "2021-1-24", 
+            "deaths": 83, 
+            "recovered": 10443
+        }, 
+        {
+            "confirmed": 11915, 
+            "date": "2021-1-25", 
+            "deaths": 84, 
+            "recovered": 10508
+        }, 
+        {
+            "confirmed": 11979, 
+            "date": "2021-1-26", 
+            "deaths": 84, 
+            "recovered": 10570
+        }, 
+        {
+            "confirmed": 12044, 
+            "date": "2021-1-27", 
+            "deaths": 84, 
+            "recovered": 10637
+        }, 
+        {
+            "confirmed": 12106, 
+            "date": "2021-1-28", 
+            "deaths": 84, 
+            "recovered": 10705
+        }, 
+        {
+            "confirmed": 12166, 
+            "date": "2021-1-29", 
+            "deaths": 84, 
+            "recovered": 10767
+        }, 
+        {
+            "confirmed": 12226, 
+            "date": "2021-1-30", 
+            "deaths": 84, 
+            "recovered": 10830
+        }, 
+        {
+            "confirmed": 12285, 
+            "date": "2021-1-31", 
+            "deaths": 84, 
+            "recovered": 10877
+        }, 
+        {
+            "confirmed": 12341, 
+            "date": "2021-2-1", 
+            "deaths": 84, 
+            "recovered": 10922
+        }, 
+        {
+            "confirmed": 12395, 
+            "date": "2021-2-2", 
+            "deaths": 84, 
+            "recovered": 10979
+        }, 
+        {
+            "confirmed": 12448, 
+            "date": "2021-2-3", 
+            "deaths": 84, 
+            "recovered": 11038
+        }, 
+        {
+            "confirmed": 12501, 
+            "date": "2021-2-4", 
+            "deaths": 84, 
+            "recovered": 11095
+        }, 
+        {
+            "confirmed": 12553, 
+            "date": "2021-2-5", 
+            "deaths": 85, 
+            "recovered": 11151
+        }, 
+        {
+            "confirmed": 12605, 
+            "date": "2021-2-6", 
+            "deaths": 85, 
+            "recovered": 11210
+        }, 
+        {
+            "confirmed": 12655, 
+            "date": "2021-2-7", 
+            "deaths": 85, 
+            "recovered": 11266
+        }, 
+        {
+            "confirmed": 12705, 
+            "date": "2021-2-8", 
+            "deaths": 85, 
+            "recovered": 11302
+        }, 
+        {
+            "confirmed": 12753, 
+            "date": "2021-2-9", 
+            "deaths": 86, 
+            "recovered": 11342
         }
     ], 
     "Карачаево-Черкесская Республика": [
@@ -34463,6 +37703,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 43, 
             "recovered": 14382
+        }, 
+        {
+            "confirmed": 16058, 
+            "date": "2021-1-11", 
+            "deaths": 43, 
+            "recovered": 14458
+        }, 
+        {
+            "confirmed": 16140, 
+            "date": "2021-1-12", 
+            "deaths": 43, 
+            "recovered": 14537
+        }, 
+        {
+            "confirmed": 16220, 
+            "date": "2021-1-13", 
+            "deaths": 45, 
+            "recovered": 14620
+        }, 
+        {
+            "confirmed": 16299, 
+            "date": "2021-1-14", 
+            "deaths": 45, 
+            "recovered": 14698
+        }, 
+        {
+            "confirmed": 16379, 
+            "date": "2021-1-15", 
+            "deaths": 45, 
+            "recovered": 14771
+        }, 
+        {
+            "confirmed": 16457, 
+            "date": "2021-1-16", 
+            "deaths": 45, 
+            "recovered": 14846
+        }, 
+        {
+            "confirmed": 16536, 
+            "date": "2021-1-17", 
+            "deaths": 45, 
+            "recovered": 14916
+        }, 
+        {
+            "confirmed": 16613, 
+            "date": "2021-1-18", 
+            "deaths": 46, 
+            "recovered": 14975
+        }, 
+        {
+            "confirmed": 16691, 
+            "date": "2021-1-19", 
+            "deaths": 48, 
+            "recovered": 15043
+        }, 
+        {
+            "confirmed": 16771, 
+            "date": "2021-1-20", 
+            "deaths": 48, 
+            "recovered": 15114
+        }, 
+        {
+            "confirmed": 16850, 
+            "date": "2021-1-21", 
+            "deaths": 49, 
+            "recovered": 15192
+        }, 
+        {
+            "confirmed": 16926, 
+            "date": "2021-1-22", 
+            "deaths": 49, 
+            "recovered": 15269
+        }, 
+        {
+            "confirmed": 17003, 
+            "date": "2021-1-23", 
+            "deaths": 49, 
+            "recovered": 15343
+        }, 
+        {
+            "confirmed": 17078, 
+            "date": "2021-1-24", 
+            "deaths": 49, 
+            "recovered": 15416
+        }, 
+        {
+            "confirmed": 17151, 
+            "date": "2021-1-25", 
+            "deaths": 49, 
+            "recovered": 15481
+        }, 
+        {
+            "confirmed": 17225, 
+            "date": "2021-1-26", 
+            "deaths": 50, 
+            "recovered": 15548
+        }, 
+        {
+            "confirmed": 17297, 
+            "date": "2021-1-27", 
+            "deaths": 51, 
+            "recovered": 15592
+        }, 
+        {
+            "confirmed": 17366, 
+            "date": "2021-1-28", 
+            "deaths": 52, 
+            "recovered": 15648
+        }, 
+        {
+            "confirmed": 17436, 
+            "date": "2021-1-29", 
+            "deaths": 52, 
+            "recovered": 15727
+        }, 
+        {
+            "confirmed": 17504, 
+            "date": "2021-1-30", 
+            "deaths": 52, 
+            "recovered": 15805
+        }, 
+        {
+            "confirmed": 17570, 
+            "date": "2021-1-31", 
+            "deaths": 53, 
+            "recovered": 15867
+        }, 
+        {
+            "confirmed": 17637, 
+            "date": "2021-2-1", 
+            "deaths": 53, 
+            "recovered": 15916
+        }, 
+        {
+            "confirmed": 17702, 
+            "date": "2021-2-2", 
+            "deaths": 54, 
+            "recovered": 15955
+        }, 
+        {
+            "confirmed": 17768, 
+            "date": "2021-2-3", 
+            "deaths": 54, 
+            "recovered": 16012
+        }, 
+        {
+            "confirmed": 17830, 
+            "date": "2021-2-4", 
+            "deaths": 57, 
+            "recovered": 16097
+        }, 
+        {
+            "confirmed": 17893, 
+            "date": "2021-2-5", 
+            "deaths": 60, 
+            "recovered": 16178
+        }, 
+        {
+            "confirmed": 17954, 
+            "date": "2021-2-6", 
+            "deaths": 60, 
+            "recovered": 16270
+        }, 
+        {
+            "confirmed": 18013, 
+            "date": "2021-2-7", 
+            "deaths": 60, 
+            "recovered": 16360
+        }, 
+        {
+            "confirmed": 18073, 
+            "date": "2021-2-8", 
+            "deaths": 60, 
+            "recovered": 16414
+        }, 
+        {
+            "confirmed": 18131, 
+            "date": "2021-2-9", 
+            "deaths": 60, 
+            "recovered": 16492
         }
     ], 
     "Кемеровская область": [
@@ -36277,6 +39697,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 488, 
             "recovered": 24221
+        }, 
+        {
+            "confirmed": 27146, 
+            "date": "2021-1-11", 
+            "deaths": 490, 
+            "recovered": 24331
+        }, 
+        {
+            "confirmed": 27257, 
+            "date": "2021-1-12", 
+            "deaths": 491, 
+            "recovered": 24444
+        }, 
+        {
+            "confirmed": 27367, 
+            "date": "2021-1-13", 
+            "deaths": 492, 
+            "recovered": 24573
+        }, 
+        {
+            "confirmed": 27478, 
+            "date": "2021-1-14", 
+            "deaths": 494, 
+            "recovered": 24662
+        }, 
+        {
+            "confirmed": 27590, 
+            "date": "2021-1-15", 
+            "deaths": 495, 
+            "recovered": 24789
+        }, 
+        {
+            "confirmed": 27704, 
+            "date": "2021-1-16", 
+            "deaths": 498, 
+            "recovered": 24923
+        }, 
+        {
+            "confirmed": 27817, 
+            "date": "2021-1-17", 
+            "deaths": 499, 
+            "recovered": 25081
+        }, 
+        {
+            "confirmed": 27932, 
+            "date": "2021-1-18", 
+            "deaths": 501, 
+            "recovered": 25233
+        }, 
+        {
+            "confirmed": 28044, 
+            "date": "2021-1-19", 
+            "deaths": 502, 
+            "recovered": 25412
+        }, 
+        {
+            "confirmed": 28154, 
+            "date": "2021-1-20", 
+            "deaths": 504, 
+            "recovered": 25576
+        }, 
+        {
+            "confirmed": 28263, 
+            "date": "2021-1-21", 
+            "deaths": 505, 
+            "recovered": 25752
+        }, 
+        {
+            "confirmed": 28374, 
+            "date": "2021-1-22", 
+            "deaths": 508, 
+            "recovered": 25909
+        }, 
+        {
+            "confirmed": 28488, 
+            "date": "2021-1-23", 
+            "deaths": 509, 
+            "recovered": 26100
+        }, 
+        {
+            "confirmed": 28603, 
+            "date": "2021-1-24", 
+            "deaths": 510, 
+            "recovered": 26264
+        }, 
+        {
+            "confirmed": 28716, 
+            "date": "2021-1-25", 
+            "deaths": 511, 
+            "recovered": 26421
+        }, 
+        {
+            "confirmed": 28830, 
+            "date": "2021-1-26", 
+            "deaths": 513, 
+            "recovered": 26590
+        }, 
+        {
+            "confirmed": 28940, 
+            "date": "2021-1-27", 
+            "deaths": 514, 
+            "recovered": 26767
+        }, 
+        {
+            "confirmed": 29047, 
+            "date": "2021-1-28", 
+            "deaths": 515, 
+            "recovered": 26936
+        }, 
+        {
+            "confirmed": 29147, 
+            "date": "2021-1-29", 
+            "deaths": 517, 
+            "recovered": 27088
+        }, 
+        {
+            "confirmed": 29246, 
+            "date": "2021-1-30", 
+            "deaths": 519, 
+            "recovered": 27192
+        }, 
+        {
+            "confirmed": 29344, 
+            "date": "2021-1-31", 
+            "deaths": 521, 
+            "recovered": 27377
+        }, 
+        {
+            "confirmed": 29443, 
+            "date": "2021-2-1", 
+            "deaths": 522, 
+            "recovered": 27551
+        }, 
+        {
+            "confirmed": 29542, 
+            "date": "2021-2-2", 
+            "deaths": 524, 
+            "recovered": 27698
+        }, 
+        {
+            "confirmed": 29640, 
+            "date": "2021-2-3", 
+            "deaths": 527, 
+            "recovered": 27872
+        }, 
+        {
+            "confirmed": 29737, 
+            "date": "2021-2-4", 
+            "deaths": 529, 
+            "recovered": 28029
+        }, 
+        {
+            "confirmed": 29836, 
+            "date": "2021-2-5", 
+            "deaths": 532, 
+            "recovered": 28187
+        }, 
+        {
+            "confirmed": 29932, 
+            "date": "2021-2-6", 
+            "deaths": 534, 
+            "recovered": 28358
+        }, 
+        {
+            "confirmed": 30031, 
+            "date": "2021-2-7", 
+            "deaths": 535, 
+            "recovered": 28546
+        }, 
+        {
+            "confirmed": 30128, 
+            "date": "2021-2-8", 
+            "deaths": 537, 
+            "recovered": 28710
+        }, 
+        {
+            "confirmed": 30225, 
+            "date": "2021-2-9", 
+            "deaths": 538, 
+            "recovered": 28867
         }
     ], 
     "Кировская область": [
@@ -38091,6 +41691,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 241, 
             "recovered": 21601
+        }, 
+        {
+            "confirmed": 28177, 
+            "date": "2021-1-11", 
+            "deaths": 242, 
+            "recovered": 21847
+        }, 
+        {
+            "confirmed": 28405, 
+            "date": "2021-1-12", 
+            "deaths": 243, 
+            "recovered": 22118
+        }, 
+        {
+            "confirmed": 28634, 
+            "date": "2021-1-13", 
+            "deaths": 245, 
+            "recovered": 22396
+        }, 
+        {
+            "confirmed": 28862, 
+            "date": "2021-1-14", 
+            "deaths": 247, 
+            "recovered": 22702
+        }, 
+        {
+            "confirmed": 29094, 
+            "date": "2021-1-15", 
+            "deaths": 248, 
+            "recovered": 22932
+        }, 
+        {
+            "confirmed": 29329, 
+            "date": "2021-1-16", 
+            "deaths": 250, 
+            "recovered": 23164
+        }, 
+        {
+            "confirmed": 29561, 
+            "date": "2021-1-17", 
+            "deaths": 251, 
+            "recovered": 23393
+        }, 
+        {
+            "confirmed": 29787, 
+            "date": "2021-1-18", 
+            "deaths": 252, 
+            "recovered": 23608
+        }, 
+        {
+            "confirmed": 30011, 
+            "date": "2021-1-19", 
+            "deaths": 257, 
+            "recovered": 23826
+        }, 
+        {
+            "confirmed": 30230, 
+            "date": "2021-1-20", 
+            "deaths": 257, 
+            "recovered": 24058
+        }, 
+        {
+            "confirmed": 30444, 
+            "date": "2021-1-21", 
+            "deaths": 258, 
+            "recovered": 24334
+        }, 
+        {
+            "confirmed": 30656, 
+            "date": "2021-1-22", 
+            "deaths": 258, 
+            "recovered": 24636
+        }, 
+        {
+            "confirmed": 30866, 
+            "date": "2021-1-23", 
+            "deaths": 259, 
+            "recovered": 24952
+        }, 
+        {
+            "confirmed": 31075, 
+            "date": "2021-1-24", 
+            "deaths": 259, 
+            "recovered": 25254
+        }, 
+        {
+            "confirmed": 31280, 
+            "date": "2021-1-25", 
+            "deaths": 260, 
+            "recovered": 25538
+        }, 
+        {
+            "confirmed": 31483, 
+            "date": "2021-1-26", 
+            "deaths": 261, 
+            "recovered": 25819
+        }, 
+        {
+            "confirmed": 31682, 
+            "date": "2021-1-27", 
+            "deaths": 262, 
+            "recovered": 26098
+        }, 
+        {
+            "confirmed": 31867, 
+            "date": "2021-1-28", 
+            "deaths": 263, 
+            "recovered": 26379
+        }, 
+        {
+            "confirmed": 32041, 
+            "date": "2021-1-29", 
+            "deaths": 264, 
+            "recovered": 26662
+        }, 
+        {
+            "confirmed": 32214, 
+            "date": "2021-1-30", 
+            "deaths": 265, 
+            "recovered": 26947
+        }, 
+        {
+            "confirmed": 32384, 
+            "date": "2021-1-31", 
+            "deaths": 266, 
+            "recovered": 27124
+        }, 
+        {
+            "confirmed": 32554, 
+            "date": "2021-2-1", 
+            "deaths": 267, 
+            "recovered": 27275
+        }, 
+        {
+            "confirmed": 32726, 
+            "date": "2021-2-2", 
+            "deaths": 268, 
+            "recovered": 27448
+        }, 
+        {
+            "confirmed": 32900, 
+            "date": "2021-2-3", 
+            "deaths": 269, 
+            "recovered": 27627
+        }, 
+        {
+            "confirmed": 33071, 
+            "date": "2021-2-4", 
+            "deaths": 270, 
+            "recovered": 27822
+        }, 
+        {
+            "confirmed": 33237, 
+            "date": "2021-2-5", 
+            "deaths": 271, 
+            "recovered": 28011
+        }, 
+        {
+            "confirmed": 33399, 
+            "date": "2021-2-6", 
+            "deaths": 273, 
+            "recovered": 28199
+        }, 
+        {
+            "confirmed": 33559, 
+            "date": "2021-2-7", 
+            "deaths": 274, 
+            "recovered": 28384
+        }, 
+        {
+            "confirmed": 33715, 
+            "date": "2021-2-8", 
+            "deaths": 275, 
+            "recovered": 28507
+        }, 
+        {
+            "confirmed": 33869, 
+            "date": "2021-2-9", 
+            "deaths": 276, 
+            "recovered": 28653
         }
     ], 
     "Костромская область": [
@@ -39905,6 +43685,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 246, 
             "recovered": 11915
+        }, 
+        {
+            "confirmed": 15830, 
+            "date": "2021-1-11", 
+            "deaths": 246, 
+            "recovered": 11925
+        }, 
+        {
+            "confirmed": 15898, 
+            "date": "2021-1-12", 
+            "deaths": 248, 
+            "recovered": 12001
+        }, 
+        {
+            "confirmed": 15973, 
+            "date": "2021-1-13", 
+            "deaths": 250, 
+            "recovered": 12229
+        }, 
+        {
+            "confirmed": 16015, 
+            "date": "2021-1-14", 
+            "deaths": 253, 
+            "recovered": 12434
+        }, 
+        {
+            "confirmed": 16093, 
+            "date": "2021-1-15", 
+            "deaths": 258, 
+            "recovered": 12553
+        }, 
+        {
+            "confirmed": 16180, 
+            "date": "2021-1-16", 
+            "deaths": 260, 
+            "recovered": 12705
+        }, 
+        {
+            "confirmed": 16265, 
+            "date": "2021-1-17", 
+            "deaths": 260, 
+            "recovered": 12726
+        }, 
+        {
+            "confirmed": 16327, 
+            "date": "2021-1-18", 
+            "deaths": 261, 
+            "recovered": 12740
+        }, 
+        {
+            "confirmed": 16346, 
+            "date": "2021-1-19", 
+            "deaths": 263, 
+            "recovered": 12879
+        }, 
+        {
+            "confirmed": 16402, 
+            "date": "2021-1-20", 
+            "deaths": 266, 
+            "recovered": 12994
+        }, 
+        {
+            "confirmed": 16448, 
+            "date": "2021-1-21", 
+            "deaths": 266, 
+            "recovered": 13090
+        }, 
+        {
+            "confirmed": 16539, 
+            "date": "2021-1-22", 
+            "deaths": 267, 
+            "recovered": 13178
+        }, 
+        {
+            "confirmed": 16608, 
+            "date": "2021-1-23", 
+            "deaths": 268, 
+            "recovered": 13266
+        }, 
+        {
+            "confirmed": 16696, 
+            "date": "2021-1-24", 
+            "deaths": 271, 
+            "recovered": 13302
+        }, 
+        {
+            "confirmed": 16765, 
+            "date": "2021-1-25", 
+            "deaths": 272, 
+            "recovered": 13314
+        }, 
+        {
+            "confirmed": 16790, 
+            "date": "2021-1-26", 
+            "deaths": 276, 
+            "recovered": 13404
+        }, 
+        {
+            "confirmed": 16828, 
+            "date": "2021-1-27", 
+            "deaths": 284, 
+            "recovered": 13526
+        }, 
+        {
+            "confirmed": 16885, 
+            "date": "2021-1-28", 
+            "deaths": 284, 
+            "recovered": 13619
+        }, 
+        {
+            "confirmed": 16923, 
+            "date": "2021-1-29", 
+            "deaths": 284, 
+            "recovered": 13692
+        }, 
+        {
+            "confirmed": 16969, 
+            "date": "2021-1-30", 
+            "deaths": 285, 
+            "recovered": 13750
+        }, 
+        {
+            "confirmed": 17019, 
+            "date": "2021-1-31", 
+            "deaths": 287, 
+            "recovered": 13805
+        }, 
+        {
+            "confirmed": 17077, 
+            "date": "2021-2-1", 
+            "deaths": 290, 
+            "recovered": 13819
+        }, 
+        {
+            "confirmed": 17130, 
+            "date": "2021-2-2", 
+            "deaths": 298, 
+            "recovered": 13943
+        }, 
+        {
+            "confirmed": 17185, 
+            "date": "2021-2-3", 
+            "deaths": 299, 
+            "recovered": 14028
+        }, 
+        {
+            "confirmed": 17225, 
+            "date": "2021-2-4", 
+            "deaths": 300, 
+            "recovered": 14082
+        }, 
+        {
+            "confirmed": 17273, 
+            "date": "2021-2-5", 
+            "deaths": 305, 
+            "recovered": 14173
+        }, 
+        {
+            "confirmed": 17330, 
+            "date": "2021-2-6", 
+            "deaths": 310, 
+            "recovered": 14253
+        }, 
+        {
+            "confirmed": 17389, 
+            "date": "2021-2-7", 
+            "deaths": 313, 
+            "recovered": 14267
+        }, 
+        {
+            "confirmed": 17447, 
+            "date": "2021-2-8", 
+            "deaths": 318, 
+            "recovered": 14277
+        }, 
+        {
+            "confirmed": 17503, 
+            "date": "2021-2-9", 
+            "deaths": 321, 
+            "recovered": 14370
         }
     ], 
     "Краснодарский край": [
@@ -41719,6 +45679,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1082, 
             "recovered": 20034
+        }, 
+        {
+            "confirmed": 29790, 
+            "date": "2021-1-11", 
+            "deaths": 1097, 
+            "recovered": 20182
+        }, 
+        {
+            "confirmed": 29986, 
+            "date": "2021-1-12", 
+            "deaths": 1113, 
+            "recovered": 20365
+        }, 
+        {
+            "confirmed": 30183, 
+            "date": "2021-1-13", 
+            "deaths": 1128, 
+            "recovered": 20525
+        }, 
+        {
+            "confirmed": 30378, 
+            "date": "2021-1-14", 
+            "deaths": 1143, 
+            "recovered": 20716
+        }, 
+        {
+            "confirmed": 30572, 
+            "date": "2021-1-15", 
+            "deaths": 1161, 
+            "recovered": 20899
+        }, 
+        {
+            "confirmed": 30769, 
+            "date": "2021-1-16", 
+            "deaths": 1181, 
+            "recovered": 21115
+        }, 
+        {
+            "confirmed": 30967, 
+            "date": "2021-1-17", 
+            "deaths": 1200, 
+            "recovered": 21368
+        }, 
+        {
+            "confirmed": 31167, 
+            "date": "2021-1-18", 
+            "deaths": 1218, 
+            "recovered": 21617
+        }, 
+        {
+            "confirmed": 31364, 
+            "date": "2021-1-19", 
+            "deaths": 1238, 
+            "recovered": 21894
+        }, 
+        {
+            "confirmed": 31562, 
+            "date": "2021-1-20", 
+            "deaths": 1257, 
+            "recovered": 22083
+        }, 
+        {
+            "confirmed": 31760, 
+            "date": "2021-1-21", 
+            "deaths": 1275, 
+            "recovered": 22251
+        }, 
+        {
+            "confirmed": 31959, 
+            "date": "2021-1-22", 
+            "deaths": 1294, 
+            "recovered": 22405
+        }, 
+        {
+            "confirmed": 32153, 
+            "date": "2021-1-23", 
+            "deaths": 1315, 
+            "recovered": 22624
+        }, 
+        {
+            "confirmed": 32345, 
+            "date": "2021-1-24", 
+            "deaths": 1335, 
+            "recovered": 22866
+        }, 
+        {
+            "confirmed": 32543, 
+            "date": "2021-1-25", 
+            "deaths": 1354, 
+            "recovered": 23116
+        }, 
+        {
+            "confirmed": 32738, 
+            "date": "2021-1-26", 
+            "deaths": 1374, 
+            "recovered": 23376
+        }, 
+        {
+            "confirmed": 32932, 
+            "date": "2021-1-27", 
+            "deaths": 1393, 
+            "recovered": 23625
+        }, 
+        {
+            "confirmed": 33125, 
+            "date": "2021-1-28", 
+            "deaths": 1412, 
+            "recovered": 23902
+        }, 
+        {
+            "confirmed": 33314, 
+            "date": "2021-1-29", 
+            "deaths": 1432, 
+            "recovered": 24149
+        }, 
+        {
+            "confirmed": 33499, 
+            "date": "2021-1-30", 
+            "deaths": 1451, 
+            "recovered": 24394
+        }, 
+        {
+            "confirmed": 33681, 
+            "date": "2021-1-31", 
+            "deaths": 1469, 
+            "recovered": 24652
+        }, 
+        {
+            "confirmed": 33861, 
+            "date": "2021-2-1", 
+            "deaths": 1488, 
+            "recovered": 24907
+        }, 
+        {
+            "confirmed": 34044, 
+            "date": "2021-2-2", 
+            "deaths": 1506, 
+            "recovered": 25180
+        }, 
+        {
+            "confirmed": 34229, 
+            "date": "2021-2-3", 
+            "deaths": 1524, 
+            "recovered": 25475
+        }, 
+        {
+            "confirmed": 34411, 
+            "date": "2021-2-4", 
+            "deaths": 1542, 
+            "recovered": 25826
+        }, 
+        {
+            "confirmed": 34596, 
+            "date": "2021-2-5", 
+            "deaths": 1560, 
+            "recovered": 26105
+        }, 
+        {
+            "confirmed": 34779, 
+            "date": "2021-2-6", 
+            "deaths": 1577, 
+            "recovered": 26362
+        }, 
+        {
+            "confirmed": 34961, 
+            "date": "2021-2-7", 
+            "deaths": 1594, 
+            "recovered": 26659
+        }, 
+        {
+            "confirmed": 35142, 
+            "date": "2021-2-8", 
+            "deaths": 1610, 
+            "recovered": 26981
+        }, 
+        {
+            "confirmed": 35321, 
+            "date": "2021-2-9", 
+            "deaths": 1627, 
+            "recovered": 27302
         }
     ], 
     "Красноярский край": [
@@ -43533,6 +47673,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1857, 
             "recovered": 45000
+        }, 
+        {
+            "confirmed": 50019, 
+            "date": "2021-1-11", 
+            "deaths": 1870, 
+            "recovered": 45450
+        }, 
+        {
+            "confirmed": 50334, 
+            "date": "2021-1-12", 
+            "deaths": 1887, 
+            "recovered": 46000
+        }, 
+        {
+            "confirmed": 50656, 
+            "date": "2021-1-13", 
+            "deaths": 1900, 
+            "recovered": 46320
+        }, 
+        {
+            "confirmed": 50983, 
+            "date": "2021-1-14", 
+            "deaths": 1925, 
+            "recovered": 46664
+        }, 
+        {
+            "confirmed": 51308, 
+            "date": "2021-1-15", 
+            "deaths": 1940, 
+            "recovered": 47000
+        }, 
+        {
+            "confirmed": 51631, 
+            "date": "2021-1-16", 
+            "deaths": 1965, 
+            "recovered": 47330
+        }, 
+        {
+            "confirmed": 51951, 
+            "date": "2021-1-17", 
+            "deaths": 1985, 
+            "recovered": 47700
+        }, 
+        {
+            "confirmed": 52272, 
+            "date": "2021-1-18", 
+            "deaths": 2010, 
+            "recovered": 48025
+        }, 
+        {
+            "confirmed": 52594, 
+            "date": "2021-1-19", 
+            "deaths": 2035, 
+            "recovered": 48355
+        }, 
+        {
+            "confirmed": 52920, 
+            "date": "2021-1-20", 
+            "deaths": 2060, 
+            "recovered": 48700
+        }, 
+        {
+            "confirmed": 53244, 
+            "date": "2021-1-21", 
+            "deaths": 2089, 
+            "recovered": 49033
+        }, 
+        {
+            "confirmed": 53570, 
+            "date": "2021-1-22", 
+            "deaths": 2115, 
+            "recovered": 49328
+        }, 
+        {
+            "confirmed": 53895, 
+            "date": "2021-1-23", 
+            "deaths": 2140, 
+            "recovered": 49593
+        }, 
+        {
+            "confirmed": 54218, 
+            "date": "2021-1-24", 
+            "deaths": 2165, 
+            "recovered": 49892
+        }, 
+        {
+            "confirmed": 54539, 
+            "date": "2021-1-25", 
+            "deaths": 2190, 
+            "recovered": 50211
+        }, 
+        {
+            "confirmed": 54863, 
+            "date": "2021-1-26", 
+            "deaths": 2216, 
+            "recovered": 50505
+        }, 
+        {
+            "confirmed": 55184, 
+            "date": "2021-1-27", 
+            "deaths": 2244, 
+            "recovered": 50792
+        }, 
+        {
+            "confirmed": 55501, 
+            "date": "2021-1-28", 
+            "deaths": 2271, 
+            "recovered": 51100
+        }, 
+        {
+            "confirmed": 55815, 
+            "date": "2021-1-29", 
+            "deaths": 2295, 
+            "recovered": 51402
+        }, 
+        {
+            "confirmed": 56126, 
+            "date": "2021-1-30", 
+            "deaths": 2318, 
+            "recovered": 51729
+        }, 
+        {
+            "confirmed": 56435, 
+            "date": "2021-1-31", 
+            "deaths": 2345, 
+            "recovered": 52000
+        }, 
+        {
+            "confirmed": 56740, 
+            "date": "2021-2-1", 
+            "deaths": 2369, 
+            "recovered": 52300
+        }, 
+        {
+            "confirmed": 57047, 
+            "date": "2021-2-2", 
+            "deaths": 2390, 
+            "recovered": 52589
+        }, 
+        {
+            "confirmed": 57346, 
+            "date": "2021-2-3", 
+            "deaths": 2415, 
+            "recovered": 52841
+        }, 
+        {
+            "confirmed": 57638, 
+            "date": "2021-2-4", 
+            "deaths": 2438, 
+            "recovered": 53101
+        }, 
+        {
+            "confirmed": 57922, 
+            "date": "2021-2-5", 
+            "deaths": 2460, 
+            "recovered": 53335
+        }, 
+        {
+            "confirmed": 58200, 
+            "date": "2021-2-6", 
+            "deaths": 2484, 
+            "recovered": 53535
+        }, 
+        {
+            "confirmed": 58467, 
+            "date": "2021-2-7", 
+            "deaths": 2499, 
+            "recovered": 53780
+        }, 
+        {
+            "confirmed": 58725, 
+            "date": "2021-2-8", 
+            "deaths": 2516, 
+            "recovered": 54000
+        }, 
+        {
+            "confirmed": 58976, 
+            "date": "2021-2-9", 
+            "deaths": 2537, 
+            "recovered": 54245
         }
     ], 
     "Курганская область": [
@@ -45347,6 +49667,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 200, 
             "recovered": 11429
+        }, 
+        {
+            "confirmed": 13166, 
+            "date": "2021-1-11", 
+            "deaths": 200, 
+            "recovered": 11505
+        }, 
+        {
+            "confirmed": 13267, 
+            "date": "2021-1-12", 
+            "deaths": 200, 
+            "recovered": 11586
+        }, 
+        {
+            "confirmed": 13372, 
+            "date": "2021-1-13", 
+            "deaths": 201, 
+            "recovered": 11683
+        }, 
+        {
+            "confirmed": 13478, 
+            "date": "2021-1-14", 
+            "deaths": 202, 
+            "recovered": 11784
+        }, 
+        {
+            "confirmed": 13592, 
+            "date": "2021-1-15", 
+            "deaths": 202, 
+            "recovered": 11887
+        }, 
+        {
+            "confirmed": 13708, 
+            "date": "2021-1-16", 
+            "deaths": 202, 
+            "recovered": 11992
+        }, 
+        {
+            "confirmed": 13820, 
+            "date": "2021-1-17", 
+            "deaths": 202, 
+            "recovered": 12099
+        }, 
+        {
+            "confirmed": 13929, 
+            "date": "2021-1-18", 
+            "deaths": 202, 
+            "recovered": 12197
+        }, 
+        {
+            "confirmed": 14040, 
+            "date": "2021-1-19", 
+            "deaths": 202, 
+            "recovered": 12293
+        }, 
+        {
+            "confirmed": 14147, 
+            "date": "2021-1-20", 
+            "deaths": 202, 
+            "recovered": 12387
+        }, 
+        {
+            "confirmed": 14252, 
+            "date": "2021-1-21", 
+            "deaths": 202, 
+            "recovered": 12484
+        }, 
+        {
+            "confirmed": 14353, 
+            "date": "2021-1-22", 
+            "deaths": 202, 
+            "recovered": 12583
+        }, 
+        {
+            "confirmed": 14453, 
+            "date": "2021-1-23", 
+            "deaths": 202, 
+            "recovered": 12689
+        }, 
+        {
+            "confirmed": 14555, 
+            "date": "2021-1-24", 
+            "deaths": 204, 
+            "recovered": 12794
+        }, 
+        {
+            "confirmed": 14654, 
+            "date": "2021-1-25", 
+            "deaths": 204, 
+            "recovered": 12881
+        }, 
+        {
+            "confirmed": 14752, 
+            "date": "2021-1-26", 
+            "deaths": 204, 
+            "recovered": 12971
+        }, 
+        {
+            "confirmed": 14852, 
+            "date": "2021-1-27", 
+            "deaths": 204, 
+            "recovered": 13063
+        }, 
+        {
+            "confirmed": 14950, 
+            "date": "2021-1-28", 
+            "deaths": 204, 
+            "recovered": 13160
+        }, 
+        {
+            "confirmed": 15045, 
+            "date": "2021-1-29", 
+            "deaths": 206, 
+            "recovered": 13253
+        }, 
+        {
+            "confirmed": 15141, 
+            "date": "2021-1-30", 
+            "deaths": 206, 
+            "recovered": 13347
+        }, 
+        {
+            "confirmed": 15235, 
+            "date": "2021-1-31", 
+            "deaths": 213, 
+            "recovered": 13426
+        }, 
+        {
+            "confirmed": 15330, 
+            "date": "2021-2-1", 
+            "deaths": 219, 
+            "recovered": 13494
+        }, 
+        {
+            "confirmed": 15423, 
+            "date": "2021-2-2", 
+            "deaths": 219, 
+            "recovered": 13568
+        }, 
+        {
+            "confirmed": 15515, 
+            "date": "2021-2-3", 
+            "deaths": 222, 
+            "recovered": 13651
+        }, 
+        {
+            "confirmed": 15610, 
+            "date": "2021-2-4", 
+            "deaths": 222, 
+            "recovered": 13739
+        }, 
+        {
+            "confirmed": 15706, 
+            "date": "2021-2-5", 
+            "deaths": 223, 
+            "recovered": 13832
+        }, 
+        {
+            "confirmed": 15800, 
+            "date": "2021-2-6", 
+            "deaths": 223, 
+            "recovered": 13930
+        }, 
+        {
+            "confirmed": 15892, 
+            "date": "2021-2-7", 
+            "deaths": 223, 
+            "recovered": 14025
+        }, 
+        {
+            "confirmed": 15983, 
+            "date": "2021-2-8", 
+            "deaths": 223, 
+            "recovered": 14098
+        }, 
+        {
+            "confirmed": 16073, 
+            "date": "2021-2-9", 
+            "deaths": 223, 
+            "recovered": 14176
         }
     ], 
     "Курская область": [
@@ -47161,6 +51661,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 319, 
             "recovered": 19912
+        }, 
+        {
+            "confirmed": 22710, 
+            "date": "2021-1-11", 
+            "deaths": 319, 
+            "recovered": 19981
+        }, 
+        {
+            "confirmed": 22880, 
+            "date": "2021-1-12", 
+            "deaths": 322, 
+            "recovered": 20094
+        }, 
+        {
+            "confirmed": 23054, 
+            "date": "2021-1-13", 
+            "deaths": 322, 
+            "recovered": 20261
+        }, 
+        {
+            "confirmed": 23229, 
+            "date": "2021-1-14", 
+            "deaths": 324, 
+            "recovered": 20433
+        }, 
+        {
+            "confirmed": 23407, 
+            "date": "2021-1-15", 
+            "deaths": 326, 
+            "recovered": 20609
+        }, 
+        {
+            "confirmed": 23587, 
+            "date": "2021-1-16", 
+            "deaths": 327, 
+            "recovered": 20791
+        }, 
+        {
+            "confirmed": 23768, 
+            "date": "2021-1-17", 
+            "deaths": 329, 
+            "recovered": 20969
+        }, 
+        {
+            "confirmed": 23944, 
+            "date": "2021-1-18", 
+            "deaths": 330, 
+            "recovered": 21118
+        }, 
+        {
+            "confirmed": 24118, 
+            "date": "2021-1-19", 
+            "deaths": 333, 
+            "recovered": 21269
+        }, 
+        {
+            "confirmed": 24297, 
+            "date": "2021-1-20", 
+            "deaths": 336, 
+            "recovered": 21426
+        }, 
+        {
+            "confirmed": 24478, 
+            "date": "2021-1-21", 
+            "deaths": 338, 
+            "recovered": 21595
+        }, 
+        {
+            "confirmed": 24661, 
+            "date": "2021-1-22", 
+            "deaths": 341, 
+            "recovered": 21766
+        }, 
+        {
+            "confirmed": 24845, 
+            "date": "2021-1-23", 
+            "deaths": 345, 
+            "recovered": 21943
+        }, 
+        {
+            "confirmed": 25028, 
+            "date": "2021-1-24", 
+            "deaths": 348, 
+            "recovered": 22122
+        }, 
+        {
+            "confirmed": 25212, 
+            "date": "2021-1-25", 
+            "deaths": 350, 
+            "recovered": 22218
+        }, 
+        {
+            "confirmed": 25392, 
+            "date": "2021-1-26", 
+            "deaths": 355, 
+            "recovered": 22345
+        }, 
+        {
+            "confirmed": 25571, 
+            "date": "2021-1-27", 
+            "deaths": 359, 
+            "recovered": 22491
+        }, 
+        {
+            "confirmed": 25749, 
+            "date": "2021-1-28", 
+            "deaths": 361, 
+            "recovered": 22646
+        }, 
+        {
+            "confirmed": 25928, 
+            "date": "2021-1-29", 
+            "deaths": 364, 
+            "recovered": 22818
+        }, 
+        {
+            "confirmed": 26105, 
+            "date": "2021-1-30", 
+            "deaths": 369, 
+            "recovered": 22993
+        }, 
+        {
+            "confirmed": 26283, 
+            "date": "2021-1-31", 
+            "deaths": 370, 
+            "recovered": 23105
+        }, 
+        {
+            "confirmed": 26459, 
+            "date": "2021-2-1", 
+            "deaths": 372, 
+            "recovered": 23213
+        }, 
+        {
+            "confirmed": 26632, 
+            "date": "2021-2-2", 
+            "deaths": 376, 
+            "recovered": 23329
+        }, 
+        {
+            "confirmed": 26802, 
+            "date": "2021-2-3", 
+            "deaths": 380, 
+            "recovered": 23497
+        }, 
+        {
+            "confirmed": 26974, 
+            "date": "2021-2-4", 
+            "deaths": 385, 
+            "recovered": 23681
+        }, 
+        {
+            "confirmed": 27151, 
+            "date": "2021-2-5", 
+            "deaths": 389, 
+            "recovered": 23863
+        }, 
+        {
+            "confirmed": 27322, 
+            "date": "2021-2-6", 
+            "deaths": 390, 
+            "recovered": 24049
+        }, 
+        {
+            "confirmed": 27492, 
+            "date": "2021-2-7", 
+            "deaths": 395, 
+            "recovered": 24227
+        }, 
+        {
+            "confirmed": 27661, 
+            "date": "2021-2-8", 
+            "deaths": 397, 
+            "recovered": 24392
+        }, 
+        {
+            "confirmed": 27830, 
+            "date": "2021-2-9", 
+            "deaths": 402, 
+            "recovered": 24558
         }
     ], 
     "Ленинградская область": [
@@ -48975,6 +53655,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 300, 
             "recovered": 23179
+        }, 
+        {
+            "confirmed": 26229, 
+            "date": "2021-1-11", 
+            "deaths": 307, 
+            "recovered": 23437
+        }, 
+        {
+            "confirmed": 26447, 
+            "date": "2021-1-12", 
+            "deaths": 313, 
+            "recovered": 23648
+        }, 
+        {
+            "confirmed": 26673, 
+            "date": "2021-1-13", 
+            "deaths": 318, 
+            "recovered": 23861
+        }, 
+        {
+            "confirmed": 26902, 
+            "date": "2021-1-14", 
+            "deaths": 318, 
+            "recovered": 24104
+        }, 
+        {
+            "confirmed": 27130, 
+            "date": "2021-1-15", 
+            "deaths": 318, 
+            "recovered": 24338
+        }, 
+        {
+            "confirmed": 27356, 
+            "date": "2021-1-16", 
+            "deaths": 318, 
+            "recovered": 24599
+        }, 
+        {
+            "confirmed": 27584, 
+            "date": "2021-1-17", 
+            "deaths": 322, 
+            "recovered": 24796
+        }, 
+        {
+            "confirmed": 27809, 
+            "date": "2021-1-18", 
+            "deaths": 328, 
+            "recovered": 24953
+        }, 
+        {
+            "confirmed": 28035, 
+            "date": "2021-1-19", 
+            "deaths": 336, 
+            "recovered": 25167
+        }, 
+        {
+            "confirmed": 28262, 
+            "date": "2021-1-20", 
+            "deaths": 343, 
+            "recovered": 25408
+        }, 
+        {
+            "confirmed": 28487, 
+            "date": "2021-1-21", 
+            "deaths": 353, 
+            "recovered": 25665
+        }, 
+        {
+            "confirmed": 28710, 
+            "date": "2021-1-22", 
+            "deaths": 362, 
+            "recovered": 25872
+        }, 
+        {
+            "confirmed": 28932, 
+            "date": "2021-1-23", 
+            "deaths": 369, 
+            "recovered": 26066
+        }, 
+        {
+            "confirmed": 29156, 
+            "date": "2021-1-24", 
+            "deaths": 369, 
+            "recovered": 26249
+        }, 
+        {
+            "confirmed": 29375, 
+            "date": "2021-1-25", 
+            "deaths": 371, 
+            "recovered": 26450
+        }, 
+        {
+            "confirmed": 29596, 
+            "date": "2021-1-26", 
+            "deaths": 379, 
+            "recovered": 26665
+        }, 
+        {
+            "confirmed": 29818, 
+            "date": "2021-1-27", 
+            "deaths": 386, 
+            "recovered": 26847
+        }, 
+        {
+            "confirmed": 30042, 
+            "date": "2021-1-28", 
+            "deaths": 395, 
+            "recovered": 27083
+        }, 
+        {
+            "confirmed": 30265, 
+            "date": "2021-1-29", 
+            "deaths": 407, 
+            "recovered": 27342
+        }, 
+        {
+            "confirmed": 30484, 
+            "date": "2021-1-30", 
+            "deaths": 417, 
+            "recovered": 27616
+        }, 
+        {
+            "confirmed": 30701, 
+            "date": "2021-1-31", 
+            "deaths": 427, 
+            "recovered": 27820
+        }, 
+        {
+            "confirmed": 30917, 
+            "date": "2021-2-1", 
+            "deaths": 432, 
+            "recovered": 27987
+        }, 
+        {
+            "confirmed": 31136, 
+            "date": "2021-2-2", 
+            "deaths": 438, 
+            "recovered": 28205
+        }, 
+        {
+            "confirmed": 31354, 
+            "date": "2021-2-3", 
+            "deaths": 442, 
+            "recovered": 28428
+        }, 
+        {
+            "confirmed": 31571, 
+            "date": "2021-2-4", 
+            "deaths": 446, 
+            "recovered": 28624
+        }, 
+        {
+            "confirmed": 31787, 
+            "date": "2021-2-5", 
+            "deaths": 455, 
+            "recovered": 28845
+        }, 
+        {
+            "confirmed": 31985, 
+            "date": "2021-2-6", 
+            "deaths": 462, 
+            "recovered": 29048
+        }, 
+        {
+            "confirmed": 32192, 
+            "date": "2021-2-7", 
+            "deaths": 462, 
+            "recovered": 29211
+        }, 
+        {
+            "confirmed": 32397, 
+            "date": "2021-2-8", 
+            "deaths": 463, 
+            "recovered": 29335
+        }, 
+        {
+            "confirmed": 32600, 
+            "date": "2021-2-9", 
+            "deaths": 463, 
+            "recovered": 29499
         }
     ], 
     "Липецкая область": [
@@ -50789,6 +55649,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 294, 
             "recovered": 13056
+        }, 
+        {
+            "confirmed": 17853, 
+            "date": "2021-1-11", 
+            "deaths": 299, 
+            "recovered": 13070
+        }, 
+        {
+            "confirmed": 18021, 
+            "date": "2021-1-12", 
+            "deaths": 306, 
+            "recovered": 13151
+        }, 
+        {
+            "confirmed": 18184, 
+            "date": "2021-1-13", 
+            "deaths": 312, 
+            "recovered": 13334
+        }, 
+        {
+            "confirmed": 18339, 
+            "date": "2021-1-14", 
+            "deaths": 316, 
+            "recovered": 13575
+        }, 
+        {
+            "confirmed": 18494, 
+            "date": "2021-1-15", 
+            "deaths": 321, 
+            "recovered": 13796
+        }, 
+        {
+            "confirmed": 18648, 
+            "date": "2021-1-16", 
+            "deaths": 325, 
+            "recovered": 14013
+        }, 
+        {
+            "confirmed": 18800, 
+            "date": "2021-1-17", 
+            "deaths": 327, 
+            "recovered": 14227
+        }, 
+        {
+            "confirmed": 18953, 
+            "date": "2021-1-18", 
+            "deaths": 332, 
+            "recovered": 14340
+        }, 
+        {
+            "confirmed": 19107, 
+            "date": "2021-1-19", 
+            "deaths": 335, 
+            "recovered": 14589
+        }, 
+        {
+            "confirmed": 19259, 
+            "date": "2021-1-20", 
+            "deaths": 340, 
+            "recovered": 14847
+        }, 
+        {
+            "confirmed": 19414, 
+            "date": "2021-1-21", 
+            "deaths": 342, 
+            "recovered": 15111
+        }, 
+        {
+            "confirmed": 19568, 
+            "date": "2021-1-22", 
+            "deaths": 346, 
+            "recovered": 15379
+        }, 
+        {
+            "confirmed": 19724, 
+            "date": "2021-1-23", 
+            "deaths": 348, 
+            "recovered": 15653
+        }, 
+        {
+            "confirmed": 19879, 
+            "date": "2021-1-24", 
+            "deaths": 351, 
+            "recovered": 15936
+        }, 
+        {
+            "confirmed": 20032, 
+            "date": "2021-1-25", 
+            "deaths": 354, 
+            "recovered": 16060
+        }, 
+        {
+            "confirmed": 20182, 
+            "date": "2021-1-26", 
+            "deaths": 358, 
+            "recovered": 16197
+        }, 
+        {
+            "confirmed": 20333, 
+            "date": "2021-1-27", 
+            "deaths": 360, 
+            "recovered": 16340
+        }, 
+        {
+            "confirmed": 20483, 
+            "date": "2021-1-28", 
+            "deaths": 363, 
+            "recovered": 16494
+        }, 
+        {
+            "confirmed": 20632, 
+            "date": "2021-1-29", 
+            "deaths": 366, 
+            "recovered": 16647
+        }, 
+        {
+            "confirmed": 20783, 
+            "date": "2021-1-30", 
+            "deaths": 368, 
+            "recovered": 16802
+        }, 
+        {
+            "confirmed": 20933, 
+            "date": "2021-1-31", 
+            "deaths": 369, 
+            "recovered": 16940
+        }, 
+        {
+            "confirmed": 21082, 
+            "date": "2021-2-1", 
+            "deaths": 373, 
+            "recovered": 17067
+        }, 
+        {
+            "confirmed": 21229, 
+            "date": "2021-2-2", 
+            "deaths": 376, 
+            "recovered": 17232
+        }, 
+        {
+            "confirmed": 21374, 
+            "date": "2021-2-3", 
+            "deaths": 380, 
+            "recovered": 17395
+        }, 
+        {
+            "confirmed": 21517, 
+            "date": "2021-2-4", 
+            "deaths": 381, 
+            "recovered": 17563
+        }, 
+        {
+            "confirmed": 21662, 
+            "date": "2021-2-5", 
+            "deaths": 383, 
+            "recovered": 17738
+        }, 
+        {
+            "confirmed": 21805, 
+            "date": "2021-2-6", 
+            "deaths": 383, 
+            "recovered": 17916
+        }, 
+        {
+            "confirmed": 21947, 
+            "date": "2021-2-7", 
+            "deaths": 383, 
+            "recovered": 18085
+        }, 
+        {
+            "confirmed": 22088, 
+            "date": "2021-2-8", 
+            "deaths": 386, 
+            "recovered": 18243
+        }, 
+        {
+            "confirmed": 22231, 
+            "date": "2021-2-9", 
+            "deaths": 390, 
+            "recovered": 18408
         }
     ], 
     "Магаданская область": [
@@ -52603,6 +57643,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 66, 
             "recovered": 6863
+        }, 
+        {
+            "confirmed": 7351, 
+            "date": "2021-1-11", 
+            "deaths": 69, 
+            "recovered": 6893
+        }, 
+        {
+            "confirmed": 7376, 
+            "date": "2021-1-12", 
+            "deaths": 71, 
+            "recovered": 6918
+        }, 
+        {
+            "confirmed": 7403, 
+            "date": "2021-1-13", 
+            "deaths": 72, 
+            "recovered": 6943
+        }, 
+        {
+            "confirmed": 7431, 
+            "date": "2021-1-14", 
+            "deaths": 73, 
+            "recovered": 6970
+        }, 
+        {
+            "confirmed": 7459, 
+            "date": "2021-1-15", 
+            "deaths": 73, 
+            "recovered": 7000
+        }, 
+        {
+            "confirmed": 7489, 
+            "date": "2021-1-16", 
+            "deaths": 73, 
+            "recovered": 7032
+        }, 
+        {
+            "confirmed": 7520, 
+            "date": "2021-1-17", 
+            "deaths": 73, 
+            "recovered": 7062
+        }, 
+        {
+            "confirmed": 7548, 
+            "date": "2021-1-18", 
+            "deaths": 75, 
+            "recovered": 7095
+        }, 
+        {
+            "confirmed": 7574, 
+            "date": "2021-1-19", 
+            "deaths": 75, 
+            "recovered": 7124
+        }, 
+        {
+            "confirmed": 7599, 
+            "date": "2021-1-20", 
+            "deaths": 77, 
+            "recovered": 7149
+        }, 
+        {
+            "confirmed": 7624, 
+            "date": "2021-1-21", 
+            "deaths": 78, 
+            "recovered": 7177
+        }, 
+        {
+            "confirmed": 7654, 
+            "date": "2021-1-22", 
+            "deaths": 80, 
+            "recovered": 7208
+        }, 
+        {
+            "confirmed": 7679, 
+            "date": "2021-1-23", 
+            "deaths": 82, 
+            "recovered": 7235
+        }, 
+        {
+            "confirmed": 7703, 
+            "date": "2021-1-24", 
+            "deaths": 82, 
+            "recovered": 7256
+        }, 
+        {
+            "confirmed": 7727, 
+            "date": "2021-1-25", 
+            "deaths": 82, 
+            "recovered": 7284
+        }, 
+        {
+            "confirmed": 7749, 
+            "date": "2021-1-26", 
+            "deaths": 82, 
+            "recovered": 7308
+        }, 
+        {
+            "confirmed": 7770, 
+            "date": "2021-1-27", 
+            "deaths": 84, 
+            "recovered": 7334
+        }, 
+        {
+            "confirmed": 7790, 
+            "date": "2021-1-28", 
+            "deaths": 85, 
+            "recovered": 7356
+        }, 
+        {
+            "confirmed": 7813, 
+            "date": "2021-1-29", 
+            "deaths": 86, 
+            "recovered": 7376
+        }, 
+        {
+            "confirmed": 7833, 
+            "date": "2021-1-30", 
+            "deaths": 88, 
+            "recovered": 7401
+        }, 
+        {
+            "confirmed": 7853, 
+            "date": "2021-1-31", 
+            "deaths": 88, 
+            "recovered": 7424
+        }, 
+        {
+            "confirmed": 7872, 
+            "date": "2021-2-1", 
+            "deaths": 88, 
+            "recovered": 7444
+        }, 
+        {
+            "confirmed": 7889, 
+            "date": "2021-2-2", 
+            "deaths": 90, 
+            "recovered": 7456
+        }, 
+        {
+            "confirmed": 7906, 
+            "date": "2021-2-3", 
+            "deaths": 91, 
+            "recovered": 7465
+        }, 
+        {
+            "confirmed": 7927, 
+            "date": "2021-2-4", 
+            "deaths": 91, 
+            "recovered": 7484
+        }, 
+        {
+            "confirmed": 7943, 
+            "date": "2021-2-5", 
+            "deaths": 91, 
+            "recovered": 7504
+        }, 
+        {
+            "confirmed": 7958, 
+            "date": "2021-2-6", 
+            "deaths": 92, 
+            "recovered": 7524
+        }, 
+        {
+            "confirmed": 7975, 
+            "date": "2021-2-7", 
+            "deaths": 92, 
+            "recovered": 7542
+        }, 
+        {
+            "confirmed": 7988, 
+            "date": "2021-2-8", 
+            "deaths": 92, 
+            "recovered": 7559
+        }, 
+        {
+            "confirmed": 8000, 
+            "date": "2021-2-9", 
+            "deaths": 93, 
+            "recovered": 7570
         }
     ], 
     "Москва": [
@@ -54417,6 +59637,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 11950, 
             "recovered": 695106
+        }, 
+        {
+            "confirmed": 862214, 
+            "date": "2021-1-11", 
+            "deaths": 12025, 
+            "recovered": 701790
+        }, 
+        {
+            "confirmed": 867215, 
+            "date": "2021-1-12", 
+            "deaths": 12097, 
+            "recovered": 708568
+        }, 
+        {
+            "confirmed": 871535, 
+            "date": "2021-1-13", 
+            "deaths": 12173, 
+            "recovered": 715438
+        }, 
+        {
+            "confirmed": 877428, 
+            "date": "2021-1-14", 
+            "deaths": 12241, 
+            "recovered": 722487
+        }, 
+        {
+            "confirmed": 882962, 
+            "date": "2021-1-15", 
+            "deaths": 12322, 
+            "recovered": 729089
+        }, 
+        {
+            "confirmed": 887636, 
+            "date": "2021-1-16", 
+            "deaths": 12401, 
+            "recovered": 734728
+        }, 
+        {
+            "confirmed": 891648, 
+            "date": "2021-1-17", 
+            "deaths": 12468, 
+            "recovered": 739340
+        }, 
+        {
+            "confirmed": 895327, 
+            "date": "2021-1-18", 
+            "deaths": 12541, 
+            "recovered": 743349
+        }, 
+        {
+            "confirmed": 898442, 
+            "date": "2021-1-19", 
+            "deaths": 12625, 
+            "recovered": 747881
+        }, 
+        {
+            "confirmed": 900894, 
+            "date": "2021-1-20", 
+            "deaths": 12690, 
+            "recovered": 752651
+        }, 
+        {
+            "confirmed": 904352, 
+            "date": "2021-1-21", 
+            "deaths": 12759, 
+            "recovered": 757871
+        }, 
+        {
+            "confirmed": 907389, 
+            "date": "2021-1-22", 
+            "deaths": 12831, 
+            "recovered": 763500
+        }, 
+        {
+            "confirmed": 910057, 
+            "date": "2021-1-23", 
+            "deaths": 12895, 
+            "recovered": 769433
+        }, 
+        {
+            "confirmed": 913126, 
+            "date": "2021-1-24", 
+            "deaths": 12969, 
+            "recovered": 774550
+        }, 
+        {
+            "confirmed": 915508, 
+            "date": "2021-1-25", 
+            "deaths": 13030, 
+            "recovered": 779824
+        }, 
+        {
+            "confirmed": 917825, 
+            "date": "2021-1-26", 
+            "deaths": 13100, 
+            "recovered": 785396
+        }, 
+        {
+            "confirmed": 919662, 
+            "date": "2021-1-27", 
+            "deaths": 13175, 
+            "recovered": 791320
+        }, 
+        {
+            "confirmed": 922559, 
+            "date": "2021-1-28", 
+            "deaths": 13237, 
+            "recovered": 797462
+        }, 
+        {
+            "confirmed": 925358, 
+            "date": "2021-1-29", 
+            "deaths": 13300, 
+            "recovered": 803642
+        }, 
+        {
+            "confirmed": 927788, 
+            "date": "2021-1-30", 
+            "deaths": 13368, 
+            "recovered": 809226
+        }, 
+        {
+            "confirmed": 930072, 
+            "date": "2021-1-31", 
+            "deaths": 13434, 
+            "recovered": 814728
+        }, 
+        {
+            "confirmed": 932109, 
+            "date": "2021-2-1", 
+            "deaths": 13495, 
+            "recovered": 819611
+        }, 
+        {
+            "confirmed": 933810, 
+            "date": "2021-2-2", 
+            "deaths": 13569, 
+            "recovered": 824623
+        }, 
+        {
+            "confirmed": 935355, 
+            "date": "2021-2-3", 
+            "deaths": 13634, 
+            "recovered": 829844
+        }, 
+        {
+            "confirmed": 937450, 
+            "date": "2021-2-4", 
+            "deaths": 13701, 
+            "recovered": 835168
+        }, 
+        {
+            "confirmed": 939482, 
+            "date": "2021-2-5", 
+            "deaths": 13772, 
+            "recovered": 839832
+        }, 
+        {
+            "confirmed": 941696, 
+            "date": "2021-2-6", 
+            "deaths": 13832, 
+            "recovered": 844165
+        }, 
+        {
+            "confirmed": 943724, 
+            "date": "2021-2-7", 
+            "deaths": 13896, 
+            "recovered": 847822
+        }, 
+        {
+            "confirmed": 945452, 
+            "date": "2021-2-8", 
+            "deaths": 13958, 
+            "recovered": 851171
+        }, 
+        {
+            "confirmed": 947036, 
+            "date": "2021-2-9", 
+            "deaths": 14031, 
+            "recovered": 854725
         }
     ], 
     "Московская область": [
@@ -56231,6 +61631,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 3093, 
             "recovered": 126629
+        }, 
+        {
+            "confirmed": 169724, 
+            "date": "2021-1-11", 
+            "deaths": 3112, 
+            "recovered": 128052
+        }, 
+        {
+            "confirmed": 170807, 
+            "date": "2021-1-12", 
+            "deaths": 3137, 
+            "recovered": 129621
+        }, 
+        {
+            "confirmed": 171996, 
+            "date": "2021-1-13", 
+            "deaths": 3163, 
+            "recovered": 131209
+        }, 
+        {
+            "confirmed": 173259, 
+            "date": "2021-1-14", 
+            "deaths": 3188, 
+            "recovered": 132567
+        }, 
+        {
+            "confirmed": 174620, 
+            "date": "2021-1-15", 
+            "deaths": 3217, 
+            "recovered": 133874
+        }, 
+        {
+            "confirmed": 176026, 
+            "date": "2021-1-16", 
+            "deaths": 3249, 
+            "recovered": 135174
+        }, 
+        {
+            "confirmed": 177452, 
+            "date": "2021-1-17", 
+            "deaths": 3276, 
+            "recovered": 136490
+        }, 
+        {
+            "confirmed": 178833, 
+            "date": "2021-1-18", 
+            "deaths": 3299, 
+            "recovered": 137730
+        }, 
+        {
+            "confirmed": 179905, 
+            "date": "2021-1-19", 
+            "deaths": 3335, 
+            "recovered": 139228
+        }, 
+        {
+            "confirmed": 180899, 
+            "date": "2021-1-20", 
+            "deaths": 3372, 
+            "recovered": 140529
+        }, 
+        {
+            "confirmed": 181991, 
+            "date": "2021-1-21", 
+            "deaths": 3411, 
+            "recovered": 141779
+        }, 
+        {
+            "confirmed": 183133, 
+            "date": "2021-1-22", 
+            "deaths": 3449, 
+            "recovered": 143026
+        }, 
+        {
+            "confirmed": 184254, 
+            "date": "2021-1-23", 
+            "deaths": 3488, 
+            "recovered": 144272
+        }, 
+        {
+            "confirmed": 185388, 
+            "date": "2021-1-24", 
+            "deaths": 3525, 
+            "recovered": 145461
+        }, 
+        {
+            "confirmed": 186551, 
+            "date": "2021-1-25", 
+            "deaths": 3546, 
+            "recovered": 146579
+        }, 
+        {
+            "confirmed": 187680, 
+            "date": "2021-1-26", 
+            "deaths": 3581, 
+            "recovered": 147781
+        }, 
+        {
+            "confirmed": 188608, 
+            "date": "2021-1-27", 
+            "deaths": 3619, 
+            "recovered": 148881
+        }, 
+        {
+            "confirmed": 189547, 
+            "date": "2021-1-28", 
+            "deaths": 3657, 
+            "recovered": 149984
+        }, 
+        {
+            "confirmed": 190591, 
+            "date": "2021-1-29", 
+            "deaths": 3696, 
+            "recovered": 151079
+        }, 
+        {
+            "confirmed": 191660, 
+            "date": "2021-1-30", 
+            "deaths": 3731, 
+            "recovered": 152088
+        }, 
+        {
+            "confirmed": 192742, 
+            "date": "2021-1-31", 
+            "deaths": 3764, 
+            "recovered": 153099
+        }, 
+        {
+            "confirmed": 193810, 
+            "date": "2021-2-1", 
+            "deaths": 3796, 
+            "recovered": 154097
+        }, 
+        {
+            "confirmed": 194863, 
+            "date": "2021-2-2", 
+            "deaths": 3834, 
+            "recovered": 155117
+        }, 
+        {
+            "confirmed": 195636, 
+            "date": "2021-2-3", 
+            "deaths": 3871, 
+            "recovered": 156107
+        }, 
+        {
+            "confirmed": 196467, 
+            "date": "2021-2-4", 
+            "deaths": 3904, 
+            "recovered": 157140
+        }, 
+        {
+            "confirmed": 197413, 
+            "date": "2021-2-5", 
+            "deaths": 3940, 
+            "recovered": 158141
+        }, 
+        {
+            "confirmed": 198368, 
+            "date": "2021-2-6", 
+            "deaths": 3971, 
+            "recovered": 159153
+        }, 
+        {
+            "confirmed": 199291, 
+            "date": "2021-2-7", 
+            "deaths": 4004, 
+            "recovered": 160103
+        }, 
+        {
+            "confirmed": 200203, 
+            "date": "2021-2-8", 
+            "deaths": 4036, 
+            "recovered": 161059
+        }, 
+        {
+            "confirmed": 201106, 
+            "date": "2021-2-9", 
+            "deaths": 4078, 
+            "recovered": 162039
         }
     ], 
     "Мурманская область": [
@@ -58045,6 +63625,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 688, 
             "recovered": 34274
+        }, 
+        {
+            "confirmed": 38789, 
+            "date": "2021-1-11", 
+            "deaths": 693, 
+            "recovered": 34331
+        }, 
+        {
+            "confirmed": 39026, 
+            "date": "2021-1-12", 
+            "deaths": 700, 
+            "recovered": 34645
+        }, 
+        {
+            "confirmed": 39262, 
+            "date": "2021-1-13", 
+            "deaths": 704, 
+            "recovered": 35027
+        }, 
+        {
+            "confirmed": 39496, 
+            "date": "2021-1-14", 
+            "deaths": 712, 
+            "recovered": 35118
+        }, 
+        {
+            "confirmed": 39735, 
+            "date": "2021-1-15", 
+            "deaths": 720, 
+            "recovered": 35365
+        }, 
+        {
+            "confirmed": 39989, 
+            "date": "2021-1-16", 
+            "deaths": 728, 
+            "recovered": 35767
+        }, 
+        {
+            "confirmed": 40236, 
+            "date": "2021-1-17", 
+            "deaths": 735, 
+            "recovered": 35978
+        }, 
+        {
+            "confirmed": 40477, 
+            "date": "2021-1-18", 
+            "deaths": 743, 
+            "recovered": 36013
+        }, 
+        {
+            "confirmed": 40721, 
+            "date": "2021-1-19", 
+            "deaths": 750, 
+            "recovered": 36308
+        }, 
+        {
+            "confirmed": 40959, 
+            "date": "2021-1-20", 
+            "deaths": 758, 
+            "recovered": 36776
+        }, 
+        {
+            "confirmed": 41191, 
+            "date": "2021-1-21", 
+            "deaths": 765, 
+            "recovered": 36940
+        }, 
+        {
+            "confirmed": 41419, 
+            "date": "2021-1-22", 
+            "deaths": 773, 
+            "recovered": 37471
+        }, 
+        {
+            "confirmed": 41638, 
+            "date": "2021-1-23", 
+            "deaths": 779, 
+            "recovered": 37792
+        }, 
+        {
+            "confirmed": 41848, 
+            "date": "2021-1-24", 
+            "deaths": 783, 
+            "recovered": 37912
+        }, 
+        {
+            "confirmed": 42055, 
+            "date": "2021-1-25", 
+            "deaths": 788, 
+            "recovered": 38054
+        }, 
+        {
+            "confirmed": 42258, 
+            "date": "2021-1-26", 
+            "deaths": 796, 
+            "recovered": 38343
+        }, 
+        {
+            "confirmed": 42456, 
+            "date": "2021-1-27", 
+            "deaths": 801, 
+            "recovered": 38699
+        }, 
+        {
+            "confirmed": 42643, 
+            "date": "2021-1-28", 
+            "deaths": 808, 
+            "recovered": 39124
+        }, 
+        {
+            "confirmed": 42823, 
+            "date": "2021-1-29", 
+            "deaths": 815, 
+            "recovered": 39497
+        }, 
+        {
+            "confirmed": 42996, 
+            "date": "2021-1-30", 
+            "deaths": 820, 
+            "recovered": 39879
+        }, 
+        {
+            "confirmed": 43160, 
+            "date": "2021-1-31", 
+            "deaths": 822, 
+            "recovered": 40129
+        }, 
+        {
+            "confirmed": 43320, 
+            "date": "2021-2-1", 
+            "deaths": 825, 
+            "recovered": 40314
+        }, 
+        {
+            "confirmed": 43478, 
+            "date": "2021-2-2", 
+            "deaths": 828, 
+            "recovered": 40613
+        }, 
+        {
+            "confirmed": 43634, 
+            "date": "2021-2-3", 
+            "deaths": 834, 
+            "recovered": 40935
+        }, 
+        {
+            "confirmed": 43788, 
+            "date": "2021-2-4", 
+            "deaths": 839, 
+            "recovered": 41137
+        }, 
+        {
+            "confirmed": 43937, 
+            "date": "2021-2-5", 
+            "deaths": 842, 
+            "recovered": 41379
+        }, 
+        {
+            "confirmed": 44084, 
+            "date": "2021-2-6", 
+            "deaths": 844, 
+            "recovered": 41631
+        }, 
+        {
+            "confirmed": 44229, 
+            "date": "2021-2-7", 
+            "deaths": 848, 
+            "recovered": 41872
+        }, 
+        {
+            "confirmed": 44372, 
+            "date": "2021-2-8", 
+            "deaths": 852, 
+            "recovered": 42002
+        }, 
+        {
+            "confirmed": 44513, 
+            "date": "2021-2-9", 
+            "deaths": 858, 
+            "recovered": 42132
         }
     ], 
     "Ненецкий автономный округ": [
@@ -59859,6 +65619,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 4, 
             "recovered": 716
+        }, 
+        {
+            "confirmed": 818, 
+            "date": "2021-1-11", 
+            "deaths": 4, 
+            "recovered": 718
+        }, 
+        {
+            "confirmed": 819, 
+            "date": "2021-1-12", 
+            "deaths": 4, 
+            "recovered": 720
+        }, 
+        {
+            "confirmed": 825, 
+            "date": "2021-1-13", 
+            "deaths": 4, 
+            "recovered": 721
+        }, 
+        {
+            "confirmed": 829, 
+            "date": "2021-1-14", 
+            "deaths": 4, 
+            "recovered": 724
+        }, 
+        {
+            "confirmed": 832, 
+            "date": "2021-1-15", 
+            "deaths": 4, 
+            "recovered": 726
+        }, 
+        {
+            "confirmed": 837, 
+            "date": "2021-1-16", 
+            "deaths": 4, 
+            "recovered": 729
+        }, 
+        {
+            "confirmed": 843, 
+            "date": "2021-1-17", 
+            "deaths": 4, 
+            "recovered": 734
+        }, 
+        {
+            "confirmed": 845, 
+            "date": "2021-1-18", 
+            "deaths": 4, 
+            "recovered": 739
+        }, 
+        {
+            "confirmed": 850, 
+            "date": "2021-1-19", 
+            "deaths": 4, 
+            "recovered": 742
+        }, 
+        {
+            "confirmed": 856, 
+            "date": "2021-1-20", 
+            "deaths": 4, 
+            "recovered": 747
+        }, 
+        {
+            "confirmed": 859, 
+            "date": "2021-1-21", 
+            "deaths": 4, 
+            "recovered": 751
+        }, 
+        {
+            "confirmed": 860, 
+            "date": "2021-1-22", 
+            "deaths": 4, 
+            "recovered": 754
+        }, 
+        {
+            "confirmed": 865, 
+            "date": "2021-1-23", 
+            "deaths": 4, 
+            "recovered": 758
+        }, 
+        {
+            "confirmed": 873, 
+            "date": "2021-1-24", 
+            "deaths": 4, 
+            "recovered": 761
+        }, 
+        {
+            "confirmed": 876, 
+            "date": "2021-1-25", 
+            "deaths": 4, 
+            "recovered": 762
+        }, 
+        {
+            "confirmed": 882, 
+            "date": "2021-1-26", 
+            "deaths": 4, 
+            "recovered": 764
+        }, 
+        {
+            "confirmed": 890, 
+            "date": "2021-1-27", 
+            "deaths": 4, 
+            "recovered": 768
+        }, 
+        {
+            "confirmed": 898, 
+            "date": "2021-1-28", 
+            "deaths": 4, 
+            "recovered": 772
+        }, 
+        {
+            "confirmed": 905, 
+            "date": "2021-1-29", 
+            "deaths": 4, 
+            "recovered": 775
+        }, 
+        {
+            "confirmed": 912, 
+            "date": "2021-1-30", 
+            "deaths": 4, 
+            "recovered": 778
+        }, 
+        {
+            "confirmed": 917, 
+            "date": "2021-1-31", 
+            "deaths": 4, 
+            "recovered": 780
+        }, 
+        {
+            "confirmed": 920, 
+            "date": "2021-2-1", 
+            "deaths": 4, 
+            "recovered": 782
+        }, 
+        {
+            "confirmed": 926, 
+            "date": "2021-2-2", 
+            "deaths": 4, 
+            "recovered": 787
+        }, 
+        {
+            "confirmed": 929, 
+            "date": "2021-2-3", 
+            "deaths": 4, 
+            "recovered": 791
+        }, 
+        {
+            "confirmed": 932, 
+            "date": "2021-2-4", 
+            "deaths": 4, 
+            "recovered": 798
+        }, 
+        {
+            "confirmed": 940, 
+            "date": "2021-2-5", 
+            "deaths": 4, 
+            "recovered": 806
+        }, 
+        {
+            "confirmed": 944, 
+            "date": "2021-2-6", 
+            "deaths": 4, 
+            "recovered": 815
+        }, 
+        {
+            "confirmed": 946, 
+            "date": "2021-2-7", 
+            "deaths": 4, 
+            "recovered": 822
+        }, 
+        {
+            "confirmed": 947, 
+            "date": "2021-2-8", 
+            "deaths": 4, 
+            "recovered": 827
+        }, 
+        {
+            "confirmed": 952, 
+            "date": "2021-2-9", 
+            "deaths": 4, 
+            "recovered": 832
         }
     ], 
     "Нижегородская область": [
@@ -61673,6 +67613,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1805, 
             "recovered": 66794
+        }, 
+        {
+            "confirmed": 74913, 
+            "date": "2021-1-11", 
+            "deaths": 1817, 
+            "recovered": 67220
+        }, 
+        {
+            "confirmed": 75355, 
+            "date": "2021-1-12", 
+            "deaths": 1834, 
+            "recovered": 67693
+        }, 
+        {
+            "confirmed": 75811, 
+            "date": "2021-1-13", 
+            "deaths": 1852, 
+            "recovered": 68139
+        }, 
+        {
+            "confirmed": 76287, 
+            "date": "2021-1-14", 
+            "deaths": 1865, 
+            "recovered": 68592
+        }, 
+        {
+            "confirmed": 76770, 
+            "date": "2021-1-15", 
+            "deaths": 1877, 
+            "recovered": 69044
+        }, 
+        {
+            "confirmed": 77255, 
+            "date": "2021-1-16", 
+            "deaths": 1894, 
+            "recovered": 69499
+        }, 
+        {
+            "confirmed": 77739, 
+            "date": "2021-1-17", 
+            "deaths": 1909, 
+            "recovered": 69998
+        }, 
+        {
+            "confirmed": 78218, 
+            "date": "2021-1-18", 
+            "deaths": 1923, 
+            "recovered": 70465
+        }, 
+        {
+            "confirmed": 78689, 
+            "date": "2021-1-19", 
+            "deaths": 1938, 
+            "recovered": 70961
+        }, 
+        {
+            "confirmed": 79177, 
+            "date": "2021-1-20", 
+            "deaths": 1954, 
+            "recovered": 71455
+        }, 
+        {
+            "confirmed": 79670, 
+            "date": "2021-1-21", 
+            "deaths": 1972, 
+            "recovered": 71938
+        }, 
+        {
+            "confirmed": 80161, 
+            "date": "2021-1-22", 
+            "deaths": 1989, 
+            "recovered": 72420
+        }, 
+        {
+            "confirmed": 80648, 
+            "date": "2021-1-23", 
+            "deaths": 2004, 
+            "recovered": 72898
+        }, 
+        {
+            "confirmed": 81137, 
+            "date": "2021-1-24", 
+            "deaths": 2018, 
+            "recovered": 73414
+        }, 
+        {
+            "confirmed": 81625, 
+            "date": "2021-1-25", 
+            "deaths": 2034, 
+            "recovered": 73905
+        }, 
+        {
+            "confirmed": 82086, 
+            "date": "2021-1-26", 
+            "deaths": 2046, 
+            "recovered": 74381
+        }, 
+        {
+            "confirmed": 82560, 
+            "date": "2021-1-27", 
+            "deaths": 2062, 
+            "recovered": 74655
+        }, 
+        {
+            "confirmed": 83029, 
+            "date": "2021-1-28", 
+            "deaths": 2077, 
+            "recovered": 75132
+        }, 
+        {
+            "confirmed": 83500, 
+            "date": "2021-1-29", 
+            "deaths": 2094, 
+            "recovered": 75626
+        }, 
+        {
+            "confirmed": 83972, 
+            "date": "2021-1-30", 
+            "deaths": 2107, 
+            "recovered": 76123
+        }, 
+        {
+            "confirmed": 84436, 
+            "date": "2021-1-31", 
+            "deaths": 2118, 
+            "recovered": 76617
+        }, 
+        {
+            "confirmed": 84904, 
+            "date": "2021-2-1", 
+            "deaths": 2130, 
+            "recovered": 77102
+        }, 
+        {
+            "confirmed": 85363, 
+            "date": "2021-2-2", 
+            "deaths": 2144, 
+            "recovered": 77591
+        }, 
+        {
+            "confirmed": 85840, 
+            "date": "2021-2-3", 
+            "deaths": 2157, 
+            "recovered": 78082
+        }, 
+        {
+            "confirmed": 86311, 
+            "date": "2021-2-4", 
+            "deaths": 2168, 
+            "recovered": 78480
+        }, 
+        {
+            "confirmed": 86784, 
+            "date": "2021-2-5", 
+            "deaths": 2184, 
+            "recovered": 78924
+        }, 
+        {
+            "confirmed": 87256, 
+            "date": "2021-2-6", 
+            "deaths": 2198, 
+            "recovered": 79361
+        }, 
+        {
+            "confirmed": 87725, 
+            "date": "2021-2-7", 
+            "deaths": 2210, 
+            "recovered": 79791
+        }, 
+        {
+            "confirmed": 88190, 
+            "date": "2021-2-8", 
+            "deaths": 2221, 
+            "recovered": 80218
+        }, 
+        {
+            "confirmed": 88647, 
+            "date": "2021-2-9", 
+            "deaths": 2230, 
+            "recovered": 80660
         }
     ], 
     "Новгородская область": [
@@ -63487,6 +69607,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 99, 
             "recovered": 14769
+        }, 
+        {
+            "confirmed": 20535, 
+            "date": "2021-1-11", 
+            "deaths": 99, 
+            "recovered": 14825
+        }, 
+        {
+            "confirmed": 20716, 
+            "date": "2021-1-12", 
+            "deaths": 99, 
+            "recovered": 14951
+        }, 
+        {
+            "confirmed": 20902, 
+            "date": "2021-1-13", 
+            "deaths": 99, 
+            "recovered": 15276
+        }, 
+        {
+            "confirmed": 21092, 
+            "date": "2021-1-14", 
+            "deaths": 100, 
+            "recovered": 15534
+        }, 
+        {
+            "confirmed": 21280, 
+            "date": "2021-1-15", 
+            "deaths": 100, 
+            "recovered": 15786
+        }, 
+        {
+            "confirmed": 21462, 
+            "date": "2021-1-16", 
+            "deaths": 105, 
+            "recovered": 16151
+        }, 
+        {
+            "confirmed": 21647, 
+            "date": "2021-1-17", 
+            "deaths": 105, 
+            "recovered": 16294
+        }, 
+        {
+            "confirmed": 21830, 
+            "date": "2021-1-18", 
+            "deaths": 105, 
+            "recovered": 16461
+        }, 
+        {
+            "confirmed": 22010, 
+            "date": "2021-1-19", 
+            "deaths": 105, 
+            "recovered": 16724
+        }, 
+        {
+            "confirmed": 22193, 
+            "date": "2021-1-20", 
+            "deaths": 105, 
+            "recovered": 17039
+        }, 
+        {
+            "confirmed": 22374, 
+            "date": "2021-1-21", 
+            "deaths": 108, 
+            "recovered": 17405
+        }, 
+        {
+            "confirmed": 22550, 
+            "date": "2021-1-22", 
+            "deaths": 110, 
+            "recovered": 17801
+        }, 
+        {
+            "confirmed": 22729, 
+            "date": "2021-1-23", 
+            "deaths": 110, 
+            "recovered": 18165
+        }, 
+        {
+            "confirmed": 22904, 
+            "date": "2021-1-24", 
+            "deaths": 110, 
+            "recovered": 18523
+        }, 
+        {
+            "confirmed": 23075, 
+            "date": "2021-1-25", 
+            "deaths": 110, 
+            "recovered": 18759
+        }, 
+        {
+            "confirmed": 23245, 
+            "date": "2021-1-26", 
+            "deaths": 110, 
+            "recovered": 18997
+        }, 
+        {
+            "confirmed": 23417, 
+            "date": "2021-1-27", 
+            "deaths": 110, 
+            "recovered": 19228
+        }, 
+        {
+            "confirmed": 23582, 
+            "date": "2021-1-28", 
+            "deaths": 110, 
+            "recovered": 19463
+        }, 
+        {
+            "confirmed": 23742, 
+            "date": "2021-1-29", 
+            "deaths": 110, 
+            "recovered": 19694
+        }, 
+        {
+            "confirmed": 23895, 
+            "date": "2021-1-30", 
+            "deaths": 110, 
+            "recovered": 19923
+        }, 
+        {
+            "confirmed": 24045, 
+            "date": "2021-1-31", 
+            "deaths": 110, 
+            "recovered": 20034
+        }, 
+        {
+            "confirmed": 24192, 
+            "date": "2021-2-1", 
+            "deaths": 110, 
+            "recovered": 20140
+        }, 
+        {
+            "confirmed": 24337, 
+            "date": "2021-2-2", 
+            "deaths": 110, 
+            "recovered": 20323
+        }, 
+        {
+            "confirmed": 24477, 
+            "date": "2021-2-3", 
+            "deaths": 110, 
+            "recovered": 20508
+        }, 
+        {
+            "confirmed": 24616, 
+            "date": "2021-2-4", 
+            "deaths": 110, 
+            "recovered": 20726
+        }, 
+        {
+            "confirmed": 24752, 
+            "date": "2021-2-5", 
+            "deaths": 110, 
+            "recovered": 20941
+        }, 
+        {
+            "confirmed": 24883, 
+            "date": "2021-2-6", 
+            "deaths": 113, 
+            "recovered": 21162
+        }, 
+        {
+            "confirmed": 25013, 
+            "date": "2021-2-7", 
+            "deaths": 113, 
+            "recovered": 21377
+        }, 
+        {
+            "confirmed": 25135, 
+            "date": "2021-2-8", 
+            "deaths": 113, 
+            "recovered": 21509
+        }, 
+        {
+            "confirmed": 25262, 
+            "date": "2021-2-9", 
+            "deaths": 113, 
+            "recovered": 21653
         }
     ], 
     "Новосибирская область": [
@@ -65301,6 +71601,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1047, 
             "recovered": 25734
+        }, 
+        {
+            "confirmed": 29476, 
+            "date": "2021-1-11", 
+            "deaths": 1055, 
+            "recovered": 25923
+        }, 
+        {
+            "confirmed": 29612, 
+            "date": "2021-1-12", 
+            "deaths": 1064, 
+            "recovered": 26137
+        }, 
+        {
+            "confirmed": 29752, 
+            "date": "2021-1-13", 
+            "deaths": 1073, 
+            "recovered": 26365
+        }, 
+        {
+            "confirmed": 29896, 
+            "date": "2021-1-14", 
+            "deaths": 1081, 
+            "recovered": 26597
+        }, 
+        {
+            "confirmed": 30035, 
+            "date": "2021-1-15", 
+            "deaths": 1089, 
+            "recovered": 26823
+        }, 
+        {
+            "confirmed": 30181, 
+            "date": "2021-1-16", 
+            "deaths": 1098, 
+            "recovered": 27060
+        }, 
+        {
+            "confirmed": 30323, 
+            "date": "2021-1-17", 
+            "deaths": 1105, 
+            "recovered": 27161
+        }, 
+        {
+            "confirmed": 30461, 
+            "date": "2021-1-18", 
+            "deaths": 1114, 
+            "recovered": 27258
+        }, 
+        {
+            "confirmed": 30603, 
+            "date": "2021-1-19", 
+            "deaths": 1122, 
+            "recovered": 27446
+        }, 
+        {
+            "confirmed": 30747, 
+            "date": "2021-1-20", 
+            "deaths": 1129, 
+            "recovered": 27655
+        }, 
+        {
+            "confirmed": 30894, 
+            "date": "2021-1-21", 
+            "deaths": 1139, 
+            "recovered": 27878
+        }, 
+        {
+            "confirmed": 31034, 
+            "date": "2021-1-22", 
+            "deaths": 1148, 
+            "recovered": 28089
+        }, 
+        {
+            "confirmed": 31171, 
+            "date": "2021-1-23", 
+            "deaths": 1155, 
+            "recovered": 28307
+        }, 
+        {
+            "confirmed": 31306, 
+            "date": "2021-1-24", 
+            "deaths": 1165, 
+            "recovered": 28401
+        }, 
+        {
+            "confirmed": 31440, 
+            "date": "2021-1-25", 
+            "deaths": 1173, 
+            "recovered": 28491
+        }, 
+        {
+            "confirmed": 31571, 
+            "date": "2021-1-26", 
+            "deaths": 1183, 
+            "recovered": 28688
+        }, 
+        {
+            "confirmed": 31709, 
+            "date": "2021-1-27", 
+            "deaths": 1191, 
+            "recovered": 28896
+        }, 
+        {
+            "confirmed": 31843, 
+            "date": "2021-1-28", 
+            "deaths": 1201, 
+            "recovered": 29110
+        }, 
+        {
+            "confirmed": 31982, 
+            "date": "2021-1-29", 
+            "deaths": 1209, 
+            "recovered": 29330
+        }, 
+        {
+            "confirmed": 32118, 
+            "date": "2021-1-30", 
+            "deaths": 1216, 
+            "recovered": 29558
+        }, 
+        {
+            "confirmed": 32251, 
+            "date": "2021-1-31", 
+            "deaths": 1225, 
+            "recovered": 29655
+        }, 
+        {
+            "confirmed": 32385, 
+            "date": "2021-2-1", 
+            "deaths": 1233, 
+            "recovered": 29747
+        }, 
+        {
+            "confirmed": 32517, 
+            "date": "2021-2-2", 
+            "deaths": 1243, 
+            "recovered": 29949
+        }, 
+        {
+            "confirmed": 32652, 
+            "date": "2021-2-3", 
+            "deaths": 1250, 
+            "recovered": 30155
+        }, 
+        {
+            "confirmed": 32786, 
+            "date": "2021-2-4", 
+            "deaths": 1260, 
+            "recovered": 30368
+        }, 
+        {
+            "confirmed": 32917, 
+            "date": "2021-2-5", 
+            "deaths": 1267, 
+            "recovered": 30587
+        }, 
+        {
+            "confirmed": 33044, 
+            "date": "2021-2-6", 
+            "deaths": 1273, 
+            "recovered": 30794
+        }, 
+        {
+            "confirmed": 33169, 
+            "date": "2021-2-7", 
+            "deaths": 1281, 
+            "recovered": 30885
+        }, 
+        {
+            "confirmed": 33297, 
+            "date": "2021-2-8", 
+            "deaths": 1288, 
+            "recovered": 30979
+        }, 
+        {
+            "confirmed": 33427, 
+            "date": "2021-2-9", 
+            "deaths": 1296, 
+            "recovered": 31194
         }
     ], 
     "Омская область": [
@@ -67115,6 +73595,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 947, 
             "recovered": 29452
+        }, 
+        {
+            "confirmed": 32889, 
+            "date": "2021-1-11", 
+            "deaths": 955, 
+            "recovered": 29656
+        }, 
+        {
+            "confirmed": 33130, 
+            "date": "2021-1-12", 
+            "deaths": 963, 
+            "recovered": 29867
+        }, 
+        {
+            "confirmed": 33370, 
+            "date": "2021-1-13", 
+            "deaths": 970, 
+            "recovered": 30118
+        }, 
+        {
+            "confirmed": 33615, 
+            "date": "2021-1-14", 
+            "deaths": 978, 
+            "recovered": 30367
+        }, 
+        {
+            "confirmed": 33862, 
+            "date": "2021-1-15", 
+            "deaths": 986, 
+            "recovered": 30611
+        }, 
+        {
+            "confirmed": 34110, 
+            "date": "2021-1-16", 
+            "deaths": 993, 
+            "recovered": 30857
+        }, 
+        {
+            "confirmed": 34355, 
+            "date": "2021-1-17", 
+            "deaths": 1000, 
+            "recovered": 31098
+        }, 
+        {
+            "confirmed": 34598, 
+            "date": "2021-1-18", 
+            "deaths": 1007, 
+            "recovered": 31317
+        }, 
+        {
+            "confirmed": 34835, 
+            "date": "2021-1-19", 
+            "deaths": 1015, 
+            "recovered": 31535
+        }, 
+        {
+            "confirmed": 35070, 
+            "date": "2021-1-20", 
+            "deaths": 1023, 
+            "recovered": 31749
+        }, 
+        {
+            "confirmed": 35299, 
+            "date": "2021-1-21", 
+            "deaths": 1032, 
+            "recovered": 31976
+        }, 
+        {
+            "confirmed": 35527, 
+            "date": "2021-1-22", 
+            "deaths": 1039, 
+            "recovered": 32201
+        }, 
+        {
+            "confirmed": 35746, 
+            "date": "2021-1-23", 
+            "deaths": 1046, 
+            "recovered": 32432
+        }, 
+        {
+            "confirmed": 35964, 
+            "date": "2021-1-24", 
+            "deaths": 1052, 
+            "recovered": 32660
+        }, 
+        {
+            "confirmed": 36163, 
+            "date": "2021-1-25", 
+            "deaths": 1059, 
+            "recovered": 32871
+        }, 
+        {
+            "confirmed": 36321, 
+            "date": "2021-1-26", 
+            "deaths": 1064, 
+            "recovered": 33081
+        }, 
+        {
+            "confirmed": 36484, 
+            "date": "2021-1-27", 
+            "deaths": 1069, 
+            "recovered": 33279
+        }, 
+        {
+            "confirmed": 36650, 
+            "date": "2021-1-28", 
+            "deaths": 1072, 
+            "recovered": 33474
+        }, 
+        {
+            "confirmed": 36887, 
+            "date": "2021-1-29", 
+            "deaths": 1075, 
+            "recovered": 33704
+        }, 
+        {
+            "confirmed": 37070, 
+            "date": "2021-1-30", 
+            "deaths": 1079, 
+            "recovered": 33895
+        }, 
+        {
+            "confirmed": 37247, 
+            "date": "2021-1-31", 
+            "deaths": 1084, 
+            "recovered": 34057
+        }, 
+        {
+            "confirmed": 37421, 
+            "date": "2021-2-1", 
+            "deaths": 1088, 
+            "recovered": 34215
+        }, 
+        {
+            "confirmed": 37590, 
+            "date": "2021-2-2", 
+            "deaths": 1092, 
+            "recovered": 34380
+        }, 
+        {
+            "confirmed": 37753, 
+            "date": "2021-2-3", 
+            "deaths": 1096, 
+            "recovered": 34551
+        }, 
+        {
+            "confirmed": 37914, 
+            "date": "2021-2-4", 
+            "deaths": 1101, 
+            "recovered": 34720
+        }, 
+        {
+            "confirmed": 38076, 
+            "date": "2021-2-5", 
+            "deaths": 1105, 
+            "recovered": 34891
+        }, 
+        {
+            "confirmed": 38244, 
+            "date": "2021-2-6", 
+            "deaths": 1111, 
+            "recovered": 35060
+        }, 
+        {
+            "confirmed": 38409, 
+            "date": "2021-2-7", 
+            "deaths": 1118, 
+            "recovered": 35222
+        }, 
+        {
+            "confirmed": 38573, 
+            "date": "2021-2-8", 
+            "deaths": 1123, 
+            "recovered": 35315
+        }, 
+        {
+            "confirmed": 38735, 
+            "date": "2021-2-9", 
+            "deaths": 1127, 
+            "recovered": 35421
         }
     ], 
     "Оренбургская область": [
@@ -68929,6 +75589,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 384, 
             "recovered": 26896
+        }, 
+        {
+            "confirmed": 30669, 
+            "date": "2021-1-11", 
+            "deaths": 389, 
+            "recovered": 27061
+        }, 
+        {
+            "confirmed": 30838, 
+            "date": "2021-1-12", 
+            "deaths": 393, 
+            "recovered": 27223
+        }, 
+        {
+            "confirmed": 31008, 
+            "date": "2021-1-13", 
+            "deaths": 397, 
+            "recovered": 27388
+        }, 
+        {
+            "confirmed": 31176, 
+            "date": "2021-1-14", 
+            "deaths": 402, 
+            "recovered": 27548
+        }, 
+        {
+            "confirmed": 31347, 
+            "date": "2021-1-15", 
+            "deaths": 405, 
+            "recovered": 27706
+        }, 
+        {
+            "confirmed": 31523, 
+            "date": "2021-1-16", 
+            "deaths": 410, 
+            "recovered": 27870
+        }, 
+        {
+            "confirmed": 31696, 
+            "date": "2021-1-17", 
+            "deaths": 411, 
+            "recovered": 28028
+        }, 
+        {
+            "confirmed": 31868, 
+            "date": "2021-1-18", 
+            "deaths": 416, 
+            "recovered": 28184
+        }, 
+        {
+            "confirmed": 32041, 
+            "date": "2021-1-19", 
+            "deaths": 421, 
+            "recovered": 28346
+        }, 
+        {
+            "confirmed": 32212, 
+            "date": "2021-1-20", 
+            "deaths": 425, 
+            "recovered": 28511
+        }, 
+        {
+            "confirmed": 32386, 
+            "date": "2021-1-21", 
+            "deaths": 431, 
+            "recovered": 28668
+        }, 
+        {
+            "confirmed": 32560, 
+            "date": "2021-1-22", 
+            "deaths": 436, 
+            "recovered": 28832
+        }, 
+        {
+            "confirmed": 32732, 
+            "date": "2021-1-23", 
+            "deaths": 440, 
+            "recovered": 28993
+        }, 
+        {
+            "confirmed": 32904, 
+            "date": "2021-1-24", 
+            "deaths": 444, 
+            "recovered": 29151
+        }, 
+        {
+            "confirmed": 33075, 
+            "date": "2021-1-25", 
+            "deaths": 447, 
+            "recovered": 29305
+        }, 
+        {
+            "confirmed": 33250, 
+            "date": "2021-1-26", 
+            "deaths": 453, 
+            "recovered": 29468
+        }, 
+        {
+            "confirmed": 33420, 
+            "date": "2021-1-27", 
+            "deaths": 457, 
+            "recovered": 29633
+        }, 
+        {
+            "confirmed": 33589, 
+            "date": "2021-1-28", 
+            "deaths": 463, 
+            "recovered": 29787
+        }, 
+        {
+            "confirmed": 33757, 
+            "date": "2021-1-29", 
+            "deaths": 468, 
+            "recovered": 29944
+        }, 
+        {
+            "confirmed": 33922, 
+            "date": "2021-1-30", 
+            "deaths": 473, 
+            "recovered": 30110
+        }, 
+        {
+            "confirmed": 34085, 
+            "date": "2021-1-31", 
+            "deaths": 476, 
+            "recovered": 30271
+        }, 
+        {
+            "confirmed": 34245, 
+            "date": "2021-2-1", 
+            "deaths": 481, 
+            "recovered": 30429
+        }, 
+        {
+            "confirmed": 34401, 
+            "date": "2021-2-2", 
+            "deaths": 487, 
+            "recovered": 30596
+        }, 
+        {
+            "confirmed": 34555, 
+            "date": "2021-2-3", 
+            "deaths": 492, 
+            "recovered": 30752
+        }, 
+        {
+            "confirmed": 34709, 
+            "date": "2021-2-4", 
+            "deaths": 498, 
+            "recovered": 30905
+        }, 
+        {
+            "confirmed": 34859, 
+            "date": "2021-2-5", 
+            "deaths": 502, 
+            "recovered": 31069
+        }, 
+        {
+            "confirmed": 35008, 
+            "date": "2021-2-6", 
+            "deaths": 507, 
+            "recovered": 31230
+        }, 
+        {
+            "confirmed": 35157, 
+            "date": "2021-2-7", 
+            "deaths": 508, 
+            "recovered": 31397
+        }, 
+        {
+            "confirmed": 35303, 
+            "date": "2021-2-8", 
+            "deaths": 512, 
+            "recovered": 31551
+        }, 
+        {
+            "confirmed": 35446, 
+            "date": "2021-2-9", 
+            "deaths": 518, 
+            "recovered": 31710
         }
     ], 
     "Орловская область": [
@@ -70743,6 +77583,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 290, 
             "recovered": 20472
+        }, 
+        {
+            "confirmed": 23275, 
+            "date": "2021-1-11", 
+            "deaths": 292, 
+            "recovered": 20576
+        }, 
+        {
+            "confirmed": 23453, 
+            "date": "2021-1-12", 
+            "deaths": 295, 
+            "recovered": 20689
+        }, 
+        {
+            "confirmed": 23630, 
+            "date": "2021-1-13", 
+            "deaths": 299, 
+            "recovered": 20861
+        }, 
+        {
+            "confirmed": 23806, 
+            "date": "2021-1-14", 
+            "deaths": 301, 
+            "recovered": 21037
+        }, 
+        {
+            "confirmed": 23985, 
+            "date": "2021-1-15", 
+            "deaths": 303, 
+            "recovered": 21218
+        }, 
+        {
+            "confirmed": 24165, 
+            "date": "2021-1-16", 
+            "deaths": 305, 
+            "recovered": 21398
+        }, 
+        {
+            "confirmed": 24345, 
+            "date": "2021-1-17", 
+            "deaths": 307, 
+            "recovered": 21575
+        }, 
+        {
+            "confirmed": 24520, 
+            "date": "2021-1-18", 
+            "deaths": 309, 
+            "recovered": 21714
+        }, 
+        {
+            "confirmed": 24696, 
+            "date": "2021-1-19", 
+            "deaths": 311, 
+            "recovered": 21849
+        }, 
+        {
+            "confirmed": 24873, 
+            "date": "2021-1-20", 
+            "deaths": 313, 
+            "recovered": 21986
+        }, 
+        {
+            "confirmed": 25047, 
+            "date": "2021-1-21", 
+            "deaths": 315, 
+            "recovered": 22128
+        }, 
+        {
+            "confirmed": 25220, 
+            "date": "2021-1-22", 
+            "deaths": 317, 
+            "recovered": 22277
+        }, 
+        {
+            "confirmed": 25391, 
+            "date": "2021-1-23", 
+            "deaths": 319, 
+            "recovered": 22430
+        }, 
+        {
+            "confirmed": 25563, 
+            "date": "2021-1-24", 
+            "deaths": 322, 
+            "recovered": 22586
+        }, 
+        {
+            "confirmed": 25733, 
+            "date": "2021-1-25", 
+            "deaths": 325, 
+            "recovered": 22693
+        }, 
+        {
+            "confirmed": 25901, 
+            "date": "2021-1-26", 
+            "deaths": 330, 
+            "recovered": 22824
+        }, 
+        {
+            "confirmed": 26070, 
+            "date": "2021-1-27", 
+            "deaths": 335, 
+            "recovered": 22965
+        }, 
+        {
+            "confirmed": 26235, 
+            "date": "2021-1-28", 
+            "deaths": 340, 
+            "recovered": 23121
+        }, 
+        {
+            "confirmed": 26398, 
+            "date": "2021-1-29", 
+            "deaths": 345, 
+            "recovered": 23282
+        }, 
+        {
+            "confirmed": 26560, 
+            "date": "2021-1-30", 
+            "deaths": 348, 
+            "recovered": 23446
+        }, 
+        {
+            "confirmed": 26721, 
+            "date": "2021-1-31", 
+            "deaths": 349, 
+            "recovered": 23555
+        }, 
+        {
+            "confirmed": 26884, 
+            "date": "2021-2-1", 
+            "deaths": 352, 
+            "recovered": 23656
+        }, 
+        {
+            "confirmed": 27046, 
+            "date": "2021-2-2", 
+            "deaths": 356, 
+            "recovered": 23823
+        }, 
+        {
+            "confirmed": 27204, 
+            "date": "2021-2-3", 
+            "deaths": 360, 
+            "recovered": 23996
+        }, 
+        {
+            "confirmed": 27363, 
+            "date": "2021-2-4", 
+            "deaths": 365, 
+            "recovered": 24185
+        }, 
+        {
+            "confirmed": 27518, 
+            "date": "2021-2-5", 
+            "deaths": 369, 
+            "recovered": 24371
+        }, 
+        {
+            "confirmed": 27671, 
+            "date": "2021-2-6", 
+            "deaths": 373, 
+            "recovered": 24554
+        }, 
+        {
+            "confirmed": 27825, 
+            "date": "2021-2-7", 
+            "deaths": 375, 
+            "recovered": 24734
+        }, 
+        {
+            "confirmed": 27976, 
+            "date": "2021-2-8", 
+            "deaths": 377, 
+            "recovered": 24903
+        }, 
+        {
+            "confirmed": 28125, 
+            "date": "2021-2-9", 
+            "deaths": 382, 
+            "recovered": 25057
         }
     ], 
     "Пензенская область": [
@@ -72557,6 +79577,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 337, 
             "recovered": 22470
+        }, 
+        {
+            "confirmed": 28251, 
+            "date": "2021-1-11", 
+            "deaths": 340, 
+            "recovered": 22625
+        }, 
+        {
+            "confirmed": 28446, 
+            "date": "2021-1-12", 
+            "deaths": 342, 
+            "recovered": 22764
+        }, 
+        {
+            "confirmed": 28653, 
+            "date": "2021-1-13", 
+            "deaths": 345, 
+            "recovered": 22922
+        }, 
+        {
+            "confirmed": 28865, 
+            "date": "2021-1-14", 
+            "deaths": 347, 
+            "recovered": 23068
+        }, 
+        {
+            "confirmed": 29084, 
+            "date": "2021-1-15", 
+            "deaths": 349, 
+            "recovered": 23229
+        }, 
+        {
+            "confirmed": 29314, 
+            "date": "2021-1-16", 
+            "deaths": 352, 
+            "recovered": 23386
+        }, 
+        {
+            "confirmed": 29542, 
+            "date": "2021-1-17", 
+            "deaths": 353, 
+            "recovered": 23538
+        }, 
+        {
+            "confirmed": 29767, 
+            "date": "2021-1-18", 
+            "deaths": 353, 
+            "recovered": 23685
+        }, 
+        {
+            "confirmed": 29994, 
+            "date": "2021-1-19", 
+            "deaths": 356, 
+            "recovered": 23849
+        }, 
+        {
+            "confirmed": 30225, 
+            "date": "2021-1-20", 
+            "deaths": 358, 
+            "recovered": 23998
+        }, 
+        {
+            "confirmed": 30461, 
+            "date": "2021-1-21", 
+            "deaths": 361, 
+            "recovered": 24152
+        }, 
+        {
+            "confirmed": 30689, 
+            "date": "2021-1-22", 
+            "deaths": 363, 
+            "recovered": 24300
+        }, 
+        {
+            "confirmed": 30918, 
+            "date": "2021-1-23", 
+            "deaths": 366, 
+            "recovered": 24467
+        }, 
+        {
+            "confirmed": 31140, 
+            "date": "2021-1-24", 
+            "deaths": 367, 
+            "recovered": 24637
+        }, 
+        {
+            "confirmed": 31360, 
+            "date": "2021-1-25", 
+            "deaths": 367, 
+            "recovered": 24803
+        }, 
+        {
+            "confirmed": 31583, 
+            "date": "2021-1-26", 
+            "deaths": 370, 
+            "recovered": 24985
+        }, 
+        {
+            "confirmed": 31813, 
+            "date": "2021-1-27", 
+            "deaths": 373, 
+            "recovered": 25162
+        }, 
+        {
+            "confirmed": 32038, 
+            "date": "2021-1-28", 
+            "deaths": 376, 
+            "recovered": 25344
+        }, 
+        {
+            "confirmed": 32262, 
+            "date": "2021-1-29", 
+            "deaths": 379, 
+            "recovered": 25523
+        }, 
+        {
+            "confirmed": 32488, 
+            "date": "2021-1-30", 
+            "deaths": 381, 
+            "recovered": 25715
+        }, 
+        {
+            "confirmed": 32711, 
+            "date": "2021-1-31", 
+            "deaths": 382, 
+            "recovered": 25891
+        }, 
+        {
+            "confirmed": 32931, 
+            "date": "2021-2-1", 
+            "deaths": 382, 
+            "recovered": 26045
+        }, 
+        {
+            "confirmed": 33149, 
+            "date": "2021-2-2", 
+            "deaths": 385, 
+            "recovered": 26238
+        }, 
+        {
+            "confirmed": 33371, 
+            "date": "2021-2-3", 
+            "deaths": 388, 
+            "recovered": 26442
+        }, 
+        {
+            "confirmed": 33581, 
+            "date": "2021-2-4", 
+            "deaths": 391, 
+            "recovered": 26641
+        }, 
+        {
+            "confirmed": 33795, 
+            "date": "2021-2-5", 
+            "deaths": 394, 
+            "recovered": 26846
+        }, 
+        {
+            "confirmed": 34011, 
+            "date": "2021-2-6", 
+            "deaths": 396, 
+            "recovered": 27099
+        }, 
+        {
+            "confirmed": 34224, 
+            "date": "2021-2-7", 
+            "deaths": 397, 
+            "recovered": 27367
+        }, 
+        {
+            "confirmed": 34435, 
+            "date": "2021-2-8", 
+            "deaths": 397, 
+            "recovered": 27565
+        }, 
+        {
+            "confirmed": 34645, 
+            "date": "2021-2-9", 
+            "deaths": 400, 
+            "recovered": 27811
         }
     ], 
     "Пермский край": [
@@ -74371,6 +81571,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1234, 
             "recovered": 26886
+        }, 
+        {
+            "confirmed": 33949, 
+            "date": "2021-1-11", 
+            "deaths": 1245, 
+            "recovered": 27219
+        }, 
+        {
+            "confirmed": 34236, 
+            "date": "2021-1-12", 
+            "deaths": 1254, 
+            "recovered": 27576
+        }, 
+        {
+            "confirmed": 34522, 
+            "date": "2021-1-13", 
+            "deaths": 1263, 
+            "recovered": 27892
+        }, 
+        {
+            "confirmed": 34812, 
+            "date": "2021-1-14", 
+            "deaths": 1273, 
+            "recovered": 28203
+        }, 
+        {
+            "confirmed": 35106, 
+            "date": "2021-1-15", 
+            "deaths": 1282, 
+            "recovered": 28502
+        }, 
+        {
+            "confirmed": 35404, 
+            "date": "2021-1-16", 
+            "deaths": 1293, 
+            "recovered": 28873
+        }, 
+        {
+            "confirmed": 35700, 
+            "date": "2021-1-17", 
+            "deaths": 1302, 
+            "recovered": 29214
+        }, 
+        {
+            "confirmed": 35995, 
+            "date": "2021-1-18", 
+            "deaths": 1312, 
+            "recovered": 29423
+        }, 
+        {
+            "confirmed": 36292, 
+            "date": "2021-1-19", 
+            "deaths": 1323, 
+            "recovered": 29714
+        }, 
+        {
+            "confirmed": 36590, 
+            "date": "2021-1-20", 
+            "deaths": 1334, 
+            "recovered": 30017
+        }, 
+        {
+            "confirmed": 36887, 
+            "date": "2021-1-21", 
+            "deaths": 1344, 
+            "recovered": 30310
+        }, 
+        {
+            "confirmed": 37183, 
+            "date": "2021-1-22", 
+            "deaths": 1355, 
+            "recovered": 30599
+        }, 
+        {
+            "confirmed": 37477, 
+            "date": "2021-1-23", 
+            "deaths": 1364, 
+            "recovered": 30951
+        }, 
+        {
+            "confirmed": 37772, 
+            "date": "2021-1-24", 
+            "deaths": 1374, 
+            "recovered": 31158
+        }, 
+        {
+            "confirmed": 38069, 
+            "date": "2021-1-25", 
+            "deaths": 1385, 
+            "recovered": 31276
+        }, 
+        {
+            "confirmed": 38361, 
+            "date": "2021-1-26", 
+            "deaths": 1395, 
+            "recovered": 31544
+        }, 
+        {
+            "confirmed": 38651, 
+            "date": "2021-1-27", 
+            "deaths": 1405, 
+            "recovered": 31905
+        }, 
+        {
+            "confirmed": 38939, 
+            "date": "2021-1-28", 
+            "deaths": 1415, 
+            "recovered": 32208
+        }, 
+        {
+            "confirmed": 39228, 
+            "date": "2021-1-29", 
+            "deaths": 1424, 
+            "recovered": 32517
+        }, 
+        {
+            "confirmed": 39515, 
+            "date": "2021-1-30", 
+            "deaths": 1434, 
+            "recovered": 32850
+        }, 
+        {
+            "confirmed": 39801, 
+            "date": "2021-1-31", 
+            "deaths": 1442, 
+            "recovered": 32957
+        }, 
+        {
+            "confirmed": 40085, 
+            "date": "2021-2-1", 
+            "deaths": 1453, 
+            "recovered": 33045
+        }, 
+        {
+            "confirmed": 40366, 
+            "date": "2021-2-2", 
+            "deaths": 1465, 
+            "recovered": 33299
+        }, 
+        {
+            "confirmed": 40645, 
+            "date": "2021-2-3", 
+            "deaths": 1477, 
+            "recovered": 33618
+        }, 
+        {
+            "confirmed": 40924, 
+            "date": "2021-2-4", 
+            "deaths": 1488, 
+            "recovered": 33929
+        }, 
+        {
+            "confirmed": 41201, 
+            "date": "2021-2-5", 
+            "deaths": 1496, 
+            "recovered": 34201
+        }, 
+        {
+            "confirmed": 41481, 
+            "date": "2021-2-6", 
+            "deaths": 1510, 
+            "recovered": 34534
+        }, 
+        {
+            "confirmed": 41757, 
+            "date": "2021-2-7", 
+            "deaths": 1520, 
+            "recovered": 34691
+        }, 
+        {
+            "confirmed": 42031, 
+            "date": "2021-2-8", 
+            "deaths": 1531, 
+            "recovered": 34766
+        }, 
+        {
+            "confirmed": 42300, 
+            "date": "2021-2-9", 
+            "deaths": 1542, 
+            "recovered": 35025
         }
     ], 
     "Приморский край": [
@@ -76185,6 +83565,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 418, 
             "recovered": 22970
+        }, 
+        {
+            "confirmed": 31849, 
+            "date": "2021-1-11", 
+            "deaths": 423, 
+            "recovered": 23173
+        }, 
+        {
+            "confirmed": 32082, 
+            "date": "2021-1-12", 
+            "deaths": 426, 
+            "recovered": 23469
+        }, 
+        {
+            "confirmed": 32312, 
+            "date": "2021-1-13", 
+            "deaths": 429, 
+            "recovered": 23740
+        }, 
+        {
+            "confirmed": 32539, 
+            "date": "2021-1-14", 
+            "deaths": 434, 
+            "recovered": 24009
+        }, 
+        {
+            "confirmed": 32774, 
+            "date": "2021-1-15", 
+            "deaths": 439, 
+            "recovered": 24273
+        }, 
+        {
+            "confirmed": 33014, 
+            "date": "2021-1-16", 
+            "deaths": 445, 
+            "recovered": 24530
+        }, 
+        {
+            "confirmed": 33251, 
+            "date": "2021-1-17", 
+            "deaths": 451, 
+            "recovered": 24697
+        }, 
+        {
+            "confirmed": 33486, 
+            "date": "2021-1-18", 
+            "deaths": 456, 
+            "recovered": 24824
+        }, 
+        {
+            "confirmed": 33717, 
+            "date": "2021-1-19", 
+            "deaths": 462, 
+            "recovered": 25122
+        }, 
+        {
+            "confirmed": 33945, 
+            "date": "2021-1-20", 
+            "deaths": 467, 
+            "recovered": 25380
+        }, 
+        {
+            "confirmed": 34171, 
+            "date": "2021-1-21", 
+            "deaths": 472, 
+            "recovered": 25595
+        }, 
+        {
+            "confirmed": 34394, 
+            "date": "2021-1-22", 
+            "deaths": 478, 
+            "recovered": 25818
+        }, 
+        {
+            "confirmed": 34615, 
+            "date": "2021-1-23", 
+            "deaths": 482, 
+            "recovered": 26047
+        }, 
+        {
+            "confirmed": 34835, 
+            "date": "2021-1-24", 
+            "deaths": 488, 
+            "recovered": 26177
+        }, 
+        {
+            "confirmed": 35053, 
+            "date": "2021-1-25", 
+            "deaths": 493, 
+            "recovered": 26282
+        }, 
+        {
+            "confirmed": 35271, 
+            "date": "2021-1-26", 
+            "deaths": 498, 
+            "recovered": 26561
+        }, 
+        {
+            "confirmed": 35487, 
+            "date": "2021-1-27", 
+            "deaths": 503, 
+            "recovered": 26808
+        }, 
+        {
+            "confirmed": 35700, 
+            "date": "2021-1-28", 
+            "deaths": 509, 
+            "recovered": 27071
+        }, 
+        {
+            "confirmed": 35912, 
+            "date": "2021-1-29", 
+            "deaths": 514, 
+            "recovered": 27302
+        }, 
+        {
+            "confirmed": 36127, 
+            "date": "2021-1-30", 
+            "deaths": 520, 
+            "recovered": 27541
+        }, 
+        {
+            "confirmed": 36338, 
+            "date": "2021-1-31", 
+            "deaths": 525, 
+            "recovered": 27725
+        }, 
+        {
+            "confirmed": 36548, 
+            "date": "2021-2-1", 
+            "deaths": 531, 
+            "recovered": 27894
+        }, 
+        {
+            "confirmed": 36760, 
+            "date": "2021-2-2", 
+            "deaths": 536, 
+            "recovered": 28142
+        }, 
+        {
+            "confirmed": 36967, 
+            "date": "2021-2-3", 
+            "deaths": 541, 
+            "recovered": 28341
+        }, 
+        {
+            "confirmed": 37171, 
+            "date": "2021-2-4", 
+            "deaths": 547, 
+            "recovered": 28544
+        }, 
+        {
+            "confirmed": 37370, 
+            "date": "2021-2-5", 
+            "deaths": 552, 
+            "recovered": 28834
+        }, 
+        {
+            "confirmed": 37567, 
+            "date": "2021-2-6", 
+            "deaths": 557, 
+            "recovered": 29144
+        }, 
+        {
+            "confirmed": 37760, 
+            "date": "2021-2-7", 
+            "deaths": 563, 
+            "recovered": 29639
+        }, 
+        {
+            "confirmed": 37950, 
+            "date": "2021-2-8", 
+            "deaths": 569, 
+            "recovered": 29639
+        }, 
+        {
+            "confirmed": 38130, 
+            "date": "2021-2-9", 
+            "deaths": 574, 
+            "recovered": 29891
         }
     ], 
     "Псковская область": [
@@ -77999,6 +85559,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 106, 
             "recovered": 13605
+        }, 
+        {
+            "confirmed": 25810, 
+            "date": "2021-1-11", 
+            "deaths": 106, 
+            "recovered": 13740
+        }, 
+        {
+            "confirmed": 26039, 
+            "date": "2021-1-12", 
+            "deaths": 107, 
+            "recovered": 13981
+        }, 
+        {
+            "confirmed": 26284, 
+            "date": "2021-1-13", 
+            "deaths": 108, 
+            "recovered": 14308
+        }, 
+        {
+            "confirmed": 26483, 
+            "date": "2021-1-14", 
+            "deaths": 108, 
+            "recovered": 14498
+        }, 
+        {
+            "confirmed": 26757, 
+            "date": "2021-1-15", 
+            "deaths": 110, 
+            "recovered": 14579
+        }, 
+        {
+            "confirmed": 26941, 
+            "date": "2021-1-16", 
+            "deaths": 111, 
+            "recovered": 14829
+        }, 
+        {
+            "confirmed": 27212, 
+            "date": "2021-1-17", 
+            "deaths": 111, 
+            "recovered": 14944
+        }, 
+        {
+            "confirmed": 27422, 
+            "date": "2021-1-18", 
+            "deaths": 112, 
+            "recovered": 14958
+        }, 
+        {
+            "confirmed": 27605, 
+            "date": "2021-1-19", 
+            "deaths": 114, 
+            "recovered": 15159
+        }, 
+        {
+            "confirmed": 27802, 
+            "date": "2021-1-20", 
+            "deaths": 115, 
+            "recovered": 15504
+        }, 
+        {
+            "confirmed": 27934, 
+            "date": "2021-1-21", 
+            "deaths": 117, 
+            "recovered": 15887
+        }, 
+        {
+            "confirmed": 28129, 
+            "date": "2021-1-22", 
+            "deaths": 118, 
+            "recovered": 16121
+        }, 
+        {
+            "confirmed": 28292, 
+            "date": "2021-1-23", 
+            "deaths": 120, 
+            "recovered": 16313
+        }, 
+        {
+            "confirmed": 28473, 
+            "date": "2021-1-24", 
+            "deaths": 121, 
+            "recovered": 16349
+        }, 
+        {
+            "confirmed": 28565, 
+            "date": "2021-1-25", 
+            "deaths": 122, 
+            "recovered": 16461
+        }, 
+        {
+            "confirmed": 28710, 
+            "date": "2021-1-26", 
+            "deaths": 124, 
+            "recovered": 16748
+        }, 
+        {
+            "confirmed": 28773, 
+            "date": "2021-1-27", 
+            "deaths": 127, 
+            "recovered": 16982
+        }, 
+        {
+            "confirmed": 28871, 
+            "date": "2021-1-28", 
+            "deaths": 128, 
+            "recovered": 17197
+        }, 
+        {
+            "confirmed": 29007, 
+            "date": "2021-1-29", 
+            "deaths": 130, 
+            "recovered": 17387
+        }, 
+        {
+            "confirmed": 29178, 
+            "date": "2021-1-30", 
+            "deaths": 131, 
+            "recovered": 17470
+        }, 
+        {
+            "confirmed": 29328, 
+            "date": "2021-1-31", 
+            "deaths": 132, 
+            "recovered": 17638
+        }, 
+        {
+            "confirmed": 29493, 
+            "date": "2021-2-1", 
+            "deaths": 135, 
+            "recovered": 17710
+        }, 
+        {
+            "confirmed": 29608, 
+            "date": "2021-2-2", 
+            "deaths": 137, 
+            "recovered": 17943
+        }, 
+        {
+            "confirmed": 29650, 
+            "date": "2021-2-3", 
+            "deaths": 139, 
+            "recovered": 18086
+        }, 
+        {
+            "confirmed": 29751, 
+            "date": "2021-2-4", 
+            "deaths": 139, 
+            "recovered": 18295
+        }, 
+        {
+            "confirmed": 29875, 
+            "date": "2021-2-5", 
+            "deaths": 140, 
+            "recovered": 18593
+        }, 
+        {
+            "confirmed": 30038, 
+            "date": "2021-2-6", 
+            "deaths": 140, 
+            "recovered": 18779
+        }, 
+        {
+            "confirmed": 30121, 
+            "date": "2021-2-7", 
+            "deaths": 142, 
+            "recovered": 18881
+        }, 
+        {
+            "confirmed": 30214, 
+            "date": "2021-2-8", 
+            "deaths": 144, 
+            "recovered": 18918
+        }, 
+        {
+            "confirmed": 30254, 
+            "date": "2021-2-9", 
+            "deaths": 145, 
+            "recovered": 19138
         }
     ], 
     "Республика Адыгея": [
@@ -79813,6 +87553,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 101, 
             "recovered": 9765
+        }, 
+        {
+            "confirmed": 11867, 
+            "date": "2021-1-11", 
+            "deaths": 101, 
+            "recovered": 9813
+        }, 
+        {
+            "confirmed": 11936, 
+            "date": "2021-1-12", 
+            "deaths": 102, 
+            "recovered": 9880
+        }, 
+        {
+            "confirmed": 12008, 
+            "date": "2021-1-13", 
+            "deaths": 103, 
+            "recovered": 9960
+        }, 
+        {
+            "confirmed": 12078, 
+            "date": "2021-1-14", 
+            "deaths": 104, 
+            "recovered": 10051
+        }, 
+        {
+            "confirmed": 12146, 
+            "date": "2021-1-15", 
+            "deaths": 104, 
+            "recovered": 10138
+        }, 
+        {
+            "confirmed": 12211, 
+            "date": "2021-1-16", 
+            "deaths": 106, 
+            "recovered": 10222
+        }, 
+        {
+            "confirmed": 12278, 
+            "date": "2021-1-17", 
+            "deaths": 106, 
+            "recovered": 10274
+        }, 
+        {
+            "confirmed": 12343, 
+            "date": "2021-1-18", 
+            "deaths": 106, 
+            "recovered": 10329
+        }, 
+        {
+            "confirmed": 12406, 
+            "date": "2021-1-19", 
+            "deaths": 109, 
+            "recovered": 10392
+        }, 
+        {
+            "confirmed": 12468, 
+            "date": "2021-1-20", 
+            "deaths": 109, 
+            "recovered": 10465
+        }, 
+        {
+            "confirmed": 12523, 
+            "date": "2021-1-21", 
+            "deaths": 111, 
+            "recovered": 10547
+        }, 
+        {
+            "confirmed": 12580, 
+            "date": "2021-1-22", 
+            "deaths": 111, 
+            "recovered": 10641
+        }, 
+        {
+            "confirmed": 12638, 
+            "date": "2021-1-23", 
+            "deaths": 113, 
+            "recovered": 10710
+        }, 
+        {
+            "confirmed": 12690, 
+            "date": "2021-1-24", 
+            "deaths": 113, 
+            "recovered": 10767
+        }, 
+        {
+            "confirmed": 12746, 
+            "date": "2021-1-25", 
+            "deaths": 113, 
+            "recovered": 10815
+        }, 
+        {
+            "confirmed": 12796, 
+            "date": "2021-1-26", 
+            "deaths": 114, 
+            "recovered": 10859
+        }, 
+        {
+            "confirmed": 12844, 
+            "date": "2021-1-27", 
+            "deaths": 115, 
+            "recovered": 10927
+        }, 
+        {
+            "confirmed": 12895, 
+            "date": "2021-1-28", 
+            "deaths": 117, 
+            "recovered": 10982
+        }, 
+        {
+            "confirmed": 12941, 
+            "date": "2021-1-29", 
+            "deaths": 117, 
+            "recovered": 11067
+        }, 
+        {
+            "confirmed": 12990, 
+            "date": "2021-1-30", 
+            "deaths": 117, 
+            "recovered": 11118
+        }, 
+        {
+            "confirmed": 13035, 
+            "date": "2021-1-31", 
+            "deaths": 119, 
+            "recovered": 11163
+        }, 
+        {
+            "confirmed": 13082, 
+            "date": "2021-2-1", 
+            "deaths": 119, 
+            "recovered": 11204
+        }, 
+        {
+            "confirmed": 13122, 
+            "date": "2021-2-2", 
+            "deaths": 121, 
+            "recovered": 11250
+        }, 
+        {
+            "confirmed": 13160, 
+            "date": "2021-2-3", 
+            "deaths": 122, 
+            "recovered": 11300
+        }, 
+        {
+            "confirmed": 13199, 
+            "date": "2021-2-4", 
+            "deaths": 122, 
+            "recovered": 11348
+        }, 
+        {
+            "confirmed": 13239, 
+            "date": "2021-2-5", 
+            "deaths": 125, 
+            "recovered": 11387
+        }, 
+        {
+            "confirmed": 13276, 
+            "date": "2021-2-6", 
+            "deaths": 126, 
+            "recovered": 11424
+        }, 
+        {
+            "confirmed": 13311, 
+            "date": "2021-2-7", 
+            "deaths": 128, 
+            "recovered": 11458
+        }, 
+        {
+            "confirmed": 13349, 
+            "date": "2021-2-8", 
+            "deaths": 128, 
+            "recovered": 11496
+        }, 
+        {
+            "confirmed": 13382, 
+            "date": "2021-2-9", 
+            "deaths": 130, 
+            "recovered": 11537
         }
     ], 
     "Республика Алтай": [
@@ -81627,6 +89547,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 108, 
             "recovered": 13300
+        }, 
+        {
+            "confirmed": 14353, 
+            "date": "2021-1-11", 
+            "deaths": 108, 
+            "recovered": 13319
+        }, 
+        {
+            "confirmed": 14377, 
+            "date": "2021-1-12", 
+            "deaths": 108, 
+            "recovered": 13340
+        }, 
+        {
+            "confirmed": 14432, 
+            "date": "2021-1-13", 
+            "deaths": 108, 
+            "recovered": 13388
+        }, 
+        {
+            "confirmed": 14508, 
+            "date": "2021-1-14", 
+            "deaths": 111, 
+            "recovered": 13439
+        }, 
+        {
+            "confirmed": 14580, 
+            "date": "2021-1-15", 
+            "deaths": 113, 
+            "recovered": 13502
+        }, 
+        {
+            "confirmed": 14660, 
+            "date": "2021-1-16", 
+            "deaths": 116, 
+            "recovered": 13569
+        }, 
+        {
+            "confirmed": 14750, 
+            "date": "2021-1-17", 
+            "deaths": 116, 
+            "recovered": 13638
+        }, 
+        {
+            "confirmed": 14820, 
+            "date": "2021-1-18", 
+            "deaths": 116, 
+            "recovered": 13699
+        }, 
+        {
+            "confirmed": 14849, 
+            "date": "2021-1-19", 
+            "deaths": 116, 
+            "recovered": 13750
+        }, 
+        {
+            "confirmed": 14883, 
+            "date": "2021-1-20", 
+            "deaths": 116, 
+            "recovered": 13804
+        }, 
+        {
+            "confirmed": 14947, 
+            "date": "2021-1-21", 
+            "deaths": 117, 
+            "recovered": 13857
+        }, 
+        {
+            "confirmed": 15017, 
+            "date": "2021-1-22", 
+            "deaths": 117, 
+            "recovered": 13913
+        }, 
+        {
+            "confirmed": 15060, 
+            "date": "2021-1-23", 
+            "deaths": 117, 
+            "recovered": 13975
+        }, 
+        {
+            "confirmed": 15119, 
+            "date": "2021-1-24", 
+            "deaths": 117, 
+            "recovered": 14029
+        }, 
+        {
+            "confirmed": 15165, 
+            "date": "2021-1-25", 
+            "deaths": 125, 
+            "recovered": 14075
+        }, 
+        {
+            "confirmed": 15174, 
+            "date": "2021-1-26", 
+            "deaths": 128, 
+            "recovered": 14089
+        }, 
+        {
+            "confirmed": 15196, 
+            "date": "2021-1-27", 
+            "deaths": 130, 
+            "recovered": 14104
+        }, 
+        {
+            "confirmed": 15273, 
+            "date": "2021-1-28", 
+            "deaths": 133, 
+            "recovered": 14125
+        }, 
+        {
+            "confirmed": 15340, 
+            "date": "2021-1-29", 
+            "deaths": 134, 
+            "recovered": 14188
+        }, 
+        {
+            "confirmed": 15395, 
+            "date": "2021-1-30", 
+            "deaths": 134, 
+            "recovered": 14252
+        }, 
+        {
+            "confirmed": 15427, 
+            "date": "2021-1-31", 
+            "deaths": 134, 
+            "recovered": 14278
+        }, 
+        {
+            "confirmed": 15461, 
+            "date": "2021-2-1", 
+            "deaths": 134, 
+            "recovered": 14302
+        }, 
+        {
+            "confirmed": 15462, 
+            "date": "2021-2-2", 
+            "deaths": 134, 
+            "recovered": 14356
+        }, 
+        {
+            "confirmed": 15484, 
+            "date": "2021-2-3", 
+            "deaths": 134, 
+            "recovered": 14397
+        }, 
+        {
+            "confirmed": 15532, 
+            "date": "2021-2-4", 
+            "deaths": 135, 
+            "recovered": 14446
+        }, 
+        {
+            "confirmed": 15575, 
+            "date": "2021-2-5", 
+            "deaths": 135, 
+            "recovered": 14492
+        }, 
+        {
+            "confirmed": 15621, 
+            "date": "2021-2-6", 
+            "deaths": 135, 
+            "recovered": 14541
+        }, 
+        {
+            "confirmed": 15667, 
+            "date": "2021-2-7", 
+            "deaths": 135, 
+            "recovered": 14589
+        }, 
+        {
+            "confirmed": 15712, 
+            "date": "2021-2-8", 
+            "deaths": 135, 
+            "recovered": 14628
+        }, 
+        {
+            "confirmed": 15731, 
+            "date": "2021-2-9", 
+            "deaths": 135, 
+            "recovered": 14670
         }
     ], 
     "Республика Башкортостан": [
@@ -83441,6 +91541,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 155, 
             "recovered": 15480
+        }, 
+        {
+            "confirmed": 20901, 
+            "date": "2021-1-11", 
+            "deaths": 157, 
+            "recovered": 15566
+        }, 
+        {
+            "confirmed": 21068, 
+            "date": "2021-1-12", 
+            "deaths": 159, 
+            "recovered": 15852
+        }, 
+        {
+            "confirmed": 21235, 
+            "date": "2021-1-13", 
+            "deaths": 161, 
+            "recovered": 16001
+        }, 
+        {
+            "confirmed": 21402, 
+            "date": "2021-1-14", 
+            "deaths": 161, 
+            "recovered": 16111
+        }, 
+        {
+            "confirmed": 21569, 
+            "date": "2021-1-15", 
+            "deaths": 162, 
+            "recovered": 16188
+        }, 
+        {
+            "confirmed": 21735, 
+            "date": "2021-1-16", 
+            "deaths": 164, 
+            "recovered": 16397
+        }, 
+        {
+            "confirmed": 21902, 
+            "date": "2021-1-17", 
+            "deaths": 165, 
+            "recovered": 16522
+        }, 
+        {
+            "confirmed": 22068, 
+            "date": "2021-1-18", 
+            "deaths": 167, 
+            "recovered": 16570
+        }, 
+        {
+            "confirmed": 22235, 
+            "date": "2021-1-19", 
+            "deaths": 167, 
+            "recovered": 16743
+        }, 
+        {
+            "confirmed": 22403, 
+            "date": "2021-1-20", 
+            "deaths": 167, 
+            "recovered": 16907
+        }, 
+        {
+            "confirmed": 22570, 
+            "date": "2021-1-21", 
+            "deaths": 169, 
+            "recovered": 17189
+        }, 
+        {
+            "confirmed": 22738, 
+            "date": "2021-1-22", 
+            "deaths": 172, 
+            "recovered": 17230
+        }, 
+        {
+            "confirmed": 22906, 
+            "date": "2021-1-23", 
+            "deaths": 172, 
+            "recovered": 17334
+        }, 
+        {
+            "confirmed": 23074, 
+            "date": "2021-1-24", 
+            "deaths": 172, 
+            "recovered": 17387
+        }, 
+        {
+            "confirmed": 23242, 
+            "date": "2021-1-25", 
+            "deaths": 175, 
+            "recovered": 17394
+        }, 
+        {
+            "confirmed": 23410, 
+            "date": "2021-1-26", 
+            "deaths": 177, 
+            "recovered": 17591
+        }, 
+        {
+            "confirmed": 23577, 
+            "date": "2021-1-27", 
+            "deaths": 178, 
+            "recovered": 17763
+        }, 
+        {
+            "confirmed": 23745, 
+            "date": "2021-1-28", 
+            "deaths": 180, 
+            "recovered": 17924
+        }, 
+        {
+            "confirmed": 23912, 
+            "date": "2021-1-29", 
+            "deaths": 182, 
+            "recovered": 18062
+        }, 
+        {
+            "confirmed": 24080, 
+            "date": "2021-1-30", 
+            "deaths": 184, 
+            "recovered": 18234
+        }, 
+        {
+            "confirmed": 24247, 
+            "date": "2021-1-31", 
+            "deaths": 185, 
+            "recovered": 18340
+        }, 
+        {
+            "confirmed": 24412, 
+            "date": "2021-2-1", 
+            "deaths": 188, 
+            "recovered": 18441
+        }, 
+        {
+            "confirmed": 24577, 
+            "date": "2021-2-2", 
+            "deaths": 190, 
+            "recovered": 18603
+        }, 
+        {
+            "confirmed": 24744, 
+            "date": "2021-2-3", 
+            "deaths": 193, 
+            "recovered": 18760
+        }, 
+        {
+            "confirmed": 24909, 
+            "date": "2021-2-4", 
+            "deaths": 195, 
+            "recovered": 18904
+        }, 
+        {
+            "confirmed": 25073, 
+            "date": "2021-2-5", 
+            "deaths": 196, 
+            "recovered": 19062
+        }, 
+        {
+            "confirmed": 25239, 
+            "date": "2021-2-6", 
+            "deaths": 200, 
+            "recovered": 19211
+        }, 
+        {
+            "confirmed": 25403, 
+            "date": "2021-2-7", 
+            "deaths": 204, 
+            "recovered": 19314
+        }, 
+        {
+            "confirmed": 25566, 
+            "date": "2021-2-8", 
+            "deaths": 208, 
+            "recovered": 19368
+        }, 
+        {
+            "confirmed": 25731, 
+            "date": "2021-2-9", 
+            "deaths": 210, 
+            "recovered": 19555
         }
     ], 
     "Республика Бурятия": [
@@ -85255,6 +93535,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 620, 
             "recovered": 24657
+        }, 
+        {
+            "confirmed": 27403, 
+            "date": "2021-1-11", 
+            "deaths": 623, 
+            "recovered": 24794
+        }, 
+        {
+            "confirmed": 27552, 
+            "date": "2021-1-12", 
+            "deaths": 626, 
+            "recovered": 24925
+        }, 
+        {
+            "confirmed": 27703, 
+            "date": "2021-1-13", 
+            "deaths": 628, 
+            "recovered": 25123
+        }, 
+        {
+            "confirmed": 27853, 
+            "date": "2021-1-14", 
+            "deaths": 630, 
+            "recovered": 25302
+        }, 
+        {
+            "confirmed": 28006, 
+            "date": "2021-1-15", 
+            "deaths": 632, 
+            "recovered": 25465
+        }, 
+        {
+            "confirmed": 28162, 
+            "date": "2021-1-16", 
+            "deaths": 633, 
+            "recovered": 25630
+        }, 
+        {
+            "confirmed": 28316, 
+            "date": "2021-1-17", 
+            "deaths": 634, 
+            "recovered": 25780
+        }, 
+        {
+            "confirmed": 28469, 
+            "date": "2021-1-18", 
+            "deaths": 636, 
+            "recovered": 25882
+        }, 
+        {
+            "confirmed": 28619, 
+            "date": "2021-1-19", 
+            "deaths": 639, 
+            "recovered": 25986
+        }, 
+        {
+            "confirmed": 28769, 
+            "date": "2021-1-20", 
+            "deaths": 641, 
+            "recovered": 26186
+        }, 
+        {
+            "confirmed": 28918, 
+            "date": "2021-1-21", 
+            "deaths": 643, 
+            "recovered": 26350
+        }, 
+        {
+            "confirmed": 29069, 
+            "date": "2021-1-22", 
+            "deaths": 645, 
+            "recovered": 26517
+        }, 
+        {
+            "confirmed": 29222, 
+            "date": "2021-1-23", 
+            "deaths": 647, 
+            "recovered": 26693
+        }, 
+        {
+            "confirmed": 29372, 
+            "date": "2021-1-24", 
+            "deaths": 649, 
+            "recovered": 26872
+        }, 
+        {
+            "confirmed": 29519, 
+            "date": "2021-1-25", 
+            "deaths": 650, 
+            "recovered": 26983
+        }, 
+        {
+            "confirmed": 29665, 
+            "date": "2021-1-26", 
+            "deaths": 653, 
+            "recovered": 27105
+        }, 
+        {
+            "confirmed": 29813, 
+            "date": "2021-1-27", 
+            "deaths": 656, 
+            "recovered": 27303
+        }, 
+        {
+            "confirmed": 29958, 
+            "date": "2021-1-28", 
+            "deaths": 659, 
+            "recovered": 27480
+        }, 
+        {
+            "confirmed": 30109, 
+            "date": "2021-1-29", 
+            "deaths": 661, 
+            "recovered": 27675
+        }, 
+        {
+            "confirmed": 30262, 
+            "date": "2021-1-30", 
+            "deaths": 663, 
+            "recovered": 27848
+        }, 
+        {
+            "confirmed": 30417, 
+            "date": "2021-1-31", 
+            "deaths": 666, 
+            "recovered": 28003
+        }, 
+        {
+            "confirmed": 30569, 
+            "date": "2021-2-1", 
+            "deaths": 669, 
+            "recovered": 28103
+        }, 
+        {
+            "confirmed": 30720, 
+            "date": "2021-2-2", 
+            "deaths": 670, 
+            "recovered": 28233
+        }, 
+        {
+            "confirmed": 30860, 
+            "date": "2021-2-3", 
+            "deaths": 672, 
+            "recovered": 28411
+        }, 
+        {
+            "confirmed": 30994, 
+            "date": "2021-2-4", 
+            "deaths": 675, 
+            "recovered": 28580
+        }, 
+        {
+            "confirmed": 31129, 
+            "date": "2021-2-5", 
+            "deaths": 676, 
+            "recovered": 28733
+        }, 
+        {
+            "confirmed": 31263, 
+            "date": "2021-2-6", 
+            "deaths": 679, 
+            "recovered": 28888
+        }, 
+        {
+            "confirmed": 31395, 
+            "date": "2021-2-7", 
+            "deaths": 681, 
+            "recovered": 29006
+        }, 
+        {
+            "confirmed": 31525, 
+            "date": "2021-2-8", 
+            "deaths": 683, 
+            "recovered": 29084
+        }, 
+        {
+            "confirmed": 31656, 
+            "date": "2021-2-9", 
+            "deaths": 684, 
+            "recovered": 29186
         }
     ], 
     "Республика Дагестан": [
@@ -87069,6 +95529,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1153, 
             "recovered": 21699
+        }, 
+        {
+            "confirmed": 25205, 
+            "date": "2021-1-11", 
+            "deaths": 1156, 
+            "recovered": 21852
+        }, 
+        {
+            "confirmed": 25361, 
+            "date": "2021-1-12", 
+            "deaths": 1161, 
+            "recovered": 22003
+        }, 
+        {
+            "confirmed": 25520, 
+            "date": "2021-1-13", 
+            "deaths": 1167, 
+            "recovered": 22171
+        }, 
+        {
+            "confirmed": 25681, 
+            "date": "2021-1-14", 
+            "deaths": 1172, 
+            "recovered": 22336
+        }, 
+        {
+            "confirmed": 25839, 
+            "date": "2021-1-15", 
+            "deaths": 1176, 
+            "recovered": 22499
+        }, 
+        {
+            "confirmed": 25996, 
+            "date": "2021-1-16", 
+            "deaths": 1182, 
+            "recovered": 22671
+        }, 
+        {
+            "confirmed": 26156, 
+            "date": "2021-1-17", 
+            "deaths": 1185, 
+            "recovered": 22831
+        }, 
+        {
+            "confirmed": 26314, 
+            "date": "2021-1-18", 
+            "deaths": 1187, 
+            "recovered": 22996
+        }, 
+        {
+            "confirmed": 26469, 
+            "date": "2021-1-19", 
+            "deaths": 1194, 
+            "recovered": 23139
+        }, 
+        {
+            "confirmed": 26619, 
+            "date": "2021-1-20", 
+            "deaths": 1202, 
+            "recovered": 23320
+        }, 
+        {
+            "confirmed": 26769, 
+            "date": "2021-1-21", 
+            "deaths": 1204, 
+            "recovered": 23494
+        }, 
+        {
+            "confirmed": 26918, 
+            "date": "2021-1-22", 
+            "deaths": 1210, 
+            "recovered": 23657
+        }, 
+        {
+            "confirmed": 27066, 
+            "date": "2021-1-23", 
+            "deaths": 1214, 
+            "recovered": 23814
+        }, 
+        {
+            "confirmed": 27213, 
+            "date": "2021-1-24", 
+            "deaths": 1218, 
+            "recovered": 23968
+        }, 
+        {
+            "confirmed": 27352, 
+            "date": "2021-1-25", 
+            "deaths": 1219, 
+            "recovered": 24116
+        }, 
+        {
+            "confirmed": 27462, 
+            "date": "2021-1-26", 
+            "deaths": 1221, 
+            "recovered": 24258
+        }, 
+        {
+            "confirmed": 27564, 
+            "date": "2021-1-27", 
+            "deaths": 1226, 
+            "recovered": 24371
+        }, 
+        {
+            "confirmed": 27652, 
+            "date": "2021-1-28", 
+            "deaths": 1232, 
+            "recovered": 24506
+        }, 
+        {
+            "confirmed": 27750, 
+            "date": "2021-1-29", 
+            "deaths": 1238, 
+            "recovered": 24648
+        }, 
+        {
+            "confirmed": 27847, 
+            "date": "2021-1-30", 
+            "deaths": 1242, 
+            "recovered": 24781
+        }, 
+        {
+            "confirmed": 27943, 
+            "date": "2021-1-31", 
+            "deaths": 1244, 
+            "recovered": 24909
+        }, 
+        {
+            "confirmed": 28041, 
+            "date": "2021-2-1", 
+            "deaths": 1246, 
+            "recovered": 25033
+        }, 
+        {
+            "confirmed": 28123, 
+            "date": "2021-2-2", 
+            "deaths": 1252, 
+            "recovered": 25163
+        }, 
+        {
+            "confirmed": 28203, 
+            "date": "2021-2-3", 
+            "deaths": 1256, 
+            "recovered": 25277
+        }, 
+        {
+            "confirmed": 28284, 
+            "date": "2021-2-4", 
+            "deaths": 1259, 
+            "recovered": 25400
+        }, 
+        {
+            "confirmed": 28366, 
+            "date": "2021-2-5", 
+            "deaths": 1264, 
+            "recovered": 25532
+        }, 
+        {
+            "confirmed": 28451, 
+            "date": "2021-2-6", 
+            "deaths": 1270, 
+            "recovered": 25661
+        }, 
+        {
+            "confirmed": 28527, 
+            "date": "2021-2-7", 
+            "deaths": 1271, 
+            "recovered": 25786
+        }, 
+        {
+            "confirmed": 28598, 
+            "date": "2021-2-8", 
+            "deaths": 1273, 
+            "recovered": 25917
+        }, 
+        {
+            "confirmed": 28668, 
+            "date": "2021-2-9", 
+            "deaths": 1278, 
+            "recovered": 26047
         }
     ], 
     "Республика Ингушетия": [
@@ -88883,6 +97523,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 147, 
             "recovered": 11060
+        }, 
+        {
+            "confirmed": 12911, 
+            "date": "2021-1-11", 
+            "deaths": 148, 
+            "recovered": 11141
+        }, 
+        {
+            "confirmed": 12991, 
+            "date": "2021-1-12", 
+            "deaths": 149, 
+            "recovered": 11148
+        }, 
+        {
+            "confirmed": 13058, 
+            "date": "2021-1-13", 
+            "deaths": 149, 
+            "recovered": 11173
+        }, 
+        {
+            "confirmed": 13127, 
+            "date": "2021-1-14", 
+            "deaths": 149, 
+            "recovered": 11233
+        }, 
+        {
+            "confirmed": 13193, 
+            "date": "2021-1-15", 
+            "deaths": 151, 
+            "recovered": 11297
+        }, 
+        {
+            "confirmed": 13247, 
+            "date": "2021-1-16", 
+            "deaths": 152, 
+            "recovered": 11433
+        }, 
+        {
+            "confirmed": 13300, 
+            "date": "2021-1-17", 
+            "deaths": 153, 
+            "recovered": 11473
+        }, 
+        {
+            "confirmed": 13356, 
+            "date": "2021-1-18", 
+            "deaths": 153, 
+            "recovered": 11495
+        }, 
+        {
+            "confirmed": 13407, 
+            "date": "2021-1-19", 
+            "deaths": 153, 
+            "recovered": 11526
+        }, 
+        {
+            "confirmed": 13459, 
+            "date": "2021-1-20", 
+            "deaths": 153, 
+            "recovered": 11561
+        }, 
+        {
+            "confirmed": 13513, 
+            "date": "2021-1-21", 
+            "deaths": 154, 
+            "recovered": 11671
+        }, 
+        {
+            "confirmed": 13564, 
+            "date": "2021-1-22", 
+            "deaths": 156, 
+            "recovered": 11701
+        }, 
+        {
+            "confirmed": 13614, 
+            "date": "2021-1-23", 
+            "deaths": 156, 
+            "recovered": 11804
+        }, 
+        {
+            "confirmed": 13661, 
+            "date": "2021-1-24", 
+            "deaths": 156, 
+            "recovered": 11822
+        }, 
+        {
+            "confirmed": 13706, 
+            "date": "2021-1-25", 
+            "deaths": 156, 
+            "recovered": 11848
+        }, 
+        {
+            "confirmed": 13744, 
+            "date": "2021-1-26", 
+            "deaths": 157, 
+            "recovered": 11975
+        }, 
+        {
+            "confirmed": 13784, 
+            "date": "2021-1-27", 
+            "deaths": 159, 
+            "recovered": 11993
+        }, 
+        {
+            "confirmed": 13826, 
+            "date": "2021-1-28", 
+            "deaths": 159, 
+            "recovered": 12032
+        }, 
+        {
+            "confirmed": 13870, 
+            "date": "2021-1-29", 
+            "deaths": 160, 
+            "recovered": 12063
+        }, 
+        {
+            "confirmed": 13915, 
+            "date": "2021-1-30", 
+            "deaths": 160, 
+            "recovered": 12076
+        }, 
+        {
+            "confirmed": 13957, 
+            "date": "2021-1-31", 
+            "deaths": 160, 
+            "recovered": 12149
+        }, 
+        {
+            "confirmed": 13996, 
+            "date": "2021-2-1", 
+            "deaths": 160, 
+            "recovered": 12156
+        }, 
+        {
+            "confirmed": 14031, 
+            "date": "2021-2-2", 
+            "deaths": 161, 
+            "recovered": 12214
+        }, 
+        {
+            "confirmed": 14067, 
+            "date": "2021-2-3", 
+            "deaths": 161, 
+            "recovered": 12280
+        }, 
+        {
+            "confirmed": 14102, 
+            "date": "2021-2-4", 
+            "deaths": 161, 
+            "recovered": 12306
+        }, 
+        {
+            "confirmed": 14135, 
+            "date": "2021-2-5", 
+            "deaths": 162, 
+            "recovered": 12365
+        }, 
+        {
+            "confirmed": 14169, 
+            "date": "2021-2-6", 
+            "deaths": 162, 
+            "recovered": 12389
+        }, 
+        {
+            "confirmed": 14205, 
+            "date": "2021-2-7", 
+            "deaths": 163, 
+            "recovered": 12404
+        }, 
+        {
+            "confirmed": 14238, 
+            "date": "2021-2-8", 
+            "deaths": 164, 
+            "recovered": 12414
+        }, 
+        {
+            "confirmed": 14273, 
+            "date": "2021-2-9", 
+            "deaths": 165, 
+            "recovered": 12491
         }
     ], 
     "Республика Калмыкия": [
@@ -90697,6 +99517,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 211, 
             "recovered": 13181
+        }, 
+        {
+            "confirmed": 15794, 
+            "date": "2021-1-11", 
+            "deaths": 214, 
+            "recovered": 13215
+        }, 
+        {
+            "confirmed": 15880, 
+            "date": "2021-1-12", 
+            "deaths": 216, 
+            "recovered": 13269
+        }, 
+        {
+            "confirmed": 15973, 
+            "date": "2021-1-13", 
+            "deaths": 218, 
+            "recovered": 13348
+        }, 
+        {
+            "confirmed": 16064, 
+            "date": "2021-1-14", 
+            "deaths": 221, 
+            "recovered": 13378
+        }, 
+        {
+            "confirmed": 16152, 
+            "date": "2021-1-15", 
+            "deaths": 221, 
+            "recovered": 13447
+        }, 
+        {
+            "confirmed": 16245, 
+            "date": "2021-1-16", 
+            "deaths": 224, 
+            "recovered": 13577
+        }, 
+        {
+            "confirmed": 16330, 
+            "date": "2021-1-17", 
+            "deaths": 225, 
+            "recovered": 13621
+        }, 
+        {
+            "confirmed": 16411, 
+            "date": "2021-1-18", 
+            "deaths": 228, 
+            "recovered": 13710
+        }, 
+        {
+            "confirmed": 16494, 
+            "date": "2021-1-19", 
+            "deaths": 229, 
+            "recovered": 13801
+        }, 
+        {
+            "confirmed": 16581, 
+            "date": "2021-1-20", 
+            "deaths": 231, 
+            "recovered": 13933
+        }, 
+        {
+            "confirmed": 16668, 
+            "date": "2021-1-21", 
+            "deaths": 235, 
+            "recovered": 14068
+        }, 
+        {
+            "confirmed": 16743, 
+            "date": "2021-1-22", 
+            "deaths": 236, 
+            "recovered": 14158
+        }, 
+        {
+            "confirmed": 16820, 
+            "date": "2021-1-23", 
+            "deaths": 237, 
+            "recovered": 14293
+        }, 
+        {
+            "confirmed": 16896, 
+            "date": "2021-1-24", 
+            "deaths": 238, 
+            "recovered": 14396
+        }, 
+        {
+            "confirmed": 16968, 
+            "date": "2021-1-25", 
+            "deaths": 240, 
+            "recovered": 14448
+        }, 
+        {
+            "confirmed": 17039, 
+            "date": "2021-1-26", 
+            "deaths": 243, 
+            "recovered": 14593
+        }, 
+        {
+            "confirmed": 17113, 
+            "date": "2021-1-27", 
+            "deaths": 245, 
+            "recovered": 14732
+        }, 
+        {
+            "confirmed": 17194, 
+            "date": "2021-1-28", 
+            "deaths": 248, 
+            "recovered": 14933
+        }, 
+        {
+            "confirmed": 17270, 
+            "date": "2021-1-29", 
+            "deaths": 250, 
+            "recovered": 15058
+        }, 
+        {
+            "confirmed": 17345, 
+            "date": "2021-1-30", 
+            "deaths": 252, 
+            "recovered": 15122
+        }, 
+        {
+            "confirmed": 17424, 
+            "date": "2021-1-31", 
+            "deaths": 254, 
+            "recovered": 15215
+        }, 
+        {
+            "confirmed": 17494, 
+            "date": "2021-2-1", 
+            "deaths": 256, 
+            "recovered": 15469
+        }, 
+        {
+            "confirmed": 17567, 
+            "date": "2021-2-2", 
+            "deaths": 258, 
+            "recovered": 15708
+        }, 
+        {
+            "confirmed": 17636, 
+            "date": "2021-2-3", 
+            "deaths": 260, 
+            "recovered": 15954
+        }, 
+        {
+            "confirmed": 17711, 
+            "date": "2021-2-4", 
+            "deaths": 262, 
+            "recovered": 16193
+        }, 
+        {
+            "confirmed": 17784, 
+            "date": "2021-2-5", 
+            "deaths": 264, 
+            "recovered": 16331
+        }, 
+        {
+            "confirmed": 17856, 
+            "date": "2021-2-6", 
+            "deaths": 266, 
+            "recovered": 16466
+        }, 
+        {
+            "confirmed": 17926, 
+            "date": "2021-2-7", 
+            "deaths": 268, 
+            "recovered": 16598
+        }, 
+        {
+            "confirmed": 17992, 
+            "date": "2021-2-8", 
+            "deaths": 270, 
+            "recovered": 16719
+        }, 
+        {
+            "confirmed": 18056, 
+            "date": "2021-2-9", 
+            "deaths": 272, 
+            "recovered": 16834
         }
     ], 
     "Республика Карелия": [
@@ -92511,6 +101511,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 183, 
             "recovered": 24676
+        }, 
+        {
+            "confirmed": 30703, 
+            "date": "2021-1-11", 
+            "deaths": 186, 
+            "recovered": 24974
+        }, 
+        {
+            "confirmed": 30879, 
+            "date": "2021-1-12", 
+            "deaths": 188, 
+            "recovered": 25284
+        }, 
+        {
+            "confirmed": 31122, 
+            "date": "2021-1-13", 
+            "deaths": 190, 
+            "recovered": 25585
+        }, 
+        {
+            "confirmed": 31403, 
+            "date": "2021-1-14", 
+            "deaths": 193, 
+            "recovered": 25835
+        }, 
+        {
+            "confirmed": 31694, 
+            "date": "2021-1-15", 
+            "deaths": 194, 
+            "recovered": 26093
+        }, 
+        {
+            "confirmed": 31983, 
+            "date": "2021-1-16", 
+            "deaths": 197, 
+            "recovered": 26420
+        }, 
+        {
+            "confirmed": 32276, 
+            "date": "2021-1-17", 
+            "deaths": 199, 
+            "recovered": 26737
+        }, 
+        {
+            "confirmed": 32561, 
+            "date": "2021-1-18", 
+            "deaths": 199, 
+            "recovered": 27056
+        }, 
+        {
+            "confirmed": 32843, 
+            "date": "2021-1-19", 
+            "deaths": 202, 
+            "recovered": 27406
+        }, 
+        {
+            "confirmed": 33123, 
+            "date": "2021-1-20", 
+            "deaths": 204, 
+            "recovered": 27701
+        }, 
+        {
+            "confirmed": 33402, 
+            "date": "2021-1-21", 
+            "deaths": 207, 
+            "recovered": 28013
+        }, 
+        {
+            "confirmed": 33687, 
+            "date": "2021-1-22", 
+            "deaths": 209, 
+            "recovered": 28315
+        }, 
+        {
+            "confirmed": 33962, 
+            "date": "2021-1-23", 
+            "deaths": 212, 
+            "recovered": 28617
+        }, 
+        {
+            "confirmed": 34231, 
+            "date": "2021-1-24", 
+            "deaths": 214, 
+            "recovered": 28895
+        }, 
+        {
+            "confirmed": 34467, 
+            "date": "2021-1-25", 
+            "deaths": 214, 
+            "recovered": 29105
+        }, 
+        {
+            "confirmed": 34697, 
+            "date": "2021-1-26", 
+            "deaths": 217, 
+            "recovered": 29354
+        }, 
+        {
+            "confirmed": 34938, 
+            "date": "2021-1-27", 
+            "deaths": 219, 
+            "recovered": 29604
+        }, 
+        {
+            "confirmed": 35178, 
+            "date": "2021-1-28", 
+            "deaths": 222, 
+            "recovered": 29906
+        }, 
+        {
+            "confirmed": 35417, 
+            "date": "2021-1-29", 
+            "deaths": 225, 
+            "recovered": 30218
+        }, 
+        {
+            "confirmed": 35668, 
+            "date": "2021-1-30", 
+            "deaths": 227, 
+            "recovered": 30540
+        }, 
+        {
+            "confirmed": 35905, 
+            "date": "2021-1-31", 
+            "deaths": 230, 
+            "recovered": 30806
+        }, 
+        {
+            "confirmed": 36140, 
+            "date": "2021-2-1", 
+            "deaths": 230, 
+            "recovered": 31033
+        }, 
+        {
+            "confirmed": 36371, 
+            "date": "2021-2-2", 
+            "deaths": 233, 
+            "recovered": 31331
+        }, 
+        {
+            "confirmed": 36590, 
+            "date": "2021-2-3", 
+            "deaths": 237, 
+            "recovered": 31587
+        }, 
+        {
+            "confirmed": 36824, 
+            "date": "2021-2-4", 
+            "deaths": 240, 
+            "recovered": 31874
+        }, 
+        {
+            "confirmed": 37061, 
+            "date": "2021-2-5", 
+            "deaths": 244, 
+            "recovered": 32175
+        }, 
+        {
+            "confirmed": 37290, 
+            "date": "2021-2-6", 
+            "deaths": 248, 
+            "recovered": 32487
+        }, 
+        {
+            "confirmed": 37495, 
+            "date": "2021-2-7", 
+            "deaths": 251, 
+            "recovered": 32729
+        }, 
+        {
+            "confirmed": 37675, 
+            "date": "2021-2-8", 
+            "deaths": 254, 
+            "recovered": 32950
+        }, 
+        {
+            "confirmed": 37850, 
+            "date": "2021-2-9", 
+            "deaths": 257, 
+            "recovered": 33181
         }
     ], 
     "Республика Коми": [
@@ -94325,6 +103505,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 616, 
             "recovered": 30774
+        }, 
+        {
+            "confirmed": 32943, 
+            "date": "2021-1-11", 
+            "deaths": 619, 
+            "recovered": 31021
+        }, 
+        {
+            "confirmed": 33153, 
+            "date": "2021-1-12", 
+            "deaths": 625, 
+            "recovered": 31272
+        }, 
+        {
+            "confirmed": 33365, 
+            "date": "2021-1-13", 
+            "deaths": 630, 
+            "recovered": 31547
+        }, 
+        {
+            "confirmed": 33570, 
+            "date": "2021-1-14", 
+            "deaths": 633, 
+            "recovered": 31814
+        }, 
+        {
+            "confirmed": 33768, 
+            "date": "2021-1-15", 
+            "deaths": 638, 
+            "recovered": 32085
+        }, 
+        {
+            "confirmed": 33969, 
+            "date": "2021-1-16", 
+            "deaths": 643, 
+            "recovered": 32362
+        }, 
+        {
+            "confirmed": 34165, 
+            "date": "2021-1-17", 
+            "deaths": 647, 
+            "recovered": 32613
+        }, 
+        {
+            "confirmed": 34356, 
+            "date": "2021-1-18", 
+            "deaths": 648, 
+            "recovered": 32886
+        }, 
+        {
+            "confirmed": 34549, 
+            "date": "2021-1-19", 
+            "deaths": 651, 
+            "recovered": 33068
+        }, 
+        {
+            "confirmed": 34738, 
+            "date": "2021-1-20", 
+            "deaths": 652, 
+            "recovered": 33253
+        }, 
+        {
+            "confirmed": 34896, 
+            "date": "2021-1-21", 
+            "deaths": 652, 
+            "recovered": 33450
+        }, 
+        {
+            "confirmed": 35066, 
+            "date": "2021-1-22", 
+            "deaths": 655, 
+            "recovered": 33637
+        }, 
+        {
+            "confirmed": 35228, 
+            "date": "2021-1-23", 
+            "deaths": 659, 
+            "recovered": 33816
+        }, 
+        {
+            "confirmed": 35381, 
+            "date": "2021-1-24", 
+            "deaths": 663, 
+            "recovered": 33997
+        }, 
+        {
+            "confirmed": 35528, 
+            "date": "2021-1-25", 
+            "deaths": 668, 
+            "recovered": 34171
+        }, 
+        {
+            "confirmed": 35671, 
+            "date": "2021-1-26", 
+            "deaths": 673, 
+            "recovered": 34346
+        }, 
+        {
+            "confirmed": 35813, 
+            "date": "2021-1-27", 
+            "deaths": 680, 
+            "recovered": 34503
+        }, 
+        {
+            "confirmed": 35957, 
+            "date": "2021-1-28", 
+            "deaths": 685, 
+            "recovered": 34657
+        }, 
+        {
+            "confirmed": 36098, 
+            "date": "2021-1-29", 
+            "deaths": 688, 
+            "recovered": 34799
+        }, 
+        {
+            "confirmed": 36239, 
+            "date": "2021-1-30", 
+            "deaths": 689, 
+            "recovered": 34942
+        }, 
+        {
+            "confirmed": 36383, 
+            "date": "2021-1-31", 
+            "deaths": 690, 
+            "recovered": 35095
+        }, 
+        {
+            "confirmed": 36518, 
+            "date": "2021-2-1", 
+            "deaths": 692, 
+            "recovered": 35239
+        }, 
+        {
+            "confirmed": 36655, 
+            "date": "2021-2-2", 
+            "deaths": 695, 
+            "recovered": 35382
+        }, 
+        {
+            "confirmed": 36790, 
+            "date": "2021-2-3", 
+            "deaths": 699, 
+            "recovered": 35521
+        }, 
+        {
+            "confirmed": 36921, 
+            "date": "2021-2-4", 
+            "deaths": 704, 
+            "recovered": 35646
+        }, 
+        {
+            "confirmed": 37054, 
+            "date": "2021-2-5", 
+            "deaths": 709, 
+            "recovered": 35775
+        }, 
+        {
+            "confirmed": 37186, 
+            "date": "2021-2-6", 
+            "deaths": 713, 
+            "recovered": 35901
+        }, 
+        {
+            "confirmed": 37321, 
+            "date": "2021-2-7", 
+            "deaths": 716, 
+            "recovered": 36030
+        }, 
+        {
+            "confirmed": 37454, 
+            "date": "2021-2-8", 
+            "deaths": 717, 
+            "recovered": 36151
+        }, 
+        {
+            "confirmed": 37584, 
+            "date": "2021-2-9", 
+            "deaths": 719, 
+            "recovered": 36272
         }
     ], 
     "Республика Крым": [
@@ -96139,6 +105499,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 591, 
             "recovered": 21820
+        }, 
+        {
+            "confirmed": 27783, 
+            "date": "2021-1-11", 
+            "deaths": 597, 
+            "recovered": 21875
+        }, 
+        {
+            "confirmed": 27967, 
+            "date": "2021-1-12", 
+            "deaths": 605, 
+            "recovered": 22222
+        }, 
+        {
+            "confirmed": 28180, 
+            "date": "2021-1-13", 
+            "deaths": 613, 
+            "recovered": 22690
+        }, 
+        {
+            "confirmed": 28545, 
+            "date": "2021-1-14", 
+            "deaths": 622, 
+            "recovered": 23020
+        }, 
+        {
+            "confirmed": 28870, 
+            "date": "2021-1-15", 
+            "deaths": 629, 
+            "recovered": 23221
+        }, 
+        {
+            "confirmed": 29198, 
+            "date": "2021-1-16", 
+            "deaths": 638, 
+            "recovered": 23554
+        }, 
+        {
+            "confirmed": 29509, 
+            "date": "2021-1-17", 
+            "deaths": 646, 
+            "recovered": 23616
+        }, 
+        {
+            "confirmed": 29762, 
+            "date": "2021-1-18", 
+            "deaths": 654, 
+            "recovered": 23685
+        }, 
+        {
+            "confirmed": 29954, 
+            "date": "2021-1-19", 
+            "deaths": 662, 
+            "recovered": 23878
+        }, 
+        {
+            "confirmed": 30205, 
+            "date": "2021-1-20", 
+            "deaths": 671, 
+            "recovered": 24282
+        }, 
+        {
+            "confirmed": 30449, 
+            "date": "2021-1-21", 
+            "deaths": 680, 
+            "recovered": 24483
+        }, 
+        {
+            "confirmed": 30683, 
+            "date": "2021-1-22", 
+            "deaths": 688, 
+            "recovered": 24736
+        }, 
+        {
+            "confirmed": 30921, 
+            "date": "2021-1-23", 
+            "deaths": 697, 
+            "recovered": 25022
+        }, 
+        {
+            "confirmed": 31147, 
+            "date": "2021-1-24", 
+            "deaths": 704, 
+            "recovered": 25103
+        }, 
+        {
+            "confirmed": 31339, 
+            "date": "2021-1-25", 
+            "deaths": 711, 
+            "recovered": 25138
+        }, 
+        {
+            "confirmed": 31496, 
+            "date": "2021-1-26", 
+            "deaths": 720, 
+            "recovered": 25320
+        }, 
+        {
+            "confirmed": 31677, 
+            "date": "2021-1-27", 
+            "deaths": 729, 
+            "recovered": 25713
+        }, 
+        {
+            "confirmed": 31861, 
+            "date": "2021-1-28", 
+            "deaths": 737, 
+            "recovered": 25952
+        }, 
+        {
+            "confirmed": 32034, 
+            "date": "2021-1-29", 
+            "deaths": 746, 
+            "recovered": 26245
+        }, 
+        {
+            "confirmed": 32212, 
+            "date": "2021-1-30", 
+            "deaths": 752, 
+            "recovered": 26499
+        }, 
+        {
+            "confirmed": 32387, 
+            "date": "2021-1-31", 
+            "deaths": 760, 
+            "recovered": 26669
+        }, 
+        {
+            "confirmed": 32543, 
+            "date": "2021-2-1", 
+            "deaths": 767, 
+            "recovered": 26803
+        }, 
+        {
+            "confirmed": 32681, 
+            "date": "2021-2-2", 
+            "deaths": 776, 
+            "recovered": 27400
+        }, 
+        {
+            "confirmed": 32832, 
+            "date": "2021-2-3", 
+            "deaths": 783, 
+            "recovered": 27719
+        }, 
+        {
+            "confirmed": 32980, 
+            "date": "2021-2-4", 
+            "deaths": 791, 
+            "recovered": 28140
+        }, 
+        {
+            "confirmed": 33132, 
+            "date": "2021-2-5", 
+            "deaths": 799, 
+            "recovered": 28355
+        }, 
+        {
+            "confirmed": 33287, 
+            "date": "2021-2-6", 
+            "deaths": 806, 
+            "recovered": 28555
+        }, 
+        {
+            "confirmed": 33436, 
+            "date": "2021-2-7", 
+            "deaths": 814, 
+            "recovered": 28577
+        }, 
+        {
+            "confirmed": 33561, 
+            "date": "2021-2-8", 
+            "deaths": 819, 
+            "recovered": 28601
+        }, 
+        {
+            "confirmed": 33681, 
+            "date": "2021-2-9", 
+            "deaths": 826, 
+            "recovered": 28887
         }
     ], 
     "Республика Марий Эл": [
@@ -97953,6 +107493,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 130, 
             "recovered": 8453
+        }, 
+        {
+            "confirmed": 9738, 
+            "date": "2021-1-11", 
+            "deaths": 131, 
+            "recovered": 8477
+        }, 
+        {
+            "confirmed": 9787, 
+            "date": "2021-1-12", 
+            "deaths": 131, 
+            "recovered": 8503
+        }, 
+        {
+            "confirmed": 9835, 
+            "date": "2021-1-13", 
+            "deaths": 132, 
+            "recovered": 8535
+        }, 
+        {
+            "confirmed": 9883, 
+            "date": "2021-1-14", 
+            "deaths": 135, 
+            "recovered": 8575
+        }, 
+        {
+            "confirmed": 9931, 
+            "date": "2021-1-15", 
+            "deaths": 136, 
+            "recovered": 8616
+        }, 
+        {
+            "confirmed": 9980, 
+            "date": "2021-1-16", 
+            "deaths": 138, 
+            "recovered": 8659
+        }, 
+        {
+            "confirmed": 10028, 
+            "date": "2021-1-17", 
+            "deaths": 138, 
+            "recovered": 8704
+        }, 
+        {
+            "confirmed": 10076, 
+            "date": "2021-1-18", 
+            "deaths": 140, 
+            "recovered": 8747
+        }, 
+        {
+            "confirmed": 10125, 
+            "date": "2021-1-19", 
+            "deaths": 141, 
+            "recovered": 8794
+        }, 
+        {
+            "confirmed": 10173, 
+            "date": "2021-1-20", 
+            "deaths": 142, 
+            "recovered": 8837
+        }, 
+        {
+            "confirmed": 10218, 
+            "date": "2021-1-21", 
+            "deaths": 145, 
+            "recovered": 8881
+        }, 
+        {
+            "confirmed": 10263, 
+            "date": "2021-1-22", 
+            "deaths": 147, 
+            "recovered": 8924
+        }, 
+        {
+            "confirmed": 10309, 
+            "date": "2021-1-23", 
+            "deaths": 147, 
+            "recovered": 8980
+        }, 
+        {
+            "confirmed": 10354, 
+            "date": "2021-1-24", 
+            "deaths": 149, 
+            "recovered": 9032
+        }, 
+        {
+            "confirmed": 10400, 
+            "date": "2021-1-25", 
+            "deaths": 149, 
+            "recovered": 9071
+        }, 
+        {
+            "confirmed": 10445, 
+            "date": "2021-1-26", 
+            "deaths": 150, 
+            "recovered": 9112
+        }, 
+        {
+            "confirmed": 10489, 
+            "date": "2021-1-27", 
+            "deaths": 151, 
+            "recovered": 9154
+        }, 
+        {
+            "confirmed": 10533, 
+            "date": "2021-1-28", 
+            "deaths": 152, 
+            "recovered": 9197
+        }, 
+        {
+            "confirmed": 10576, 
+            "date": "2021-1-29", 
+            "deaths": 154, 
+            "recovered": 9242
+        }, 
+        {
+            "confirmed": 10620, 
+            "date": "2021-1-30", 
+            "deaths": 154, 
+            "recovered": 9288
+        }, 
+        {
+            "confirmed": 10663, 
+            "date": "2021-1-31", 
+            "deaths": 156, 
+            "recovered": 9321
+        }, 
+        {
+            "confirmed": 10706, 
+            "date": "2021-2-1", 
+            "deaths": 156, 
+            "recovered": 9348
+        }, 
+        {
+            "confirmed": 10750, 
+            "date": "2021-2-2", 
+            "deaths": 156, 
+            "recovered": 9399
+        }, 
+        {
+            "confirmed": 10793, 
+            "date": "2021-2-3", 
+            "deaths": 156, 
+            "recovered": 9453
+        }, 
+        {
+            "confirmed": 10835, 
+            "date": "2021-2-4", 
+            "deaths": 156, 
+            "recovered": 9510
+        }, 
+        {
+            "confirmed": 10878, 
+            "date": "2021-2-5", 
+            "deaths": 157, 
+            "recovered": 9569
+        }, 
+        {
+            "confirmed": 10921, 
+            "date": "2021-2-6", 
+            "deaths": 157, 
+            "recovered": 9631
+        }, 
+        {
+            "confirmed": 10965, 
+            "date": "2021-2-7", 
+            "deaths": 157, 
+            "recovered": 9689
+        }, 
+        {
+            "confirmed": 11008, 
+            "date": "2021-2-8", 
+            "deaths": 157, 
+            "recovered": 9721
+        }, 
+        {
+            "confirmed": 11051, 
+            "date": "2021-2-9", 
+            "deaths": 158, 
+            "recovered": 9761
         }
     ], 
     "Республика Мордовия": [
@@ -99767,6 +109487,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 101, 
             "recovered": 11893
+        }, 
+        {
+            "confirmed": 14434, 
+            "date": "2021-1-11", 
+            "deaths": 103, 
+            "recovered": 11965
+        }, 
+        {
+            "confirmed": 14517, 
+            "date": "2021-1-12", 
+            "deaths": 105, 
+            "recovered": 12043
+        }, 
+        {
+            "confirmed": 14600, 
+            "date": "2021-1-13", 
+            "deaths": 106, 
+            "recovered": 12117
+        }, 
+        {
+            "confirmed": 14682, 
+            "date": "2021-1-14", 
+            "deaths": 108, 
+            "recovered": 12190
+        }, 
+        {
+            "confirmed": 14765, 
+            "date": "2021-1-15", 
+            "deaths": 110, 
+            "recovered": 12265
+        }, 
+        {
+            "confirmed": 14847, 
+            "date": "2021-1-16", 
+            "deaths": 112, 
+            "recovered": 12336
+        }, 
+        {
+            "confirmed": 14930, 
+            "date": "2021-1-17", 
+            "deaths": 114, 
+            "recovered": 12408
+        }, 
+        {
+            "confirmed": 15011, 
+            "date": "2021-1-18", 
+            "deaths": 115, 
+            "recovered": 12478
+        }, 
+        {
+            "confirmed": 15092, 
+            "date": "2021-1-19", 
+            "deaths": 117, 
+            "recovered": 12555
+        }, 
+        {
+            "confirmed": 15173, 
+            "date": "2021-1-20", 
+            "deaths": 119, 
+            "recovered": 12631
+        }, 
+        {
+            "confirmed": 15253, 
+            "date": "2021-1-21", 
+            "deaths": 121, 
+            "recovered": 12704
+        }, 
+        {
+            "confirmed": 15333, 
+            "date": "2021-1-22", 
+            "deaths": 123, 
+            "recovered": 12778
+        }, 
+        {
+            "confirmed": 15414, 
+            "date": "2021-1-23", 
+            "deaths": 125, 
+            "recovered": 12853
+        }, 
+        {
+            "confirmed": 15495, 
+            "date": "2021-1-24", 
+            "deaths": 127, 
+            "recovered": 12923
+        }, 
+        {
+            "confirmed": 15577, 
+            "date": "2021-1-25", 
+            "deaths": 128, 
+            "recovered": 12994
+        }, 
+        {
+            "confirmed": 15657, 
+            "date": "2021-1-26", 
+            "deaths": 130, 
+            "recovered": 13072
+        }, 
+        {
+            "confirmed": 15736, 
+            "date": "2021-1-27", 
+            "deaths": 131, 
+            "recovered": 13156
+        }, 
+        {
+            "confirmed": 15814, 
+            "date": "2021-1-28", 
+            "deaths": 133, 
+            "recovered": 13242
+        }, 
+        {
+            "confirmed": 15890, 
+            "date": "2021-1-29", 
+            "deaths": 134, 
+            "recovered": 13327
+        }, 
+        {
+            "confirmed": 15966, 
+            "date": "2021-1-30", 
+            "deaths": 136, 
+            "recovered": 13416
+        }, 
+        {
+            "confirmed": 16042, 
+            "date": "2021-1-31", 
+            "deaths": 138, 
+            "recovered": 13504
+        }, 
+        {
+            "confirmed": 16117, 
+            "date": "2021-2-1", 
+            "deaths": 139, 
+            "recovered": 13588
+        }, 
+        {
+            "confirmed": 16190, 
+            "date": "2021-2-2", 
+            "deaths": 139, 
+            "recovered": 13677
+        }, 
+        {
+            "confirmed": 16261, 
+            "date": "2021-2-3", 
+            "deaths": 139, 
+            "recovered": 13769
+        }, 
+        {
+            "confirmed": 16332, 
+            "date": "2021-2-4", 
+            "deaths": 141, 
+            "recovered": 13859
+        }, 
+        {
+            "confirmed": 16402, 
+            "date": "2021-2-5", 
+            "deaths": 141, 
+            "recovered": 13950
+        }, 
+        {
+            "confirmed": 16473, 
+            "date": "2021-2-6", 
+            "deaths": 141, 
+            "recovered": 14042
+        }, 
+        {
+            "confirmed": 16543, 
+            "date": "2021-2-7", 
+            "deaths": 143, 
+            "recovered": 14131
+        }, 
+        {
+            "confirmed": 16613, 
+            "date": "2021-2-8", 
+            "deaths": 145, 
+            "recovered": 14223
+        }, 
+        {
+            "confirmed": 16680, 
+            "date": "2021-2-9", 
+            "deaths": 146, 
+            "recovered": 14319
         }
     ], 
     "Республика Саха (Якутия)": [
@@ -101581,6 +111481,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 405, 
             "recovered": 25180
+        }, 
+        {
+            "confirmed": 27836, 
+            "date": "2021-1-11", 
+            "deaths": 406, 
+            "recovered": 25296
+        }, 
+        {
+            "confirmed": 27959, 
+            "date": "2021-1-12", 
+            "deaths": 406, 
+            "recovered": 25412
+        }, 
+        {
+            "confirmed": 28089, 
+            "date": "2021-1-13", 
+            "deaths": 406, 
+            "recovered": 25496
+        }, 
+        {
+            "confirmed": 28230, 
+            "date": "2021-1-14", 
+            "deaths": 406, 
+            "recovered": 25588
+        }, 
+        {
+            "confirmed": 28392, 
+            "date": "2021-1-15", 
+            "deaths": 410, 
+            "recovered": 25682
+        }, 
+        {
+            "confirmed": 28557, 
+            "date": "2021-1-16", 
+            "deaths": 415, 
+            "recovered": 25747
+        }, 
+        {
+            "confirmed": 28723, 
+            "date": "2021-1-17", 
+            "deaths": 422, 
+            "recovered": 25825
+        }, 
+        {
+            "confirmed": 28876, 
+            "date": "2021-1-18", 
+            "deaths": 427, 
+            "recovered": 25850
+        }, 
+        {
+            "confirmed": 29026, 
+            "date": "2021-1-19", 
+            "deaths": 428, 
+            "recovered": 25902
+        }, 
+        {
+            "confirmed": 29177, 
+            "date": "2021-1-20", 
+            "deaths": 440, 
+            "recovered": 25952
+        }, 
+        {
+            "confirmed": 29323, 
+            "date": "2021-1-21", 
+            "deaths": 446, 
+            "recovered": 26028
+        }, 
+        {
+            "confirmed": 29468, 
+            "date": "2021-1-22", 
+            "deaths": 450, 
+            "recovered": 26110
+        }, 
+        {
+            "confirmed": 29608, 
+            "date": "2021-1-23", 
+            "deaths": 455, 
+            "recovered": 26269
+        }, 
+        {
+            "confirmed": 29746, 
+            "date": "2021-1-24", 
+            "deaths": 458, 
+            "recovered": 26449
+        }, 
+        {
+            "confirmed": 29878, 
+            "date": "2021-1-25", 
+            "deaths": 466, 
+            "recovered": 26601
+        }, 
+        {
+            "confirmed": 30006, 
+            "date": "2021-1-26", 
+            "deaths": 472, 
+            "recovered": 26715
+        }, 
+        {
+            "confirmed": 30126, 
+            "date": "2021-1-27", 
+            "deaths": 479, 
+            "recovered": 26948
+        }, 
+        {
+            "confirmed": 30248, 
+            "date": "2021-1-28", 
+            "deaths": 482, 
+            "recovered": 27317
+        }, 
+        {
+            "confirmed": 30367, 
+            "date": "2021-1-29", 
+            "deaths": 485, 
+            "recovered": 27523
+        }, 
+        {
+            "confirmed": 30490, 
+            "date": "2021-1-30", 
+            "deaths": 487, 
+            "recovered": 27644
+        }, 
+        {
+            "confirmed": 30611, 
+            "date": "2021-1-31", 
+            "deaths": 489, 
+            "recovered": 27794
+        }, 
+        {
+            "confirmed": 30726, 
+            "date": "2021-2-1", 
+            "deaths": 489, 
+            "recovered": 27884
+        }, 
+        {
+            "confirmed": 30834, 
+            "date": "2021-2-2", 
+            "deaths": 491, 
+            "recovered": 27988
+        }, 
+        {
+            "confirmed": 30934, 
+            "date": "2021-2-3", 
+            "deaths": 494, 
+            "recovered": 28256
+        }, 
+        {
+            "confirmed": 31027, 
+            "date": "2021-2-4", 
+            "deaths": 494, 
+            "recovered": 28517
+        }, 
+        {
+            "confirmed": 31115, 
+            "date": "2021-2-5", 
+            "deaths": 494, 
+            "recovered": 28697
+        }, 
+        {
+            "confirmed": 31204, 
+            "date": "2021-2-6", 
+            "deaths": 497, 
+            "recovered": 28805
+        }, 
+        {
+            "confirmed": 31291, 
+            "date": "2021-2-7", 
+            "deaths": 498, 
+            "recovered": 28948
+        }, 
+        {
+            "confirmed": 31376, 
+            "date": "2021-2-8", 
+            "deaths": 498, 
+            "recovered": 29013
+        }, 
+        {
+            "confirmed": 31456, 
+            "date": "2021-2-9", 
+            "deaths": 498, 
+            "recovered": 29085
         }
     ], 
     "Республика Северная Осетия — Алания": [
@@ -103395,6 +113475,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 101, 
             "recovered": 11414
+        }, 
+        {
+            "confirmed": 12932, 
+            "date": "2021-1-11", 
+            "deaths": 101, 
+            "recovered": 11483
+        }, 
+        {
+            "confirmed": 13013, 
+            "date": "2021-1-12", 
+            "deaths": 101, 
+            "recovered": 11555
+        }, 
+        {
+            "confirmed": 13095, 
+            "date": "2021-1-13", 
+            "deaths": 104, 
+            "recovered": 11631
+        }, 
+        {
+            "confirmed": 13179, 
+            "date": "2021-1-14", 
+            "deaths": 105, 
+            "recovered": 11708
+        }, 
+        {
+            "confirmed": 13260, 
+            "date": "2021-1-15", 
+            "deaths": 105, 
+            "recovered": 11786
+        }, 
+        {
+            "confirmed": 13343, 
+            "date": "2021-1-16", 
+            "deaths": 105, 
+            "recovered": 11866
+        }, 
+        {
+            "confirmed": 13425, 
+            "date": "2021-1-17", 
+            "deaths": 105, 
+            "recovered": 11944
+        }, 
+        {
+            "confirmed": 13507, 
+            "date": "2021-1-18", 
+            "deaths": 105, 
+            "recovered": 12012
+        }, 
+        {
+            "confirmed": 13587, 
+            "date": "2021-1-19", 
+            "deaths": 105, 
+            "recovered": 12075
+        }, 
+        {
+            "confirmed": 13666, 
+            "date": "2021-1-20", 
+            "deaths": 105, 
+            "recovered": 12143
+        }, 
+        {
+            "confirmed": 13743, 
+            "date": "2021-1-21", 
+            "deaths": 107, 
+            "recovered": 12215
+        }, 
+        {
+            "confirmed": 13819, 
+            "date": "2021-1-22", 
+            "deaths": 108, 
+            "recovered": 12289
+        }, 
+        {
+            "confirmed": 13895, 
+            "date": "2021-1-23", 
+            "deaths": 110, 
+            "recovered": 12367
+        }, 
+        {
+            "confirmed": 13969, 
+            "date": "2021-1-24", 
+            "deaths": 110, 
+            "recovered": 12441
+        }, 
+        {
+            "confirmed": 14043, 
+            "date": "2021-1-25", 
+            "deaths": 110, 
+            "recovered": 12503
+        }, 
+        {
+            "confirmed": 14116, 
+            "date": "2021-1-26", 
+            "deaths": 111, 
+            "recovered": 12567
+        }, 
+        {
+            "confirmed": 14186, 
+            "date": "2021-1-27", 
+            "deaths": 113, 
+            "recovered": 12634
+        }, 
+        {
+            "confirmed": 14252, 
+            "date": "2021-1-28", 
+            "deaths": 113, 
+            "recovered": 12703
+        }, 
+        {
+            "confirmed": 14316, 
+            "date": "2021-1-29", 
+            "deaths": 115, 
+            "recovered": 12770
+        }, 
+        {
+            "confirmed": 14381, 
+            "date": "2021-1-30", 
+            "deaths": 118, 
+            "recovered": 12838
+        }, 
+        {
+            "confirmed": 14446, 
+            "date": "2021-1-31", 
+            "deaths": 118, 
+            "recovered": 12898
+        }, 
+        {
+            "confirmed": 14510, 
+            "date": "2021-2-1", 
+            "deaths": 118, 
+            "recovered": 12945
+        }, 
+        {
+            "confirmed": 14571, 
+            "date": "2021-2-2", 
+            "deaths": 118, 
+            "recovered": 13006
+        }, 
+        {
+            "confirmed": 14630, 
+            "date": "2021-2-3", 
+            "deaths": 122, 
+            "recovered": 13071
+        }, 
+        {
+            "confirmed": 14686, 
+            "date": "2021-2-4", 
+            "deaths": 124, 
+            "recovered": 13138
+        }, 
+        {
+            "confirmed": 14742, 
+            "date": "2021-2-5", 
+            "deaths": 128, 
+            "recovered": 13201
+        }, 
+        {
+            "confirmed": 14797, 
+            "date": "2021-2-6", 
+            "deaths": 131, 
+            "recovered": 13267
+        }, 
+        {
+            "confirmed": 14852, 
+            "date": "2021-2-7", 
+            "deaths": 131, 
+            "recovered": 13335
+        }, 
+        {
+            "confirmed": 14905, 
+            "date": "2021-2-8", 
+            "deaths": 131, 
+            "recovered": 13387
+        }, 
+        {
+            "confirmed": 14956, 
+            "date": "2021-2-9", 
+            "deaths": 134, 
+            "recovered": 13441
         }
     ], 
     "Республика Татарстан": [
@@ -105209,6 +115469,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 211, 
             "recovered": 11023
+        }, 
+        {
+            "confirmed": 14273, 
+            "date": "2021-1-11", 
+            "deaths": 211, 
+            "recovered": 11041
+        }, 
+        {
+            "confirmed": 14362, 
+            "date": "2021-1-12", 
+            "deaths": 211, 
+            "recovered": 11061
+        }, 
+        {
+            "confirmed": 14449, 
+            "date": "2021-1-13", 
+            "deaths": 214, 
+            "recovered": 11082
+        }, 
+        {
+            "confirmed": 14541, 
+            "date": "2021-1-14", 
+            "deaths": 218, 
+            "recovered": 11114
+        }, 
+        {
+            "confirmed": 14637, 
+            "date": "2021-1-15", 
+            "deaths": 221, 
+            "recovered": 11151
+        }, 
+        {
+            "confirmed": 14735, 
+            "date": "2021-1-16", 
+            "deaths": 225, 
+            "recovered": 11200
+        }, 
+        {
+            "confirmed": 14832, 
+            "date": "2021-1-17", 
+            "deaths": 229, 
+            "recovered": 11263
+        }, 
+        {
+            "confirmed": 14927, 
+            "date": "2021-1-18", 
+            "deaths": 232, 
+            "recovered": 11332
+        }, 
+        {
+            "confirmed": 15017, 
+            "date": "2021-1-19", 
+            "deaths": 233, 
+            "recovered": 11404
+        }, 
+        {
+            "confirmed": 15104, 
+            "date": "2021-1-20", 
+            "deaths": 237, 
+            "recovered": 11480
+        }, 
+        {
+            "confirmed": 15189, 
+            "date": "2021-1-21", 
+            "deaths": 241, 
+            "recovered": 11577
+        }, 
+        {
+            "confirmed": 15275, 
+            "date": "2021-1-22", 
+            "deaths": 244, 
+            "recovered": 11659
+        }, 
+        {
+            "confirmed": 15365, 
+            "date": "2021-1-23", 
+            "deaths": 247, 
+            "recovered": 11757
+        }, 
+        {
+            "confirmed": 15451, 
+            "date": "2021-1-24", 
+            "deaths": 251, 
+            "recovered": 11855
+        }, 
+        {
+            "confirmed": 15538, 
+            "date": "2021-1-25", 
+            "deaths": 254, 
+            "recovered": 11950
+        }, 
+        {
+            "confirmed": 15623, 
+            "date": "2021-1-26", 
+            "deaths": 260, 
+            "recovered": 12040
+        }, 
+        {
+            "confirmed": 15707, 
+            "date": "2021-1-27", 
+            "deaths": 264, 
+            "recovered": 12138
+        }, 
+        {
+            "confirmed": 15790, 
+            "date": "2021-1-28", 
+            "deaths": 270, 
+            "recovered": 12234
+        }, 
+        {
+            "confirmed": 15875, 
+            "date": "2021-1-29", 
+            "deaths": 276, 
+            "recovered": 12331
+        }, 
+        {
+            "confirmed": 15959, 
+            "date": "2021-1-30", 
+            "deaths": 282, 
+            "recovered": 12430
+        }, 
+        {
+            "confirmed": 16046, 
+            "date": "2021-1-31", 
+            "deaths": 283, 
+            "recovered": 12525
+        }, 
+        {
+            "confirmed": 16132, 
+            "date": "2021-2-1", 
+            "deaths": 283, 
+            "recovered": 12623
+        }, 
+        {
+            "confirmed": 16217, 
+            "date": "2021-2-2", 
+            "deaths": 283, 
+            "recovered": 12720
+        }, 
+        {
+            "confirmed": 16302, 
+            "date": "2021-2-3", 
+            "deaths": 283, 
+            "recovered": 12812
+        }, 
+        {
+            "confirmed": 16385, 
+            "date": "2021-2-4", 
+            "deaths": 283, 
+            "recovered": 12881
+        }, 
+        {
+            "confirmed": 16469, 
+            "date": "2021-2-5", 
+            "deaths": 285, 
+            "recovered": 12978
+        }, 
+        {
+            "confirmed": 16553, 
+            "date": "2021-2-6", 
+            "deaths": 288, 
+            "recovered": 13068
+        }, 
+        {
+            "confirmed": 16638, 
+            "date": "2021-2-7", 
+            "deaths": 290, 
+            "recovered": 13158
+        }, 
+        {
+            "confirmed": 16720, 
+            "date": "2021-2-8", 
+            "deaths": 291, 
+            "recovered": 13227
+        }, 
+        {
+            "confirmed": 16800, 
+            "date": "2021-2-9", 
+            "deaths": 291, 
+            "recovered": 13309
         }
     ], 
     "Республика Тыва": [
@@ -107023,6 +117463,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 159, 
             "recovered": 13788
+        }, 
+        {
+            "confirmed": 14993, 
+            "date": "2021-1-11", 
+            "deaths": 162, 
+            "recovered": 13807
+        }, 
+        {
+            "confirmed": 15015, 
+            "date": "2021-1-12", 
+            "deaths": 170, 
+            "recovered": 13827
+        }, 
+        {
+            "confirmed": 15041, 
+            "date": "2021-1-13", 
+            "deaths": 172, 
+            "recovered": 13851
+        }, 
+        {
+            "confirmed": 15064, 
+            "date": "2021-1-14", 
+            "deaths": 174, 
+            "recovered": 13872
+        }, 
+        {
+            "confirmed": 15085, 
+            "date": "2021-1-15", 
+            "deaths": 180, 
+            "recovered": 13896
+        }, 
+        {
+            "confirmed": 15109, 
+            "date": "2021-1-16", 
+            "deaths": 183, 
+            "recovered": 13918
+        }, 
+        {
+            "confirmed": 15138, 
+            "date": "2021-1-17", 
+            "deaths": 183, 
+            "recovered": 13943
+        }, 
+        {
+            "confirmed": 15170, 
+            "date": "2021-1-18", 
+            "deaths": 183, 
+            "recovered": 13966
+        }, 
+        {
+            "confirmed": 15197, 
+            "date": "2021-1-19", 
+            "deaths": 183, 
+            "recovered": 13991
+        }, 
+        {
+            "confirmed": 15227, 
+            "date": "2021-1-20", 
+            "deaths": 185, 
+            "recovered": 14020
+        }, 
+        {
+            "confirmed": 15259, 
+            "date": "2021-1-21", 
+            "deaths": 185, 
+            "recovered": 14051
+        }, 
+        {
+            "confirmed": 15288, 
+            "date": "2021-1-22", 
+            "deaths": 185, 
+            "recovered": 14084
+        }, 
+        {
+            "confirmed": 15308, 
+            "date": "2021-1-23", 
+            "deaths": 185, 
+            "recovered": 14119
+        }, 
+        {
+            "confirmed": 15326, 
+            "date": "2021-1-24", 
+            "deaths": 185, 
+            "recovered": 14147
+        }, 
+        {
+            "confirmed": 15335, 
+            "date": "2021-1-25", 
+            "deaths": 186, 
+            "recovered": 14163
+        }, 
+        {
+            "confirmed": 15341, 
+            "date": "2021-1-26", 
+            "deaths": 187, 
+            "recovered": 14173
+        }, 
+        {
+            "confirmed": 15351, 
+            "date": "2021-1-27", 
+            "deaths": 187, 
+            "recovered": 14182
+        }, 
+        {
+            "confirmed": 15362, 
+            "date": "2021-1-28", 
+            "deaths": 187, 
+            "recovered": 14192
+        }, 
+        {
+            "confirmed": 15374, 
+            "date": "2021-1-29", 
+            "deaths": 187, 
+            "recovered": 14202
+        }, 
+        {
+            "confirmed": 15389, 
+            "date": "2021-1-30", 
+            "deaths": 187, 
+            "recovered": 14213
+        }, 
+        {
+            "confirmed": 15403, 
+            "date": "2021-1-31", 
+            "deaths": 187, 
+            "recovered": 14225
+        }, 
+        {
+            "confirmed": 15414, 
+            "date": "2021-2-1", 
+            "deaths": 187, 
+            "recovered": 14232
+        }, 
+        {
+            "confirmed": 15426, 
+            "date": "2021-2-2", 
+            "deaths": 188, 
+            "recovered": 14247
+        }, 
+        {
+            "confirmed": 15430, 
+            "date": "2021-2-3", 
+            "deaths": 190, 
+            "recovered": 14270
+        }, 
+        {
+            "confirmed": 15439, 
+            "date": "2021-2-4", 
+            "deaths": 190, 
+            "recovered": 14287
+        }, 
+        {
+            "confirmed": 15451, 
+            "date": "2021-2-5", 
+            "deaths": 190, 
+            "recovered": 14306
+        }, 
+        {
+            "confirmed": 15468, 
+            "date": "2021-2-6", 
+            "deaths": 190, 
+            "recovered": 14323
+        }, 
+        {
+            "confirmed": 15488, 
+            "date": "2021-2-7", 
+            "deaths": 190, 
+            "recovered": 14338
+        }, 
+        {
+            "confirmed": 15505, 
+            "date": "2021-2-8", 
+            "deaths": 190, 
+            "recovered": 14353
+        }, 
+        {
+            "confirmed": 15521, 
+            "date": "2021-2-9", 
+            "deaths": 190, 
+            "recovered": 14371
         }
     ], 
     "Республика Хакасия": [
@@ -108837,6 +119457,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 302, 
             "recovered": 15536
+        }, 
+        {
+            "confirmed": 18605, 
+            "date": "2021-1-11", 
+            "deaths": 302, 
+            "recovered": 15610
+        }, 
+        {
+            "confirmed": 18710, 
+            "date": "2021-1-12", 
+            "deaths": 311, 
+            "recovered": 15796
+        }, 
+        {
+            "confirmed": 18822, 
+            "date": "2021-1-13", 
+            "deaths": 312, 
+            "recovered": 15973
+        }, 
+        {
+            "confirmed": 18931, 
+            "date": "2021-1-14", 
+            "deaths": 325, 
+            "recovered": 16146
+        }, 
+        {
+            "confirmed": 19047, 
+            "date": "2021-1-15", 
+            "deaths": 327, 
+            "recovered": 16450
+        }, 
+        {
+            "confirmed": 19160, 
+            "date": "2021-1-16", 
+            "deaths": 327, 
+            "recovered": 16795
+        }, 
+        {
+            "confirmed": 19277, 
+            "date": "2021-1-17", 
+            "deaths": 332, 
+            "recovered": 17164
+        }, 
+        {
+            "confirmed": 19391, 
+            "date": "2021-1-18", 
+            "deaths": 339, 
+            "recovered": 17219
+        }, 
+        {
+            "confirmed": 19507, 
+            "date": "2021-1-19", 
+            "deaths": 341, 
+            "recovered": 17346
+        }, 
+        {
+            "confirmed": 19616, 
+            "date": "2021-1-20", 
+            "deaths": 351, 
+            "recovered": 17580
+        }, 
+        {
+            "confirmed": 19716, 
+            "date": "2021-1-21", 
+            "deaths": 360, 
+            "recovered": 17792
+        }, 
+        {
+            "confirmed": 19814, 
+            "date": "2021-1-22", 
+            "deaths": 365, 
+            "recovered": 18001
+        }, 
+        {
+            "confirmed": 19903, 
+            "date": "2021-1-23", 
+            "deaths": 371, 
+            "recovered": 18220
+        }, 
+        {
+            "confirmed": 19984, 
+            "date": "2021-1-24", 
+            "deaths": 371, 
+            "recovered": 18282
+        }, 
+        {
+            "confirmed": 20061, 
+            "date": "2021-1-25", 
+            "deaths": 371, 
+            "recovered": 18341
+        }, 
+        {
+            "confirmed": 20133, 
+            "date": "2021-1-26", 
+            "deaths": 372, 
+            "recovered": 18431
+        }, 
+        {
+            "confirmed": 20176, 
+            "date": "2021-1-27", 
+            "deaths": 374, 
+            "recovered": 18533
+        }, 
+        {
+            "confirmed": 20221, 
+            "date": "2021-1-28", 
+            "deaths": 378, 
+            "recovered": 18611
+        }, 
+        {
+            "confirmed": 20278, 
+            "date": "2021-1-29", 
+            "deaths": 382, 
+            "recovered": 18692
+        }, 
+        {
+            "confirmed": 20333, 
+            "date": "2021-1-30", 
+            "deaths": 384, 
+            "recovered": 18753
+        }, 
+        {
+            "confirmed": 20391, 
+            "date": "2021-1-31", 
+            "deaths": 384, 
+            "recovered": 18851
+        }, 
+        {
+            "confirmed": 20447, 
+            "date": "2021-2-1", 
+            "deaths": 384, 
+            "recovered": 18892
+        }, 
+        {
+            "confirmed": 20499, 
+            "date": "2021-2-2", 
+            "deaths": 389, 
+            "recovered": 19002
+        }, 
+        {
+            "confirmed": 20545, 
+            "date": "2021-2-3", 
+            "deaths": 393, 
+            "recovered": 19099
+        }, 
+        {
+            "confirmed": 20596, 
+            "date": "2021-2-4", 
+            "deaths": 394, 
+            "recovered": 19186
+        }, 
+        {
+            "confirmed": 20649, 
+            "date": "2021-2-5", 
+            "deaths": 395, 
+            "recovered": 19252
+        }, 
+        {
+            "confirmed": 20699, 
+            "date": "2021-2-6", 
+            "deaths": 396, 
+            "recovered": 19310
+        }, 
+        {
+            "confirmed": 20748, 
+            "date": "2021-2-7", 
+            "deaths": 399, 
+            "recovered": 19331
+        }, 
+        {
+            "confirmed": 20796, 
+            "date": "2021-2-8", 
+            "deaths": 399, 
+            "recovered": 19350
+        }, 
+        {
+            "confirmed": 20829, 
+            "date": "2021-2-9", 
+            "deaths": 403, 
+            "recovered": 19414
         }
     ], 
     "Республика Чувашия": [
@@ -110651,6 +121451,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 633, 
             "recovered": 15694
+        }, 
+        {
+            "confirmed": 17455, 
+            "date": "2021-1-11", 
+            "deaths": 643, 
+            "recovered": 15779
+        }, 
+        {
+            "confirmed": 17545, 
+            "date": "2021-1-12", 
+            "deaths": 654, 
+            "recovered": 15847
+        }, 
+        {
+            "confirmed": 17640, 
+            "date": "2021-1-13", 
+            "deaths": 665, 
+            "recovered": 15925
+        }, 
+        {
+            "confirmed": 17741, 
+            "date": "2021-1-14", 
+            "deaths": 677, 
+            "recovered": 16003
+        }, 
+        {
+            "confirmed": 17846, 
+            "date": "2021-1-15", 
+            "deaths": 690, 
+            "recovered": 16076
+        }, 
+        {
+            "confirmed": 17955, 
+            "date": "2021-1-16", 
+            "deaths": 702, 
+            "recovered": 16154
+        }, 
+        {
+            "confirmed": 18067, 
+            "date": "2021-1-17", 
+            "deaths": 712, 
+            "recovered": 16243
+        }, 
+        {
+            "confirmed": 18181, 
+            "date": "2021-1-18", 
+            "deaths": 725, 
+            "recovered": 16336
+        }, 
+        {
+            "confirmed": 18291, 
+            "date": "2021-1-19", 
+            "deaths": 736, 
+            "recovered": 16413
+        }, 
+        {
+            "confirmed": 18399, 
+            "date": "2021-1-20", 
+            "deaths": 747, 
+            "recovered": 16501
+        }, 
+        {
+            "confirmed": 18504, 
+            "date": "2021-1-21", 
+            "deaths": 760, 
+            "recovered": 16602
+        }, 
+        {
+            "confirmed": 18609, 
+            "date": "2021-1-22", 
+            "deaths": 769, 
+            "recovered": 16704
+        }, 
+        {
+            "confirmed": 18712, 
+            "date": "2021-1-23", 
+            "deaths": 781, 
+            "recovered": 16819
+        }, 
+        {
+            "confirmed": 18812, 
+            "date": "2021-1-24", 
+            "deaths": 794, 
+            "recovered": 16908
+        }, 
+        {
+            "confirmed": 18914, 
+            "date": "2021-1-25", 
+            "deaths": 807, 
+            "recovered": 17012
+        }, 
+        {
+            "confirmed": 19009, 
+            "date": "2021-1-26", 
+            "deaths": 819, 
+            "recovered": 17105
+        }, 
+        {
+            "confirmed": 19102, 
+            "date": "2021-1-27", 
+            "deaths": 830, 
+            "recovered": 17213
+        }, 
+        {
+            "confirmed": 19198, 
+            "date": "2021-1-28", 
+            "deaths": 842, 
+            "recovered": 17302
+        }, 
+        {
+            "confirmed": 19289, 
+            "date": "2021-1-29", 
+            "deaths": 853, 
+            "recovered": 17388
+        }, 
+        {
+            "confirmed": 19379, 
+            "date": "2021-1-30", 
+            "deaths": 865, 
+            "recovered": 17466
+        }, 
+        {
+            "confirmed": 19467, 
+            "date": "2021-1-31", 
+            "deaths": 876, 
+            "recovered": 17538
+        }, 
+        {
+            "confirmed": 19553, 
+            "date": "2021-2-1", 
+            "deaths": 888, 
+            "recovered": 17622
+        }, 
+        {
+            "confirmed": 19639, 
+            "date": "2021-2-2", 
+            "deaths": 894, 
+            "recovered": 17711
+        }, 
+        {
+            "confirmed": 19729, 
+            "date": "2021-2-3", 
+            "deaths": 899, 
+            "recovered": 17807
+        }, 
+        {
+            "confirmed": 19817, 
+            "date": "2021-2-4", 
+            "deaths": 905, 
+            "recovered": 17884
+        }, 
+        {
+            "confirmed": 19908, 
+            "date": "2021-2-5", 
+            "deaths": 911, 
+            "recovered": 17959
+        }, 
+        {
+            "confirmed": 19995, 
+            "date": "2021-2-6", 
+            "deaths": 916, 
+            "recovered": 18040
+        }, 
+        {
+            "confirmed": 20075, 
+            "date": "2021-2-7", 
+            "deaths": 920, 
+            "recovered": 18143
+        }, 
+        {
+            "confirmed": 20154, 
+            "date": "2021-2-8", 
+            "deaths": 926, 
+            "recovered": 18251
+        }, 
+        {
+            "confirmed": 20234, 
+            "date": "2021-2-9", 
+            "deaths": 930, 
+            "recovered": 18366
         }
     ], 
     "Ростовская область": [
@@ -112465,6 +123445,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 2208, 
             "recovered": 45653
+        }, 
+        {
+            "confirmed": 55955, 
+            "date": "2021-1-11", 
+            "deaths": 2216, 
+            "recovered": 45993
+        }, 
+        {
+            "confirmed": 56349, 
+            "date": "2021-1-12", 
+            "deaths": 2242, 
+            "recovered": 46466
+        }, 
+        {
+            "confirmed": 56738, 
+            "date": "2021-1-13", 
+            "deaths": 2264, 
+            "recovered": 46945
+        }, 
+        {
+            "confirmed": 57130, 
+            "date": "2021-1-14", 
+            "deaths": 2293, 
+            "recovered": 47302
+        }, 
+        {
+            "confirmed": 57528, 
+            "date": "2021-1-15", 
+            "deaths": 2310, 
+            "recovered": 47606
+        }, 
+        {
+            "confirmed": 57921, 
+            "date": "2021-1-16", 
+            "deaths": 2323, 
+            "recovered": 47918
+        }, 
+        {
+            "confirmed": 58315, 
+            "date": "2021-1-17", 
+            "deaths": 2334, 
+            "recovered": 48296
+        }, 
+        {
+            "confirmed": 58708, 
+            "date": "2021-1-18", 
+            "deaths": 2348, 
+            "recovered": 48505
+        }, 
+        {
+            "confirmed": 59100, 
+            "date": "2021-1-19", 
+            "deaths": 2370, 
+            "recovered": 48864
+        }, 
+        {
+            "confirmed": 59488, 
+            "date": "2021-1-20", 
+            "deaths": 2397, 
+            "recovered": 49196
+        }, 
+        {
+            "confirmed": 59878, 
+            "date": "2021-1-21", 
+            "deaths": 2422, 
+            "recovered": 49523
+        }, 
+        {
+            "confirmed": 60269, 
+            "date": "2021-1-22", 
+            "deaths": 2448, 
+            "recovered": 49861
+        }, 
+        {
+            "confirmed": 60658, 
+            "date": "2021-1-23", 
+            "deaths": 2477, 
+            "recovered": 50219
+        }, 
+        {
+            "confirmed": 61046, 
+            "date": "2021-1-24", 
+            "deaths": 2488, 
+            "recovered": 50581
+        }, 
+        {
+            "confirmed": 61432, 
+            "date": "2021-1-25", 
+            "deaths": 2505, 
+            "recovered": 50952
+        }, 
+        {
+            "confirmed": 61814, 
+            "date": "2021-1-26", 
+            "deaths": 2533, 
+            "recovered": 51270
+        }, 
+        {
+            "confirmed": 62193, 
+            "date": "2021-1-27", 
+            "deaths": 2562, 
+            "recovered": 51621
+        }, 
+        {
+            "confirmed": 62568, 
+            "date": "2021-1-28", 
+            "deaths": 2586, 
+            "recovered": 52040
+        }, 
+        {
+            "confirmed": 62945, 
+            "date": "2021-1-29", 
+            "deaths": 2606, 
+            "recovered": 52461
+        }, 
+        {
+            "confirmed": 63321, 
+            "date": "2021-1-30", 
+            "deaths": 2616, 
+            "recovered": 52889
+        }, 
+        {
+            "confirmed": 63695, 
+            "date": "2021-1-31", 
+            "deaths": 2640, 
+            "recovered": 53301
+        }, 
+        {
+            "confirmed": 64067, 
+            "date": "2021-2-1", 
+            "deaths": 2655, 
+            "recovered": 53723
+        }, 
+        {
+            "confirmed": 64437, 
+            "date": "2021-2-2", 
+            "deaths": 2677, 
+            "recovered": 54152
+        }, 
+        {
+            "confirmed": 64803, 
+            "date": "2021-2-3", 
+            "deaths": 2705, 
+            "recovered": 54571
+        }, 
+        {
+            "confirmed": 65166, 
+            "date": "2021-2-4", 
+            "deaths": 2733, 
+            "recovered": 54994
+        }, 
+        {
+            "confirmed": 65530, 
+            "date": "2021-2-5", 
+            "deaths": 2762, 
+            "recovered": 55423
+        }, 
+        {
+            "confirmed": 65891, 
+            "date": "2021-2-6", 
+            "deaths": 2790, 
+            "recovered": 55850
+        }, 
+        {
+            "confirmed": 66251, 
+            "date": "2021-2-7", 
+            "deaths": 2800, 
+            "recovered": 56247
+        }, 
+        {
+            "confirmed": 66610, 
+            "date": "2021-2-8", 
+            "deaths": 2809, 
+            "recovered": 56635
+        }, 
+        {
+            "confirmed": 66966, 
+            "date": "2021-2-9", 
+            "deaths": 2833, 
+            "recovered": 57052
         }
     ], 
     "Рязанская область": [
@@ -114279,6 +125439,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 190, 
             "recovered": 17731
+        }, 
+        {
+            "confirmed": 19605, 
+            "date": "2021-1-11", 
+            "deaths": 190, 
+            "recovered": 17814
+        }, 
+        {
+            "confirmed": 19727, 
+            "date": "2021-1-12", 
+            "deaths": 190, 
+            "recovered": 17908
+        }, 
+        {
+            "confirmed": 19851, 
+            "date": "2021-1-13", 
+            "deaths": 193, 
+            "recovered": 18035
+        }, 
+        {
+            "confirmed": 19976, 
+            "date": "2021-1-14", 
+            "deaths": 198, 
+            "recovered": 18157
+        }, 
+        {
+            "confirmed": 20098, 
+            "date": "2021-1-15", 
+            "deaths": 203, 
+            "recovered": 18283
+        }, 
+        {
+            "confirmed": 20221, 
+            "date": "2021-1-16", 
+            "deaths": 207, 
+            "recovered": 18403
+        }, 
+        {
+            "confirmed": 20341, 
+            "date": "2021-1-17", 
+            "deaths": 209, 
+            "recovered": 18521
+        }, 
+        {
+            "confirmed": 20459, 
+            "date": "2021-1-18", 
+            "deaths": 209, 
+            "recovered": 18630
+        }, 
+        {
+            "confirmed": 20580, 
+            "date": "2021-1-19", 
+            "deaths": 214, 
+            "recovered": 18734
+        }, 
+        {
+            "confirmed": 20699, 
+            "date": "2021-1-20", 
+            "deaths": 215, 
+            "recovered": 18835
+        }, 
+        {
+            "confirmed": 20814, 
+            "date": "2021-1-21", 
+            "deaths": 216, 
+            "recovered": 18943
+        }, 
+        {
+            "confirmed": 20925, 
+            "date": "2021-1-22", 
+            "deaths": 217, 
+            "recovered": 19052
+        }, 
+        {
+            "confirmed": 21035, 
+            "date": "2021-1-23", 
+            "deaths": 218, 
+            "recovered": 19160
+        }, 
+        {
+            "confirmed": 21147, 
+            "date": "2021-1-24", 
+            "deaths": 218, 
+            "recovered": 19269
+        }, 
+        {
+            "confirmed": 21257, 
+            "date": "2021-1-25", 
+            "deaths": 218, 
+            "recovered": 19365
+        }, 
+        {
+            "confirmed": 21368, 
+            "date": "2021-1-26", 
+            "deaths": 221, 
+            "recovered": 19463
+        }, 
+        {
+            "confirmed": 21477, 
+            "date": "2021-1-27", 
+            "deaths": 223, 
+            "recovered": 19564
+        }, 
+        {
+            "confirmed": 21582, 
+            "date": "2021-1-28", 
+            "deaths": 225, 
+            "recovered": 19667
+        }, 
+        {
+            "confirmed": 21686, 
+            "date": "2021-1-29", 
+            "deaths": 226, 
+            "recovered": 19772
+        }, 
+        {
+            "confirmed": 21792, 
+            "date": "2021-1-30", 
+            "deaths": 227, 
+            "recovered": 19877
+        }, 
+        {
+            "confirmed": 21902, 
+            "date": "2021-1-31", 
+            "deaths": 227, 
+            "recovered": 19971
+        }, 
+        {
+            "confirmed": 22009, 
+            "date": "2021-2-1", 
+            "deaths": 227, 
+            "recovered": 20052
+        }, 
+        {
+            "confirmed": 22118, 
+            "date": "2021-2-2", 
+            "deaths": 232, 
+            "recovered": 20162
+        }, 
+        {
+            "confirmed": 22222, 
+            "date": "2021-2-3", 
+            "deaths": 235, 
+            "recovered": 20275
+        }, 
+        {
+            "confirmed": 22328, 
+            "date": "2021-2-4", 
+            "deaths": 238, 
+            "recovered": 20390
+        }, 
+        {
+            "confirmed": 22438, 
+            "date": "2021-2-5", 
+            "deaths": 243, 
+            "recovered": 20501
+        }, 
+        {
+            "confirmed": 22543, 
+            "date": "2021-2-6", 
+            "deaths": 246, 
+            "recovered": 20608
+        }, 
+        {
+            "confirmed": 22647, 
+            "date": "2021-2-7", 
+            "deaths": 246, 
+            "recovered": 20717
+        }, 
+        {
+            "confirmed": 22748, 
+            "date": "2021-2-8", 
+            "deaths": 246, 
+            "recovered": 20808
+        }, 
+        {
+            "confirmed": 22848, 
+            "date": "2021-2-9", 
+            "deaths": 249, 
+            "recovered": 20902
         }
     ], 
     "Самарская область": [
@@ -116093,6 +127433,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 702, 
             "recovered": 31531
+        }, 
+        {
+            "confirmed": 34602, 
+            "date": "2021-1-11", 
+            "deaths": 708, 
+            "recovered": 31777
+        }, 
+        {
+            "confirmed": 34880, 
+            "date": "2021-1-12", 
+            "deaths": 713, 
+            "recovered": 32048
+        }, 
+        {
+            "confirmed": 35159, 
+            "date": "2021-1-13", 
+            "deaths": 724, 
+            "recovered": 32324
+        }, 
+        {
+            "confirmed": 35441, 
+            "date": "2021-1-14", 
+            "deaths": 730, 
+            "recovered": 32605
+        }, 
+        {
+            "confirmed": 35724, 
+            "date": "2021-1-15", 
+            "deaths": 739, 
+            "recovered": 32885
+        }, 
+        {
+            "confirmed": 36011, 
+            "date": "2021-1-16", 
+            "deaths": 740, 
+            "recovered": 33168
+        }, 
+        {
+            "confirmed": 36298, 
+            "date": "2021-1-17", 
+            "deaths": 742, 
+            "recovered": 33452
+        }, 
+        {
+            "confirmed": 36586, 
+            "date": "2021-1-18", 
+            "deaths": 743, 
+            "recovered": 33722
+        }, 
+        {
+            "confirmed": 36872, 
+            "date": "2021-1-19", 
+            "deaths": 745, 
+            "recovered": 33987
+        }, 
+        {
+            "confirmed": 37157, 
+            "date": "2021-1-20", 
+            "deaths": 754, 
+            "recovered": 34256
+        }, 
+        {
+            "confirmed": 37444, 
+            "date": "2021-1-21", 
+            "deaths": 762, 
+            "recovered": 34528
+        }, 
+        {
+            "confirmed": 37730, 
+            "date": "2021-1-22", 
+            "deaths": 770, 
+            "recovered": 34804
+        }, 
+        {
+            "confirmed": 38014, 
+            "date": "2021-1-23", 
+            "deaths": 775, 
+            "recovered": 35085
+        }, 
+        {
+            "confirmed": 38299, 
+            "date": "2021-1-24", 
+            "deaths": 782, 
+            "recovered": 35358
+        }, 
+        {
+            "confirmed": 38582, 
+            "date": "2021-1-25", 
+            "deaths": 782, 
+            "recovered": 35613
+        }, 
+        {
+            "confirmed": 38861, 
+            "date": "2021-1-26", 
+            "deaths": 792, 
+            "recovered": 35874
+        }, 
+        {
+            "confirmed": 39136, 
+            "date": "2021-1-27", 
+            "deaths": 803, 
+            "recovered": 36137
+        }, 
+        {
+            "confirmed": 39409, 
+            "date": "2021-1-28", 
+            "deaths": 808, 
+            "recovered": 36402
+        }, 
+        {
+            "confirmed": 39686, 
+            "date": "2021-1-29", 
+            "deaths": 810, 
+            "recovered": 36677
+        }, 
+        {
+            "confirmed": 39991, 
+            "date": "2021-1-30", 
+            "deaths": 812, 
+            "recovered": 36953
+        }, 
+        {
+            "confirmed": 40298, 
+            "date": "2021-1-31", 
+            "deaths": 820, 
+            "recovered": 37157
+        }, 
+        {
+            "confirmed": 40603, 
+            "date": "2021-2-1", 
+            "deaths": 824, 
+            "recovered": 37350
+        }, 
+        {
+            "confirmed": 40903, 
+            "date": "2021-2-2", 
+            "deaths": 830, 
+            "recovered": 37599
+        }, 
+        {
+            "confirmed": 41204, 
+            "date": "2021-2-3", 
+            "deaths": 832, 
+            "recovered": 37897
+        }, 
+        {
+            "confirmed": 41504, 
+            "date": "2021-2-4", 
+            "deaths": 835, 
+            "recovered": 38201
+        }, 
+        {
+            "confirmed": 41807, 
+            "date": "2021-2-5", 
+            "deaths": 838, 
+            "recovered": 38502
+        }, 
+        {
+            "confirmed": 42109, 
+            "date": "2021-2-6", 
+            "deaths": 842, 
+            "recovered": 38811
+        }, 
+        {
+            "confirmed": 42410, 
+            "date": "2021-2-7", 
+            "deaths": 842, 
+            "recovered": 39122
+        }, 
+        {
+            "confirmed": 42710, 
+            "date": "2021-2-8", 
+            "deaths": 843, 
+            "recovered": 39343
+        }, 
+        {
+            "confirmed": 43010, 
+            "date": "2021-2-9", 
+            "deaths": 853, 
+            "recovered": 39582
         }
     ], 
     "Санкт-Петербург": [
@@ -117907,6 +129427,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 8378, 
             "recovered": 166416
+        }, 
+        {
+            "confirmed": 279039, 
+            "date": "2021-1-11", 
+            "deaths": 8420, 
+            "recovered": 168289
+        }, 
+        {
+            "confirmed": 281770, 
+            "date": "2021-1-12", 
+            "deaths": 8488, 
+            "recovered": 169547
+        }, 
+        {
+            "confirmed": 284773, 
+            "date": "2021-1-13", 
+            "deaths": 8566, 
+            "recovered": 172972
+        }, 
+        {
+            "confirmed": 287814, 
+            "date": "2021-1-14", 
+            "deaths": 8649, 
+            "recovered": 176523
+        }, 
+        {
+            "confirmed": 290908, 
+            "date": "2021-1-15", 
+            "deaths": 8721, 
+            "recovered": 180438
+        }, 
+        {
+            "confirmed": 294161, 
+            "date": "2021-1-16", 
+            "deaths": 8788, 
+            "recovered": 184063
+        }, 
+        {
+            "confirmed": 297477, 
+            "date": "2021-1-17", 
+            "deaths": 8847, 
+            "recovered": 187135
+        }, 
+        {
+            "confirmed": 300764, 
+            "date": "2021-1-18", 
+            "deaths": 8902, 
+            "recovered": 188303
+        }, 
+        {
+            "confirmed": 304045, 
+            "date": "2021-1-19", 
+            "deaths": 8971, 
+            "recovered": 190562
+        }, 
+        {
+            "confirmed": 307392, 
+            "date": "2021-1-20", 
+            "deaths": 9043, 
+            "recovered": 193417
+        }, 
+        {
+            "confirmed": 310504, 
+            "date": "2021-1-21", 
+            "deaths": 9122, 
+            "recovered": 197611
+        }, 
+        {
+            "confirmed": 313608, 
+            "date": "2021-1-22", 
+            "deaths": 9181, 
+            "recovered": 202307
+        }, 
+        {
+            "confirmed": 316664, 
+            "date": "2021-1-23", 
+            "deaths": 9254, 
+            "recovered": 206512
+        }, 
+        {
+            "confirmed": 319593, 
+            "date": "2021-1-24", 
+            "deaths": 9315, 
+            "recovered": 208772
+        }, 
+        {
+            "confirmed": 321709, 
+            "date": "2021-1-25", 
+            "deaths": 9374, 
+            "recovered": 209671
+        }, 
+        {
+            "confirmed": 323219, 
+            "date": "2021-1-26", 
+            "deaths": 9432, 
+            "recovered": 212093
+        }, 
+        {
+            "confirmed": 325032, 
+            "date": "2021-1-27", 
+            "deaths": 9502, 
+            "recovered": 217888
+        }, 
+        {
+            "confirmed": 327160, 
+            "date": "2021-1-28", 
+            "deaths": 9571, 
+            "recovered": 222012
+        }, 
+        {
+            "confirmed": 329444, 
+            "date": "2021-1-29", 
+            "deaths": 9622, 
+            "recovered": 225640
+        }, 
+        {
+            "confirmed": 331956, 
+            "date": "2021-1-30", 
+            "deaths": 9686, 
+            "recovered": 229049
+        }, 
+        {
+            "confirmed": 334116, 
+            "date": "2021-1-31", 
+            "deaths": 9733, 
+            "recovered": 230486
+        }, 
+        {
+            "confirmed": 335958, 
+            "date": "2021-2-1", 
+            "deaths": 9786, 
+            "recovered": 231759
+        }, 
+        {
+            "confirmed": 337442, 
+            "date": "2021-2-2", 
+            "deaths": 9851, 
+            "recovered": 233683
+        }, 
+        {
+            "confirmed": 339358, 
+            "date": "2021-2-3", 
+            "deaths": 9906, 
+            "recovered": 237310
+        }, 
+        {
+            "confirmed": 340929, 
+            "date": "2021-2-4", 
+            "deaths": 9959, 
+            "recovered": 240463
+        }, 
+        {
+            "confirmed": 342392, 
+            "date": "2021-2-5", 
+            "deaths": 9997, 
+            "recovered": 243475
+        }, 
+        {
+            "confirmed": 343640, 
+            "date": "2021-2-6", 
+            "deaths": 10042, 
+            "recovered": 245947
+        }, 
+        {
+            "confirmed": 344815, 
+            "date": "2021-2-7", 
+            "deaths": 10081, 
+            "recovered": 248286
+        }, 
+        {
+            "confirmed": 346366, 
+            "date": "2021-2-8", 
+            "deaths": 10122, 
+            "recovered": 249376
+        }, 
+        {
+            "confirmed": 347444, 
+            "date": "2021-2-9", 
+            "deaths": 10183, 
+            "recovered": 253115
         }
     ], 
     "Саратовская область": [
@@ -119721,6 +131421,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 442, 
             "recovered": 32532
+        }, 
+        {
+            "confirmed": 38189, 
+            "date": "2021-1-11", 
+            "deaths": 444, 
+            "recovered": 32705
+        }, 
+        {
+            "confirmed": 38443, 
+            "date": "2021-1-12", 
+            "deaths": 449, 
+            "recovered": 32936
+        }, 
+        {
+            "confirmed": 38695, 
+            "date": "2021-1-13", 
+            "deaths": 452, 
+            "recovered": 33156
+        }, 
+        {
+            "confirmed": 38944, 
+            "date": "2021-1-14", 
+            "deaths": 459, 
+            "recovered": 33419
+        }, 
+        {
+            "confirmed": 39195, 
+            "date": "2021-1-15", 
+            "deaths": 465, 
+            "recovered": 33639
+        }, 
+        {
+            "confirmed": 39449, 
+            "date": "2021-1-16", 
+            "deaths": 471, 
+            "recovered": 33841
+        }, 
+        {
+            "confirmed": 39701, 
+            "date": "2021-1-17", 
+            "deaths": 474, 
+            "recovered": 34119
+        }, 
+        {
+            "confirmed": 39951, 
+            "date": "2021-1-18", 
+            "deaths": 479, 
+            "recovered": 34331
+        }, 
+        {
+            "confirmed": 40199, 
+            "date": "2021-1-19", 
+            "deaths": 485, 
+            "recovered": 34570
+        }, 
+        {
+            "confirmed": 40449, 
+            "date": "2021-1-20", 
+            "deaths": 492, 
+            "recovered": 34836
+        }, 
+        {
+            "confirmed": 40702, 
+            "date": "2021-1-21", 
+            "deaths": 498, 
+            "recovered": 35105
+        }, 
+        {
+            "confirmed": 40956, 
+            "date": "2021-1-22", 
+            "deaths": 505, 
+            "recovered": 35383
+        }, 
+        {
+            "confirmed": 41207, 
+            "date": "2021-1-23", 
+            "deaths": 512, 
+            "recovered": 35640
+        }, 
+        {
+            "confirmed": 41456, 
+            "date": "2021-1-24", 
+            "deaths": 515, 
+            "recovered": 35929
+        }, 
+        {
+            "confirmed": 41706, 
+            "date": "2021-1-25", 
+            "deaths": 516, 
+            "recovered": 36208
+        }, 
+        {
+            "confirmed": 41954, 
+            "date": "2021-1-26", 
+            "deaths": 519, 
+            "recovered": 36467
+        }, 
+        {
+            "confirmed": 42206, 
+            "date": "2021-1-27", 
+            "deaths": 524, 
+            "recovered": 36765
+        }, 
+        {
+            "confirmed": 42459, 
+            "date": "2021-1-28", 
+            "deaths": 528, 
+            "recovered": 37048
+        }, 
+        {
+            "confirmed": 42706, 
+            "date": "2021-1-29", 
+            "deaths": 532, 
+            "recovered": 37297
+        }, 
+        {
+            "confirmed": 42951, 
+            "date": "2021-1-30", 
+            "deaths": 537, 
+            "recovered": 37560
+        }, 
+        {
+            "confirmed": 43192, 
+            "date": "2021-1-31", 
+            "deaths": 540, 
+            "recovered": 37809
+        }, 
+        {
+            "confirmed": 43435, 
+            "date": "2021-2-1", 
+            "deaths": 542, 
+            "recovered": 38062
+        }, 
+        {
+            "confirmed": 43675, 
+            "date": "2021-2-2", 
+            "deaths": 547, 
+            "recovered": 38315
+        }, 
+        {
+            "confirmed": 43917, 
+            "date": "2021-2-3", 
+            "deaths": 552, 
+            "recovered": 38566
+        }, 
+        {
+            "confirmed": 44160, 
+            "date": "2021-2-4", 
+            "deaths": 558, 
+            "recovered": 38830
+        }, 
+        {
+            "confirmed": 44399, 
+            "date": "2021-2-5", 
+            "deaths": 564, 
+            "recovered": 39089
+        }, 
+        {
+            "confirmed": 44640, 
+            "date": "2021-2-6", 
+            "deaths": 569, 
+            "recovered": 39352
+        }, 
+        {
+            "confirmed": 44878, 
+            "date": "2021-2-7", 
+            "deaths": 574, 
+            "recovered": 39593
+        }, 
+        {
+            "confirmed": 45114, 
+            "date": "2021-2-8", 
+            "deaths": 578, 
+            "recovered": 39834
+        }, 
+        {
+            "confirmed": 45356, 
+            "date": "2021-2-9", 
+            "deaths": 582, 
+            "recovered": 40099
         }
     ], 
     "Сахалинская область": [
@@ -121535,6 +133415,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 17, 
             "recovered": 14278
+        }, 
+        {
+            "confirmed": 17290, 
+            "date": "2021-1-11", 
+            "deaths": 18, 
+            "recovered": 14371
+        }, 
+        {
+            "confirmed": 17431, 
+            "date": "2021-1-12", 
+            "deaths": 18, 
+            "recovered": 14442
+        }, 
+        {
+            "confirmed": 17566, 
+            "date": "2021-1-13", 
+            "deaths": 20, 
+            "recovered": 14558
+        }, 
+        {
+            "confirmed": 17695, 
+            "date": "2021-1-14", 
+            "deaths": 20, 
+            "recovered": 14740
+        }, 
+        {
+            "confirmed": 17826, 
+            "date": "2021-1-15", 
+            "deaths": 20, 
+            "recovered": 14807
+        }, 
+        {
+            "confirmed": 17953, 
+            "date": "2021-1-16", 
+            "deaths": 20, 
+            "recovered": 14959
+        }, 
+        {
+            "confirmed": 18083, 
+            "date": "2021-1-17", 
+            "deaths": 20, 
+            "recovered": 15115
+        }, 
+        {
+            "confirmed": 18216, 
+            "date": "2021-1-18", 
+            "deaths": 21, 
+            "recovered": 15177
+        }, 
+        {
+            "confirmed": 18345, 
+            "date": "2021-1-19", 
+            "deaths": 21, 
+            "recovered": 15314
+        }, 
+        {
+            "confirmed": 18476, 
+            "date": "2021-1-20", 
+            "deaths": 21, 
+            "recovered": 15459
+        }, 
+        {
+            "confirmed": 18596, 
+            "date": "2021-1-21", 
+            "deaths": 22, 
+            "recovered": 15622
+        }, 
+        {
+            "confirmed": 18714, 
+            "date": "2021-1-22", 
+            "deaths": 22, 
+            "recovered": 15783
+        }, 
+        {
+            "confirmed": 18835, 
+            "date": "2021-1-23", 
+            "deaths": 22, 
+            "recovered": 15957
+        }, 
+        {
+            "confirmed": 18954, 
+            "date": "2021-1-24", 
+            "deaths": 22, 
+            "recovered": 16126
+        }, 
+        {
+            "confirmed": 19071, 
+            "date": "2021-1-25", 
+            "deaths": 22, 
+            "recovered": 16189
+        }, 
+        {
+            "confirmed": 19191, 
+            "date": "2021-1-26", 
+            "deaths": 23, 
+            "recovered": 16262
+        }, 
+        {
+            "confirmed": 19305, 
+            "date": "2021-1-27", 
+            "deaths": 23, 
+            "recovered": 16354
+        }, 
+        {
+            "confirmed": 19408, 
+            "date": "2021-1-28", 
+            "deaths": 23, 
+            "recovered": 16455
+        }, 
+        {
+            "confirmed": 19505, 
+            "date": "2021-1-29", 
+            "deaths": 25, 
+            "recovered": 16595
+        }, 
+        {
+            "confirmed": 19596, 
+            "date": "2021-1-30", 
+            "deaths": 25, 
+            "recovered": 16782
+        }, 
+        {
+            "confirmed": 19683, 
+            "date": "2021-1-31", 
+            "deaths": 25, 
+            "recovered": 16958
+        }, 
+        {
+            "confirmed": 19766, 
+            "date": "2021-2-1", 
+            "deaths": 26, 
+            "recovered": 17137
+        }, 
+        {
+            "confirmed": 19847, 
+            "date": "2021-2-2", 
+            "deaths": 26, 
+            "recovered": 17297
+        }, 
+        {
+            "confirmed": 19920, 
+            "date": "2021-2-3", 
+            "deaths": 27, 
+            "recovered": 17446
+        }, 
+        {
+            "confirmed": 19959, 
+            "date": "2021-2-4", 
+            "deaths": 27, 
+            "recovered": 17592
+        }, 
+        {
+            "confirmed": 20047, 
+            "date": "2021-2-5", 
+            "deaths": 27, 
+            "recovered": 17759
+        }, 
+        {
+            "confirmed": 20148, 
+            "date": "2021-2-6", 
+            "deaths": 28, 
+            "recovered": 17954
+        }, 
+        {
+            "confirmed": 20237, 
+            "date": "2021-2-7", 
+            "deaths": 28, 
+            "recovered": 18137
+        }, 
+        {
+            "confirmed": 20323, 
+            "date": "2021-2-8", 
+            "deaths": 28, 
+            "recovered": 18293
+        }, 
+        {
+            "confirmed": 20402, 
+            "date": "2021-2-9", 
+            "deaths": 29, 
+            "recovered": 18474
         }
     ], 
     "Свердловская область": [
@@ -123349,6 +135409,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 1683, 
             "recovered": 54906
+        }, 
+        {
+            "confirmed": 62900, 
+            "date": "2021-1-11", 
+            "deaths": 1700, 
+            "recovered": 55296
+        }, 
+        {
+            "confirmed": 63261, 
+            "date": "2021-1-12", 
+            "deaths": 1718, 
+            "recovered": 55665
+        }, 
+        {
+            "confirmed": 63635, 
+            "date": "2021-1-13", 
+            "deaths": 1733, 
+            "recovered": 56046
+        }, 
+        {
+            "confirmed": 64018, 
+            "date": "2021-1-14", 
+            "deaths": 1753, 
+            "recovered": 56435
+        }, 
+        {
+            "confirmed": 64410, 
+            "date": "2021-1-15", 
+            "deaths": 1771, 
+            "recovered": 56830
+        }, 
+        {
+            "confirmed": 64807, 
+            "date": "2021-1-16", 
+            "deaths": 1788, 
+            "recovered": 57235
+        }, 
+        {
+            "confirmed": 65202, 
+            "date": "2021-1-17", 
+            "deaths": 1804, 
+            "recovered": 57635
+        }, 
+        {
+            "confirmed": 65592, 
+            "date": "2021-1-18", 
+            "deaths": 1821, 
+            "recovered": 58034
+        }, 
+        {
+            "confirmed": 65970, 
+            "date": "2021-1-19", 
+            "deaths": 1839, 
+            "recovered": 58419
+        }, 
+        {
+            "confirmed": 66359, 
+            "date": "2021-1-20", 
+            "deaths": 1855, 
+            "recovered": 58816
+        }, 
+        {
+            "confirmed": 66751, 
+            "date": "2021-1-21", 
+            "deaths": 1872, 
+            "recovered": 59218
+        }, 
+        {
+            "confirmed": 67136, 
+            "date": "2021-1-22", 
+            "deaths": 1890, 
+            "recovered": 59615
+        }, 
+        {
+            "confirmed": 67526, 
+            "date": "2021-1-23", 
+            "deaths": 1907, 
+            "recovered": 60015
+        }, 
+        {
+            "confirmed": 67918, 
+            "date": "2021-1-24", 
+            "deaths": 1922, 
+            "recovered": 60419
+        }, 
+        {
+            "confirmed": 68304, 
+            "date": "2021-1-25", 
+            "deaths": 1938, 
+            "recovered": 60815
+        }, 
+        {
+            "confirmed": 68662, 
+            "date": "2021-1-26", 
+            "deaths": 1956, 
+            "recovered": 61185
+        }, 
+        {
+            "confirmed": 69030, 
+            "date": "2021-1-27", 
+            "deaths": 1973, 
+            "recovered": 61564
+        }, 
+        {
+            "confirmed": 69399, 
+            "date": "2021-1-28", 
+            "deaths": 1989, 
+            "recovered": 61948
+        }, 
+        {
+            "confirmed": 69761, 
+            "date": "2021-1-29", 
+            "deaths": 2004, 
+            "recovered": 62328
+        }, 
+        {
+            "confirmed": 70120, 
+            "date": "2021-1-30", 
+            "deaths": 2020, 
+            "recovered": 62707
+        }, 
+        {
+            "confirmed": 70472, 
+            "date": "2021-1-31", 
+            "deaths": 2034, 
+            "recovered": 63074
+        }, 
+        {
+            "confirmed": 70820, 
+            "date": "2021-2-1", 
+            "deaths": 2048, 
+            "recovered": 63442
+        }, 
+        {
+            "confirmed": 71145, 
+            "date": "2021-2-2", 
+            "deaths": 2063, 
+            "recovered": 63789
+        }, 
+        {
+            "confirmed": 71479, 
+            "date": "2021-2-3", 
+            "deaths": 2079, 
+            "recovered": 64144
+        }, 
+        {
+            "confirmed": 71820, 
+            "date": "2021-2-4", 
+            "deaths": 2093, 
+            "recovered": 64507
+        }, 
+        {
+            "confirmed": 72151, 
+            "date": "2021-2-5", 
+            "deaths": 2108, 
+            "recovered": 64853
+        }, 
+        {
+            "confirmed": 72474, 
+            "date": "2021-2-6", 
+            "deaths": 2121, 
+            "recovered": 65197
+        }, 
+        {
+            "confirmed": 72787, 
+            "date": "2021-2-7", 
+            "deaths": 2132, 
+            "recovered": 65528
+        }, 
+        {
+            "confirmed": 73088, 
+            "date": "2021-2-8", 
+            "deaths": 2144, 
+            "recovered": 65845
+        }, 
+        {
+            "confirmed": 73377, 
+            "date": "2021-2-9", 
+            "deaths": 2157, 
+            "recovered": 66144
         }
     ], 
     "Севастополь": [
@@ -125163,6 +137403,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 283, 
             "recovered": 6967
+        }, 
+        {
+            "confirmed": 7753, 
+            "date": "2021-1-11", 
+            "deaths": 287, 
+            "recovered": 7007
+        }, 
+        {
+            "confirmed": 7846, 
+            "date": "2021-1-12", 
+            "deaths": 291, 
+            "recovered": 7076
+        }, 
+        {
+            "confirmed": 7939, 
+            "date": "2021-1-13", 
+            "deaths": 294, 
+            "recovered": 7158
+        }, 
+        {
+            "confirmed": 8034, 
+            "date": "2021-1-14", 
+            "deaths": 302, 
+            "recovered": 7287
+        }, 
+        {
+            "confirmed": 8130, 
+            "date": "2021-1-15", 
+            "deaths": 308, 
+            "recovered": 7377
+        }, 
+        {
+            "confirmed": 8224, 
+            "date": "2021-1-16", 
+            "deaths": 313, 
+            "recovered": 7465
+        }, 
+        {
+            "confirmed": 8321, 
+            "date": "2021-1-17", 
+            "deaths": 319, 
+            "recovered": 7560
+        }, 
+        {
+            "confirmed": 8416, 
+            "date": "2021-1-18", 
+            "deaths": 324, 
+            "recovered": 7600
+        }, 
+        {
+            "confirmed": 8516, 
+            "date": "2021-1-19", 
+            "deaths": 329, 
+            "recovered": 7698
+        }, 
+        {
+            "confirmed": 8611, 
+            "date": "2021-1-20", 
+            "deaths": 335, 
+            "recovered": 7778
+        }, 
+        {
+            "confirmed": 8710, 
+            "date": "2021-1-21", 
+            "deaths": 342, 
+            "recovered": 7874
+        }, 
+        {
+            "confirmed": 8807, 
+            "date": "2021-1-22", 
+            "deaths": 348, 
+            "recovered": 7963
+        }, 
+        {
+            "confirmed": 8905, 
+            "date": "2021-1-23", 
+            "deaths": 355, 
+            "recovered": 8057
+        }, 
+        {
+            "confirmed": 9006, 
+            "date": "2021-1-24", 
+            "deaths": 361, 
+            "recovered": 8152
+        }, 
+        {
+            "confirmed": 9105, 
+            "date": "2021-1-25", 
+            "deaths": 366, 
+            "recovered": 8220
+        }, 
+        {
+            "confirmed": 9207, 
+            "date": "2021-1-26", 
+            "deaths": 371, 
+            "recovered": 8311
+        }, 
+        {
+            "confirmed": 9303, 
+            "date": "2021-1-27", 
+            "deaths": 376, 
+            "recovered": 8400
+        }, 
+        {
+            "confirmed": 9401, 
+            "date": "2021-1-28", 
+            "deaths": 381, 
+            "recovered": 8481
+        }, 
+        {
+            "confirmed": 9500, 
+            "date": "2021-1-29", 
+            "deaths": 385, 
+            "recovered": 8566
+        }, 
+        {
+            "confirmed": 9603, 
+            "date": "2021-1-30", 
+            "deaths": 389, 
+            "recovered": 8609
+        }, 
+        {
+            "confirmed": 9704, 
+            "date": "2021-1-31", 
+            "deaths": 393, 
+            "recovered": 8724
+        }, 
+        {
+            "confirmed": 9805, 
+            "date": "2021-2-1", 
+            "deaths": 396, 
+            "recovered": 8739
+        }, 
+        {
+            "confirmed": 9904, 
+            "date": "2021-2-2", 
+            "deaths": 400, 
+            "recovered": 8834
+        }, 
+        {
+            "confirmed": 10005, 
+            "date": "2021-2-3", 
+            "deaths": 404, 
+            "recovered": 8952
+        }, 
+        {
+            "confirmed": 10108, 
+            "date": "2021-2-4", 
+            "deaths": 409, 
+            "recovered": 9053
+        }, 
+        {
+            "confirmed": 10200, 
+            "date": "2021-2-5", 
+            "deaths": 413, 
+            "recovered": 9141
+        }, 
+        {
+            "confirmed": 10293, 
+            "date": "2021-2-6", 
+            "deaths": 413, 
+            "recovered": 9226
+        }, 
+        {
+            "confirmed": 10384, 
+            "date": "2021-2-7", 
+            "deaths": 417, 
+            "recovered": 9304
+        }, 
+        {
+            "confirmed": 10474, 
+            "date": "2021-2-8", 
+            "deaths": 421, 
+            "recovered": 9327
+        }, 
+        {
+            "confirmed": 10565, 
+            "date": "2021-2-9", 
+            "deaths": 425, 
+            "recovered": 9417
         }
     ], 
     "Смоленская область": [
@@ -126977,6 +139397,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 356, 
             "recovered": 14275
+        }, 
+        {
+            "confirmed": 18783, 
+            "date": "2021-1-11", 
+            "deaths": 356, 
+            "recovered": 14287
+        }, 
+        {
+            "confirmed": 18939, 
+            "date": "2021-1-12", 
+            "deaths": 357, 
+            "recovered": 14518
+        }, 
+        {
+            "confirmed": 19097, 
+            "date": "2021-1-13", 
+            "deaths": 358, 
+            "recovered": 14771
+        }, 
+        {
+            "confirmed": 19264, 
+            "date": "2021-1-14", 
+            "deaths": 362, 
+            "recovered": 14826
+        }, 
+        {
+            "confirmed": 19436, 
+            "date": "2021-1-15", 
+            "deaths": 367, 
+            "recovered": 15184
+        }, 
+        {
+            "confirmed": 19611, 
+            "date": "2021-1-16", 
+            "deaths": 373, 
+            "recovered": 15553
+        }, 
+        {
+            "confirmed": 19782, 
+            "date": "2021-1-17", 
+            "deaths": 380, 
+            "recovered": 15682
+        }, 
+        {
+            "confirmed": 19954, 
+            "date": "2021-1-18", 
+            "deaths": 387, 
+            "recovered": 15693
+        }, 
+        {
+            "confirmed": 20128, 
+            "date": "2021-1-19", 
+            "deaths": 395, 
+            "recovered": 16011
+        }, 
+        {
+            "confirmed": 20309, 
+            "date": "2021-1-20", 
+            "deaths": 403, 
+            "recovered": 16484
+        }, 
+        {
+            "confirmed": 20496, 
+            "date": "2021-1-21", 
+            "deaths": 408, 
+            "recovered": 16764
+        }, 
+        {
+            "confirmed": 20685, 
+            "date": "2021-1-22", 
+            "deaths": 414, 
+            "recovered": 17052
+        }, 
+        {
+            "confirmed": 20874, 
+            "date": "2021-1-23", 
+            "deaths": 418, 
+            "recovered": 17343
+        }, 
+        {
+            "confirmed": 21062, 
+            "date": "2021-1-24", 
+            "deaths": 420, 
+            "recovered": 17598
+        }, 
+        {
+            "confirmed": 21251, 
+            "date": "2021-1-25", 
+            "deaths": 424, 
+            "recovered": 17782
+        }, 
+        {
+            "confirmed": 21438, 
+            "date": "2021-1-26", 
+            "deaths": 430, 
+            "recovered": 18080
+        }, 
+        {
+            "confirmed": 21625, 
+            "date": "2021-1-27", 
+            "deaths": 436, 
+            "recovered": 18398
+        }, 
+        {
+            "confirmed": 21811, 
+            "date": "2021-1-28", 
+            "deaths": 443, 
+            "recovered": 18742
+        }, 
+        {
+            "confirmed": 21997, 
+            "date": "2021-1-29", 
+            "deaths": 448, 
+            "recovered": 19093
+        }, 
+        {
+            "confirmed": 22180, 
+            "date": "2021-1-30", 
+            "deaths": 453, 
+            "recovered": 19284
+        }, 
+        {
+            "confirmed": 22362, 
+            "date": "2021-1-31", 
+            "deaths": 458, 
+            "recovered": 19434
+        }, 
+        {
+            "confirmed": 22544, 
+            "date": "2021-2-1", 
+            "deaths": 463, 
+            "recovered": 19555
+        }, 
+        {
+            "confirmed": 22723, 
+            "date": "2021-2-2", 
+            "deaths": 467, 
+            "recovered": 19669
+        }, 
+        {
+            "confirmed": 22903, 
+            "date": "2021-2-3", 
+            "deaths": 471, 
+            "recovered": 20033
+        }, 
+        {
+            "confirmed": 23080, 
+            "date": "2021-2-4", 
+            "deaths": 478, 
+            "recovered": 20292
+        }, 
+        {
+            "confirmed": 23257, 
+            "date": "2021-2-5", 
+            "deaths": 484, 
+            "recovered": 20521
+        }, 
+        {
+            "confirmed": 23432, 
+            "date": "2021-2-6", 
+            "deaths": 488, 
+            "recovered": 20731
+        }, 
+        {
+            "confirmed": 23601, 
+            "date": "2021-2-7", 
+            "deaths": 491, 
+            "recovered": 20885
+        }, 
+        {
+            "confirmed": 23766, 
+            "date": "2021-2-8", 
+            "deaths": 497, 
+            "recovered": 21006
+        }, 
+        {
+            "confirmed": 23926, 
+            "date": "2021-2-9", 
+            "deaths": 499, 
+            "recovered": 21280
         }
     ], 
     "Ставропольский край": [
@@ -128791,6 +141391,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 798, 
             "recovered": 33515
+        }, 
+        {
+            "confirmed": 37748, 
+            "date": "2021-1-11", 
+            "deaths": 805, 
+            "recovered": 33611
+        }, 
+        {
+            "confirmed": 37991, 
+            "date": "2021-1-12", 
+            "deaths": 813, 
+            "recovered": 33882
+        }, 
+        {
+            "confirmed": 38230, 
+            "date": "2021-1-13", 
+            "deaths": 820, 
+            "recovered": 34126
+        }, 
+        {
+            "confirmed": 38471, 
+            "date": "2021-1-14", 
+            "deaths": 827, 
+            "recovered": 34435
+        }, 
+        {
+            "confirmed": 38709, 
+            "date": "2021-1-15", 
+            "deaths": 834, 
+            "recovered": 34679
+        }, 
+        {
+            "confirmed": 38949, 
+            "date": "2021-1-16", 
+            "deaths": 841, 
+            "recovered": 35060
+        }, 
+        {
+            "confirmed": 39186, 
+            "date": "2021-1-17", 
+            "deaths": 848, 
+            "recovered": 35187
+        }, 
+        {
+            "confirmed": 39421, 
+            "date": "2021-1-18", 
+            "deaths": 855, 
+            "recovered": 35288
+        }, 
+        {
+            "confirmed": 39655, 
+            "date": "2021-1-19", 
+            "deaths": 863, 
+            "recovered": 35487
+        }, 
+        {
+            "confirmed": 39891, 
+            "date": "2021-1-20", 
+            "deaths": 870, 
+            "recovered": 35793
+        }, 
+        {
+            "confirmed": 40131, 
+            "date": "2021-1-21", 
+            "deaths": 877, 
+            "recovered": 36058
+        }, 
+        {
+            "confirmed": 40369, 
+            "date": "2021-1-22", 
+            "deaths": 884, 
+            "recovered": 36328
+        }, 
+        {
+            "confirmed": 40612, 
+            "date": "2021-1-23", 
+            "deaths": 891, 
+            "recovered": 36640
+        }, 
+        {
+            "confirmed": 40853, 
+            "date": "2021-1-24", 
+            "deaths": 897, 
+            "recovered": 36743
+        }, 
+        {
+            "confirmed": 41090, 
+            "date": "2021-1-25", 
+            "deaths": 897, 
+            "recovered": 36831
+        }, 
+        {
+            "confirmed": 41325, 
+            "date": "2021-1-26", 
+            "deaths": 903, 
+            "recovered": 37124
+        }, 
+        {
+            "confirmed": 41557, 
+            "date": "2021-1-27", 
+            "deaths": 910, 
+            "recovered": 37336
+        }, 
+        {
+            "confirmed": 41791, 
+            "date": "2021-1-28", 
+            "deaths": 916, 
+            "recovered": 37625
+        }, 
+        {
+            "confirmed": 42022, 
+            "date": "2021-1-29", 
+            "deaths": 920, 
+            "recovered": 37897
+        }, 
+        {
+            "confirmed": 42255, 
+            "date": "2021-1-30", 
+            "deaths": 923, 
+            "recovered": 38104
+        }, 
+        {
+            "confirmed": 42484, 
+            "date": "2021-1-31", 
+            "deaths": 930, 
+            "recovered": 38240
+        }, 
+        {
+            "confirmed": 42711, 
+            "date": "2021-2-1", 
+            "deaths": 932, 
+            "recovered": 38311
+        }, 
+        {
+            "confirmed": 42936, 
+            "date": "2021-2-2", 
+            "deaths": 938, 
+            "recovered": 38510
+        }, 
+        {
+            "confirmed": 43165, 
+            "date": "2021-2-3", 
+            "deaths": 945, 
+            "recovered": 38714
+        }, 
+        {
+            "confirmed": 43393, 
+            "date": "2021-2-4", 
+            "deaths": 951, 
+            "recovered": 38905
+        }, 
+        {
+            "confirmed": 43619, 
+            "date": "2021-2-5", 
+            "deaths": 957, 
+            "recovered": 39122
+        }, 
+        {
+            "confirmed": 43849, 
+            "date": "2021-2-6", 
+            "deaths": 963, 
+            "recovered": 39376
+        }, 
+        {
+            "confirmed": 44073, 
+            "date": "2021-2-7", 
+            "deaths": 968, 
+            "recovered": 39491
+        }, 
+        {
+            "confirmed": 44295, 
+            "date": "2021-2-8", 
+            "deaths": 971, 
+            "recovered": 39583
+        }, 
+        {
+            "confirmed": 44515, 
+            "date": "2021-2-9", 
+            "deaths": 977, 
+            "recovered": 39868
         }
     ], 
     "Тамбовская область": [
@@ -130605,6 +143385,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 209, 
             "recovered": 16893
+        }, 
+        {
+            "confirmed": 19412, 
+            "date": "2021-1-11", 
+            "deaths": 212, 
+            "recovered": 17053
+        }, 
+        {
+            "confirmed": 19569, 
+            "date": "2021-1-12", 
+            "deaths": 214, 
+            "recovered": 17230
+        }, 
+        {
+            "confirmed": 19726, 
+            "date": "2021-1-13", 
+            "deaths": 217, 
+            "recovered": 17503
+        }, 
+        {
+            "confirmed": 19885, 
+            "date": "2021-1-14", 
+            "deaths": 220, 
+            "recovered": 17868
+        }, 
+        {
+            "confirmed": 20045, 
+            "date": "2021-1-15", 
+            "deaths": 223, 
+            "recovered": 18081
+        }, 
+        {
+            "confirmed": 20203, 
+            "date": "2021-1-16", 
+            "deaths": 226, 
+            "recovered": 18268
+        }, 
+        {
+            "confirmed": 20362, 
+            "date": "2021-1-17", 
+            "deaths": 229, 
+            "recovered": 18437
+        }, 
+        {
+            "confirmed": 20522, 
+            "date": "2021-1-18", 
+            "deaths": 232, 
+            "recovered": 18498
+        }, 
+        {
+            "confirmed": 20679, 
+            "date": "2021-1-19", 
+            "deaths": 235, 
+            "recovered": 18582
+        }, 
+        {
+            "confirmed": 20834, 
+            "date": "2021-1-20", 
+            "deaths": 238, 
+            "recovered": 18828
+        }, 
+        {
+            "confirmed": 20990, 
+            "date": "2021-1-21", 
+            "deaths": 241, 
+            "recovered": 19277
+        }, 
+        {
+            "confirmed": 21148, 
+            "date": "2021-1-22", 
+            "deaths": 244, 
+            "recovered": 19322
+        }, 
+        {
+            "confirmed": 21305, 
+            "date": "2021-1-23", 
+            "deaths": 247, 
+            "recovered": 19616
+        }, 
+        {
+            "confirmed": 21464, 
+            "date": "2021-1-24", 
+            "deaths": 250, 
+            "recovered": 19796
+        }, 
+        {
+            "confirmed": 21622, 
+            "date": "2021-1-25", 
+            "deaths": 253, 
+            "recovered": 19963
+        }, 
+        {
+            "confirmed": 21777, 
+            "date": "2021-1-26", 
+            "deaths": 256, 
+            "recovered": 20138
+        }, 
+        {
+            "confirmed": 21933, 
+            "date": "2021-1-27", 
+            "deaths": 259, 
+            "recovered": 20354
+        }, 
+        {
+            "confirmed": 22089, 
+            "date": "2021-1-28", 
+            "deaths": 262, 
+            "recovered": 20397
+        }, 
+        {
+            "confirmed": 22244, 
+            "date": "2021-1-29", 
+            "deaths": 265, 
+            "recovered": 20648
+        }, 
+        {
+            "confirmed": 22398, 
+            "date": "2021-1-30", 
+            "deaths": 268, 
+            "recovered": 20745
+        }, 
+        {
+            "confirmed": 22551, 
+            "date": "2021-1-31", 
+            "deaths": 270, 
+            "recovered": 20835
+        }, 
+        {
+            "confirmed": 22702, 
+            "date": "2021-2-1", 
+            "deaths": 273, 
+            "recovered": 20856
+        }, 
+        {
+            "confirmed": 22848, 
+            "date": "2021-2-2", 
+            "deaths": 275, 
+            "recovered": 20892
+        }, 
+        {
+            "confirmed": 22993, 
+            "date": "2021-2-3", 
+            "deaths": 278, 
+            "recovered": 20999
+        }, 
+        {
+            "confirmed": 23136, 
+            "date": "2021-2-4", 
+            "deaths": 281, 
+            "recovered": 21122
+        }, 
+        {
+            "confirmed": 23278, 
+            "date": "2021-2-5", 
+            "deaths": 283, 
+            "recovered": 21293
+        }, 
+        {
+            "confirmed": 23420, 
+            "date": "2021-2-6", 
+            "deaths": 286, 
+            "recovered": 21445
+        }, 
+        {
+            "confirmed": 23560, 
+            "date": "2021-2-7", 
+            "deaths": 289, 
+            "recovered": 21513
+        }, 
+        {
+            "confirmed": 23699, 
+            "date": "2021-2-8", 
+            "deaths": 291, 
+            "recovered": 21572
+        }, 
+        {
+            "confirmed": 23836, 
+            "date": "2021-2-9", 
+            "deaths": 294, 
+            "recovered": 21640
         }
     ], 
     "Тверская область": [
@@ -132419,6 +145379,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 469, 
             "recovered": 19619
+        }, 
+        {
+            "confirmed": 24775, 
+            "date": "2021-1-11", 
+            "deaths": 469, 
+            "recovered": 19816
+        }, 
+        {
+            "confirmed": 25001, 
+            "date": "2021-1-12", 
+            "deaths": 474, 
+            "recovered": 20037
+        }, 
+        {
+            "confirmed": 25229, 
+            "date": "2021-1-13", 
+            "deaths": 477, 
+            "recovered": 20395
+        }, 
+        {
+            "confirmed": 25459, 
+            "date": "2021-1-14", 
+            "deaths": 484, 
+            "recovered": 20893
+        }, 
+        {
+            "confirmed": 25684, 
+            "date": "2021-1-15", 
+            "deaths": 484, 
+            "recovered": 21071
+        }, 
+        {
+            "confirmed": 25910, 
+            "date": "2021-1-16", 
+            "deaths": 487, 
+            "recovered": 21302
+        }, 
+        {
+            "confirmed": 26134, 
+            "date": "2021-1-17", 
+            "deaths": 487, 
+            "recovered": 21543
+        }, 
+        {
+            "confirmed": 26357, 
+            "date": "2021-1-18", 
+            "deaths": 487, 
+            "recovered": 21732
+        }, 
+        {
+            "confirmed": 26580, 
+            "date": "2021-1-19", 
+            "deaths": 490, 
+            "recovered": 21974
+        }, 
+        {
+            "confirmed": 26802, 
+            "date": "2021-1-20", 
+            "deaths": 493, 
+            "recovered": 22232
+        }, 
+        {
+            "confirmed": 27022, 
+            "date": "2021-1-21", 
+            "deaths": 495, 
+            "recovered": 22548
+        }, 
+        {
+            "confirmed": 27239, 
+            "date": "2021-1-22", 
+            "deaths": 499, 
+            "recovered": 22874
+        }, 
+        {
+            "confirmed": 27451, 
+            "date": "2021-1-23", 
+            "deaths": 502, 
+            "recovered": 23221
+        }, 
+        {
+            "confirmed": 27662, 
+            "date": "2021-1-24", 
+            "deaths": 502, 
+            "recovered": 23547
+        }, 
+        {
+            "confirmed": 27870, 
+            "date": "2021-1-25", 
+            "deaths": 502, 
+            "recovered": 23799
+        }, 
+        {
+            "confirmed": 28076, 
+            "date": "2021-1-26", 
+            "deaths": 505, 
+            "recovered": 24054
+        }, 
+        {
+            "confirmed": 28278, 
+            "date": "2021-1-27", 
+            "deaths": 507, 
+            "recovered": 24303
+        }, 
+        {
+            "confirmed": 28477, 
+            "date": "2021-1-28", 
+            "deaths": 510, 
+            "recovered": 24534
+        }, 
+        {
+            "confirmed": 28675, 
+            "date": "2021-1-29", 
+            "deaths": 513, 
+            "recovered": 24763
+        }, 
+        {
+            "confirmed": 28873, 
+            "date": "2021-1-30", 
+            "deaths": 516, 
+            "recovered": 24984
+        }, 
+        {
+            "confirmed": 29070, 
+            "date": "2021-1-31", 
+            "deaths": 516, 
+            "recovered": 25171
+        }, 
+        {
+            "confirmed": 29263, 
+            "date": "2021-2-1", 
+            "deaths": 516, 
+            "recovered": 25334
+        }, 
+        {
+            "confirmed": 29454, 
+            "date": "2021-2-2", 
+            "deaths": 519, 
+            "recovered": 25533
+        }, 
+        {
+            "confirmed": 29642, 
+            "date": "2021-2-3", 
+            "deaths": 523, 
+            "recovered": 25752
+        }, 
+        {
+            "confirmed": 29831, 
+            "date": "2021-2-4", 
+            "deaths": 528, 
+            "recovered": 25975
+        }, 
+        {
+            "confirmed": 30018, 
+            "date": "2021-2-5", 
+            "deaths": 534, 
+            "recovered": 26203
+        }, 
+        {
+            "confirmed": 30203, 
+            "date": "2021-2-6", 
+            "deaths": 537, 
+            "recovered": 26442
+        }, 
+        {
+            "confirmed": 30386, 
+            "date": "2021-2-7", 
+            "deaths": 537, 
+            "recovered": 26671
+        }, 
+        {
+            "confirmed": 30568, 
+            "date": "2021-2-8", 
+            "deaths": 537, 
+            "recovered": 26866
+        }, 
+        {
+            "confirmed": 30748, 
+            "date": "2021-2-9", 
+            "deaths": 541, 
+            "recovered": 27091
         }
     ], 
     "Томская область": [
@@ -134233,6 +147373,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 231, 
             "recovered": 22120
+        }, 
+        {
+            "confirmed": 25992, 
+            "date": "2021-1-11", 
+            "deaths": 231, 
+            "recovered": 22319
+        }, 
+        {
+            "confirmed": 26127, 
+            "date": "2021-1-12", 
+            "deaths": 231, 
+            "recovered": 22521
+        }, 
+        {
+            "confirmed": 26254, 
+            "date": "2021-1-13", 
+            "deaths": 235, 
+            "recovered": 22748
+        }, 
+        {
+            "confirmed": 26377, 
+            "date": "2021-1-14", 
+            "deaths": 235, 
+            "recovered": 22959
+        }, 
+        {
+            "confirmed": 26496, 
+            "date": "2021-1-15", 
+            "deaths": 235, 
+            "recovered": 23216
+        }, 
+        {
+            "confirmed": 26617, 
+            "date": "2021-1-16", 
+            "deaths": 241, 
+            "recovered": 23455
+        }, 
+        {
+            "confirmed": 26734, 
+            "date": "2021-1-17", 
+            "deaths": 241, 
+            "recovered": 23669
+        }, 
+        {
+            "confirmed": 26849, 
+            "date": "2021-1-18", 
+            "deaths": 241, 
+            "recovered": 23860
+        }, 
+        {
+            "confirmed": 26968, 
+            "date": "2021-1-19", 
+            "deaths": 245, 
+            "recovered": 23972
+        }, 
+        {
+            "confirmed": 27080, 
+            "date": "2021-1-20", 
+            "deaths": 245, 
+            "recovered": 24091
+        }, 
+        {
+            "confirmed": 27199, 
+            "date": "2021-1-21", 
+            "deaths": 245, 
+            "recovered": 24194
+        }, 
+        {
+            "confirmed": 27304, 
+            "date": "2021-1-22", 
+            "deaths": 251, 
+            "recovered": 24310
+        }, 
+        {
+            "confirmed": 27419, 
+            "date": "2021-1-23", 
+            "deaths": 251, 
+            "recovered": 24421
+        }, 
+        {
+            "confirmed": 27529, 
+            "date": "2021-1-24", 
+            "deaths": 251, 
+            "recovered": 24536
+        }, 
+        {
+            "confirmed": 27632, 
+            "date": "2021-1-25", 
+            "deaths": 251, 
+            "recovered": 24641
+        }, 
+        {
+            "confirmed": 27730, 
+            "date": "2021-1-26", 
+            "deaths": 255, 
+            "recovered": 24765
+        }, 
+        {
+            "confirmed": 27832, 
+            "date": "2021-1-27", 
+            "deaths": 255, 
+            "recovered": 24897
+        }, 
+        {
+            "confirmed": 27947, 
+            "date": "2021-1-28", 
+            "deaths": 255, 
+            "recovered": 25025
+        }, 
+        {
+            "confirmed": 28050, 
+            "date": "2021-1-29", 
+            "deaths": 261, 
+            "recovered": 25156
+        }, 
+        {
+            "confirmed": 28143, 
+            "date": "2021-1-30", 
+            "deaths": 263, 
+            "recovered": 25280
+        }, 
+        {
+            "confirmed": 28234, 
+            "date": "2021-1-31", 
+            "deaths": 263, 
+            "recovered": 25395
+        }, 
+        {
+            "confirmed": 28322, 
+            "date": "2021-2-1", 
+            "deaths": 267, 
+            "recovered": 25501
+        }, 
+        {
+            "confirmed": 28421, 
+            "date": "2021-2-2", 
+            "deaths": 267, 
+            "recovered": 25598
+        }, 
+        {
+            "confirmed": 28512, 
+            "date": "2021-2-3", 
+            "deaths": 267, 
+            "recovered": 25725
+        }, 
+        {
+            "confirmed": 28599, 
+            "date": "2021-2-4", 
+            "deaths": 271, 
+            "recovered": 25839
+        }, 
+        {
+            "confirmed": 28690, 
+            "date": "2021-2-5", 
+            "deaths": 271, 
+            "recovered": 25960
+        }, 
+        {
+            "confirmed": 28777, 
+            "date": "2021-2-6", 
+            "deaths": 271, 
+            "recovered": 26043
+        }, 
+        {
+            "confirmed": 28862, 
+            "date": "2021-2-7", 
+            "deaths": 277, 
+            "recovered": 26141
+        }, 
+        {
+            "confirmed": 28945, 
+            "date": "2021-2-8", 
+            "deaths": 277, 
+            "recovered": 26228
+        }, 
+        {
+            "confirmed": 29036, 
+            "date": "2021-2-9", 
+            "deaths": 277, 
+            "recovered": 26333
         }
     ], 
     "Тульская область": [
@@ -136047,6 +149367,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 854, 
             "recovered": 21971
+        }, 
+        {
+            "confirmed": 25078, 
+            "date": "2021-1-11", 
+            "deaths": 867, 
+            "recovered": 22172
+        }, 
+        {
+            "confirmed": 25284, 
+            "date": "2021-1-12", 
+            "deaths": 872, 
+            "recovered": 22370
+        }, 
+        {
+            "confirmed": 25489, 
+            "date": "2021-1-13", 
+            "deaths": 880, 
+            "recovered": 22566
+        }, 
+        {
+            "confirmed": 25696, 
+            "date": "2021-1-14", 
+            "deaths": 887, 
+            "recovered": 22766
+        }, 
+        {
+            "confirmed": 25900, 
+            "date": "2021-1-15", 
+            "deaths": 893, 
+            "recovered": 22963
+        }, 
+        {
+            "confirmed": 26104, 
+            "date": "2021-1-16", 
+            "deaths": 900, 
+            "recovered": 23173
+        }, 
+        {
+            "confirmed": 26305, 
+            "date": "2021-1-17", 
+            "deaths": 905, 
+            "recovered": 23380
+        }, 
+        {
+            "confirmed": 26505, 
+            "date": "2021-1-18", 
+            "deaths": 910, 
+            "recovered": 23584
+        }, 
+        {
+            "confirmed": 26705, 
+            "date": "2021-1-19", 
+            "deaths": 917, 
+            "recovered": 23789
+        }, 
+        {
+            "confirmed": 26903, 
+            "date": "2021-1-20", 
+            "deaths": 925, 
+            "recovered": 23995
+        }, 
+        {
+            "confirmed": 27099, 
+            "date": "2021-1-21", 
+            "deaths": 932, 
+            "recovered": 24200
+        }, 
+        {
+            "confirmed": 27294, 
+            "date": "2021-1-22", 
+            "deaths": 940, 
+            "recovered": 24405
+        }, 
+        {
+            "confirmed": 27489, 
+            "date": "2021-1-23", 
+            "deaths": 945, 
+            "recovered": 24607
+        }, 
+        {
+            "confirmed": 27679, 
+            "date": "2021-1-24", 
+            "deaths": 952, 
+            "recovered": 24810
+        }, 
+        {
+            "confirmed": 27867, 
+            "date": "2021-1-25", 
+            "deaths": 960, 
+            "recovered": 25005
+        }, 
+        {
+            "confirmed": 28052, 
+            "date": "2021-1-26", 
+            "deaths": 966, 
+            "recovered": 25202
+        }, 
+        {
+            "confirmed": 28233, 
+            "date": "2021-1-27", 
+            "deaths": 972, 
+            "recovered": 25396
+        }, 
+        {
+            "confirmed": 28411, 
+            "date": "2021-1-28", 
+            "deaths": 979, 
+            "recovered": 25591
+        }, 
+        {
+            "confirmed": 28584, 
+            "date": "2021-1-29", 
+            "deaths": 989, 
+            "recovered": 25784
+        }, 
+        {
+            "confirmed": 28754, 
+            "date": "2021-1-30", 
+            "deaths": 999, 
+            "recovered": 25974
+        }, 
+        {
+            "confirmed": 28926, 
+            "date": "2021-1-31", 
+            "deaths": 1009, 
+            "recovered": 26165
+        }, 
+        {
+            "confirmed": 29098, 
+            "date": "2021-2-1", 
+            "deaths": 1016, 
+            "recovered": 26353
+        }, 
+        {
+            "confirmed": 29267, 
+            "date": "2021-2-2", 
+            "deaths": 1026, 
+            "recovered": 26542
+        }, 
+        {
+            "confirmed": 29434, 
+            "date": "2021-2-3", 
+            "deaths": 1037, 
+            "recovered": 26728
+        }, 
+        {
+            "confirmed": 29599, 
+            "date": "2021-2-4", 
+            "deaths": 1047, 
+            "recovered": 26915
+        }, 
+        {
+            "confirmed": 29765, 
+            "date": "2021-2-5", 
+            "deaths": 1057, 
+            "recovered": 27104
+        }, 
+        {
+            "confirmed": 29928, 
+            "date": "2021-2-6", 
+            "deaths": 1066, 
+            "recovered": 27289
+        }, 
+        {
+            "confirmed": 30091, 
+            "date": "2021-2-7", 
+            "deaths": 1076, 
+            "recovered": 27471
+        }, 
+        {
+            "confirmed": 30253, 
+            "date": "2021-2-8", 
+            "deaths": 1085, 
+            "recovered": 27652
+        }, 
+        {
+            "confirmed": 30416, 
+            "date": "2021-2-9", 
+            "deaths": 1094, 
+            "recovered": 27830
         }
     ], 
     "Тюменская область": [
@@ -137861,6 +151361,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 214, 
             "recovered": 23428
+        }, 
+        {
+            "confirmed": 25087, 
+            "date": "2021-1-11", 
+            "deaths": 214, 
+            "recovered": 23557
+        }, 
+        {
+            "confirmed": 25242, 
+            "date": "2021-1-12", 
+            "deaths": 215, 
+            "recovered": 23689
+        }, 
+        {
+            "confirmed": 25407, 
+            "date": "2021-1-13", 
+            "deaths": 220, 
+            "recovered": 23842
+        }, 
+        {
+            "confirmed": 25569, 
+            "date": "2021-1-14", 
+            "deaths": 223, 
+            "recovered": 24002
+        }, 
+        {
+            "confirmed": 25735, 
+            "date": "2021-1-15", 
+            "deaths": 226, 
+            "recovered": 24163
+        }, 
+        {
+            "confirmed": 25903, 
+            "date": "2021-1-16", 
+            "deaths": 226, 
+            "recovered": 24326
+        }, 
+        {
+            "confirmed": 26066, 
+            "date": "2021-1-17", 
+            "deaths": 229, 
+            "recovered": 24486
+        }, 
+        {
+            "confirmed": 26230, 
+            "date": "2021-1-18", 
+            "deaths": 229, 
+            "recovered": 24643
+        }, 
+        {
+            "confirmed": 26397, 
+            "date": "2021-1-19", 
+            "deaths": 232, 
+            "recovered": 24797
+        }, 
+        {
+            "confirmed": 26558, 
+            "date": "2021-1-20", 
+            "deaths": 233, 
+            "recovered": 24948
+        }, 
+        {
+            "confirmed": 26717, 
+            "date": "2021-1-21", 
+            "deaths": 233, 
+            "recovered": 25104
+        }, 
+        {
+            "confirmed": 26876, 
+            "date": "2021-1-22", 
+            "deaths": 235, 
+            "recovered": 25257
+        }, 
+        {
+            "confirmed": 27036, 
+            "date": "2021-1-23", 
+            "deaths": 238, 
+            "recovered": 25419
+        }, 
+        {
+            "confirmed": 27194, 
+            "date": "2021-1-24", 
+            "deaths": 238, 
+            "recovered": 25580
+        }, 
+        {
+            "confirmed": 27349, 
+            "date": "2021-1-25", 
+            "deaths": 238, 
+            "recovered": 25723
+        }, 
+        {
+            "confirmed": 27501, 
+            "date": "2021-1-26", 
+            "deaths": 241, 
+            "recovered": 25868
+        }, 
+        {
+            "confirmed": 27651, 
+            "date": "2021-1-27", 
+            "deaths": 241, 
+            "recovered": 26012
+        }, 
+        {
+            "confirmed": 27799, 
+            "date": "2021-1-28", 
+            "deaths": 245, 
+            "recovered": 26157
+        }, 
+        {
+            "confirmed": 27944, 
+            "date": "2021-1-29", 
+            "deaths": 246, 
+            "recovered": 26300
+        }, 
+        {
+            "confirmed": 28088, 
+            "date": "2021-1-30", 
+            "deaths": 246, 
+            "recovered": 26441
+        }, 
+        {
+            "confirmed": 28229, 
+            "date": "2021-1-31", 
+            "deaths": 246, 
+            "recovered": 26521
+        }, 
+        {
+            "confirmed": 28369, 
+            "date": "2021-2-1", 
+            "deaths": 246, 
+            "recovered": 26598
+        }, 
+        {
+            "confirmed": 28507, 
+            "date": "2021-2-2", 
+            "deaths": 248, 
+            "recovered": 26707
+        }, 
+        {
+            "confirmed": 28644, 
+            "date": "2021-2-3", 
+            "deaths": 251, 
+            "recovered": 26849
+        }, 
+        {
+            "confirmed": 28779, 
+            "date": "2021-2-4", 
+            "deaths": 253, 
+            "recovered": 26988
+        }, 
+        {
+            "confirmed": 28909, 
+            "date": "2021-2-5", 
+            "deaths": 254, 
+            "recovered": 27130
+        }, 
+        {
+            "confirmed": 29044, 
+            "date": "2021-2-6", 
+            "deaths": 258, 
+            "recovered": 27274
+        }, 
+        {
+            "confirmed": 29173, 
+            "date": "2021-2-7", 
+            "deaths": 258, 
+            "recovered": 27413
+        }, 
+        {
+            "confirmed": 29301, 
+            "date": "2021-2-8", 
+            "deaths": 258, 
+            "recovered": 27515
+        }, 
+        {
+            "confirmed": 29426, 
+            "date": "2021-2-9", 
+            "deaths": 262, 
+            "recovered": 27619
         }
     ], 
     "Удмуртская Республика": [
@@ -139675,6 +153355,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 419, 
             "recovered": 18061
+        }, 
+        {
+            "confirmed": 21922, 
+            "date": "2021-1-11", 
+            "deaths": 422, 
+            "recovered": 18259
+        }, 
+        {
+            "confirmed": 22111, 
+            "date": "2021-1-12", 
+            "deaths": 424, 
+            "recovered": 18452
+        }, 
+        {
+            "confirmed": 22302, 
+            "date": "2021-1-13", 
+            "deaths": 427, 
+            "recovered": 18641
+        }, 
+        {
+            "confirmed": 22494, 
+            "date": "2021-1-14", 
+            "deaths": 429, 
+            "recovered": 18830
+        }, 
+        {
+            "confirmed": 22684, 
+            "date": "2021-1-15", 
+            "deaths": 434, 
+            "recovered": 19020
+        }, 
+        {
+            "confirmed": 22877, 
+            "date": "2021-1-16", 
+            "deaths": 439, 
+            "recovered": 19208
+        }, 
+        {
+            "confirmed": 23071, 
+            "date": "2021-1-17", 
+            "deaths": 443, 
+            "recovered": 19398
+        }, 
+        {
+            "confirmed": 23265, 
+            "date": "2021-1-18", 
+            "deaths": 445, 
+            "recovered": 19584
+        }, 
+        {
+            "confirmed": 23458, 
+            "date": "2021-1-19", 
+            "deaths": 449, 
+            "recovered": 19773
+        }, 
+        {
+            "confirmed": 23648, 
+            "date": "2021-1-20", 
+            "deaths": 454, 
+            "recovered": 19964
+        }, 
+        {
+            "confirmed": 23838, 
+            "date": "2021-1-21", 
+            "deaths": 457, 
+            "recovered": 20151
+        }, 
+        {
+            "confirmed": 24027, 
+            "date": "2021-1-22", 
+            "deaths": 460, 
+            "recovered": 20339
+        }, 
+        {
+            "confirmed": 24212, 
+            "date": "2021-1-23", 
+            "deaths": 465, 
+            "recovered": 20528
+        }, 
+        {
+            "confirmed": 24397, 
+            "date": "2021-1-24", 
+            "deaths": 469, 
+            "recovered": 20718
+        }, 
+        {
+            "confirmed": 24581, 
+            "date": "2021-1-25", 
+            "deaths": 473, 
+            "recovered": 20904
+        }, 
+        {
+            "confirmed": 24763, 
+            "date": "2021-1-26", 
+            "deaths": 477, 
+            "recovered": 21087
+        }, 
+        {
+            "confirmed": 24941, 
+            "date": "2021-1-27", 
+            "deaths": 482, 
+            "recovered": 21265
+        }, 
+        {
+            "confirmed": 25115, 
+            "date": "2021-1-28", 
+            "deaths": 487, 
+            "recovered": 21442
+        }, 
+        {
+            "confirmed": 25278, 
+            "date": "2021-1-29", 
+            "deaths": 493, 
+            "recovered": 21613
+        }, 
+        {
+            "confirmed": 25415, 
+            "date": "2021-1-30", 
+            "deaths": 498, 
+            "recovered": 21781
+        }, 
+        {
+            "confirmed": 25539, 
+            "date": "2021-1-31", 
+            "deaths": 503, 
+            "recovered": 21941
+        }, 
+        {
+            "confirmed": 25663, 
+            "date": "2021-2-1", 
+            "deaths": 508, 
+            "recovered": 22095
+        }, 
+        {
+            "confirmed": 25753, 
+            "date": "2021-2-2", 
+            "deaths": 514, 
+            "recovered": 22254
+        }, 
+        {
+            "confirmed": 25844, 
+            "date": "2021-2-3", 
+            "deaths": 518, 
+            "recovered": 22394
+        }, 
+        {
+            "confirmed": 25937, 
+            "date": "2021-2-4", 
+            "deaths": 521, 
+            "recovered": 22518
+        }, 
+        {
+            "confirmed": 26032, 
+            "date": "2021-2-5", 
+            "deaths": 525, 
+            "recovered": 22639
+        }, 
+        {
+            "confirmed": 26129, 
+            "date": "2021-2-6", 
+            "deaths": 529, 
+            "recovered": 22760
+        }, 
+        {
+            "confirmed": 26226, 
+            "date": "2021-2-7", 
+            "deaths": 533, 
+            "recovered": 22877
+        }, 
+        {
+            "confirmed": 26322, 
+            "date": "2021-2-8", 
+            "deaths": 536, 
+            "recovered": 22989
+        }, 
+        {
+            "confirmed": 26419, 
+            "date": "2021-2-9", 
+            "deaths": 541, 
+            "recovered": 23098
         }
     ], 
     "Ульяновская область": [
@@ -141489,6 +155349,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 474, 
             "recovered": 35427
+        }, 
+        {
+            "confirmed": 39124, 
+            "date": "2021-1-11", 
+            "deaths": 474, 
+            "recovered": 35639
+        }, 
+        {
+            "confirmed": 39369, 
+            "date": "2021-1-12", 
+            "deaths": 474, 
+            "recovered": 35879
+        }, 
+        {
+            "confirmed": 39616, 
+            "date": "2021-1-13", 
+            "deaths": 486, 
+            "recovered": 36116
+        }, 
+        {
+            "confirmed": 39861, 
+            "date": "2021-1-14", 
+            "deaths": 487, 
+            "recovered": 36594
+        }, 
+        {
+            "confirmed": 40105, 
+            "date": "2021-1-15", 
+            "deaths": 499, 
+            "recovered": 36863
+        }, 
+        {
+            "confirmed": 40351, 
+            "date": "2021-1-16", 
+            "deaths": 515, 
+            "recovered": 37121
+        }, 
+        {
+            "confirmed": 40598, 
+            "date": "2021-1-17", 
+            "deaths": 515, 
+            "recovered": 37362
+        }, 
+        {
+            "confirmed": 40844, 
+            "date": "2021-1-18", 
+            "deaths": 521, 
+            "recovered": 37519
+        }, 
+        {
+            "confirmed": 41089, 
+            "date": "2021-1-19", 
+            "deaths": 529, 
+            "recovered": 37688
+        }, 
+        {
+            "confirmed": 41333, 
+            "date": "2021-1-20", 
+            "deaths": 539, 
+            "recovered": 37853
+        }, 
+        {
+            "confirmed": 41574, 
+            "date": "2021-1-21", 
+            "deaths": 550, 
+            "recovered": 38020
+        }, 
+        {
+            "confirmed": 41813, 
+            "date": "2021-1-22", 
+            "deaths": 560, 
+            "recovered": 38195
+        }, 
+        {
+            "confirmed": 42051, 
+            "date": "2021-1-23", 
+            "deaths": 570, 
+            "recovered": 38398
+        }, 
+        {
+            "confirmed": 42289, 
+            "date": "2021-1-24", 
+            "deaths": 575, 
+            "recovered": 38605
+        }, 
+        {
+            "confirmed": 42528, 
+            "date": "2021-1-25", 
+            "deaths": 575, 
+            "recovered": 38798
+        }, 
+        {
+            "confirmed": 42763, 
+            "date": "2021-1-26", 
+            "deaths": 576, 
+            "recovered": 39029
+        }, 
+        {
+            "confirmed": 42991, 
+            "date": "2021-1-27", 
+            "deaths": 583, 
+            "recovered": 39262
+        }, 
+        {
+            "confirmed": 43210, 
+            "date": "2021-1-28", 
+            "deaths": 593, 
+            "recovered": 39493
+        }, 
+        {
+            "confirmed": 43408, 
+            "date": "2021-1-29", 
+            "deaths": 603, 
+            "recovered": 39727
+        }, 
+        {
+            "confirmed": 43597, 
+            "date": "2021-1-30", 
+            "deaths": 603, 
+            "recovered": 39958
+        }, 
+        {
+            "confirmed": 43779, 
+            "date": "2021-1-31", 
+            "deaths": 625, 
+            "recovered": 40137
+        }, 
+        {
+            "confirmed": 43958, 
+            "date": "2021-2-1", 
+            "deaths": 625, 
+            "recovered": 40304
+        }, 
+        {
+            "confirmed": 44134, 
+            "date": "2021-2-2", 
+            "deaths": 630, 
+            "recovered": 40482
+        }, 
+        {
+            "confirmed": 44311, 
+            "date": "2021-2-3", 
+            "deaths": 637, 
+            "recovered": 40691
+        }, 
+        {
+            "confirmed": 44485, 
+            "date": "2021-2-4", 
+            "deaths": 644, 
+            "recovered": 40903
+        }, 
+        {
+            "confirmed": 44658, 
+            "date": "2021-2-5", 
+            "deaths": 652, 
+            "recovered": 41107
+        }, 
+        {
+            "confirmed": 44827, 
+            "date": "2021-2-6", 
+            "deaths": 661, 
+            "recovered": 41317
+        }, 
+        {
+            "confirmed": 44995, 
+            "date": "2021-2-7", 
+            "deaths": 669, 
+            "recovered": 41526
+        }, 
+        {
+            "confirmed": 45162, 
+            "date": "2021-2-8", 
+            "deaths": 674, 
+            "recovered": 41696
+        }, 
+        {
+            "confirmed": 45328, 
+            "date": "2021-2-9", 
+            "deaths": 682, 
+            "recovered": 41867
         }
     ], 
     "Хабаровский край": [
@@ -143303,6 +157343,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 204, 
             "recovered": 33548
+        }, 
+        {
+            "confirmed": 38579, 
+            "date": "2021-1-11", 
+            "deaths": 204, 
+            "recovered": 33857
+        }, 
+        {
+            "confirmed": 38881, 
+            "date": "2021-1-12", 
+            "deaths": 207, 
+            "recovered": 34266
+        }, 
+        {
+            "confirmed": 39188, 
+            "date": "2021-1-13", 
+            "deaths": 210, 
+            "recovered": 34622
+        }, 
+        {
+            "confirmed": 39492, 
+            "date": "2021-1-14", 
+            "deaths": 213, 
+            "recovered": 35020
+        }, 
+        {
+            "confirmed": 39793, 
+            "date": "2021-1-15", 
+            "deaths": 216, 
+            "recovered": 35523
+        }, 
+        {
+            "confirmed": 40096, 
+            "date": "2021-1-16", 
+            "deaths": 217, 
+            "recovered": 35844
+        }, 
+        {
+            "confirmed": 40396, 
+            "date": "2021-1-17", 
+            "deaths": 219, 
+            "recovered": 36196
+        }, 
+        {
+            "confirmed": 40692, 
+            "date": "2021-1-18", 
+            "deaths": 222, 
+            "recovered": 36698
+        }, 
+        {
+            "confirmed": 40990, 
+            "date": "2021-1-19", 
+            "deaths": 225, 
+            "recovered": 37017
+        }, 
+        {
+            "confirmed": 41292, 
+            "date": "2021-1-20", 
+            "deaths": 228, 
+            "recovered": 37330
+        }, 
+        {
+            "confirmed": 41591, 
+            "date": "2021-1-21", 
+            "deaths": 231, 
+            "recovered": 37648
+        }, 
+        {
+            "confirmed": 41894, 
+            "date": "2021-1-22", 
+            "deaths": 233, 
+            "recovered": 38002
+        }, 
+        {
+            "confirmed": 42195, 
+            "date": "2021-1-23", 
+            "deaths": 236, 
+            "recovered": 38309
+        }, 
+        {
+            "confirmed": 42492, 
+            "date": "2021-1-24", 
+            "deaths": 238, 
+            "recovered": 38600
+        }, 
+        {
+            "confirmed": 42786, 
+            "date": "2021-1-25", 
+            "deaths": 241, 
+            "recovered": 38901
+        }, 
+        {
+            "confirmed": 43077, 
+            "date": "2021-1-26", 
+            "deaths": 243, 
+            "recovered": 39247
+        }, 
+        {
+            "confirmed": 43370, 
+            "date": "2021-1-27", 
+            "deaths": 246, 
+            "recovered": 39556
+        }, 
+        {
+            "confirmed": 43661, 
+            "date": "2021-1-28", 
+            "deaths": 247, 
+            "recovered": 39858
+        }, 
+        {
+            "confirmed": 43951, 
+            "date": "2021-1-29", 
+            "deaths": 249, 
+            "recovered": 40139
+        }, 
+        {
+            "confirmed": 44238, 
+            "date": "2021-1-30", 
+            "deaths": 251, 
+            "recovered": 40430
+        }, 
+        {
+            "confirmed": 44523, 
+            "date": "2021-1-31", 
+            "deaths": 253, 
+            "recovered": 40472
+        }, 
+        {
+            "confirmed": 44796, 
+            "date": "2021-2-1", 
+            "deaths": 255, 
+            "recovered": 40496
+        }, 
+        {
+            "confirmed": 45064, 
+            "date": "2021-2-2", 
+            "deaths": 257, 
+            "recovered": 40691
+        }, 
+        {
+            "confirmed": 45329, 
+            "date": "2021-2-3", 
+            "deaths": 258, 
+            "recovered": 40964
+        }, 
+        {
+            "confirmed": 45580, 
+            "date": "2021-2-4", 
+            "deaths": 258, 
+            "recovered": 41232
+        }, 
+        {
+            "confirmed": 45828, 
+            "date": "2021-2-5", 
+            "deaths": 259, 
+            "recovered": 41501
+        }, 
+        {
+            "confirmed": 46048, 
+            "date": "2021-2-6", 
+            "deaths": 261, 
+            "recovered": 41773
+        }, 
+        {
+            "confirmed": 46254, 
+            "date": "2021-2-7", 
+            "deaths": 261, 
+            "recovered": 42030
+        }, 
+        {
+            "confirmed": 46452, 
+            "date": "2021-2-8", 
+            "deaths": 262, 
+            "recovered": 42287
+        }, 
+        {
+            "confirmed": 46630, 
+            "date": "2021-2-9", 
+            "deaths": 263, 
+            "recovered": 42588
         }
     ], 
     "Ханты-Мансийский АО": [
@@ -145117,6 +159337,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 579, 
             "recovered": 39608
+        }, 
+        {
+            "confirmed": 43510, 
+            "date": "2021-1-11", 
+            "deaths": 585, 
+            "recovered": 39811
+        }, 
+        {
+            "confirmed": 43715, 
+            "date": "2021-1-12", 
+            "deaths": 591, 
+            "recovered": 40001
+        }, 
+        {
+            "confirmed": 43926, 
+            "date": "2021-1-13", 
+            "deaths": 596, 
+            "recovered": 40210
+        }, 
+        {
+            "confirmed": 44144, 
+            "date": "2021-1-14", 
+            "deaths": 598, 
+            "recovered": 40423
+        }, 
+        {
+            "confirmed": 44359, 
+            "date": "2021-1-15", 
+            "deaths": 602, 
+            "recovered": 40640
+        }, 
+        {
+            "confirmed": 44580, 
+            "date": "2021-1-16", 
+            "deaths": 609, 
+            "recovered": 40877
+        }, 
+        {
+            "confirmed": 44806, 
+            "date": "2021-1-17", 
+            "deaths": 612, 
+            "recovered": 41134
+        }, 
+        {
+            "confirmed": 45029, 
+            "date": "2021-1-18", 
+            "deaths": 616, 
+            "recovered": 41360
+        }, 
+        {
+            "confirmed": 45248, 
+            "date": "2021-1-19", 
+            "deaths": 622, 
+            "recovered": 41603
+        }, 
+        {
+            "confirmed": 45463, 
+            "date": "2021-1-20", 
+            "deaths": 629, 
+            "recovered": 41958
+        }, 
+        {
+            "confirmed": 45675, 
+            "date": "2021-1-21", 
+            "deaths": 633, 
+            "recovered": 42191
+        }, 
+        {
+            "confirmed": 45892, 
+            "date": "2021-1-22", 
+            "deaths": 636, 
+            "recovered": 42434
+        }, 
+        {
+            "confirmed": 46110, 
+            "date": "2021-1-23", 
+            "deaths": 640, 
+            "recovered": 42660
+        }, 
+        {
+            "confirmed": 46324, 
+            "date": "2021-1-24", 
+            "deaths": 642, 
+            "recovered": 42876
+        }, 
+        {
+            "confirmed": 46535, 
+            "date": "2021-1-25", 
+            "deaths": 645, 
+            "recovered": 43089
+        }, 
+        {
+            "confirmed": 46734, 
+            "date": "2021-1-26", 
+            "deaths": 648, 
+            "recovered": 43298
+        }, 
+        {
+            "confirmed": 46919, 
+            "date": "2021-1-27", 
+            "deaths": 652, 
+            "recovered": 43548
+        }, 
+        {
+            "confirmed": 47107, 
+            "date": "2021-1-28", 
+            "deaths": 655, 
+            "recovered": 43752
+        }, 
+        {
+            "confirmed": 47296, 
+            "date": "2021-1-29", 
+            "deaths": 660, 
+            "recovered": 43961
+        }, 
+        {
+            "confirmed": 47474, 
+            "date": "2021-1-30", 
+            "deaths": 664, 
+            "recovered": 44205
+        }, 
+        {
+            "confirmed": 47656, 
+            "date": "2021-1-31", 
+            "deaths": 666, 
+            "recovered": 44391
+        }, 
+        {
+            "confirmed": 47838, 
+            "date": "2021-2-1", 
+            "deaths": 668, 
+            "recovered": 44573
+        }, 
+        {
+            "confirmed": 48009, 
+            "date": "2021-2-2", 
+            "deaths": 672, 
+            "recovered": 44829
+        }, 
+        {
+            "confirmed": 48155, 
+            "date": "2021-2-3", 
+            "deaths": 675, 
+            "recovered": 45137
+        }, 
+        {
+            "confirmed": 48307, 
+            "date": "2021-2-4", 
+            "deaths": 677, 
+            "recovered": 45401
+        }, 
+        {
+            "confirmed": 48461, 
+            "date": "2021-2-5", 
+            "deaths": 681, 
+            "recovered": 45579
+        }, 
+        {
+            "confirmed": 48629, 
+            "date": "2021-2-6", 
+            "deaths": 683, 
+            "recovered": 45794
+        }, 
+        {
+            "confirmed": 48778, 
+            "date": "2021-2-7", 
+            "deaths": 685, 
+            "recovered": 45965
+        }, 
+        {
+            "confirmed": 48918, 
+            "date": "2021-2-8", 
+            "deaths": 688, 
+            "recovered": 46110
+        }, 
+        {
+            "confirmed": 49056, 
+            "date": "2021-2-9", 
+            "deaths": 692, 
+            "recovered": 46300
         }
     ], 
     "Челябинская область": [
@@ -146931,6 +161331,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 584, 
             "recovered": 24038
+        }, 
+        {
+            "confirmed": 37987, 
+            "date": "2021-1-11", 
+            "deaths": 595, 
+            "recovered": 24411
+        }, 
+        {
+            "confirmed": 38278, 
+            "date": "2021-1-12", 
+            "deaths": 604, 
+            "recovered": 24888
+        }, 
+        {
+            "confirmed": 38567, 
+            "date": "2021-1-13", 
+            "deaths": 614, 
+            "recovered": 25278
+        }, 
+        {
+            "confirmed": 38859, 
+            "date": "2021-1-14", 
+            "deaths": 625, 
+            "recovered": 25649
+        }, 
+        {
+            "confirmed": 39152, 
+            "date": "2021-1-15", 
+            "deaths": 634, 
+            "recovered": 26039
+        }, 
+        {
+            "confirmed": 39447, 
+            "date": "2021-1-16", 
+            "deaths": 642, 
+            "recovered": 26426
+        }, 
+        {
+            "confirmed": 39748, 
+            "date": "2021-1-17", 
+            "deaths": 650, 
+            "recovered": 26805
+        }, 
+        {
+            "confirmed": 40051, 
+            "date": "2021-1-18", 
+            "deaths": 660, 
+            "recovered": 27188
+        }, 
+        {
+            "confirmed": 40353, 
+            "date": "2021-1-19", 
+            "deaths": 669, 
+            "recovered": 27529
+        }, 
+        {
+            "confirmed": 40652, 
+            "date": "2021-1-20", 
+            "deaths": 675, 
+            "recovered": 27907
+        }, 
+        {
+            "confirmed": 40949, 
+            "date": "2021-1-21", 
+            "deaths": 685, 
+            "recovered": 28268
+        }, 
+        {
+            "confirmed": 41243, 
+            "date": "2021-1-22", 
+            "deaths": 696, 
+            "recovered": 28641
+        }, 
+        {
+            "confirmed": 41536, 
+            "date": "2021-1-23", 
+            "deaths": 706, 
+            "recovered": 29043
+        }, 
+        {
+            "confirmed": 41827, 
+            "date": "2021-1-24", 
+            "deaths": 716, 
+            "recovered": 29444
+        }, 
+        {
+            "confirmed": 42119, 
+            "date": "2021-1-25", 
+            "deaths": 726, 
+            "recovered": 29813
+        }, 
+        {
+            "confirmed": 42408, 
+            "date": "2021-1-26", 
+            "deaths": 736, 
+            "recovered": 30255
+        }, 
+        {
+            "confirmed": 42695, 
+            "date": "2021-1-27", 
+            "deaths": 746, 
+            "recovered": 30703
+        }, 
+        {
+            "confirmed": 42980, 
+            "date": "2021-1-28", 
+            "deaths": 756, 
+            "recovered": 31122
+        }, 
+        {
+            "confirmed": 43262, 
+            "date": "2021-1-29", 
+            "deaths": 766, 
+            "recovered": 31550
+        }, 
+        {
+            "confirmed": 43543, 
+            "date": "2021-1-30", 
+            "deaths": 773, 
+            "recovered": 32020
+        }, 
+        {
+            "confirmed": 43822, 
+            "date": "2021-1-31", 
+            "deaths": 780, 
+            "recovered": 32513
+        }, 
+        {
+            "confirmed": 44102, 
+            "date": "2021-2-1", 
+            "deaths": 787, 
+            "recovered": 33092
+        }, 
+        {
+            "confirmed": 44380, 
+            "date": "2021-2-2", 
+            "deaths": 796, 
+            "recovered": 33686
+        }, 
+        {
+            "confirmed": 44655, 
+            "date": "2021-2-3", 
+            "deaths": 797, 
+            "recovered": 34092
+        }, 
+        {
+            "confirmed": 44928, 
+            "date": "2021-2-4", 
+            "deaths": 816, 
+            "recovered": 34791
+        }, 
+        {
+            "confirmed": 45200, 
+            "date": "2021-2-5", 
+            "deaths": 826, 
+            "recovered": 35636
+        }, 
+        {
+            "confirmed": 45470, 
+            "date": "2021-2-6", 
+            "deaths": 836, 
+            "recovered": 36499
+        }, 
+        {
+            "confirmed": 45741, 
+            "date": "2021-2-7", 
+            "deaths": 846, 
+            "recovered": 37057
+        }, 
+        {
+            "confirmed": 46011, 
+            "date": "2021-2-8", 
+            "deaths": 856, 
+            "recovered": 37621
+        }, 
+        {
+            "confirmed": 46280, 
+            "date": "2021-2-9", 
+            "deaths": 866, 
+            "recovered": 38086
         }
     ], 
     "Чеченская Республика": [
@@ -148745,6 +163325,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 97, 
             "recovered": 6002
+        }, 
+        {
+            "confirmed": 9726, 
+            "date": "2021-1-11", 
+            "deaths": 98, 
+            "recovered": 6198
+        }, 
+        {
+            "confirmed": 9811, 
+            "date": "2021-1-12", 
+            "deaths": 98, 
+            "recovered": 6589
+        }, 
+        {
+            "confirmed": 9891, 
+            "date": "2021-1-13", 
+            "deaths": 99, 
+            "recovered": 6776
+        }, 
+        {
+            "confirmed": 9968, 
+            "date": "2021-1-14", 
+            "deaths": 99, 
+            "recovered": 6957
+        }, 
+        {
+            "confirmed": 10040, 
+            "date": "2021-1-15", 
+            "deaths": 100, 
+            "recovered": 7132
+        }, 
+        {
+            "confirmed": 10110, 
+            "date": "2021-1-16", 
+            "deaths": 100, 
+            "recovered": 7308
+        }, 
+        {
+            "confirmed": 10175, 
+            "date": "2021-1-17", 
+            "deaths": 101, 
+            "recovered": 7481
+        }, 
+        {
+            "confirmed": 10238, 
+            "date": "2021-1-18", 
+            "deaths": 101, 
+            "recovered": 7621
+        }, 
+        {
+            "confirmed": 10295, 
+            "date": "2021-1-19", 
+            "deaths": 102, 
+            "recovered": 7767
+        }, 
+        {
+            "confirmed": 10354, 
+            "date": "2021-1-20", 
+            "deaths": 102, 
+            "recovered": 7936
+        }, 
+        {
+            "confirmed": 10407, 
+            "date": "2021-1-21", 
+            "deaths": 103, 
+            "recovered": 8123
+        }, 
+        {
+            "confirmed": 10459, 
+            "date": "2021-1-22", 
+            "deaths": 103, 
+            "recovered": 8302
+        }, 
+        {
+            "confirmed": 10504, 
+            "date": "2021-1-23", 
+            "deaths": 104, 
+            "recovered": 8477
+        }, 
+        {
+            "confirmed": 10544, 
+            "date": "2021-1-24", 
+            "deaths": 104, 
+            "recovered": 8648
+        }, 
+        {
+            "confirmed": 10582, 
+            "date": "2021-1-25", 
+            "deaths": 105, 
+            "recovered": 8801
+        }, 
+        {
+            "confirmed": 10614, 
+            "date": "2021-1-26", 
+            "deaths": 105, 
+            "recovered": 8957
+        }, 
+        {
+            "confirmed": 10646, 
+            "date": "2021-1-27", 
+            "deaths": 106, 
+            "recovered": 9102
+        }, 
+        {
+            "confirmed": 10690, 
+            "date": "2021-1-28", 
+            "deaths": 106, 
+            "recovered": 9221
+        }, 
+        {
+            "confirmed": 10725, 
+            "date": "2021-1-29", 
+            "deaths": 107, 
+            "recovered": 9335
+        }, 
+        {
+            "confirmed": 10758, 
+            "date": "2021-1-30", 
+            "deaths": 107, 
+            "recovered": 9451
+        }, 
+        {
+            "confirmed": 10789, 
+            "date": "2021-1-31", 
+            "deaths": 108, 
+            "recovered": 9572
+        }, 
+        {
+            "confirmed": 10815, 
+            "date": "2021-2-1", 
+            "deaths": 108, 
+            "recovered": 9688
+        }, 
+        {
+            "confirmed": 10837, 
+            "date": "2021-2-2", 
+            "deaths": 108, 
+            "recovered": 9800
+        }, 
+        {
+            "confirmed": 10862, 
+            "date": "2021-2-3", 
+            "deaths": 108, 
+            "recovered": 9831
+        }, 
+        {
+            "confirmed": 10891, 
+            "date": "2021-2-4", 
+            "deaths": 108, 
+            "recovered": 9942
+        }, 
+        {
+            "confirmed": 10923, 
+            "date": "2021-2-5", 
+            "deaths": 108, 
+            "recovered": 9991
+        }, 
+        {
+            "confirmed": 10955, 
+            "date": "2021-2-6", 
+            "deaths": 108, 
+            "recovered": 10053
+        }, 
+        {
+            "confirmed": 10989, 
+            "date": "2021-2-7", 
+            "deaths": 108, 
+            "recovered": 10099
+        }, 
+        {
+            "confirmed": 11020, 
+            "date": "2021-2-8", 
+            "deaths": 108, 
+            "recovered": 10153
+        }, 
+        {
+            "confirmed": 11045, 
+            "date": "2021-2-9", 
+            "deaths": 109, 
+            "recovered": 10201
         }
     ], 
     "Чукотский автономный округ": [
@@ -150391,6 +165151,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 4, 
             "recovered": 496
+        }, 
+        {
+            "confirmed": 556, 
+            "date": "2021-1-11", 
+            "deaths": 4, 
+            "recovered": 500
+        }, 
+        {
+            "confirmed": 558, 
+            "date": "2021-1-12", 
+            "deaths": 4, 
+            "recovered": 501
+        }, 
+        {
+            "confirmed": 561, 
+            "date": "2021-1-13", 
+            "deaths": 4, 
+            "recovered": 508
+        }, 
+        {
+            "confirmed": 569, 
+            "date": "2021-1-14", 
+            "deaths": 4, 
+            "recovered": 508
+        }, 
+        {
+            "confirmed": 578, 
+            "date": "2021-1-15", 
+            "deaths": 4, 
+            "recovered": 512
+        }, 
+        {
+            "confirmed": 580, 
+            "date": "2021-1-16", 
+            "deaths": 4, 
+            "recovered": 518
+        }, 
+        {
+            "confirmed": 581, 
+            "date": "2021-1-17", 
+            "deaths": 4, 
+            "recovered": 518
+        }, 
+        {
+            "confirmed": 582, 
+            "date": "2021-1-18", 
+            "deaths": 4, 
+            "recovered": 518
+        }, 
+        {
+            "confirmed": 586, 
+            "date": "2021-1-19", 
+            "deaths": 4, 
+            "recovered": 523
+        }, 
+        {
+            "confirmed": 592, 
+            "date": "2021-1-20", 
+            "deaths": 4, 
+            "recovered": 527
+        }, 
+        {
+            "confirmed": 594, 
+            "date": "2021-1-21", 
+            "deaths": 4, 
+            "recovered": 530
+        }, 
+        {
+            "confirmed": 600, 
+            "date": "2021-1-22", 
+            "deaths": 4, 
+            "recovered": 535
+        }, 
+        {
+            "confirmed": 603, 
+            "date": "2021-1-23", 
+            "deaths": 4, 
+            "recovered": 541
+        }, 
+        {
+            "confirmed": 605, 
+            "date": "2021-1-24", 
+            "deaths": 4, 
+            "recovered": 543
+        }, 
+        {
+            "confirmed": 605, 
+            "date": "2021-1-25", 
+            "deaths": 4, 
+            "recovered": 544
+        }, 
+        {
+            "confirmed": 610, 
+            "date": "2021-1-26", 
+            "deaths": 4, 
+            "recovered": 546
+        }, 
+        {
+            "confirmed": 615, 
+            "date": "2021-1-27", 
+            "deaths": 4, 
+            "recovered": 552
+        }, 
+        {
+            "confirmed": 621, 
+            "date": "2021-1-28", 
+            "deaths": 4, 
+            "recovered": 559
+        }, 
+        {
+            "confirmed": 623, 
+            "date": "2021-1-29", 
+            "deaths": 4, 
+            "recovered": 562
+        }, 
+        {
+            "confirmed": 633, 
+            "date": "2021-1-30", 
+            "deaths": 4, 
+            "recovered": 574
+        }, 
+        {
+            "confirmed": 633, 
+            "date": "2021-1-31", 
+            "deaths": 4, 
+            "recovered": 574
+        }, 
+        {
+            "confirmed": 633, 
+            "date": "2021-2-1", 
+            "deaths": 4, 
+            "recovered": 575
+        }, 
+        {
+            "confirmed": 638, 
+            "date": "2021-2-2", 
+            "deaths": 4, 
+            "recovered": 576
+        }, 
+        {
+            "confirmed": 640, 
+            "date": "2021-2-3", 
+            "deaths": 4, 
+            "recovered": 581
+        }, 
+        {
+            "confirmed": 646, 
+            "date": "2021-2-4", 
+            "deaths": 4, 
+            "recovered": 583
+        }, 
+        {
+            "confirmed": 649, 
+            "date": "2021-2-5", 
+            "deaths": 4, 
+            "recovered": 586
+        }, 
+        {
+            "confirmed": 655, 
+            "date": "2021-2-6", 
+            "deaths": 4, 
+            "recovered": 586
+        }, 
+        {
+            "confirmed": 656, 
+            "date": "2021-2-7", 
+            "deaths": 4, 
+            "recovered": 586
+        }, 
+        {
+            "confirmed": 659, 
+            "date": "2021-2-8", 
+            "deaths": 4, 
+            "recovered": 588
+        }, 
+        {
+            "confirmed": 659, 
+            "date": "2021-2-9", 
+            "deaths": 4, 
+            "recovered": 599
         }
     ], 
     "Ямало-Ненецкий автономный округ": [
@@ -152205,6 +167145,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 355, 
             "recovered": 27077
+        }, 
+        {
+            "confirmed": 33720, 
+            "date": "2021-1-11", 
+            "deaths": 358, 
+            "recovered": 27296
+        }, 
+        {
+            "confirmed": 33841, 
+            "date": "2021-1-12", 
+            "deaths": 359, 
+            "recovered": 27521
+        }, 
+        {
+            "confirmed": 33956, 
+            "date": "2021-1-13", 
+            "deaths": 360, 
+            "recovered": 27752
+        }, 
+        {
+            "confirmed": 34068, 
+            "date": "2021-1-14", 
+            "deaths": 361, 
+            "recovered": 27977
+        }, 
+        {
+            "confirmed": 34178, 
+            "date": "2021-1-15", 
+            "deaths": 362, 
+            "recovered": 28214
+        }, 
+        {
+            "confirmed": 34290, 
+            "date": "2021-1-16", 
+            "deaths": 362, 
+            "recovered": 28444
+        }, 
+        {
+            "confirmed": 34403, 
+            "date": "2021-1-17", 
+            "deaths": 363, 
+            "recovered": 28671
+        }, 
+        {
+            "confirmed": 34515, 
+            "date": "2021-1-18", 
+            "deaths": 364, 
+            "recovered": 28890
+        }, 
+        {
+            "confirmed": 34630, 
+            "date": "2021-1-19", 
+            "deaths": 365, 
+            "recovered": 29121
+        }, 
+        {
+            "confirmed": 34740, 
+            "date": "2021-1-20", 
+            "deaths": 367, 
+            "recovered": 29359
+        }, 
+        {
+            "confirmed": 34847, 
+            "date": "2021-1-21", 
+            "deaths": 367, 
+            "recovered": 29594
+        }, 
+        {
+            "confirmed": 34944, 
+            "date": "2021-1-22", 
+            "deaths": 369, 
+            "recovered": 29821
+        }, 
+        {
+            "confirmed": 35039, 
+            "date": "2021-1-23", 
+            "deaths": 370, 
+            "recovered": 30056
+        }, 
+        {
+            "confirmed": 35128, 
+            "date": "2021-1-24", 
+            "deaths": 370, 
+            "recovered": 30270
+        }, 
+        {
+            "confirmed": 35207, 
+            "date": "2021-1-25", 
+            "deaths": 371, 
+            "recovered": 30467
+        }, 
+        {
+            "confirmed": 35282, 
+            "date": "2021-1-26", 
+            "deaths": 373, 
+            "recovered": 30672
+        }, 
+        {
+            "confirmed": 35354, 
+            "date": "2021-1-27", 
+            "deaths": 373, 
+            "recovered": 30869
+        }, 
+        {
+            "confirmed": 35425, 
+            "date": "2021-1-28", 
+            "deaths": 375, 
+            "recovered": 31072
+        }, 
+        {
+            "confirmed": 35489, 
+            "date": "2021-1-29", 
+            "deaths": 377, 
+            "recovered": 31287
+        }, 
+        {
+            "confirmed": 35552, 
+            "date": "2021-1-30", 
+            "deaths": 377, 
+            "recovered": 31478
+        }, 
+        {
+            "confirmed": 35615, 
+            "date": "2021-1-31", 
+            "deaths": 378, 
+            "recovered": 31679
+        }, 
+        {
+            "confirmed": 35680, 
+            "date": "2021-2-1", 
+            "deaths": 379, 
+            "recovered": 31868
+        }, 
+        {
+            "confirmed": 35741, 
+            "date": "2021-2-2", 
+            "deaths": 381, 
+            "recovered": 32065
+        }, 
+        {
+            "confirmed": 35803, 
+            "date": "2021-2-3", 
+            "deaths": 382, 
+            "recovered": 32250
+        }, 
+        {
+            "confirmed": 35864, 
+            "date": "2021-2-4", 
+            "deaths": 383, 
+            "recovered": 32443
+        }, 
+        {
+            "confirmed": 35923, 
+            "date": "2021-2-5", 
+            "deaths": 385, 
+            "recovered": 32644
+        }, 
+        {
+            "confirmed": 35984, 
+            "date": "2021-2-6", 
+            "deaths": 386, 
+            "recovered": 32833
+        }, 
+        {
+            "confirmed": 36046, 
+            "date": "2021-2-7", 
+            "deaths": 387, 
+            "recovered": 33002
+        }, 
+        {
+            "confirmed": 36111, 
+            "date": "2021-2-8", 
+            "deaths": 388, 
+            "recovered": 33159
+        }, 
+        {
+            "confirmed": 36175, 
+            "date": "2021-2-9", 
+            "deaths": 388, 
+            "recovered": 33308
         }
     ], 
     "Ярославская область": [
@@ -154019,6 +169139,186 @@ var data ={
             "date": "2021-1-10", 
             "deaths": 234, 
             "recovered": 22718
+        }, 
+        {
+            "confirmed": 24375, 
+            "date": "2021-1-11", 
+            "deaths": 240, 
+            "recovered": 22902
+        }, 
+        {
+            "confirmed": 24565, 
+            "date": "2021-1-12", 
+            "deaths": 242, 
+            "recovered": 23081
+        }, 
+        {
+            "confirmed": 24754, 
+            "date": "2021-1-13", 
+            "deaths": 244, 
+            "recovered": 23274
+        }, 
+        {
+            "confirmed": 24941, 
+            "date": "2021-1-14", 
+            "deaths": 246, 
+            "recovered": 23442
+        }, 
+        {
+            "confirmed": 25130, 
+            "date": "2021-1-15", 
+            "deaths": 252, 
+            "recovered": 23605
+        }, 
+        {
+            "confirmed": 25320, 
+            "date": "2021-1-16", 
+            "deaths": 255, 
+            "recovered": 23776
+        }, 
+        {
+            "confirmed": 25510, 
+            "date": "2021-1-17", 
+            "deaths": 256, 
+            "recovered": 23945
+        }, 
+        {
+            "confirmed": 25697, 
+            "date": "2021-1-18", 
+            "deaths": 258, 
+            "recovered": 24112
+        }, 
+        {
+            "confirmed": 25885, 
+            "date": "2021-1-19", 
+            "deaths": 263, 
+            "recovered": 24274
+        }, 
+        {
+            "confirmed": 26074, 
+            "date": "2021-1-20", 
+            "deaths": 267, 
+            "recovered": 24446
+        }, 
+        {
+            "confirmed": 26260, 
+            "date": "2021-1-21", 
+            "deaths": 273, 
+            "recovered": 24619
+        }, 
+        {
+            "confirmed": 26447, 
+            "date": "2021-1-22", 
+            "deaths": 275, 
+            "recovered": 24796
+        }, 
+        {
+            "confirmed": 26634, 
+            "date": "2021-1-23", 
+            "deaths": 280, 
+            "recovered": 24977
+        }, 
+        {
+            "confirmed": 26822, 
+            "date": "2021-1-24", 
+            "deaths": 286, 
+            "recovered": 25151
+        }, 
+        {
+            "confirmed": 27007, 
+            "date": "2021-1-25", 
+            "deaths": 292, 
+            "recovered": 25328
+        }, 
+        {
+            "confirmed": 27193, 
+            "date": "2021-1-26", 
+            "deaths": 297, 
+            "recovered": 25509
+        }, 
+        {
+            "confirmed": 27380, 
+            "date": "2021-1-27", 
+            "deaths": 303, 
+            "recovered": 25685
+        }, 
+        {
+            "confirmed": 27567, 
+            "date": "2021-1-28", 
+            "deaths": 306, 
+            "recovered": 25868
+        }, 
+        {
+            "confirmed": 27752, 
+            "date": "2021-1-29", 
+            "deaths": 310, 
+            "recovered": 26055
+        }, 
+        {
+            "confirmed": 27937, 
+            "date": "2021-1-30", 
+            "deaths": 314, 
+            "recovered": 26234
+        }, 
+        {
+            "confirmed": 28121, 
+            "date": "2021-1-31", 
+            "deaths": 319, 
+            "recovered": 26415
+        }, 
+        {
+            "confirmed": 28307, 
+            "date": "2021-2-1", 
+            "deaths": 319, 
+            "recovered": 26592
+        }, 
+        {
+            "confirmed": 28490, 
+            "date": "2021-2-2", 
+            "deaths": 319, 
+            "recovered": 26775
+        }, 
+        {
+            "confirmed": 28674, 
+            "date": "2021-2-3", 
+            "deaths": 321, 
+            "recovered": 26955
+        }, 
+        {
+            "confirmed": 28854, 
+            "date": "2021-2-4", 
+            "deaths": 322, 
+            "recovered": 27140
+        }, 
+        {
+            "confirmed": 29037, 
+            "date": "2021-2-5", 
+            "deaths": 324, 
+            "recovered": 27307
+        }, 
+        {
+            "confirmed": 29217, 
+            "date": "2021-2-6", 
+            "deaths": 328, 
+            "recovered": 27473
+        }, 
+        {
+            "confirmed": 29394, 
+            "date": "2021-2-7", 
+            "deaths": 330, 
+            "recovered": 27644
+        }, 
+        {
+            "confirmed": 29573, 
+            "date": "2021-2-8", 
+            "deaths": 333, 
+            "recovered": 27806
+        }, 
+        {
+            "confirmed": 29747, 
+            "date": "2021-2-9", 
+            "deaths": 337, 
+            "recovered": 27979
         }
     ]
 } ;
