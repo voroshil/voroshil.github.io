@@ -70,6 +70,7 @@ const tarif = {
   ]
 }
 const data = [
+  {date:"27.06.2022", gaz: 1189, electro: 22316, cold: 879, hot: 187},
   {date:"23.05.2022", gaz: 1186, electro: 22025, cold: 874, hot: 185},
   {date:"30.04.2022", gaz: 1180, electro: 21764, cold: 869, hot: 182},
   {date:"19.03.2022", gaz: 1168, electro: 21243, cold: 858, hot: 176},
